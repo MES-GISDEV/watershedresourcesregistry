@@ -1,0 +1,11 @@
+.jimu-widget-FeaturedCollectionPreview {
+    z-index:150;
+}
+.jimu-widget-filterforselect-close{
+	background: url('../images/close.png');
+	width: 15px;
+	height: 15px;
+	bottom: 0px;
+	right: 0px;
+	border: none;
+	}

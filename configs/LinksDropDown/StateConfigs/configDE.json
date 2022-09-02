@@ -1,0 +1,14 @@
+{
+	"nationalLinks":[
+		["Nature’s Network", "https://www.naturesnetwork.org/"],
+		["Flood Planning Tool", "https://floodplanning.dnrec.delaware.gov/"],
+		["Web Soil Survey", "https://websoilsurvey.sc.egov.usda.gov/App/WebSoilSurvey.aspx"],
+		["EnviroAtlas", "https://enviroatlas.epa.gov/enviroatlas/interactivemap/"],
+		["EJScreen", "https://ejscreen.epa.gov/mapper/"],
+		["How’s My Waterway", "https://mywaterway.epa.gov/"],
+		["NEPAssist", "https://nepassisttool.epa.gov/nepassist/nepamap.aspx"],
+		["RIBITS", "https://ribits.ops.usace.army.mil/ords/f?p=107:2:12538542177010::NO"],
+		["DWMAPS", "https://geopub.epa.gov/DWWidgetApp/"],
+		["IPaC", "https://ipac.ecosphere.fws.gov/location/index"]
+	]
+}		

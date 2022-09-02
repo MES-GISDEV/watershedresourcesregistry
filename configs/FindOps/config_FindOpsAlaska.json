@@ -1,0 +1,46 @@
+{
+    "siteVisits": "https://services.arcgis.com/njFNhDsUCentVYJW/arcgis/rest/services/survey123_f428e20cada347319bfc88cd00a82a98/FeatureServer/0",
+    "modelURL": "http://staging.mesgis.com/arcgis/rest/services/WRR/Models/MapServer/",
+    "modelState": "Alaska",
+    "watershedField": "HUC10",
+    "acresField":  "ACRES",
+    "modelItems": [
+        {
+            "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Alaska_ACS/MapServer/0",
+            "name": "Active Contaminated Sites"
+        },
+		{
+            "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Alaska_AMS/MapServer/0",
+            "name": "Abandoned Mining Sites"
+        },
+		{
+            "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Alaska_Culverts/MapServer/0",
+            "name": "Culvert Inventory"
+        },
+		{
+            "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Alaska_HMF/MapServer/0",
+            "name": "Historic Mining Footprint"
+        },
+		{
+            "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Alaska_WMS/MapServer/0",
+            "name": "Withdrawn Mining Claims"
+        }
+    ],
+    "modelItems2": [
+        {
+            "name": "Federally Administered Lands"
+        },
+        {
+            "name": "State Administered Lands"
+        },
+        {
+            "name": "Local Administered Lands"
+        },
+        {
+            "name": "Native Administered Lands"
+        },
+        {
+            "name": "Private Administered Lands"
+        }
+    ]
+}

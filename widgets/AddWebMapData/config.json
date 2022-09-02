@@ -1,0 +1,6 @@
+{
+    "portalUrl": "https://gis.menv.com/portal",
+    "publicContent": {
+      "query": "type:\"Web Map\" "
+    }
+}

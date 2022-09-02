@@ -1,0 +1,17 @@
+{
+	"nationalLinks":[
+		["WetCAT", "https://cmap2.vims.edu/WetCAT/WetCAT_Viewer/WetCAT_VA_2D.html"],
+		["AdaptVA", "http://cmap2.vims.edu/AdaptVA/adaptVA_viewer.html"],
+		["NLED Winter Habitat and Roost Tree Application", "https://dgif-virginia.maps.arcgis.com/apps/webappviewer/index.html?id=32ea4ee4935942c092e41ddcd19e5ec5"],
+		["SAV Interactive Map", "https://mobjack.vims.edu/sav/savwabmap/"],
+		["Freshwater Network Chesapeake Region", "https://maps.freshwaternetwork.org/chesapeake/#"],
+		["Web Soil Survey", "https://websoilsurvey.sc.egov.usda.gov/App/WebSoilSurvey.aspx"],
+		["EnviroAtlas", "https://enviroatlas.epa.gov/enviroatlas/interactivemap/"],
+		["EJScreen", "https://ejscreen.epa.gov/mapper/"],
+		["How’s My Waterway", "https://mywaterway.epa.gov/"],
+		["NEPAssist", "https://nepassisttool.epa.gov/nepassist/nepamap.aspx"],
+		["RIBITS", "https://ribits.ops.usace.army.mil/ords/f?p=107:2:12538542177010::NO"],
+		["DWMAPS", "https://geopub.epa.gov/DWWidgetApp/"],
+		["IPaC", "https://ipac.ecosphere.fws.gov/location/index"]
+	]
+}		

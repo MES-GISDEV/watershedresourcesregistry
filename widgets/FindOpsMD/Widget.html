@@ -1,0 +1,144 @@
+<div data-dojo-attach-point="findDiv">
+    <div class="jimu-widget-normal loc-widget-content">
+        <div class="loc-tab-header" data-dojo-attach-point="tabHeader" data-dojo-attach-event="onclick:_onTabHeaderClicked">
+            <div class="loc-tab-item jimu-float-leading selected" data-dojo-attach-point="findLocItem">Find Opportunity</div>
+            <div class="loc-tab-item jimu-float-trailing" data-dojo-attach-point="resultsLocItem">Find Visit Information</div>
+        </div>
+        <div class="loc-tabs-container">
+            <div class="loc-tab-view task-tab-view selected" data-dojo-attach-point="findTabView">
+                <label>Select a county:</label><br />
+                <select data-dojo-attach-point="ddlCounty">
+                    <option value="all">All Counties</option>
+                </select><br />
+ 				<div>
+                    <label>Select watershed type to filter by:</label><br />
+                    <div class="wtrShedChoice">
+                        <div class="scoreRBs">
+                            <input type="radio" name="wtrshd" checked="checked" data-dojo-attach-event="onchange:_wtrShedChange" value="fedhuc12"/>Federal HUC 12
+                        </div>
+                        <div class="scoreRBs">
+                            <input type="radio" name="wtrshd" value="fedhuc8" data-dojo-attach-event="onchange:_wtrShedChange"/>Federal HUC 8
+                        </div>
+                        <div class="scoreRBs">
+                            <input type="radio" name="wtrshd" value="mdhuc8" data-dojo-attach-event="onchange:_wtrShedChange"/>Maryland HUC 8
+                        </div>
+                    </div>
+                </div>   
+                <label>Select a Watershed:</label><br />
+                <select data-dojo-attach-point="ddlWatershed" class="watershedDDL">
+                </select>
+                <hr />
+                <div data-dojo-attach-point="radioSelect" class="radioContainer">
+
+                </div>
+                <hr />
+                <div class="radioSection">
+                    <label>Select Score:</label><br />
+                    <div class="scoreRBs">
+                        <input type="radio" name="score" value="1">
+                        <span class="starDiv"></span>
+                    </div>
+                    <div class="scoreRBs">
+                        <input type="radio" name="score" value="2">
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                    </div>
+                    <div class="scoreRBs">
+                        <input type="radio" name="score" value="3">
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                    </div>
+                    <div class="scoreRBs">
+                        <input type="radio" name="score" value="4">
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                    </div>
+                    <div class="scoreRBs">
+                        <input type="radio" name="score" value="5">
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                        <span class="starDiv"></span>
+                    </div>
+                </div>
+                <div class="radioSection">
+                    <label>Select Score Operator:</label><br />
+                    <select data-dojo-attach-point="ddlScore">
+                        <option value="eq">=</option>
+                        <option value="gt">></option>
+                        <option value="gteq">>=</option>
+                        <option value="lt"><</option>
+                        <option value="lteq"><=</option>
+                    </select><br />
+                    <label>Where Acres is Greater Than (>):</label><br />
+                    <select data-dojo-attach-point="ddlAcresGreater">
+                        <option value="any">Any Area</option>
+                        <option value="100">100</option>
+                        <option value="50">50</option>
+                        <option value="25">25</option>
+                        <option value="10">10</option>
+                        <option value="5">5</option>
+                        <option value="1">1</option>
+                    </select><br />
+                    <label>Where Acres is Less Than (<):</label><br />
+                    <select data-dojo-attach-point="ddlAcresLess">
+                        <option value="any">Any Area</option>
+                        <option value="100">100</option>
+                        <option value="50">50</option>
+                        <option value="25">25</option>
+                        <option value="10">10</option>
+                        <option value="5">5</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="jimu-btn selectBtn" data-dojo-attach-point="selectLocation">Search</div>
+            </div>
+            <div class="loc-tab-view result-tab-view" data-dojo-attach-point="resultsTabView">
+                <label>Site suitable for:</label><br />
+                <div class="radioSection">
+                    <div class="checkDivInput"><input data-dojo-attach-point="UPSuit" type="checkbox"><span>Upland Preservation</span></div>
+                    <div class="checkDivInput"><input data-dojo-attach-point="RPSuit" type="checkbox"><span>Riparian Preservation</span></div>
+                    <div class="checkDivInput"><input data-dojo-attach-point="WPSuit" type="checkbox"><span>Wetland Preservation</span></div>
+                    <div class="checkDivInput"><input data-dojo-attach-point="SPSuit" type="checkbox"><span>Stormwater Natural Infrastructure Preservation</span></div>
+                </div>
+                <div class="radioSection">
+                    <div class="checkDivInput"><input data-dojo-attach-point="URSuit" type="checkbox"><span>Upland Restoration</span></div>
+                    <div class="checkDivInput"><input data-dojo-attach-point="RRSuit" type="checkbox"><span>Riparian Restoration</span></div>
+                    <div class="checkDivInput"><input data-dojo-attach-point="WRSuit" type="checkbox"><span>Wetland Restoration</span></div>
+                    <div class="checkDivInput"><input data-dojo-attach-point="SRSuit" type="checkbox"><span>Stormwater Natural Infrastructure Restoration</span></div>
+                </div>
+                <hr/>
+                <label>Select a county:</label><br/>
+                <select data-dojo-attach-point="ddlSACounty">
+                    <option value="all">All Counties</option>
+                </select><br />
+                <label>Select a Watershed:</label><br />
+                <select data-dojo-attach-point="ddlSAWatershed">
+                    <option value="all">All Watersheds</option>
+                </select><br />
+                <input data-dojo-attach-point="chkLOW" type="checkbox"><span>Select only sites where property owners are willing to participate.</span>
+                <hr />
+                <input data-dojo-attach-point="chkDate" type="checkbox"><span>Between Date Range?</span><br />
+
+                <div class="subDateDiv">
+                    <label>Site Visits between:</label>
+                    <br />
+                    <div data-dojo-attach-point="startDate"></div>&nbsp;and&nbsp;
+                    <div data-dojo-attach-point="endDate"></div>
+                </div>
+                <div class="splitter"><span><strong>Or</strong></span></div>
+                <br />
+                <div class="checkDiv">
+                    <span>Search by Site Visit ID:</span><input data-dojo-attach-point="txtID" type="text">
+                </div>
+                <div class="jimu-btn selectBtn" data-dojo-attach-point="searchAssessBtn">Find Visits</div>
+                <div data-dojo-attach-point="locationLoadingDiv"></div>
+                <div data-dojo-attach-point="locationDetailsDiv"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,892 @@
+{
+  "aoiTabText": "AOI",
+  "reportTabText": "TAC Report",
+  "placenameButtonText": "Placename",
+  "drawToolsButtonText": "Draw",
+  "shapefileButtonText": "Shapefile",
+  "coordinatesButtonText": "Coordinates",
+  "showPlacenameWidget": false,
+  "showDrawToolsWidget": true,
+  "showShapefileWidget": true,
+  "showCoordinatesWidget": false,
+  "allowShapefilesUpload": false,
+  "areaUnits": "Standard",
+  "maxFeaturesForAnalysis": 1000,
+  "searchTolerance": 20,
+  "traverseUnit": "uSSurveyFeet",
+  "traverseDirectionUnit": "decimalDegree",
+  "defaultBufferDistance": 0,
+  "defaultBufferUnit": "UNIT_FOOT",
+  "reportSettings": {
+    "printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+    "footnote": "",
+    "logo": "${appPath}/widgets/Screening/images/default-logo.png",
+    "columnTitleColor": "#c6d9ec",
+    "reportTitle": "Screening Report"
+  },
+  "searchSourceSettings": {
+    "allPlaceholder": "",
+    "showInfoWindowOnSelect": true,
+    "sources": [
+      {
+        "url": "https://geodata.md.gov/imap/rest/services/GeocodeServices/MD_CompositeLocator/GeocodeServer",
+        "name": "MD Statewide Composite Locator",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "MD Statewide Composite Locator",
+        "countryCode": "",
+        "zoomScale": 50000,
+        "maxSuggestions": 6,
+        "maxResults": 6,
+        "searchInCurrentMapExtent": false,
+        "enableLocalSearch": false,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000,
+        "type": "locator"
+      },
+      {
+        "name": "MD Composite Locator (SHAREPOINT ONLY)",
+        "url": "https://utility.arcgis.com/usrsvcs/servers/8fade5b4c1ab46ee82a5398ca7bd231c/rest/services/SharePoint/MD_CompositeLocatorSharePoint/GeocodeServer",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "MD Composite Locator (SHAREPOINT ONLY)",
+        "maxResults": 6,
+        "searchInCurrentMapExtent": false,
+        "type": "locator",
+        "enableLocalSearch": false,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000
+      }
+    ]
+  },
+  "placenameSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAACNhJREFUeNrsnF1MVEcUx4f9hGWBBeJ3FVCiYtNAY2rSB6up9UHaB2rkoT7IGpsmPhjXj6SS2iptjD6owWprk9ooPvRFY6QPaNKYQhODUZtI/Gxr5cNiwYp8Lyy7SM9Z594793KvLHvnzi6kJ5ksLrv3Dr858z/nzMw1ZWxsjIi2PW73aniRWj60PJ2P9UK7xbSLh0KhHtF9TREFCKAgiAA0P7SsOC9TC+0MgLo4bQBRMPuhVXC8bCteE0CdmdKAAA6C2ad932u3kwVuN5nldBGf00HSbTbd73eGw6QnEiGdIyOkA9rI+L42oFcCqFtTChCAKcGpAK2Yfb8wNZUs8XhItsMx6WuGoZ9/h0KkaXCQDIyOan+9AyBVTwlAAKeMwpF1Br1leUaGoadINgTeMgxe46IAXfB5J3ib1pqHh8mN/n6tR9UAJH9SAwI42MHT0r9dKSlklc8HU8kZ0/cHAc4gTCWtuQCSB67hYmChR/0GkB4CLCshcQOkhZMDf9BagOMESLGaESDJbHCtLPBG1qvQm6729VkGiQsgqjn10rRCrcEpNRk4sQBiPQpBpdDro5g39PSwU+4YQAokBSCA46OJXDTZm+1ykfd8vgm/l1FcTHLLy4m7qIg4V6wY9/tIezsJ3rlDnl2+TJ7U1pKRHnWO6AB9ygRIDqprCOnn7m72Ix/yyJd4AMLosT3WaZWzciWZEQjoQjGyUZhCnadOkUcnTqhAoQdlg7dKkDTTDTPxfLPZtylAtGT4RRLktdnZhiHcCeDyq6uJe82auO+HoB74/aSzvl4FKSctjdjpoFyDzzDCbVqPbCY9cL/0Q1F6uiGctPx8sujcOVNw0OyZmeT1CxdI4bZt8ns4wL1MJEPtcykeXEEHUTwgeuNVUmb8BiSARp6zqK6OOJYu5RZ6F1RVkaV79yp69eJFVOCj9wM4bwEkvUEU7UHyjYvBewzhgOcQdYe52NydO0l+hVLeYfQbpXJRALrkVVKBVbQeFAeI3lD2HuyQns3bvZur52gtDzzJW1DAQAoTg0ELiPYg+YZFBlMLdcdbUUGsNNSkwspK+d/DkbDKixgt8osGJAvfa5CL6NmcXbuErNfkbNig8qIhxosKIbpRy6LJrPWAaGJYLOU9egUoao+nrEzYql/B1q2KF41GlCmuHrwyUR4kj8R8A+/JLS0lIi173Tr55xcwxTCqoWmK5BJRgOTplWPXz3tSly0TCsgxbx5xMeVNmAKSSh9q+SI1KGoeu/7Xsb4SbdklJSovkgdRSV6LhXtQPCuDIizMrDg6beaKBRuZJpaWl6cqP9hFu/8BYXhvbdV932fSy6cNICN7Gg4LBzTh+kro/n3hILpvKTs/dpud23XjAST3pDsS0f3A8L17QuHg6iO7kGa3peiGfOEeFBzVv3lXXZ1Y77l0SZ3JM5HruTKITcI9qDOsv8AehtEMXhS2fU6aT55UF7EMoA5lE6BFCKBDoVC9fPNXCOA/R44IgfP8/Hky0NysZNUAR1p+bQ+pBrBeZBRriHYOt2kM5vhQSwsZqKmxFA6uUT88eFBd5jD11+PQcMIAyfMH98uNrP3wYRJ58MAyQA+3b1d5TzRhZDYV25S+tcZ7wME0oPvBoHHKD1r0V3k5If393OG07dtH2mtr1d7jcMqbibgFxGwknhGaKMJooOBF5w+etNDM9fGQSku5ehLCeXj8uOo9BJPhUqYXngJhTCwg7U3vDwVfXQaAHqEnha5cMa05d9evHwcHLd3lUnkPc0Smhg6oWEA0mjVIobRzgpQePelPv5882biRhK9fnzSYJ0ePksaSEtWmoVyQ4ukPWnPhqY8b6im938ygmN1ZzccBi667QPQozc6O+btm9+bZsI7bz5L3/Nrby4pzFQxk4gBRSNiB6DE73LBboiyUT9piPd3BGm47G+zNY3lfYnZv3nQ1T0comsajaxvVZ1aYV3O6Q3NOqIzHsWFeyx2rycvTFKQBXDws4Ggx1lus7jSop+BmXgc7uQCiI1UmhX2EZKWh3viY3dxG8Bwm56nleTyY24IZjWrHpKh2Oxi0DBB7uuz3oSFVxkxM7KJaCohCCkh61DQwMGHoj8c8DuUwJ+qdJqT7eT+uYMWSq1/WI9AFnnqEgux1u2TdaVTDqWJXGpIWEBXH6OEG1AVeeoRTKpPZyb0NpcRzxUMbzOY7Ij2IUJGslfQIdcKsYSkhhXSs/e4pGtfLW3csB8RMtVYe+ZG2lLja16vVnZYpB4iKpTyy8eZHKfTwOHsdJqTXWP1olKX7YlQ0q6T8qFGd6cZkPiakY+rArDG3EhMnx5ICkLYUwXxlMnqEId3JhHRMHXiXEgkHJP0xUuiPVY+0IV0TDausfEZMOCAqooFY9Ugb0vGpHmYBzLKQnkgPUoX+ifTIy4R0XMJgTs5bGtITCkgb+o30CEN6Gg3puKWkU0q0TFtA2tCv1SNcwkhkSE8GD1KFfq0eofewIZ0pJZpEhHRdPUzEfyyAtsftRlDR0/r4TOs7Wcqj9DrPfr0pKmol3IP0qn5Wj6JVulrAdyQKTsI86MuvDuDzC2kjJ78pjXR1nY1OL/q8GVbp0gJYitN5Le3Tyg/o1/q++Pyz8LQDBDBy4QVbJnn5TKtq22Pku28DkWfPxj9IZrcPerZ8soXMnDGo+Q26F5byXRRa15QDBFDmw8ssaLMn/PDTf9OHTv/w9Vh4ZCb7dury5Qds696/FsPtMAx2YANYHUkNCMAshpeFWClMqhM3by4cvFx3TA73c+b+5Nzy8fdxdAGF7A8A9TipAAEYPDXwNp1GcVnk7JmNI21tH9lSU5tTN22u1JlakzGcdjd5aBavKGYKTrQ43eT/0eb13klb/W61STiEal4xjz/MwcF7Ms3CkXUnsLOSoyLO5nERHh4kbq85Af0yDQjmOYbc5iQEdDepohiNYIuTxHPu8opkvMO8h0KazUPf4gDzCL2ZZ8ZtVaLopJByLYY1REO6JUmisFqMelYm0xCgR1t2TAAiyLz20TIjaHXf/xNgAFypRckzpE6oAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "drawToolSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "shapefileSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "coordinatesSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAACNhJREFUeNrsnF1MVEcUx4f9hGWBBeJ3FVCiYtNAY2rSB6up9UHaB2rkoT7IGpsmPhjXj6SS2iptjD6owWprk9ooPvRFY6QPaNKYQhODUZtI/Gxr5cNiwYp8Lyy7SM9Z594793KvLHvnzi6kJ5ksLrv3Dr858z/nzMw1ZWxsjIi2PW73aniRWj60PJ2P9UK7xbSLh0KhHtF9TREFCKAgiAA0P7SsOC9TC+0MgLo4bQBRMPuhVXC8bCteE0CdmdKAAA6C2ad932u3kwVuN5nldBGf00HSbTbd73eGw6QnEiGdIyOkA9rI+L42oFcCqFtTChCAKcGpAK2Yfb8wNZUs8XhItsMx6WuGoZ9/h0KkaXCQDIyOan+9AyBVTwlAAKeMwpF1Br1leUaGoadINgTeMgxe46IAXfB5J3ib1pqHh8mN/n6tR9UAJH9SAwI42MHT0r9dKSlklc8HU8kZ0/cHAc4gTCWtuQCSB67hYmChR/0GkB4CLCshcQOkhZMDf9BagOMESLGaESDJbHCtLPBG1qvQm6729VkGiQsgqjn10rRCrcEpNRk4sQBiPQpBpdDro5g39PSwU+4YQAokBSCA46OJXDTZm+1ykfd8vgm/l1FcTHLLy4m7qIg4V6wY9/tIezsJ3rlDnl2+TJ7U1pKRHnWO6AB9ygRIDqprCOnn7m72Ix/yyJd4AMLosT3WaZWzciWZEQjoQjGyUZhCnadOkUcnTqhAoQdlg7dKkDTTDTPxfLPZtylAtGT4RRLktdnZhiHcCeDyq6uJe82auO+HoB74/aSzvl4FKSctjdjpoFyDzzDCbVqPbCY9cL/0Q1F6uiGctPx8sujcOVNw0OyZmeT1CxdI4bZt8ns4wL1MJEPtcykeXEEHUTwgeuNVUmb8BiSARp6zqK6OOJYu5RZ6F1RVkaV79yp69eJFVOCj9wM4bwEkvUEU7UHyjYvBewzhgOcQdYe52NydO0l+hVLeYfQbpXJRALrkVVKBVbQeFAeI3lD2HuyQns3bvZur52gtDzzJW1DAQAoTg0ELiPYg+YZFBlMLdcdbUUGsNNSkwspK+d/DkbDKixgt8osGJAvfa5CL6NmcXbuErNfkbNig8qIhxosKIbpRy6LJrPWAaGJYLOU9egUoao+nrEzYql/B1q2KF41GlCmuHrwyUR4kj8R8A+/JLS0lIi173Tr55xcwxTCqoWmK5BJRgOTplWPXz3tSly0TCsgxbx5xMeVNmAKSSh9q+SI1KGoeu/7Xsb4SbdklJSovkgdRSV6LhXtQPCuDIizMrDg6beaKBRuZJpaWl6cqP9hFu/8BYXhvbdV932fSy6cNICN7Gg4LBzTh+kro/n3hILpvKTs/dpud23XjAST3pDsS0f3A8L17QuHg6iO7kGa3peiGfOEeFBzVv3lXXZ1Y77l0SZ3JM5HruTKITcI9qDOsv8AehtEMXhS2fU6aT55UF7EMoA5lE6BFCKBDoVC9fPNXCOA/R44IgfP8/Hky0NysZNUAR1p+bQ+pBrBeZBRriHYOt2kM5vhQSwsZqKmxFA6uUT88eFBd5jD11+PQcMIAyfMH98uNrP3wYRJ58MAyQA+3b1d5TzRhZDYV25S+tcZ7wME0oPvBoHHKD1r0V3k5If393OG07dtH2mtr1d7jcMqbibgFxGwknhGaKMJooOBF5w+etNDM9fGQSku5ehLCeXj8uOo9BJPhUqYXngJhTCwg7U3vDwVfXQaAHqEnha5cMa05d9evHwcHLd3lUnkPc0Smhg6oWEA0mjVIobRzgpQePelPv5882biRhK9fnzSYJ0ePksaSEtWmoVyQ4ukPWnPhqY8b6im938ygmN1ZzccBi667QPQozc6O+btm9+bZsI7bz5L3/Nrby4pzFQxk4gBRSNiB6DE73LBboiyUT9piPd3BGm47G+zNY3lfYnZv3nQ1T0comsajaxvVZ1aYV3O6Q3NOqIzHsWFeyx2rycvTFKQBXDws4Ggx1lus7jSop+BmXgc7uQCiI1UmhX2EZKWh3viY3dxG8Bwm56nleTyY24IZjWrHpKh2Oxi0DBB7uuz3oSFVxkxM7KJaCohCCkh61DQwMGHoj8c8DuUwJ+qdJqT7eT+uYMWSq1/WI9AFnnqEgux1u2TdaVTDqWJXGpIWEBXH6OEG1AVeeoRTKpPZyb0NpcRzxUMbzOY7Ij2IUJGslfQIdcKsYSkhhXSs/e4pGtfLW3csB8RMtVYe+ZG2lLja16vVnZYpB4iKpTyy8eZHKfTwOHsdJqTXWP1olKX7YlQ0q6T8qFGd6cZkPiakY+rArDG3EhMnx5ICkLYUwXxlMnqEId3JhHRMHXiXEgkHJP0xUuiPVY+0IV0TDausfEZMOCAqooFY9Ugb0vGpHmYBzLKQnkgPUoX+ifTIy4R0XMJgTs5bGtITCkgb+o30CEN6Gg3puKWkU0q0TFtA2tCv1SNcwkhkSE8GD1KFfq0eofewIZ0pJZpEhHRdPUzEfyyAtsftRlDR0/r4TOs7Wcqj9DrPfr0pKmol3IP0qn5Wj6JVulrAdyQKTsI86MuvDuDzC2kjJ78pjXR1nY1OL/q8GVbp0gJYitN5Le3Tyg/o1/q++Pyz8LQDBDBy4QVbJnn5TKtq22Pku28DkWfPxj9IZrcPerZ8soXMnDGo+Q26F5byXRRa15QDBFDmw8ssaLMn/PDTf9OHTv/w9Vh4ZCb7dury5Qds696/FsPtMAx2YANYHUkNCMAshpeFWClMqhM3by4cvFx3TA73c+b+5Nzy8fdxdAGF7A8A9TipAAEYPDXwNp1GcVnk7JmNI21tH9lSU5tTN22u1JlakzGcdjd5aBavKGYKTrQ43eT/0eb13klb/W61STiEal4xjz/MwcF7Ms3CkXUnsLOSoyLO5nERHh4kbq85Af0yDQjmOYbc5iQEdDepohiNYIuTxHPu8opkvMO8h0KazUPf4gDzCL2ZZ8ZtVaLopJByLYY1REO6JUmisFqMelYm0xCgR1t2TAAiyLz20TIjaHXf/xNgAFypRckzpE6oAAAAAElFTkSuQmCC",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "aoiSymbol": {
+    "color": [
+      255,
+      255,
+      255,
+      0
+    ],
+    "outline": {
+      "color": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "type": "esriSFS",
+    "style": "esriSFSSolid"
+  },
+  "layers": [
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_WP/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_WP_2918_0",
+      "label": "",
+      "layerName": "Wetland Preservation",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_WP/MapServer/"
+    },
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_WR/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_WR_2919_0",
+      "label": "",
+      "layerName": "Wetland Restoration",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_WR/MapServer/"
+    },
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_RP/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_RP_4510_0",
+      "label": "",
+      "layerName": "Riparian Preservation",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_RP/MapServer/"
+    },
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_RR/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_RR_1589_0",
+      "label": "",
+      "layerName": "Riparian Restoration",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_RR/MapServer/"
+    },
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_THR/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_THR_9934_0",
+      "label": "",
+      "layerName": "Terrestrial Habitat Restoration",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_THR/MapServer/"
+    },
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_THP/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_THP_2256_0",
+      "label": "",
+      "layerName": "Terrestrial Habitat Preservaton",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_THP/MapServer/"
+    },
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_HP/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_HP_7353_0",
+      "label": "",
+      "layerName": "Natural Stormwater System Preservation",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_HP/MapServer/"
+    },
+    {
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_HR/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WestVirginia_HR_5736_0",
+      "label": "",
+      "layerName": "Degraded Stormwater System Restoration",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeInteger",
+          "alias": "GRIDCODE",
+          "label": "Score"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_HR/MapServer/"
+    },
+    {
+      "url": "https://tagis.dep.wv.gov/arcgis/rest/services/WVDEP_enterprise/watershed_assessment_branch/MapServer/18",
+      "geometryType": "esriGeometryPolygon",
+      "id": "watershed_assessment_branch_6678",
+      "label": "",
+      "layerName": "DEP Wetland Inventory",
+      "layerVersion": 10.3,
+      "selectedFields": {
+        "WETLAND_TY": {
+          "name": "WETLAND_TY",
+          "type": "esriFieldTypeString",
+          "alias": "WETLAND_TYPE",
+          "length": 50,
+          "label": ""
+        }
+      },
+      "layerId": "18",
+      "baseURL": "https://tagis.dep.wv.gov/arcgis/rest/services/WVDEP_enterprise/watershed_assessment_branch/MapServer/"
+    },
+    {
+      "url": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/1",
+      "geometryType": "esriGeometryPolygon",
+      "id": "wv_protected_lands_wm_9769_1",
+      "label": "",
+      "layerName": "Local Lands",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "Own_Type": {
+          "name": "Own_Type",
+          "type": "esriFieldTypeString",
+          "alias": "Owner Type",
+          "length": 50,
+          "label": ""
+        }
+      },
+      "layerId": "1",
+      "baseURL": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/"
+    },
+    {
+      "url": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/6",
+      "geometryType": "esriGeometryPolygon",
+      "id": "wv_protected_lands_wm_9769_6",
+      "label": "",
+      "layerName": "State Parks",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "Unit_Nm": {
+          "name": "Unit_Nm",
+          "type": "esriFieldTypeString",
+          "alias": "Unit_Nm",
+          "length": 250,
+          "label": ""
+        }
+      },
+      "layerId": "6",
+      "baseURL": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/"
+    },
+    {
+      "url": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/5",
+      "geometryType": "esriGeometryPolygon",
+      "id": "wv_protected_lands_wm_9769_5",
+      "label": "",
+      "layerName": "State Forests",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "Mang_Name": {
+          "name": "Mang_Name",
+          "type": "esriFieldTypeString",
+          "alias": "Mang_Name",
+          "length": 70,
+          "label": ""
+        }
+      },
+      "layerId": "5",
+      "baseURL": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/"
+    },
+    {
+      "url": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/4",
+      "geometryType": "esriGeometryPolygon",
+      "id": "wv_protected_lands_wm_9769_4",
+      "label": "",
+      "layerName": "Wildlife Management Areas",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "Mang_Name": {
+          "name": "Mang_Name",
+          "type": "esriFieldTypeString",
+          "alias": "Mang_Name",
+          "length": 70,
+          "label": ""
+        }
+      },
+      "layerId": "4",
+      "baseURL": "https://services.wvgis.wvu.edu/arcgis/rest/services/Boundaries/wv_protected_lands_wm/MapServer/"
+    },
+    {
+      "url": "https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer/28",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NFHL_553",
+      "label": "",
+      "layerName": "Flood Hazard Zones (FEMA)",
+      "layerVersion": 10.3,
+      "selectedFields": {
+        "FLD_ZONE": {
+          "name": "FLD_ZONE",
+          "type": "esriFieldTypeString",
+          "alias": "FLD_ZONE",
+          "length": 17,
+          "label": ""
+        },
+        "ZONE_SUBTY": {
+          "name": "ZONE_SUBTY",
+          "type": "esriFieldTypeString",
+          "alias": "ZONE_SUBTY",
+          "length": 72,
+          "label": ""
+        }
+      },
+      "layerId": "28",
+      "baseURL": "https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer/"
+    },
+    {
+      "url": "https://tagis.dep.wv.gov/arcgis/rest/services/WVDEP_enterprise/watershed_assessment_branch/MapServer/15",
+      "geometryType": "esriGeometryPolyline",
+      "id": "watershed_assessment_branch_1576",
+      "label": "",
+      "layerName": "2016 303d Impaired Streams (All)",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "Mang_Name": {
+          "name": "StreamName",
+          "type": "esriFieldTypeString",
+          "alias": "StreamName",
+          "length": 70,
+          "label": ""
+        }
+      },
+      "layerId": "15",
+      "baseURL": "https://tagis.dep.wv.gov/arcgis/rest/services/WVDEP_enterprise/watershed_assessment_branch/MapServer/"
+    },
+    {
+      "url": "https://services.wvgis.wvu.edu/arcgis/rest/services/ManMadeStructures/wv_WaterSewer_WVWDA/MapServer/5",
+      "geometryType": "esriGeometryPolygon",
+      "id": "wv_WaterSewer_WVWDA_8485",
+      "label": "",
+      "layerName": "Sewer Served Areas",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "Acres": {
+          "name": "Acres",
+          "type": "esriFieldTypeDouble",
+          "alias": "Acres",
+          "label": ""
+        }
+      },
+      "layerId": "5",
+      "baseURL": "https://services.wvgis.wvu.edu/arcgis/rest/services/ManMadeStructures/wv_WaterSewer_WVWDA/MapServer/"
+    },
+    {
+      "url": "https://services.wvgis.wvu.edu/arcgis/rest/services/MapWV_BaseMap/wv_data_download/MapServer/35",
+      "geometryType": "esriGeometryPolygon",
+      "id": "wv_data_download_5148",
+      "label": "",
+      "layerName": "WV Geology",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "MAP_UNIT": {
+          "name": "MAP_UNIT",
+          "type": "esriFieldTypeString",
+          "alias": "MAP_UNIT",
+          "length": 6,
+          "label": ""
+        },
+        "CLASS": {
+          "name": "CLASS",
+          "type": "esriFieldTypeString",
+          "alias": "CLASS",
+          "length": 20,
+          "label": ""
+        },
+        "TYPE": {
+          "name": "TYPE",
+          "type": "esriFieldTypeString",
+          "alias": "TYPE",
+          "length": 13,
+          "label": ""
+        }
+      },
+      "layerId": "35",
+      "baseURL": "https://services.wvgis.wvu.edu/arcgis/rest/services/MapWV_BaseMap/wv_data_download/MapServer/"
+    },
+    {
+      "url": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/4",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WVhydrology_wm_7934_4",
+      "label": "",
+      "layerName": "8 digit watersheds",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "NAME": {
+          "name": "NAME",
+          "type": "esriFieldTypeString",
+          "alias": "NAME",
+          "length": 50,
+          "label": ""
+        },
+        "ACRES": {
+          "name": "ACRES",
+          "type": "esriFieldTypeDouble",
+          "alias": "ACRES",
+          "label": ""
+        }
+      },
+      "layerId": "4",
+      "baseURL": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/"
+    },
+    {
+      "url": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/5",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WVhydrology_wm_7934_5",
+      "label": "",
+      "layerName": "10 digit watersheds",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "HU_10_NAME": {
+          "name": "HU_10_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "HU_10_NAME",
+          "length": 80,
+          "label": ""
+        },
+        "ACRES": {
+          "name": "ACRES",
+          "type": "esriFieldTypeDouble",
+          "alias": "ACRES",
+          "label": ""
+        }
+      },
+      "layerId": "5",
+      "baseURL": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/"
+    },
+    {
+      "url": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/6",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WVhydrology_wm_7934_6",
+      "label": "",
+      "layerName": "12 digit watersheds",
+      "layerVersion": 10.31,
+      "selectedFields": {
+        "HU_12_NAME": {
+          "name": "HU_12_NAME",
+          "type": "esriFieldTypeString",
+          "alias": "HU_12_NAME",
+          "length": 80,
+          "label": ""
+        },
+        "ACRES": {
+          "name": "ACRES",
+          "type": "esriFieldTypeDouble",
+          "alias": "ACRES",
+          "label": ""
+        }
+      },
+      "layerId": "6",
+      "baseURL": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/"
+    }
+  ],
+  "downloadSettings": {
+    "type": "syncEnable",
+    "layers": [
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_WP/MapServer/0",
+        "id": "WestVirginia_WP_2918_0",
+        "layerName": "Wetland Preservation",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_WR/MapServer/0",
+        "id": "WestVirginia_WR_2919_0",
+        "layerName": "Wetland Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_RP/MapServer/0",
+        "layerName": "Riparian Preservation",
+        "id": "WestVirginia_RP_4510_0",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_RR/MapServer/0",
+        "id": "WestVirginia_RR_1589_0",
+        "layerName": "Riparian Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_THR/MapServer/0",
+        "id": "WestVirginia_THR_9934_0",
+        "layerName": "Terrestrial Habitat Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_THP/MapServer/0",
+        "id": "WestVirginia_THP_2256_0",
+        "layerName": "Terrestrial Habitat Preservaton",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_HP/MapServer/0",
+        "id": "WestVirginia_HP_7353_0",
+        "layerName": "Natural Stormwater System Preservation",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/WestVirginia_HR/MapServer/0",
+        "id": "WestVirginia_HR_5736_0",
+        "layerName": "Degraded Stormwater System Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://tagis.dep.wv.gov/arcgis/rest/services/WVDEP_enterprise/watershed_assessment_branch/MapServer/18",
+        "layerName": "DEP Wetland Inventory",
+        "id": "watershed_assessment_branch_6678",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://hazards.fema.gov/gis/nfhl/rest/services/public/NFHL/MapServer/28",
+        "layerName": "Flood Hazard Zones (FEMA)",
+        "id": "NFHL_553",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://tagis.dep.wv.gov/arcgis/rest/services/WVDEP_enterprise/watershed_assessment_branch/MapServer/15",
+        "id": "watershed_assessment_branch_1576",
+        "layerName": "2016 303d Impaired Streams (All)",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/4",
+        "layerName": "8 digit watersheds",
+        "id": "WVhydrology_wm_7934_4",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/5",
+        "layerName": "10 digit watersheds",
+        "id": "WVhydrology_wm_7934_5",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://tagis.dep.wv.gov/arcgis/rest/services/webMercator/WVhydrology_wm/MapServer/6",
+        "layerName": "12 digit watersheds",
+        "id": "WVhydrology_wm_7934_6",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      }
+    ],
+    "extractDataTaskURL": "",
+    "downloadingFileOptions": [
+      "csv"
+    ]
+  }
+}

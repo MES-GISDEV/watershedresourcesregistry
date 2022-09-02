@@ -1,0 +1,156 @@
+.jimu-widget-findOpsMD{
+  position: relative;
+  width: 99%;
+  height: 100%;
+  min-width: 222px;
+  min-height: 237px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.jimu-widget-findOpsMD .loc-widget-content{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: auto;
+  top: 0;
+  bottom: 0;
+}
+/* css for tab */
+.jimu-widget-findOpsMD .loc-tab-header{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-size: 14px;
+}
+
+.jimu-widget-findOpsMD .loc-tab-item{
+  width: 50%;
+  height: 100%;
+  line-height: 30px;
+  cursor: pointer;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.jimu-widget-findOpsMD .loc-tab-item.selected{
+  border-bottom: 2px solid #898989;
+  font-weight: bold;
+  color: #000;
+}
+
+.jimu-widget-findOpsMD .loc-tabs-container{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 30px;
+  bottom: 0;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.jimu-widget-findOpsMD .loc-tab-view{
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.jimu-widget-findOpsMD .loc-tab-view.selected{
+  display: block;
+}
+
+.jimu-widget-findOpsMD .selectBtn{
+    width: 100%;
+    margin-top: 20px;
+}
+.jimu-widget-findOpsMD .selectBtn.jimu-state-active {
+    background-color: #DDDDDD;
+    border: 2px solid #000000;
+}
+
+.jimu-widget-findOpsMD .loading-container {
+    width: 100px;
+}
+.jimu-widget-findOpsMD .radioSection{
+    width: 49%;
+    display: inline-block;
+}
+.jimu-widget-findOpsMD .subDateDiv{
+    padding-left: 20px;
+}
+.jimu-widget-findOpsMD .splitter
+{
+    width: 100%;
+    text-align:center;
+    position:relative;
+    padding-top: 10px;
+}
+.jimu-widget-findOpsMD .splitter span {
+    display: inline-block;    
+}
+.jimu-widget-findOpsMD .splitter span:before,
+.jimu-widget-findOpsMD .splitter span:after {
+    border-top: 1px solid green;
+    display: block;
+    height: 1px;
+    content: " ";
+    width: 30%;
+    position: absolute;
+    top: 1.2em;
+}
+.jimu-widget-findOpsMD .splitter span:before 
+{
+   left: 50px;  
+   right: auto;     
+}
+.jimu-widget-findOpsMD .splitter span:after {
+   right: 50px;  
+   left: auto; 
+}
+.jimu-widget-findOpsMD .dijitTextBox .dijitInputInner {
+    height: 20px;
+    line-height: 15px;
+}
+.jimu-widget-findOpsMD .dijitTextBox {
+    height: 24px;
+    border-radius: 0px;
+    border-color: rgb(169, 169, 169);
+}
+.jimu-widget-findOpsMD .dijitComboBox .dijitButtonNode{
+    background-image: none;
+    background-color: inherit;
+}
+
+.jimu-widget-findOpsMD .starDiv{
+    background-image: url(images/star.png);
+    background-repeat: no-repeat;
+    height: 13px;
+    width: 13px;
+    display: inline-block;
+    background-position: center;
+}
+.jimu-widget-findOpsMD .radioClass {
+    width: 50%;
+    display: inline-block;
+}
+.jimu-widget-findOpsMD .radioContainer{
+    width: 100%;
+}
+.jimu-widget-findOpsMD .watershedDDL{
+    width: 400px;
+}
+.jimu-widget-findOpsMD .wtrShedChoice{
+	width:100%;
+	
+}
+.jimu-widget-findOpsMD .wtrShedChoice div{
+	width:32%;
+	display:inline-block;
+	
+}

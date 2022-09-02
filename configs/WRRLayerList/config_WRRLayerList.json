@@ -1,0 +1,256 @@
+{
+  "layers": [
+  {
+    "id": "KM7",
+    "wrrID": "DelawareWRR_HP_4563",
+    "title": "Stormwater Natural Infrastructure Preservation Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "4C1",
+    "wrrID": "DelawareWRR_HR_6118",
+    "title": "Stormwater Compromised Infrastructure Restoration Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "Bdl",
+    "wrrID": "DelawareWRR_RP_5181",
+    "title": "Riparian Preservation Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "OBI",
+    "wrrID": "DelawareWRR_RR_2326",
+    "title": "Riparian Restoration Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "AcM",
+    "wrrID": "DelawareWRR_UP_4462",
+    "title": "Upland Preservation Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "f82",
+    "wrrID": "DelawareWRR_UR_4569",
+    "title": "Upland Restoration Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "PPm",
+    "wrrID": "DelawareWRR_WP_8043",
+    "title": "Wetland Preservation Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "Z2h",
+    "wrrID": "DelawareWRR_WR_3750",
+    "title": "Wetland Restoration Model Output",
+    "category": "WRR Models"
+  },
+  {
+    "id": "TvC",
+    "wrrID": "survey123_f428e20cada347319bfc88cd00a82a98_fieldworker_9697",
+    "title": "Site Visit",
+    "category": "Site Visit Locations"
+  },
+  {
+    "id": "19s",
+    "wrrID": "DE_Watersheds_9844",
+    "title": "Watersheds",
+    "category": "Water"
+  },
+  {
+    "id": "y7S",
+    "wrrID": "DE_TaxDitch_6583",
+    "title": "Tax Ditch",
+    "category": "Water"
+  },
+  {
+    "id": "XrC",
+    "wrrID": "DE_Water_1666",
+    "title": "Water Features",
+    "category": "Water"
+  },
+  {
+    "id": "3w2",
+    "wrrID": "DGS_WaterTableElevation_WET_89",
+    "title": "Water Table Elevation (feet)",
+    "category": "Water"
+  },
+  {
+    "id": "0G8",
+    "wrrID": "DE_RR_Feasibility_7562",
+    "title": "Runoff Reduction Feasibility",
+    "category": "Water"
+  },
+  {
+    "id": "X3M",
+    "wrrID": "EDW_WildScenicRiverSegments_01_9425",
+    "title": "National Wild and Scenic Rivers",
+    "category": "Water"
+  },
+  {
+    "id": "qVq",
+    "wrrID": "wms_2570",
+    "title": "NRCS Soil Data",
+    "category": "Soil"
+  },
+  {
+    "id": "Xlv",
+    "wrrID": "DE_Contours_6533",
+    "title": "Elevation Contours",
+    "category": "Elevation"
+  },
+  {
+    "id": "aqI",
+    "wrrID": "DE_DNREC_DEN_Features_326",
+    "title": "FEMA Flood Maps",
+    "category": "Flood Risk"
+  },
+  {
+    "id": "CW9",
+    "wrrID": "DE_FloodRiskAdaptationMap_2577",
+    "title": "Flood Risk Adaptation Map",
+    "category": "Flood Risk"
+  },
+  {
+    "id": "D4M",
+    "wrrID": "DE_HistoricPlaces_4974",
+    "title": "Historic Places",
+    "category": "Historic"
+  },
+  {
+    "id": "JqP",
+    "wrrID": "DE_HistoricMarkers_8242",
+    "title": "Historic Markers",
+    "category": "Historic"
+  },
+  {
+    "id": "gjL",
+    "wrrID": "DE_NaturePreserves_2146",
+    "title": "Nature Preserves",
+    "category": "Natural infrastructure"
+  },
+  {
+    "id": "uPg",
+    "wrrID": "DE_Park_Facilities_5857",
+    "title": "Park Facilities",
+    "category": "Natural infrastructure"
+  },
+  {
+    "id": "KML",
+    "wrrID": "DE_DeEcologicalNetwork_4100",
+    "title": "DE Ecological Network",
+    "category": "Natural infrastructure"
+  },
+  {
+    "id": "9qj",
+    "wrrID": "DE_DNREC_DEN_Features_8834",
+    "title": "Natural Areas",
+    "category": "Natural infrastructure"
+  },
+  {
+    "id": "rrE",
+    "wrrID": "DE_DNREC_DEN_Features_809",
+    "title": "Delaware Wetlands 2007",
+    "category": "Natural infrastructure"
+  },
+  {
+    "id": "YxO",
+    "wrrID": "DE_Public_Protected_Lands_5826",
+    "title": "Public Protected Lands",
+    "category": "Natural infrastructure"
+  },
+  {
+    "id": "IQ2",
+    "wrrID": "DE_Enviro_Justice_7685",
+    "title": "Environmental Justice",
+    "category": "Natural infrastructure"
+  },
+  {
+    "id": "PlD",
+    "wrrID": "DE_Road_Inventory_6490",
+    "title": "Road Inventory",
+    "category": "Transportation"
+  },
+  {
+    "id": "RXs",
+    "wrrID": "DE_Aeronautics_473",
+    "title": "Aeronautics",
+    "category": "Transportation"
+  },
+  {
+    "id": "Zqw",
+    "wrrID": "303D_NP21_1357",
+    "title": "303d Streams",
+    "category": "Impaired Areas"
+  },
+  {
+    "id": "HC1",
+    "wrrID": "NPS_Watershed_Plans_7735",
+    "title": "319 Watersheds",
+    "category": "Impaired Areas"
+  },
+  {
+    "id": "njY",
+    "wrrID": "DE_DNREC_DEN_Features_6133",
+    "title": "SIRB Sites",
+    "category": "Impaired Areas"
+  },
+  {
+    "id": "pPn",
+    "wrrID": "DE_DNREC_DEN_Features_6778",
+    "title": "Solid and Hazardous Waste",
+    "category": "Impaired Areas"
+  },
+  {
+    "id": "S3c",
+    "wrrID": "DE_DNREC_DEN_Features_7481",
+    "title": "Large Spray Irrigation Sites",
+    "category": "Impaired Areas"
+  },
+  {
+    "id": "4Lj",
+    "wrrID": "DE_DNREC_DEN_Features_6802",
+    "title": "Certified Brownfield Sites",
+    "category": "Impaired Areas"
+  },
+  {
+    "id": "y7O",
+    "wrrID": "DE_DNREC_DEN_Features_8717",
+    "title": "Leaking Tanks",
+    "category": "Impaired Areas"
+  },
+  {
+    "id": "fAk",
+    "wrrID": "USGS_EROS_LandCover_NLCD_5531",
+    "title": "USGS EROS LandCover NLCD",
+    "category": "Federal Layers"
+  },
+  {
+    "id": "8qU",
+    "wrrID": "NPDES_NP21_1987",
+    "title": "NPDES Outfalls",
+    "category": "Federal Layers"
+  },
+  {
+    "id": "Xi3",
+    "wrrID": "DE_Imagery_Sandy_8646",
+    "title": "Delaware Imagery Hurricane Sandy",
+    "category": "Imagery"
+  },
+  {
+    "id": "y7T",
+    "wrrID": "USA_States_Generalized_8861",
+    "title": "State Boundaries",
+    "category": "Boundary"
+  },
+  {
+    "id": "rnq",
+    "wrrID": "DE_WellHeadProtectionAreas_4672",
+    "title": "Well Head Protection Areas",
+    "category": "Boundary"
+  }
+]
+}

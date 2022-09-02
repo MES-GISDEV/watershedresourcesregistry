@@ -1,0 +1,686 @@
+{
+  "aoiTabText": "AOI",
+  "reportTabText": "WRR Report",
+  "placenameButtonText": "Placename",
+  "drawToolsButtonText": "Draw",
+  "shapefileButtonText": "Shapefile",
+  "coordinatesButtonText": "Coordinates",
+  "showPlacenameWidget": false,
+  "showDrawToolsWidget": true,
+  "showShapefileWidget": true,
+  "showCoordinatesWidget": false,
+  "allowShapefilesUpload": false,
+  "areaUnits": "Standard",
+  "maxFeaturesForAnalysis": 1000,
+  "searchTolerance": 20,
+  "traverseUnit": "uSSurveyFeet",
+  "traverseDirectionUnit": "decimalDegree",
+  "defaultBufferDistance": 0,
+  "defaultBufferUnit": "UNIT_FOOT",
+  "reportSettings": {
+    "printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+    "footnote": "",
+    "logo": "${appPath}/widgets/Screening/images/default-logo.png",
+    "columnTitleColor": "#c6d9ec",
+    "reportTitle": "Screening Report"
+  },
+  "searchSourceSettings": {
+    "allPlaceholder": "",
+    "showInfoWindowOnSelect": true,
+    "sources": [
+      {
+        "url": "http://geodata.md.gov/imap/rest/services/GeocodeServices/MD_CompositeLocator/GeocodeServer",
+        "name": "MD Statewide Composite Locator",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "MD Statewide Composite Locator",
+        "countryCode": "",
+        "zoomScale": 50000,
+        "maxSuggestions": 6,
+        "maxResults": 6,
+        "searchInCurrentMapExtent": true,
+        "enableLocalSearch": false,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000,
+        "type": "locator"
+      }
+    ]
+  },
+  "placenameSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "drawToolSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "shapefileSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "coordinatesSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "aoiSymbol": {
+    "color": [
+      255,
+      255,
+      255,
+      0
+    ],
+    "outline": {
+      "color": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "type": "esriSFS",
+    "style": "esriSFSSolid"
+  },
+  "layers": [
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_0",
+      "label": "",
+      "layerName": "Upland Preservation",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/1",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_1",
+      "label": "",
+      "layerName": "Upland Restoration",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "1",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/3",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_3",
+      "label": "",
+      "layerName": "Wetland Restoration",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "3",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/2",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_2",
+      "label": "",
+      "layerName": "Wetland Preservation",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "2",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/4",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_4",
+      "label": "",
+      "layerName": "Riparian Preservation",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "4",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/5",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_5",
+      "label": "",
+      "layerName": "Riparian Restoration",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "5",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/6",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_6",
+      "label": "",
+      "layerName": "Stormwater Natural Infrastructure Preservation",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "6",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/7",
+      "geometryType": "esriGeometryPolygon",
+      "id": "NationwideWRR_8659_7",
+      "label": "",
+      "layerName": "Stormwater Compromised Infrastructure Restoration",
+      "layerVersion": 10.11,
+      "selectedFields": {
+        "GRIDCODE": {
+          "name": "GRIDCODE",
+          "type": "esriFieldTypeDouble",
+          "alias": "GRIDCODE",
+          "label": ""
+        }
+      },
+      "layerId": "7",
+      "baseURL": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/"
+    },
+    {
+      "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/WatershedBoundaryDataset_HUC8/FeatureServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WatershedBoundaryDataset_HUC8_8677",
+      "label": "8 Digit Watershed",
+      "layerName": "8 Digit Watersheds",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "HUC8": {
+          "name": "HUC8",
+          "type": "esriFieldTypeString",
+          "alias": "HUC8",
+          "length": 8,
+          "editable": true,
+          "nullable": true,
+          "label": "HUC 8"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/WatershedBoundaryDataset_HUC8/FeatureServer/"
+    },
+    {
+      "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WatershedBoundaryDataset_HUC12/FeatureServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "WatershedBoundaryDataset_HUC12_7393",
+      "label": "12 Digit Watershed",
+      "layerName": "12 Digit Watersheds",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "HUC12": {
+          "name": "HUC12",
+          "type": "esriFieldTypeString",
+          "alias": "HUC12",
+          "length": 12,
+          "editable": true,
+          "nullable": true,
+          "label": "HUC 12"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WatershedBoundaryDataset_HUC12/FeatureServer/"
+    },
+    {
+      "url": "https://landscape1.arcgis.com/arcgis/rest/services/USA_NHDPlusV2_1_Flat/MapServer/3",
+      "geometryType": "esriGeometryPolygon",
+      "id": "USA_NHDPlusV2_1_Flat_5086_3",
+      "label": "Waterbodies",
+      "layerName": "Waterbodies - Feature Type",
+      "layerVersion": 10.2,
+      "selectedFields": {
+        "gnis_name": {
+          "name": "gnis_name",
+          "type": "esriFieldTypeString",
+          "alias": "GNIS Name",
+          "length": 65,
+          "label": "GNIS Name"
+        }
+      },
+      "layerId": "3",
+      "baseURL": "https://landscape1.arcgis.com/arcgis/rest/services/USA_NHDPlusV2_1_Flat/MapServer/"
+    },
+    {
+      "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_US_Fish_and_Wildlife_Service_Lands/FeatureServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "id": "USA_US_Fish_and_Wildlife_Service_Lands_630",
+      "label": "",
+      "layerName": "US Fish and Wildlife Service Lands",
+      "layerVersion": 10.51,
+      "selectedFields": {
+        "Name": {
+          "name": "Name",
+          "type": "esriFieldTypeString",
+          "alias": "Name",
+          "length": 100,
+          "editable": true,
+          "nullable": true,
+          "label": ""
+        },
+        "YearEstablished": {
+          "name": "YearEstablished",
+          "type": "esriFieldTypeSmallInteger",
+          "alias": "Year Established",
+          "editable": true,
+          "nullable": true,
+          "label": ""
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_US_Fish_and_Wildlife_Service_Lands/FeatureServer/"
+    }
+  ],
+  "downloadSettings": {
+    "type": "syncEnable",
+    "layers": [
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/0",
+        "layerName": "Upland Preservation",
+        "id": "NationwideWRR_8659_0",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/1",
+        "layerName": "Upland Restoration",
+        "id": "NationwideWRR_8659_1",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/3",
+        "layerName": "Wetland Restoration",
+        "id": "NationwideWRR_8659_3",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/2",
+        "layerName": "Wetland Preservation",
+        "id": "NationwideWRR_8659_2",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/4",
+        "layerName": "Riparian Preservation",
+        "id": "NationwideWRR_8659_4",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/5",
+        "layerName": "Riparian Restoration",
+        "id": "NationwideWRR_8659_5",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/6",
+        "layerName": "Stormwater Natural Infrastructure Preservation",
+        "id": "NationwideWRR_8659_6",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://staging.mesgis.com/arcgis/rest/services/WRR-Nationwide/NationwideWRR/MapServer/7",
+        "layerName": "Stormwater Compromised Infrastructure Restoration",
+        "id": "NationwideWRR_8659_7",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/WatershedBoundaryDataset_HUC8/FeatureServer/0",
+        "layerName": "WatershedBoundaryDataset_HUC8 - Hydrologic Unit: Subbasin",
+        "id": "WatershedBoundaryDataset_HUC8_8677",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/WatershedBoundaryDataset_HUC12/FeatureServer/0",
+        "layerName": "Watershed Boundary Dataset: HUC 12s",
+        "id": "WatershedBoundaryDataset_HUC12_7393",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://landscape1.arcgis.com/arcgis/rest/services/USA_NHDPlusV2_1_Flat/MapServer/3",
+        "layerName": "Waterbodies - Feature Type",
+        "id": "USA_NHDPlusV2_1_Flat_5086_3",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/USA_US_Fish_and_Wildlife_Service_Lands/FeatureServer/0",
+        "layerName": "US Fish and Wildlife Service Lands",
+        "id": "USA_US_Fish_and_Wildlife_Service_Lands_630",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      }
+    ],
+    "extractDataTaskURL": "",
+    "downloadingFileOptions": [
+      "csv"
+    ]
+  }
+}

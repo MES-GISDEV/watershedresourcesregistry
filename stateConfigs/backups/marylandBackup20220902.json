@@ -1,0 +1,726 @@
+{
+	"theme": {
+    "name": "TabTheme",
+    "styles": [
+      "cyan",
+      "default",
+      "simpleblue",
+      "purple",
+      "red",
+      "yellow",
+      "green",
+      "blue"
+    ],
+    "version": "2.5",
+    "sharedTheme": {
+      "useHeader": false,
+      "useLogo": false,
+      "isPortalSupport": true
+    },
+    "customStyles": {
+			"mainBackgroundColor": "#228bad"
+		}
+	},
+	"portalUrl": "https://maryland.maps.arcgis.com",
+	"appId": "",
+	"authorizedCrossOriginDomains": [
+		"a6ab81db292.velocityweather.com",
+		"mdem-geoserver.baronweather.com"
+	],
+	"title": "Watershed Resources Registry",
+	"subtitle": "Maryland Version",
+	"keepAppState": true,
+	"logo": "images/logo.png",
+	"geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+	"links": [],
+	"widgetOnScreen": {
+		"widgets": [
+			{
+				"uri": "themes/TabTheme/widgets/Header/Widget",
+				"position": {
+					"left": 0,
+					"top": 0,
+					"right": 0,
+					"height": 44,
+					"relativeTo": "browser"
+				},
+				"version": "2.23",
+				"id": "themes_TabTheme_widgets_Header_Widget_20",
+				"name": "Header"
+			},
+			{
+				"uri": "themes/TabTheme/widgets/Footer/Widget",
+				"position": {
+					"left": 0,
+					"right": 0,
+					"bottom": 0,
+					"height": 24,
+					"relativeTo": "browser"
+				},
+				"version": "2.23",
+				"id": "themes_TabTheme_widgets_Footer_Widget_21",
+				"name": "Footer"
+			},
+			{
+				"uri": "themes/TabTheme/widgets/SidebarController/Widget",
+				"position": {
+					"left": 0,
+					"top": 44,
+					"bottom": 24,
+					"relativeTo": "browser"
+				},
+				"version": "2.23",
+				"id": "themes_TabTheme_widgets_SidebarController_Widget_22",
+				"name": "SidebarController"
+			},
+			{
+				"uri": "widgets/HomeButton/Widget",
+				"position": {
+					"left": 7,
+					"top": 75,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_HomeButton_Widget_23",
+				"name": "HomeButton"
+			},
+			{
+				"uri": "widgets/Scalebar/Widget",
+				"position": {
+					"left": 10,
+					"bottom": 25,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_Scalebar_Widget_24",
+				"name": "Scalebar"
+			},
+			{
+				"uri": "widgets/Search/Widget",
+				"position": {
+					"left": 45,
+					"top": 5,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_Search_Widget_25",
+				"name": "Search"
+			},
+			{
+				"uri": "widgets/Coordinate/Widget",
+				"position": {
+					"left": 10,
+					"bottom": 5,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_Coordinate_Widget_26",
+				"name": "Coordinate"
+			},
+			{
+				"position": {
+					"left": 245,
+					"top": 45,
+					"relativeTo": "map",
+					"wleft" : 800,
+					"wtop" : 25
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_Geoprocessing_Widget_401",
+				"name": "Geoprocessing",
+				"label": "Drainage Area Delineation",
+				"version": "2.9",
+				"uri": "widgets/Geoprocessing/Widget",
+				"config": "configs/Geoprocessing/config_widgets_Geoprocessing_Widget_45.json",
+				"icon": "configs/Geoprocessing/area_icon.png"
+			},
+			{
+				"position": {
+					"left": 295,
+					"top": 45,
+					"relativeTo": "map",
+					"wleft" : 800,
+					"wtop" : 25
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_Geoprocessing_Widget_401",
+				"name": "Geoprocessing",
+				"label": "Upstream/Downstream Search",
+				"version": "2.9",
+				"closeable": true,
+				"uri": "widgets/Geoprocessing/Widget",
+				"config": "configs/Geoprocessing/config_widgets_Geoprocessing_Widget_46.json",
+				"icon": "configs/Geoprocessing/stream_icon.png"
+			},
+			
+		
+			{
+				"position": {
+					"right": 160,
+					"top": 2,
+					"relativeTo": "browser",
+					"wleft" : 800,
+					"wtop" : 25
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_Print_Widget_45",
+				"name": "Print",
+				"label": "Print",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/Print/Widget",
+				"config": "configs/Print/config_widgets_Print_Widget_45.json",
+				"icon": "configs/Print/print.png"
+			},
+			
+			{
+				"position": {
+					"right": 210,
+					"top": 2,
+					"relativeTo": "browser",
+					"wleft" : 800,
+					"wtop" : 25
+				},
+				"placeholderIndex": 1,
+				"id": "Federal_State_Layer_Tool_060718",
+				"name": "About",
+				"label": "State Tools",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/LinksDropDown/Widget",
+				"config": "configs/LinksDropDown/stateConfigs/configMD.json",
+				"icon": "configs/LinksDropDown/icon.png"
+			},
+
+			
+			{
+				"position": {
+					"right": 110,
+					"top": 2,
+					"relativeTo": "browser",
+					"wleft" : 800,
+					"wtop" : 25
+				},
+				"placeholderIndex": 1,
+				"id": "_27",
+				"name": "AddData",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/AddData/Widget",
+				"config": "configs/AddData/config__27.json"
+			},
+			{
+				"position": {
+					"right": 60,
+					"top": 2,
+					"relativeTo": "browser",
+					"wleft" : 800,
+					"wtop" : 25
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_SaveSession_Widget_25",
+				"name": "SaveSession",
+				"label": "Save Session",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/SaveSession/Widget",
+				"config": "configs/SaveSession/config_widgets_SaveSession_Widget_25.json",
+				"IsController": false
+			},
+			{
+				"position": {
+					"right": 10,
+					"top": 2,
+					"relativeTo": "browser",
+					"wleft" : 800,
+					"wtop" : 25
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_About_Widget_37",
+				"name": "About",
+				"label": "Tutorials",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/Tutorial/Widget",
+				"config": "configs/About/config_widgets_About_Widget_37.json"
+			},
+			{
+				"position": {
+					"right": 110,
+					"top": 45,
+					"relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_LayerList_Widget_41",
+				"name": "LayerList",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/LayerList/Widget",
+				"config": "configs/LayerList/config_widgets_LayerList_Widget_41.json"
+			},
+			{
+				"position": {
+					"right": 60,
+					"top": 45,
+					"relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_Legend_Widget_43",
+				"name": "Legend",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/Legend/Widget"
+			},
+			{
+				"position": {
+					"left": 45,
+					"top": 45,
+					"relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_BasemapGallery_Widget_44",
+				"name": "BasemapGallery",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/BasemapGallery/Widget",
+				"config": "configs/BasemapGallery/config_widgets_BasemapGallery_Widget_44.json"
+			},
+			{
+				"position": {
+					"left": 95,
+					"top": 45,
+					"relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "FindOps_30",
+				"name": "FindOpsMD",
+				"label": "Find Opportunity Tool",
+				"version": "2.2",
+				"closeable": true,
+				"uri": "widgets/FindOpsMD/Widget",
+				"config": "configs/FindOpsMD/config_FindOps_30.json",
+				"icon": "widgets/FindOpsMD/images/icon.png?wab_dv=2.1",
+				"IsController": false
+			},
+			{
+				"position": {
+					"left": 145,
+					"top": 45,
+					"relativeTo": "map"
+					},
+				"placeholderIndex": 1,
+				"id": "config_widgets_Draw_Widget_43_1",
+				"name": "Draw",
+				"label": "Draw and Measure",
+				"version": "2.9",
+				"closeable": true,
+				"uri": "widgets/Draw/Widget",
+				"config": "configs/Draw/config_config_widgets_Draw_Widget_43_1.json",
+				"IsController": false
+			},
+			{
+				"position": {
+					"left": 195,
+					"top": 45,
+					"width": 380,
+					"height": 410,
+					"relativeTo": "map"
+					},
+				"placeholderIndex": 1,
+				"id": "config_Elevation_Profile",
+				"name": "ElevationProfile",
+				"label": "Elevation Profile",
+				"version": "2.9",
+				"closeable": true,
+				"uri": "widgets/ElevationProfile/Widget",
+				"config": "configs/ElevationProfile/config_Elevation_Profile.json",
+				"icon": "widgets/ElevationProfile/images/icon.png",
+				"IsController": false
+			},
+			{
+				"uri": "widgets/OverviewMap/Widget",
+				"position": {
+					"right": 0,
+					"bottom": 0,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_OverviewMap_Widget_30",
+				"name": "OverviewMap"
+			},
+			{
+				"uri": "widgets/MyLocation/Widget",
+				"position": {
+					"left": 7,
+					"top": 115,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_MyLocation_Widget_31",
+				"name": "MyLocation"
+			},
+			{
+				"uri": "widgets/AttributeTable/Widget",
+				"position": {
+					"bottom": 24,
+					"relativeTo": "browser"
+				},
+				"version": "2.23",
+				"id": "widgets_AttributeTable_Widget_32",
+				"name": "AttributeTable"
+			},
+			{
+				"uri": "widgets/Splash/Widget",
+				"visible": false,
+				"position": {
+					"relativeTo": "browser"
+				},
+				"version": "2.23",
+				"id": "widgets_Splash_Widget_33",
+				"name": "Splash"
+			},
+			{
+				"uri": "widgets/ZoomSlider/Widget",
+				"position": {
+					"top": 5,
+					"left": 7,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_ZoomSlider_Widget_34",
+				"name": "ZoomSlider"
+			},
+			{
+				"uri": "widgets/ExtentNavigate/Widget",
+				"visible": false,
+				"position": {
+					"top": 195,
+					"left": 7,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_ExtentNavigate_Widget_35",
+				"name": "ExtentNavigate"
+			},
+			{
+				"uri": "widgets/FullScreen/Widget",
+				"visible": false,
+				"position": {
+					"top": 155,
+					"left": 7,
+					"relativeTo": "map"
+				},
+				"version": "2.23",
+				"id": "widgets_FullScreen_Widget_36",
+				"name": "FullScreen"
+			},
+			{
+				"uri": "widgets/FeaturedCollectionPreview/Widget",
+				"position": {
+					"top": 100,
+					"width": 460,
+					"left": -800,
+					"relativeTo": "map"
+				},
+				"version": "2.5",
+				"id": "widgets_FeaturedCollectionPreview_Widget",
+				"name": "Featured Collection Details",
+				"label": "Featured Collection Details"
+			},
+			{
+                "name": "Screening",
+                "label": "Water Resources Report",
+                "version": "2.23",
+                "uri": "widgets/Screening/Widget",
+                "config": "configs/Screening/config_widgets_Screening_Widget_21.json",
+                "id": "widgets_Screening_Widget_21",
+                "icon": "configs\\Screening\\icon_LocationDetails.png",
+                "IsController": false
+            },
+            {
+                "name": "Screening2",
+                "label": "TAC Report",
+                "version": "2.23",
+                "uri": "widgets/Screening2/Widget",
+                "config": "configs/Screening2/config_LocationDetails_MD.json",
+                "id": "widgets_Screening_Widget_20",
+                "icon": "configs\\Screening2\\icon_LocationDetails.png",
+                "IsController": false
+            }
+		],
+		"panel": {
+			"uri": "jimu/OnScreenWidgetPanel",
+			"position": {
+				"relativeTo": "map"
+			}
+		}
+	},
+	"map": {
+		"3D": false,
+		"2D": true,
+		"position": {
+			"top": 44,
+			"right": 0,
+			"bottom": 24,
+			"left": 55
+		},
+		"dummyitemId": "f8e649edcd1b45e187bcb6bab143d456",
+		"itemId": "a5db15143ddf4cb5a4d8938dc56e9983",
+		"mapOptions": {},
+		"id": "map",
+		"portalUrl": "https://maryland.maps.arcgis.com",
+		"mapRefreshInterval": {
+			"useWebMapRefreshInterval": true
+		}
+	},
+	"widgetPool": {
+		"panel": {
+			"uri": "themes/TabTheme/panels/TabPanel/Panel",
+			"position": {
+				"top": 44,
+				"left": 0,
+				"bottom": 22,
+				"relativeTo": "browser"
+			}
+		},
+		"widgets": [
+			{
+				"name": "JoinedLayerLists",
+				"version": "2.3",
+				"label": "WRR Layer List",
+				"uri": "widgets/JoinedLayerLists/Widget",
+				"config":"configs/WRRLayerList/config_WRRLayerListMD.json",
+				"index": 0,
+				"id": "widgets_JoinedLayerLists_Widget_39",
+				"icon": "configs\\WRRLayerList\\icon_layers.png",
+				"openAtStart": true,
+				"IsController": false
+			},
+			{
+                "index": 1,
+                "id": "widgets_AddWebMapData",
+                "name": "AddWebMapData",
+                "label": "Featured Collections",
+                "version": "1.3",
+                "uri": "widgets/AddWebMapData/Widget",
+                "config": "widgets/AddWebMapData/config.json"
+			},
+			{
+                "id": "ReportItems_1",
+                "name": "ReportItems",
+                "label": "Reports",
+                "index": 2,
+                "version": "2.23",
+                "uri": "widgets/ReportItems/Widget",
+                "config": "widgets/ReportItems/config.json"
+            }
+		],
+		"groups": []
+	},
+	"mobileLayout": {
+		"widgetOnScreen": {
+			"widgets": [
+				{
+					"uri": "themes/TabTheme/widgets/Header/Widget",
+					"position": {
+						"left": 0,
+						"top": 0,
+						"width": 55,
+						"height": 44,
+						"relativeTo": "browser"
+					},
+					"version": "2.23"
+				},
+				{
+				"uri": "themes/TabTheme/widgets/Footer/Widget",
+				"position": {
+				"left": 0,
+				"width": 0,
+				"bottom": 0,
+				"height": 0,
+				"relativeTo": "browser"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "themes/TabTheme/widgets/SidebarController/Widget",
+				"position": {
+				"left": 0,
+				"top": 44,
+				"bottom": 0,
+				"relativeTo": "browser"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/HomeButton/Widget",
+				"position": {
+				"left": 7,
+				"top": 75,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/Scalebar/Widget",
+				"position": {
+				"left": 10,
+				"bottom": 40,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/Search/Widget",
+				"position": {
+				"left": 45,
+				"top": 5,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/Coordinate/Widget",
+				"position": {
+				"left": 10,
+				"bottom": 20,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"position": {
+				"right": 110,
+				"top": 45,
+				"relativeTo": "map"
+				}
+				},
+				{
+				"position": {
+				"right": 60,
+				"top": 45,
+				"relativeTo": "map"
+				}
+				},
+				{
+				"position": {
+				"right": 10,
+				"top": 45,
+				"relativeTo": "map"
+				}
+				},
+				{
+				"uri": "widgets/OverviewMap/Widget",
+				"position": {
+				"right": 0,
+				"bottom": 0,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/MyLocation/Widget",
+				"inPanel": false,
+				"position": {
+				"left": 7,
+				"top": 115,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/AttributeTable/Widget",
+				"position": {
+				"bottom": 0,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/Splash/Widget",
+				"visible": false,
+				"position": {
+				"relativeTo": "browser"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/ZoomSlider/Widget",
+				"visible": true,
+				"position": {
+				"top": 5,
+				"left": 7,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/ExtentNavigate/Widget",
+				"visible": false,
+				"position": {
+				"top": 195,
+				"left": 7,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				},
+				{
+				"uri": "widgets/FullScreen/Widget",
+				"visible": false,
+				"position": {
+				"top": 155,
+				"left": 7,
+				"relativeTo": "map"
+				},
+				"version": "2.23"
+				}
+				]
+				},
+				"widgetPool": {
+				"panel": {
+				"uri": "themes/TabTheme/panels/TabPanel/Panel",
+				"position": {
+				"top": 44,
+				"left": 0,
+				"bottom": 22,
+				"relativeTo": "browser"
+				}
+				}
+				},
+				"map": {
+				"position": {
+				"top": 0,
+				"right": 0,
+				"bottom": 0,
+				"left": 55
+				}
+				}
+				},
+				"loadingPage": {
+				"backgroundColor": "#51773f",
+				"backgroundImage": {
+				"visible": false
+				},
+				"loadingGif": {
+				"visible": true,
+				"uri": "/webappbuilder/apps/14/configs/loading/images/predefined_loading_4.gif",
+				"width": 34,
+				"height": 34
+				}
+				},
+				"wabVersion": "2.23",
+				"isTemplateApp": true,
+				"isWebTier": false,
+				"httpProxy": {
+				"useProxy": true,
+				"alwaysUseProxy": false,
+				"url": "",
+				"rules": []
+				},
+				"dataSource": {
+				"dataSources": {},
+				"settings": {}
+				},
+				"logoAlt": "",
+				"logoLink": ""
+				}																

@@ -1,0 +1,1487 @@
+{
+  "aoiTabText": "AOI",
+  "reportTabText": "LD Report",
+  "placenameButtonText": "Placename",
+  "drawToolsButtonText": "Draw",
+  "shapefileButtonText": "Shapefile",
+  "coordinatesButtonText": "Coordinates",
+  "showPlacenameWidget": false,
+  "showDrawToolsWidget": true,
+  "showShapefileWidget": true,
+  "showCoordinatesWidget": false,
+  "allowShapefilesUpload": false,
+  "areaUnits": "Standard",
+  "maxFeaturesForAnalysis": 1000,
+  "searchTolerance": 20,
+  "traverseUnit": "uSSurveyFeet",
+  "traverseDirectionUnit": "decimalDegree",
+  "defaultBufferDistance": 0,
+  "defaultBufferUnit": "UNIT_FOOT",
+  "reportSettings": {
+    "printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+    "footnote": "",
+    "logo": "${appPath}/widgets/Screening/images/default-logo.png",
+    "columnTitleColor": "#c6d9ec",
+    "reportTitle": "Screening Report"
+  },
+  "searchSourceSettings": {
+    "allPlaceholder": "",
+    "showInfoWindowOnSelect": true,
+    "sources": [
+      {
+        "url": "http://geodata.md.gov/imap/rest/services/GeocodeServices/MD_CompositeLocator/GeocodeServer",
+        "name": "MD Statewide Composite Locator",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "MD Statewide Composite Locator",
+        "countryCode": "",
+        "zoomScale": 50000,
+        "maxSuggestions": 6,
+        "maxResults": 6,
+        "searchInCurrentMapExtent": false,
+        "enableLocalSearch": false,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000,
+        "type": "locator"
+      },
+      {
+        "name": "MD Composite Locator (SHAREPOINT ONLY)",
+        "url": "https://utility.arcgis.com/usrsvcs/servers/8fade5b4c1ab46ee82a5398ca7bd231c/rest/services/SharePoint/MD_CompositeLocatorSharePoint/GeocodeServer",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "MD Composite Locator (SHAREPOINT ONLY)",
+        "maxResults": 6,
+        "searchInCurrentMapExtent": false,
+        "type": "locator",
+        "enableLocalSearch": false,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000
+      }
+    ]
+  },
+  "placenameSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "drawToolSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "shapefileSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "coordinatesSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "aoiSymbol": {
+    "color": [
+      255,
+      255,
+      255,
+      0
+    ],
+    "outline": {
+      "color": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "type": "esriSFS",
+    "style": "esriSFSSolid"
+  },
+  "layers": [
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_WR/MapServer/0",
+      "id": "Virginia_WR_8282_0",
+      "label": "Wetland Restoration",
+      "layerName": "Wetland Restoration",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_WR/MapServer"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_WP/MapServer/0",
+      "id": "Virginia_WP_5681_0",
+      "label": "Wetland Preservation",
+      "layerName": "Wetland Preservation",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_WP/MapServer"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_UR/MapServer/0",
+      "id": "Virginia_UR_4755_0",
+      "label": "Upland Restoration",
+      "layerName": "Upland Restoration",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_UR/MapServer"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_UP/MapServer/0",
+      "id": "Virginia_UP_9470_0",
+      "label": "Upland Preservation",
+      "layerName": "Upland Preservation",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_UP/MapServer"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_RR/MapServer/0",
+      "id": "Virginia_RR_9449_0",
+      "label": "Riparian Restoration",
+      "layerName": "Riparian Restoration",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_RR/MapServer"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_RP/MapServer/0",
+      "id": "Virginia_RP_9692_0",
+      "label": "Riparian Preservation",
+      "layerName": "Riparian Preservation",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_RP/MapServer"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_HR/MapServer/0",
+      "id": "Virginia_HR_3676_0",
+      "label": "Stormwater Compromised Infrastructure Restoration",
+      "layerName": "Stormwater Compromised Infrastructure Restoration",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_HR/MapServer"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_HP/MapServer/0",
+      "id": "Virginia_HP_3436_0",
+      "label": "Stormwater Natural Infrastructure Preservation",
+      "layerName": "Stormwater Natural Infrastructure Preservation",
+      "selectedFields": {
+        "COUNTY": {
+          "name": "COUNTY",
+          "alias": "County"
+        },
+		"gridcode": {
+          "name": "gridcode",
+          "alias": "Score"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_HP/MapServer"
+    },
+	{
+      "url": "https://geopub.epa.gov/arcgis/rest/services/NEPAssist/RIBITS/MapServer/2",
+      "id": "RIBITS_2234_2",
+      "label": "RIBITs - Banks - Approved",
+      "layerName": "RIBITS",
+      "selectedFields": {
+        "BANK_NAME": {
+          "name": "BANK_NAME",
+          "alias": "Name"
+        },
+		"KIND_OF_BANK": {
+          "name": "KIND_OF_BANK",
+          "alias": "Kind"
+        },
+		"RIBITS_URL_TO_BANK": {
+          "name": "RIBITS_URL_TO_BANK",
+          "alias": "RIBITS URL"
+        },
+		"DISTRICT": {
+          "name": "DISTRICT",
+          "alias": "District"
+        },
+		"COUNTY_LIST": {
+          "name": "COUNTY_LIST",
+          "alias": "County list"
+        },
+		"PERMIT_NUMBER": {
+          "name": "PERMIT_NUMBER",
+          "alias": "Permits"
+        },
+		"YEAR_ESTABLISHED": {
+          "name": "YEAR_ESTABLISHED",
+          "alias": "Year Established"
+        },
+		"TOTAL_ACRES": {
+          "name": "TOTAL_ACRES",
+          "alias": "Total Acres"
+        },
+		"BANK_TYPE": {
+          "name": "BANK_TYPE",
+          "alias": "Type"
+        }
+      },
+      "layerId": "2",
+      "baseURL": "https://geopub.epa.gov/arcgis/rest/services/NEPAssist/RIBITS/MapServer/2"
+    },
+	{
+      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/ORM/MapServer/1",
+      "id": "ORM_3210_1",
+      "label": "ORM (Final Individual Permit)",
+      "layerName": "ORM",
+      "selectedFields": {
+        "DA_Number": {
+          "name": "DA_Number",
+          "alias": "DA_Number"
+        },
+		"Applicant": {
+          "name": "Applicant",
+          "alias": "Applicant"
+        }
+      },
+      "layerId": "1",
+      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/ORM/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/193",
+      "id": "EDMA_1284",
+      "label": "VWP General Permits (GP)",
+      "layerName": "VWP General Permits (GP)",
+      "selectedFields": {
+        "PERMIT_NO": {
+          "name": "PERMIT_NO",
+          "alias": "Permit Number"
+        },
+		"FAC_NAME": {
+          "name": "FAC_NAME",
+          "alias": "Facility Name"
+        },
+		"VWP_GP_CLASSIFICATION": {
+          "name": "VWP_GP_CLASSIFICATION",
+          "alias": "Classification"
+        }
+      },
+      "layerId": "193",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/192",
+      "id": "EDMA_5936",
+      "label": "VWP Individual Permits (IP)",
+      "layerName": "VWP Individual Permits (IP)",
+      "selectedFields": {
+        "PERMIT_NO": {
+          "name": "PERMIT_NO",
+          "alias": "Permit Number"
+        },
+		"FAC_NAME": {
+          "name": "FAC_NAME",
+          "alias": "Facility Name"
+        },
+		"VWP_GP_CLASSIFICATION": {
+          "name": "VWP_GP_CLASSIFICATION",
+          "alias": "Classification"
+        }
+      },
+      "layerId": "192",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/189",
+      "id": "EDMA_6340",
+      "label": "VWP Permitee Responsible Mitigation",
+      "layerName": "VWP Permitee Responsible Mitigation",
+      "selectedFields": {
+        "PROJECT_NAME": {
+          "name": "PROJECT_NAME",
+          "alias": "Project_Name"
+        },
+		"PERMIT_NUMBER": {
+          "name": "PERMIT_NUMBER",
+          "alias": "Permit_Number"
+        },
+		"PRESERVATION_ONLY": {
+          "name": "PRESERVATION_ONLY",
+          "alias": "Preservation_Only"
+        }
+      },
+      "layerId": "189",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/104",
+      "id": "EDMA_9790",
+      "label": "Petroleum Release Sites",
+      "layerName": "Petroleum Release Sites",
+      "selectedFields": {
+        "PCNUM": {
+          "name": "PCNUM",
+          "alias": "Pollution Complaint Number"
+        },
+		"RST_FAC_ID": {
+          "name": "RST_FAC_ID",
+          "alias": "CEDS Facility ID"
+        },
+		"RST_NAME": {
+          "name": "RST_NAME",
+          "alias": "Release Site Name"
+        },
+		"RST_FED_REG_TANK": {
+          "name": "RST_FED_REG_TANK",
+          "alias": "Federally Regulated Tank Site"
+        },
+		"RST_STATUS_IND": {
+          "name": "RST_STATUS_IND",
+          "alias": "Release Site Status"
+        }
+      },
+      "layerId": "104",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/100",
+      "id": "EDMA_5442",
+      "label": "Solid Waste Permits",
+      "layerName": "Solid Waste Permits",
+      "selectedFields": {
+        "PMT_ID": {
+          "name": "PMT_ID",
+          "alias": "Solid Waste Facility ID"
+        },
+		"PMT_ID_1": {
+          "name": "PMT_ID_1",
+          "alias": "Permit ID"
+        },
+		"PMT_STATUS": {
+          "name": "PMT_STATUS",
+          "alias": "Permit Status"
+        },
+		"POS_DESC": {
+          "name": "POS_DESC",
+          "alias": "Permit Operating Status"
+        },
+		"FAC_NAME": {
+          "name": "FAC_NAME",
+          "alias": "Facility Name"
+        }
+      },
+      "layerId": "100",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/98",
+      "id": "EDMA_7446",
+      "label": "Renewable Energy Permits",
+      "layerName": "Renewable Energy Permits",
+      "selectedFields": {
+        "PERM_ID": {
+          "name": "PERM_ID",
+          "alias": "Permit ID"
+        },
+		"PERM_NUM": {
+          "name": "PERM_NUM",
+          "alias": "Permit Number"
+        },
+		"PERM_NAME": {
+          "name": "PERM_NAME",
+          "alias": "Permit Name"
+        },
+		"PTC_DESCRIPTION": {
+          "name": "PTC_DESCRIPTION",
+          "alias": "PTC Description"
+        },
+		"CLAS_DESCRIPTION": {
+          "name": "CLAS_DESCRIPTION",
+          "alias": "Class Description"
+        },
+		"PERMIT_STATUS": {
+          "name": "PERMIT_STATUS",
+          "alias": "Permit Status"
+        }
+      },
+      "layerId": "98",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
+      "id": "wbd_7728_6",
+      "label": "12-digit HU",
+      "layerName": "USGS Watershed Boundaries",
+      "selectedFields": {
+        "huc12": {
+          "name": "huc12",
+          "type": "esriFieldTypeString",
+          "alias": "HUC12",
+		  "label": ""
+        },
+		"name": {
+          "name": "name",
+          "type": "esriFieldTypeString",
+          "alias": "Name"
+        },
+		"states": {
+          "name": "states",
+          "type": "esriFieldTypeString",
+          "alias": "States"
+        },
+		"areaacres": {
+          "name": "areaacres",
+          "type": "esriFieldTypeString",
+          "alias": "Area Acres"
+        }
+      },
+      "layerId": "6",
+      "baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
+    },
+    {
+      "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
+      "id": "wbd_7728_4",
+      "label": "8-digit HU",
+      "layerName": "USGS Watershed Boundaries",
+      "selectedFields": {
+        "huc8": {
+          "name": "huc8",
+          "type": "esriFieldTypeString",
+          "alias": "HUC8"
+        },
+		"name": {
+          "name": "name",
+          "type": "esriFieldTypeString",
+          "alias": "Name"
+        },
+		"states": {
+          "name": "states",
+          "type": "esriFieldTypeString",
+          "alias": "States"
+        },
+		"areaacres": {
+          "name": "areaacres",
+          "type": "esriFieldTypeString",
+          "alias": "Area Acres"
+        }
+      },
+      "layerId": "4",
+      "baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/157",
+      "id": "EDMA_9252",
+      "label": "VA Counties",
+      "layerName": "Virginia County Boundaries",
+      "selectedFields": {
+        "NAME": {
+          "name": "NAME",
+          "alias": "NAME"
+        },
+		"DEQ": {
+          "name": "DEQ",
+          "alias": "DEQ"
+        },
+		"DEQ_REGION": {
+          "name": "DEQ_REGION",
+          "alias": "DEQ REGION"
+        }
+      },
+      "layerId": "157",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/161",
+      "id": "EDMA_1408",
+      "label": "EPA Ecoregions",
+      "layerName": "EPA Ecoregions in Virginia",
+      "selectedFields": {
+        "NA_L1NAME": {
+          "name": "NA_L1NAME",
+          "alias": "NA_L1Name"
+        },
+		"NA_L2NAME": {
+          "name": "NA_L2NAME",
+          "alias": "L2 NAME"
+        },
+		"US_L4NAME": {
+          "name": "US_L4NAME",
+          "alias": "L4 NAME"
+        }
+      },
+      "layerId": "161",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/161",
+      "id": "EDMA_8549",
+      "label": "Physiographic Regions",
+      "layerName": "Virginia Physiographic Regions",
+      "selectedFields": {
+        "DIVISION": {
+          "name": "DIVISION",
+          "alias": "DIVISION"
+        },
+		"PROVINCE": {
+          "name": "PROVINCE",
+          "alias": "PROVINCE"
+        },
+		"SECTION": {
+          "name": "SECTION",
+          "alias": "SECTION"
+        }
+      },
+      "layerId": "161",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/0",
+      "id": "NPDES_NP21_7087_0",
+      "label": "NPDES Outfalls",
+      "layerName": "NPDES Outfalls",
+      "selectedFields": {
+        "FeatureDetailURL": {
+          "name": "FeatureDetailURL",
+          "alias": "URL"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer"
+    },
+	{
+      "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
+      "id": "303D_NP21_372_1",
+      "label": "303d Streams - Line",
+      "layerName": "303d Streams",
+      "selectedFields": {
+        "WBD_HUC12": {
+          "name": "WBD_HUC12",
+          "type": "esriFieldTypeString",
+          "alias": "How's My Waterway?"
+        },
+		"REACHCODE": {
+          "name": "REACHCODE",
+          "type": "esriFieldTypeString",
+          "alias": "REACHCODE"
+        }
+      },
+      "layerId": "1",
+      "baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/"
+    },
+	{
+      "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/NPS_Watershed_Plans/FeatureServer/0",
+      "id": "NPS_Watershed_Plans_2841",
+      "label": "319 Watersheds",
+      "layerName": "319 Watersheds",
+      "selectedFields": {
+        "IP_NAME": {
+          "name": "IP_NAME",
+          "alias": "NPS Implementation Plan"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/NPS_Watershed_Plans/FeatureServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/119",
+      "id": "EDMA_4559",
+      "label": "VPDES Outfalls",
+      "layerName": "VPDES Outfalls",
+      "selectedFields": {
+        "OUTFALL_ID": {
+          "name": "OUTFALL_ID",
+          "alias": "OUTFALL ID"
+        },
+		"VAP_TYPE": {
+          "name": "VAP_TYPE",
+          "alias": "VAP TYPE"
+        },
+		"FAC_NAME": {
+          "name": "FAC_NAME",
+          "alias": "FAC NAME"
+        }
+      },
+      "layerId": "119",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/185",
+      "id": "EDMA_5037",
+      "label": "TMDL Watersheds",
+      "layerName": "TMDL Watersheds",
+      "selectedFields": {
+        "PJ_NAME": {
+          "name": "PJ_NAME",
+          "alias": "PJ NAME"
+        },
+		"WSHD_NAME": {
+          "name": "WSHD_NAME",
+          "alias": "WSHD NAME"
+        },
+		"IMP_NAME": {
+          "name": "IMP_NAME",
+          "alias": "IMP NAME"
+        }
+      },
+      "layerId": "185",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/187",
+      "id": "EDMA_3936",
+      "label": "Implementation Watersheds",
+      "layerName": "Implementation Watersheds",
+      "selectedFields": {
+        "IP_NAME": {
+          "name": "IP_NAME",
+          "alias": "IP NAME"
+        },
+		"WATERSHED_ID": {
+          "name": "WATERSHED_ID",
+          "alias": "WATERSHED ID"
+        },
+		"REPORT_NUMBER": {
+          "name": "REPORT_NUMBER",
+          "alias": "REPORT NUMBER"
+        },
+		"WATERSHED_STATUS": {
+          "name": "WATERSHED_STATUS",
+          "alias": "WATERSHED STATUS"
+        },
+		"POLLUTANTS": {
+          "name": "POLLUTANTS",
+          "alias": "POLLUTANTS"
+        },
+		"PRIORITY": {
+          "name": "PRIORITY",
+          "alias": "PRIORITY"
+        },
+		"ELIGIBLE_319H": {
+          "name": "ELIGIBLE_319H",
+          "alias": "ELIGIBLE 319H"
+        }
+      },
+      "layerId": "187",
+      "baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer"
+    },
+	{
+      "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Agency_Type/FeatureServer/0",
+      "id": "Agency_Type_1530",
+      "label": "Protected Areas",
+      "layerName": "Protected Areas of the US (PADUS)",
+      "selectedFields": {
+        "FeatClass": {
+          "name": "FeatClass",
+          "alias": "Feat Class"
+        },
+		"Mang_Name": {
+          "name": "Mang_Name",
+          "alias": "Manager Name"
+        },
+		"Des_Tp": {
+          "name": "Des_Tp",
+          "alias": "Designation Type"
+        },
+		"Unit_Nm": {
+          "name": "Unit_Nm",
+          "alias": "Unit Name"
+        },
+		"GAP_Sts": {
+          "name": "GAP_Sts",
+          "alias": "GAP Status Code"
+        },
+		"EsmtHldr": {
+          "name": "EsmtHldr",
+          "alias": "Easement Holder"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Agency_Type/FeatureServer"
+    },
+	{
+      "url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer/0",
+      "id": "ShorelineInventoryLayers_1151_0",
+      "label": "Virginia Tidal Marsh Inventory",
+      "layerName": "Virginia Tidal Marsh Inventory",
+      "selectedFields": {
+        "MarshType": {
+          "name": "MarshType",
+          "alias": "Marsh Type"
+        },
+		"Acres": {
+          "name": "Acres",
+          "alias": "Acres"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer"
+    },
+	{
+      "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
+      "id": "VulnerabilityAssessments_1753_0",
+      "label": "Tidal Marsh Vulnerability Assessments (2050)",
+      "layerName": "Tidal Marsh Vulnerability Assessments",
+      "selectedFields": {
+        "salinity": {
+          "name": "salinity",
+          "alias": "Salinity"
+        },
+		"ErosionVuln": {
+          "name": "ErosionVuln",
+          "alias": "Erosion Vulnerability"
+        },
+		"Marsh2050": {
+          "name": "Marsh2050",
+          "alias": "2050 Marsh change extent"
+        },
+		"SalinVuln": {
+          "name": "SalinVuln",
+          "alias": "Salinization Vulnerability"
+        },
+		"C2050Class": {
+          "name": "C2050Class",
+          "alias": "Combined 2050 vulnerability classification"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0"
+    },
+	{
+      "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
+      "id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
+      "label": "NonTidal NWI Habitat and Water Quality 4 yrs",
+      "layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
+      "selectedFields": {
+        "ATTRIBUTE": {
+          "name": "ATTRIBUTE",
+          "alias": "ATTRIBUTE"
+        },
+		"WETLAND_TYPE": {
+          "name": "WETLAND_TYPE",
+          "alias": "WETLAND TYPE"
+        },
+		"ACRES": {
+          "name": "ACRES",
+          "alias": "ACRES"
+        },
+		"PROJECT_NAME": {
+          "name": "PROJECT_NAME",
+          "alias": "PROJECT NAME"
+        },
+		"HStress01": {
+          "name": "HStress01",
+          "alias": "HqStress01"
+        },
+		"WQStres01": {
+          "name": "WQStres01",
+          "alias": "WQStress01"
+        },
+		"HStress06": {
+          "name": "HStress06",
+          "alias": "HStress06"
+        },
+		"WQStres06": {
+          "name": "WQStres06",
+          "alias": "WQStress06"
+        },
+		"HStress11": {
+          "name": "HStress11",
+          "alias": "HStress11"
+        },
+		"WQStres11": {
+          "name": "WQStres11",
+          "alias": "WQStres11"
+        },
+		"HStress16": {
+          "name": "HStress16",
+          "alias": "HStress16"
+        },
+		"WQStres16": {
+          "name": "WQStres16",
+          "alias": "WQStres16"
+        }
+      },
+      "layerId": "2",
+      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer"
+    },
+	{
+      "url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/Virginia_FEMA_DisasterDeclaration_1964_Present/MapServer/0",
+      "id": "Virginia_FEMA_DisasterDeclaration_1964_Present_8643",
+      "label": "VA FEMA Disaster Declaration 1964 to Present",
+      "layerName": "VA FEMA Disaster Declaration 1964 to Present",
+      "selectedFields": {
+        "Coastal_Storm_1964ToPres": {
+          "name": "Coastal_Storm_1964ToPres",
+          "alias": "Coastal Storm 1964 To Present"
+        },
+		"Flood_1964ToPres": {
+          "name": "Flood_1964ToPres",
+          "alias": "Flood 1964 To Present"
+        },
+		"Hurricane_1964ToPres": {
+          "name": "Hurricane_1964ToPres",
+          "alias": "Hurricane 1964 To Present"
+        },
+		"Coastal_Storm_2000ToPres": {
+          "name": "Coastal_Storm_2000ToPres",
+          "alias": "Coastal Storm 2000 To Present"
+        },
+		"Flood_2000ToPres": {
+          "name": "Flood_2000ToPres",
+          "alias": "Flood 2000 To Present"
+        },
+		"Hurricane_2000ToPres": {
+          "name": "Hurricane_2000ToPres",
+          "alias": "Hurricane 2000 To Present"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/Virginia_FEMA_DisasterDeclaration_1964_Present/MapServer"
+    },
+	{
+      "url": "https://cmap2.vims.edu/arcgis/rest/services/SocialVulnerability/Social_Vulnerability_WM_webM_SarahEdits_F/MapServer/0",
+      "id": "Social_Vulnerability_WM_webM_SarahEdits_F_9585",
+      "label": "Social Vulnerability Classification",
+      "layerName": "Social Vulnerability Classification",
+      "selectedFields": {
+        "Social_Vulnerability_Classification": {
+          "name": "Social_Vulnerability_Classification",
+          "alias": "Social Vulnerability Classification"
+        },
+		"Social_Vulnerability_Index_Score": {
+          "name": "Social_Vulnerability_Index_Score",
+          "alias": "Social Vulnerability Index Score"
+        },
+		"Hazardous_Toxic_Index_Score": {
+          "name": "Hazardous_Toxic_Index_Score",
+          "alias": "Hazardous Toxic Index Score"
+        },
+		"R_vulnerable_housing_descrip": {
+          "name": "R_vulnerable_housing_descrip",
+          "alias": "R vulnerable housing description"
+        },
+		"R_housing_cat_descrip": {
+          "name": "R_housing_cat_descrip",
+          "alias": "R housing category description"
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/SocialVulnerability/Social_Vulnerability_WM_webM_SarahEdits_F/MapServer"
+    }
+  ],
+  "downloadSettings": {
+    "type": "syncEnable",
+    "layers": [
+      {
+        "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
+        "layerName": "12-digit HU",
+        "id": "wbd_7728_6",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
+        "layerName": "8-digit HU",
+        "id": "wbd_7728_4",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+	  {
+        "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
+        "layerName": "303d Streams - Line",
+        "id": "303D_NP21_372_1",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_WR/MapServer/0",
+        "id": "Virginia_WR_8282_0",
+        "layerName": "Wetland Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_WP/MapServer/0",
+        "id": "Virginia_WP_5681_0",
+        "layerName": "Wetland Preservation",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_UR/MapServer/0",
+        "id": "Virginia_UR_4755_0",
+        "layerName": "Upland Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_UP/MapServer/0",
+        "id": "Virginia_UP_9470_0",
+        "layerName": "Upland Preservation",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_RR/MapServer/0",
+        "id": "Virginia_RR_9449_0",
+        "layerName": "Riparian Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_RP/MapServer/0",
+        "id": "Virginia_RP_9692_0",
+        "layerName": "Riparian Preservation",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_HR/MapServer/0",
+        "id": "Virginia_HR_3676_0",
+        "layerName": "Stormwater Compromised Infrastructure Restoration",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/Virginia_HP/MapServer/0",
+        "id": "Virginia_HP_3436_0",
+        "layerName": "Stormwater Natural Infrastructure Preservation",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://geopub.epa.gov/arcgis/rest/services/NEPAssist/RIBITS/MapServer/2",
+        "id": "RIBITS_2234_2",
+        "layerName": "RIBITS",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/ORM/MapServer/1",
+        "id": "ORM_3210_1",
+        "layerName": "ORM",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/193",
+        "id": "EDMA_1284",
+        "layerName": "VWP General Permits (GP)",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/192",
+        "id": "EDMA_5936",
+        "layerName": "VWP Individual Permits (IP)",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/104",
+        "id": "EDMA_9790",
+        "layerName": "Petroleum Release Sites",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/100",
+        "id": "EDMA_5442",
+        "layerName": "Solid Waste Permits",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/98",
+        "id": "EDMA_7446",
+        "layerName": "Renewable Energy Permits",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/157",
+        "id": "EDMA_9252",
+        "layerName": "Virginia County Boundaries",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/161",
+        "id": "EDMA_1408",
+        "layerName": "EPA Ecoregions in Virginia",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/161",
+        "id": "EDMA_8549",
+        "layerName": "Virginia Physiographic Regions",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/0",
+        "id": "NPDES_NP21_7087_0",
+        "layerName": "NPDES Outfalls",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/arcgis/rest/services/NPS_Watershed_Plans/FeatureServer/0",
+        "id": "NPS_Watershed_Plans_2841",
+        "layerName": "319 Watersheds",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/119",
+        "id": "EDMA_4559",
+        "layerName": "VPDES Outfalls",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/185",
+        "id": "EDMA_5037",
+        "layerName": "TMDL Watersheds",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Agency_Type/FeatureServer/0",
+        "id": "Agency_Type_1530",
+        "layerName": "Protected Areas of the US (PADUS)",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
+        "id": "VulnerabilityAssessments_1753_0",
+        "layerName": "Tidal Marsh Vulnerability Assessments (2050)",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
+        "id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
+        "layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/Virginia_FEMA_DisasterDeclaration_1964_Present/MapServer/0",
+        "id": "Virginia_FEMA_DisasterDeclaration_1964_Present_8643",
+        "layerName": "VA FEMA Disaster Declaration 1964 to Present",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://cmap2.vims.edu/arcgis/rest/services/SocialVulnerability/Social_Vulnerability_WM_webM_SarahEdits_F/MapServer/0",
+        "id": "Social_Vulnerability_WM_webM_SarahEdits_F_9585",
+        "layerName": "Social Vulnerability Classification",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      }
+    ],
+    "extractDataTaskURL": "",
+    "downloadingFileOptions": [
+      "csv"
+    ]
+  }
+}

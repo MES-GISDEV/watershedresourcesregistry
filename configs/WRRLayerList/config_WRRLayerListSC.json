@@ -1,0 +1,370 @@
+{
+  "layers": [
+  {
+    "id": "OEe",
+    "wrrID": "SouthCarolina_RP_9765",
+    "title": "Riparian Preservation Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "I5m",
+    "wrrID": "SouthCarolina_RR_5873",
+    "title": "Riparian Restoration Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "xXm",
+    "wrrID": "SouthCarolina_WP_5268",
+    "title": "Wetland Preservation Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "I8k",
+    "wrrID": "SouthCarolina_WR_799",
+    "title": "Wetland Restoration Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "lzT",
+    "wrrID": "SouthCarolina_SP_6649",
+    "title": "Provisional Stormwater Natural Infrastructure Preservation Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "gpO",
+    "wrrID": "SouthCarolina_SR_2400",
+    "title": "Provisional Stormwater Restoration Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "un0",
+    "wrrID": "SouthCarolina_UP_8228",
+    "title": "Provisional Upland Preservation Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "N9M",
+    "wrrID": "SouthCarolina_UR_2758",
+    "title": "Provisional Upland Restoration Model Output",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "xU5",
+    "wrrID": "USFWS_Critical_Habitat_6504",
+    "title": "USFWS Critical Habitat",
+    "category": "Biology"
+  },
+  {
+    "id": "Rex",
+    "wrrID": "Element_Occurrence_Presence_by_Hexagon_4642",
+    "title": "DNR Species of Concern Presence/Absence - Hexagon",
+    "category": "Biology"
+  },
+  {
+    "id": "skS",
+    "wrrID": "Critical_and_Occupied_Habitat_Designations_229",
+    "title": "DNR Critical Habitat",
+    "category": "Biology"
+  },
+  {
+    "id": "Jus",
+    "wrrID": "North_Atlantic_Right_Whale_9625",
+    "title": "DNR North Atlantic Right Whale",
+    "category": "Biology"
+  },
+  {
+    "id": "q4R",
+    "wrrID": "Aquatic_Records_by_HUC12_8372",
+    "title": "DNR Aquatic Species of Concern Presence/Absence",
+    "category": "Biology"
+  },
+  {
+    "id": "CBl",
+    "wrrID": "SC_Protected_and_Public_Lands_2020_6885",
+    "title": "Protected and Public Lands",
+    "category": "Protected Lands"
+  },
+  {
+    "id": "Sm6",
+    "wrrID": "USA_Counties_8817",
+    "title": "County Boundaries",
+    "category": "Boundaries"
+  },
+  {
+    "id": "5Dd",
+    "wrrID": "USA_States_Generalized_782",
+    "title": "State Boundaries",
+    "category": "Boundaries"
+  },
+  {
+    "id": "6xZ",
+    "wrrID": "USA_Urban_Areas_5259",
+    "title": "US Census Urban Areas",
+    "category": "Boundaries"
+  },
+  {
+    "id": "0D6",
+    "wrrID": "Emergency_EA_Layers_8564",
+    "title": "Coastal Zone",
+    "category": "Boundaries"
+  },
+  {
+    "id": "ajq",
+    "wrrID": "Emergency_EA_Layers_6994",
+    "title": "Critical Area Boundary",
+    "category": "Boundaries"
+  },
+  {
+    "id": "gtM",
+    "wrrID": "USA_Block_Groups_4919",
+    "title": "US Census Blocks",
+    "category": "Boundaries"
+  },
+  {
+    "id": "2uF",
+    "wrrID": "RIBITS_Nation_9526",
+    "title": "RIBITS - Banks & Service Areas",
+    "category": "RIBITS"
+  },
+  {
+    "id": "b5d",
+    "wrrID": "RIBITS_6370",
+    "title": "RIBITS - ILFs",
+    "category": "Permits"
+  },
+  {
+    "id": "Huj",
+    "wrrID": "SCCB_Priority_Model_5613",
+    "title": "SC Conservation Bank Map",
+    "category": "Priority Conservation Lands"
+  },
+  {
+    "id": "GxH",
+    "wrrID": "SC_LCC_Blueprint_3106",
+    "title": "Blueprint",
+    "category": "Priority Conservation Lands"
+  },
+  {
+    "id": "2FB",
+    "wrrID": "Rice_fields_5823",
+    "title": "Rice Fields",
+    "category": "Cultural/Historical"
+  },
+  {
+    "id": "wBY",
+    "wrrID": "SC_Scenic_Rivers_WRR_8235",
+    "title": "Scenic Rivers",
+    "category": "Cultural/Historical"
+  },
+  {
+    "id": "nNV",
+    "wrrID": "Prelim_NFHL_5895",
+    "title": "FEMA Preliminary Flood Zone",
+    "category": "Floodplains"
+  },
+  {
+    "id": "gc0",
+    "wrrID": "NFHL_223",
+    "title": "FEMA Effective Flood Zone",
+    "category": "Floodplains"
+  },
+  {
+    "id": "9Y1",
+    "wrrID": "Active_River_Area_higher_resolution_7422",
+    "title": "TNC Active River Area",
+    "category": "Floodplains"
+  },
+  {
+    "id": "ywd",
+    "wrrID": "Estimated_floodplain_CONUS_WM_701",
+    "title": "EPA Flood Model",
+    "category": "Floodplains"
+  },
+  {
+	"id": "Fxa",
+    "wrrID": "CFEM_StormSurge_1996",
+    "title": "NOAA Hurricane Inundation Data",
+    "category": "Floodplains"
+  },
+  {			
+    "id": "s3E",
+    "wrrID": "Aquatic_Records_by_HUC12_8372",
+    "title": "Rivers, Lakes & Streams",
+    "category": "Rivers, Lakes & Streams"
+  },
+  {
+    "id": "Jby",
+    "wrrID": "SC_Resilience_2611",
+    "title": "State and Coastal Climate Resilience",
+    "category": "Coastal Resiliency"
+  },
+  {
+    "id": "w1w",
+    "wrrID": "Overall_2016_Tracts_9963",
+    "title": "Social Vulnerability Index",
+    "category": "Social Systems"
+  },
+  {
+    "id": "wU0",
+    "wrrID": "waterqualityassessments_3715",
+    "title": "TMDL Sites",
+    "category": "Water Quality"
+  },
+  {
+    "id": "aiD",
+    "wrrID": "waterqualityassessments_8987",
+    "title": "TMDL Watersheds",
+    "category": "Water Quality"
+  },
+  {
+    "id": "8eg",
+    "wrrID": "monitoringstations_4122",
+    "title": "Water Quality Monitoring Stations",
+    "category": "Water Quality"
+  },
+  {
+    "id": "uEy",
+    "wrrID": "publicwatersupply_4984",
+    "title": "Groundwater Protection Zones",
+    "category": "Water Quality"
+  },
+  {
+    "id": "2Tm",
+    "wrrID": "StreamflowMonitoringSept2019_7721",
+    "title": "USGS Stream Gauges",
+    "category": "Water Quality"
+  },
+  {
+    "id": "Rnp",
+    "wrrID": "WRR_SC_ATTAINS_5093",
+    "title": "Assessment Points",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "zYZ",
+    "wrrID": "WRR_SC_ATTAINS_2838",
+    "title": "Assessment Line",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "OQE",
+    "wrrID": "WRR_SC_ATTAINS_2484",
+    "title": "Assessment Unit Catchment Associations",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "A5L",
+    "wrrID": "permits_6809",
+    "title": "Agricultural Livestock Operations",
+    "category": "Permits/Regulated"
+  },
+  {
+    "id": "nOF",
+    "wrrID": "permits_8982",
+    "title": "Agricultural Irrigation Sites",
+    "category": "Permits/Regulated"
+  },
+  {
+    "id": "joq",
+    "wrrID": "permits_2844",
+    "title": "DHEC NPDES Outfalls",
+    "category": "Permits/Regulated"
+  },
+  {
+    "id": "uaC",
+    "wrrID": "ORM_1068",
+    "title": "ORM - Updated 8/10/22",
+    "category": "Permits/Regulated"
+  },
+  {
+    "id": "Hz7",
+    "wrrID": "MSBFP2_4107",
+    "title": "Building Footprints",
+    "category": "Infrastructure"
+  },
+  {
+    "id": "kGQ",
+    "wrrID": "permits_3358",
+    "title": "State Regulated Dams",
+    "category": "Infrastructure"
+  },
+  {
+    "id": "oxi",
+    "wrrID": "NID_2018_1566",
+    "title": "National Inventory of Dams",
+    "category": "Infrastructure"
+  },
+  {
+    "id": "0eb",
+    "wrrID": "544f9f7ae4b0f97badbc547d_6975",
+    "title": "SLEUTH Model-Projections",
+    "category": "Infrastructure"
+  },
+  {
+    "id": "7Ro",
+    "wrrID": "USA_NLCD_Impervious_Surface_TimeSeries_5605",
+    "title": "Impervious Surfaces",
+    "category": "Infrastructure"
+  },
+  {
+    "id": "kLi",
+    "wrrID": "wbd_6896",
+    "title": "Federal HUC 8",
+    "category": "Watersheds"
+  },
+  {
+    "id": "k8Z",
+    "wrrID": "wbd_6712",
+    "title": "Federal HUC 10",
+    "category": "Watersheds"
+  },
+  {
+    "id": "o07",
+    "wrrID": "wbd_4862",
+    "title": "Federal HUC 12",
+    "category": "Watersheds"
+  },
+  {
+    "id": "cJk",
+    "wrrID": "watersheds_5222",
+    "title": "National Watershed Boundary Dataset & SC Major River Basins",
+    "category": "Watersheds"
+  },
+  {
+    "id": "Bfn",
+    "wrrID": "ecoregions_9426",
+    "title": "EPA Ecoregions",
+    "category": "Ecoregions"
+  },
+  {
+    "id": "v4F",
+    "wrrID": "Wetlands_2596",
+    "title": "USFWS NWI",
+    "category": "Wetlands"
+  },
+  {
+    "id": "Bqz",
+    "wrrID": "USA_Wetlands_7989",
+    "title": "National Wetlands Inventory (NWI)",
+    "category": "Wetlands"
+  },
+  {
+    "id": "1Cn",
+    "wrrID": "USA_Soils_Hydric_Class_9769",
+    "title": "Hydric Soils",
+    "category": "Wetlands"
+  },
+  {
+    "id": "dq7",
+    "wrrID": "mapserver_3639",
+    "title": "SSURGO Soils",
+    "category": "Geology and Soils"
+  },
+  {
+    "id": "oiL",
+    "wrrID": "GeologicRegionsAGOL_5807",
+    "title": "SC Geological Survey Map",
+    "category": "Geology and Soils"
+  }
+]
+}
