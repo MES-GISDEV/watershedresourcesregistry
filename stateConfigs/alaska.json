@@ -119,26 +119,7 @@
 			},
 			{
 				"position": {
-					"right": 160,
-					"top": 2,
-					"relativeTo": "browser",
-					"wleft" : 800,
-					"wtop" : 25
-				},
-				"placeholderIndex": 1,
-				"id": "widgets_Print_Widget_45",
-				"name": "Print",
-				"label": "Print",
-				"version": "2.23",
-				"closeable": true,
-				"uri": "widgets/Print/Widget",
-				"config": "configs/Print/config_widgets_Print_Widget_45.json",
-				"icon": "configs/Print/print.png"
-			},
-			
-			{
-				"position": {
-					"right": 210,
+					"right": 110,
 					"top": 2,
 					"relativeTo": "browser",
 					"wleft" : 800,
@@ -151,14 +132,12 @@
 				"version": "2.23",
 				"closeable": true,
 				"uri": "widgets/LinksDropDown/Widget",
-				"config": "configs/LinksDropDown/stateConfigs/configAK.json",
+				"config": "configs/LinksDropDown/stateConfigs/configDE.json",
 				"icon": "configs/LinksDropDown/icon.png"
 			},
-
-			
 			{
 				"position": {
-					"right": 110,
+					"right": 60,
 					"top": 2,
 					"relativeTo": "browser",
 					"wleft" : 800,
@@ -171,24 +150,6 @@
 				"closeable": true,
 				"uri": "widgets/AddData/Widget",
 				"config": "configs/AddData/config__27.json"
-			},
-			{
-				"position": {
-					"right": 60,
-					"top": 2,
-					"relativeTo": "browser",
-					"wleft" : 800,
-					"wtop" : 25
-				},
-				"placeholderIndex": 1,
-				"id": "widgets_SaveSession_Widget_25",
-				"name": "SaveSession",
-				"label": "Save Session",
-				"version": "2.23",
-				"closeable": true,
-				"uri": "widgets/SaveSession/Widget",
-				"config": "configs/SaveSession/config_widgets_SaveSession_Widget_25.json",
-				"IsController": false
 			},
 			{
 				"position": {
@@ -263,6 +224,38 @@
 				"uri": "widgets/Draw/Widget",
 				"config": "configs/Draw/config_config_widgets_Draw_Widget_43_1.json",
 				"IsController": false
+			},
+			{
+				"position": {
+					"left": 145,
+					"top": 45,
+					"relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_SaveSession_Widget_25",
+				"name": "SaveSession",
+				"label": "Save Session",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/SaveSession/Widget",
+				"config": "configs/SaveSession/config_widgets_SaveSession_Widget_25.json",
+				"IsController": false
+			},
+			{
+				"position": {
+					"left": 195,
+					"top": 45,
+					"relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "widgets_Print_Widget_45",
+				"name": "Print",
+				"label": "Print",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/Print/Widget",
+				"config": "configs/Print/config_widgets_Print_Widget_45.json",
+				"icon": "configs/Print/print.png"
 			},
 			{
 				"uri": "widgets/OverviewMap/Widget",
@@ -463,13 +456,13 @@
                 "config": "widgets/ReportItems/config.json"
             },
 			{
-                "id": "MappingTools_1",
-                "name": "MappingTools",
-                "label": "Mapping Tools",
+                "id": "Analysis_1",
+                "name": "Analysis",
+                "label": "Analysis",
                 "index": 3,
                 "version": "2.23",
-                "uri": "widgets/MappingTools/Widget",
-                "config": "widgets/MappingTools/config.json"
+                "uri": "widgets/Analysis/Widget",
+                "config": "widgets/Analysis/config.json"
             }
 		],
 		"groups": []

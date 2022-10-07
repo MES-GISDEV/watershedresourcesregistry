@@ -130,9 +130,9 @@
 				"name": "Geoprocessing",
 				"label": "Drainage Area Delineation",
 				"version": "2.9",
-				"uri": "widgets/Geoprocessing/Widget",
-				"config": "configs/Geoprocessing/config_widgets_Geoprocessing_Widget_45.json",
-				"icon": "configs/Geoprocessing/area_icon.png"
+				"uri": "widgets/GeoprocessingDAD/Widget",
+				"config": "configs/GeoprocessingDAD/config_widgets_Geoprocessing_Widget_45.json",
+				"icon": "configs/GeoprocessingDAD/area_icon.png"
 			},
 			{
 				"position": {
@@ -148,9 +148,9 @@
 				"label": "Upstream/Downstream Search",
 				"version": "2.9",
 				"closeable": true,
-				"uri": "widgets/Geoprocessing/Widget",
-				"config": "configs/Geoprocessing/config_widgets_Geoprocessing_Widget_46.json",
-				"icon": "configs/Geoprocessing/stream_icon.png"
+				"uri": "widgets/GeoprocessingUDS/Widget",
+				"config": "configs/GeoprocessingUDS/config_widgets_Geoprocessing_Widget_46.json",
+				"icon": "configs/GeoprocessingUDS/stream_icon.png"
 			},
 			
 		

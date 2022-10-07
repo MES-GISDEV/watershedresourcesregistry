@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/main.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<!-- InstanceBeginEditable name="doctitle" -->
+    <title>Watershed Resources Registry - Additional</title>
+    <!-- InstanceEndEditable -->
+    <!-- shortcut ico-->
+    <link rel="icon" type="image/png" href="images/shortcut.ico">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <!-- InstanceBeginEditable name="head" -->
+	<!-- InstanceEndEditable -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39468011-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-39468011-2');
+	</script>
+	<script>
+	//time stamp function for the tutorial videos
+      function timestamps() {
+        //loops through all the tutorial videos with time stamps
+        for (var i = 1; i < 11; i++) {
+          (function(){
+            var myvideo = document.getElementById('video'+i.toString()),
+                group = document.getElementById('group'+i.toString());
+
+            //makes sure myvideo is not null
+            if(myvideo){
+              //loops through every video group and attaches event listeners
+              for (var j = 1; j < group.children.length; j++) {
+                (function(){
+
+                  var jumplink = group.children[j].childNodes[0],
+                      num1 = group.children[j].childNodes[0].children[0],
+                      num2 = group.children[j].childNodes[0].children[1];
+
+                  jumplink.addEventListener("click", function (event) {
+                      var int1 = parseInt(num1.innerText);
+                      var int2 = parseInt(num2.innerText);
+                      var playtime = (int1*60)+int2;
+                      event.preventDefault();
+                      myvideo.play();
+                      myvideo.pause();
+                      myvideo.currentTime = playtime;
+                      //myvideo.play();
+                  }, false);
+                }()); //immediate invocation
+                
+              }
+            }
+          }()); //immediate invocation
+        }
+	   }
+	</script>
+
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-wrr fixed-top">
+        <a class="navbar-brand" href="index.html"><img alt="Watershed Resources Registry Logo" src="images/logo.png" /> Watershed Resources Registry</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="yourRegistry.html">Developing A Registry</a>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownStates" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        State Registries
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownStates">
+						<a class="dropdown-item" href="states/alaska.html">Alaska</a>
+                        <a class="dropdown-item" href="states/delaware.html">Delaware</a>
+                        <a class="dropdown-item" href="states/maryland.html">Maryland</a>
+						<a class="dropdown-item" href="states/newjersey.html">New Jersey</a>
+                        <a class="dropdown-item" href="states/pennsylvania.html">Pennsylvania</a>
+						<a class="dropdown-item" href="states/puertorico.html">Puerto Rico</a>
+						<a class="dropdown-item" href="states/southcarolina.html">South Carolina</a>
+                        <a class="dropdown-item" href="states/virginia.html">Virginia</a>                        
+                        <a class="dropdown-item" href="states/westvirginia.html">West Virginia</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Info
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAbout">
+                        <a class="dropdown-item" href="about.html">About</a>
+                        <a class="dropdown-item" href="acknowledgments.html">Acknowledgements</a>
+						<a class="dropdown-item" href="additional.html">Additional Resources</a>
+						<a class="dropdown-item" href="updates.html">Updates</a>
+                    </div> 
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="faq.html">FAQs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- InstanceBeginEditable name="bodycontent" -->
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Additional Resources</h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="homepage.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Additional Resources</li>
+        </ol>
+
+        <!-- Intro Content -->
+        <div class="row">
+            <div class="col-lg-12">
+				<h3>PowerHours & Presentations:</h3>
+				<br>
+					<h5>1/26/2022 - WRR Powerhour: Focus on EPA’s EnviroAtlas</h5>
+					<video width="640" height="360" controls>
+						<source src="videos/WRR Powerhour_20220126_Meeting.mp4" type="video/mp4">
+					</video>
+				<br><br>
+					<h5>12/7/2021 - Pennsylvania DOT Training, December 7, 2021</h5>
+					<video id="video3" width="640" height="360" controls>
+						<source src="videos/PA DOT Training_Dec72021.mp4" type="video/mp4">
+					</video>
+					<br>
+					<b><i>Transcript: </i></b><a href="./transcripts/PADOTTrainingTranscript_120721.pdf" target="_blank">View Here</a>
+					<br><br>
+					<ul id="group3"><b>Time Stamps</b>
+						<li><a style="cursor:pointer; color:blue;"><b>0</b>:<b>27</b></a> Ellen Bryson Opening Remarks </li>
+						<li><a style="cursor:pointer; color:blue;"><b>1</b>:<b>15</b></a> Drew Ames Presentation Purpose </li>
+						<li><a style="cursor:pointer; color:blue;"><b>3</b>:<b>23</b></a> Ellen Bryson Presentation Basics </li>
+						<li><a style="cursor:pointer; color:blue;"><b>5</b>:<b>49</b></a> PA WRR History </li>
+						<li><a style="cursor:pointer; color:blue;"><b>7</b>:<b>13</b></a> WRR Components </li>
+						<li><a style="cursor:pointer; color:blue;"><b>10</b>:<b>00</b></a> WRR Uses </li>
+						<li><a style="cursor:pointer; color:blue;"><b>12</b>:<b>26</b></a> Process for creating Spatial Analyses </li>
+						<li><a style="cursor:pointer; color:blue;"><b>23</b>:<b>39</b></a> Ellen’s Summary of Information </li>
+						<li><a style="cursor:pointer; color:blue;"><b>25</b>:<b>33</b></a> Emily Gentry Presentation Basics </li>
+						<li><a style="cursor:pointer; color:blue;"><b>26</b>:<b>31</b></a> Accessing WRR </li>
+						<li><a style="cursor:pointer; color:blue;"><b>27</b>:<b>34</b></a> Tutorials Panel </li>
+						<li><a style="cursor:pointer; color:blue;"><b>28</b>:<b>35</b></a> Search, Find, and Save Locations </li>
+						<li><a style="cursor:pointer; color:blue;"><b>30</b>:<b>39</b></a> Find Opportunity Tool </li>
+						<li><a style="cursor:pointer; color:blue;"><b>31</b>:<b>54</b></a> Navigating WRR Layer List </li>
+						<li><a style="cursor:pointer; color:blue;"><b>33</b>:<b>01</b></a> Data Layers, Attribute Information, and Pop-ups </li>
+						<li><a style="cursor:pointer; color:blue;"><b>35</b>:<b>31</b></a> Conflicting Suitability Analyses and the Transparency feature </li>
+						<li><a style="cursor:pointer; color:blue;"><b>37</b>:<b>23</b></a> Wetland Restoration and Supplemental data layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>39</b>:<b>57</b></a> Adding external data layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>43</b>:<b>46</b></a> Print Map Tool </li>
+						<li><a style="cursor:pointer; color:blue;"><b>45</b>:<b>11</b></a> Location Details tool and Customization </li>
+					</ul>
+				<br><br>
+					<h5>10/27/2021 - New Climate Change, Environmental Justice and Water Quality Indicators Added to EPA’s Recovery Potential Screening and Watershed Index Online Tool</h5>
+					<video width="640" height="360" controls>
+						<source src="videos/WRR Power Hour 3.mp4" type="video/mp4">
+					</video>
+				<br><br>
+					<h5>6/23/2021 - Demonstration of EPA's EJScreen Tool</h5>
+					<video width="640" height="360" controls>
+						<source src="videos/WRR Power Hour 2.mp4" type="video/mp4">
+					</video>
+				<br><br>
+					<h5>3/24/2021 - Chesapeake Conservancy Hyper Resolution Data and Floodplain and Channel Evaluation Tool</h5>
+					<video width="640" height="360" controls>
+						<source src="videos/WRR Power Hour 1.mp4" type="video/mp4">
+					</video>
+				<br><br>
+					<h5>Basics of Using the Watershed Resources Registry (WRR)</h5>
+					<video id="video1" width="640" height="360" controls>
+						<source src="videos/Basics of Using the Watershed Resources Registry (WRR).mp4" type="video/mp4">
+					</video>
+					<br>
+					<b><i>Transcript: </i></b><a href="./transcripts/BasicTrainingTranscript_072821.pdf" target="_blank">View Here</a>
+					<br><br>
+					<ul id="group1"><b>Time Stamps</b>
+						<li><a style="cursor:pointer; color:blue;"><b>0</b>:<b>00</b></a> Christine’s Introduction </li>
+						<li><a style="cursor:pointer; color:blue;"><b>3</b>:<b>00</b></a> Emily Gentry’s Introduction </li>
+						<li><a style="cursor:pointer; color:blue;"><b>3</b>:<b>37</b></a> Additional Resources Page </li>
+						<li><a style="cursor:pointer; color:blue;"><b>4</b>:<b>41</b></a> Updates Page </li>
+						<li><a style="cursor:pointer; color:blue;"><b>5</b>:<b>07</b></a> What is a WRR? </li>
+						<li><a style="cursor:pointer; color:blue;"><b>6</b>:<b>20</b></a> Accessing WRRs </li>
+						<li><a style="cursor:pointer; color:blue;"><b>7</b>:<b>32</b></a> Restoration and Preservation Spatial Analyses </li>
+						<li><a style="cursor:pointer; color:blue;"><b>8</b>:<b>54</b></a> State Listings of Map Services </li>
+						<li><a style="cursor:pointer; color:blue;"><b>9</b>:<b>33</b></a> WRR User Manual </li>
+						<li><a style="cursor:pointer; color:blue;"><b>9</b>:<b>51</b></a> Entering a WRR’s Interactive Map </li>
+						<li><a style="cursor:pointer; color:blue;"><b>10</b>:<b>10</b></a> WRR Disclaimer and Clearing Your Cache </li>
+						<li><a style="cursor:pointer; color:blue;"><b>11</b>:<b>02</b></a> Set-up of Interactive Maps </li>
+						<li><a style="cursor:pointer; color:blue;"><b>11</b>:<b>33</b></a> Section One: The Tutorial Panel </li>
+						<li><a style="cursor:pointer; color:blue;"><b>12</b>:<b>02</b></a> Video Tab in Tutorial Panel </li>
+						<li><a style="cursor:pointer; color:blue;"><b>13</b>:<b>13</b></a> Fact Sheet Tab in Tutorial Panel </li>
+						<li><a style="cursor:pointer; color:blue;"><b>14</b>:<b>38</b></a> Section Two: The Interactive Map </li>
+						<li><a style="cursor:pointer; color:blue;"><b>14</b>:<b>48</b></a> Search Bar </li>
+						<li><a style="cursor:pointer; color:blue;"><b>16</b>:<b>27</b></a> Adding a Placemarker </li>
+						<li><a style="cursor:pointer; color:blue;"><b>17</b>:<b>12</b></a> The Basemap Gallery </li>
+						<li><a style="cursor:pointer; color:blue;"><b>18</b>:<b>05</b></a> Measurement Tool </li>
+						<li><a style="cursor:pointer; color:blue;"><b>19</b>:<b>08</b></a> Draw Tool </li>
+						<li><a style="cursor:pointer; color:blue;"><b>22</b>:<b>18</b></a> Print Map Tool </li>
+						<li><a style="cursor:pointer; color:blue;"><b>24</b>:<b>28</b></a> Section Three: The Tool Panel </li>
+						<li><a style="cursor:pointer; color:blue;"><b>24</b>:<b>35</b></a> WRR Layer List: Map Layers Tab  </li>
+						<li><a style="cursor:pointer; color:blue;"><b>25</b>:<b>20</b></a> Control F and Finding Layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>26</b>:<b>24</b></a> Turning Data Layers On </li>
+						<li><a style="cursor:pointer; color:blue;"><b>26</b>:<b>35</b></a> The Legend Panel </li>
+						<li><a style="cursor:pointer; color:blue;"><b>27</b>:<b>16</b></a> Pop-ups and data layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>27</b>:<b>40</b></a> Pop-ups and links to external resources </li>
+						<li><a style="cursor:pointer; color:blue;"><b>28</b>:<b>32</b></a> Location Details Tool </li>
+						<li><a style="cursor:pointer; color:blue;"><b>29</b>:<b>39</b></a> NEPAssist Reports, Demographic Reports, USFWS IPaC Reports </li>
+						<li><a style="cursor:pointer; color:blue;"><b>31</b>:<b>00</b></a> Location Details Report </li>
+						<li><a style="cursor:pointer; color:blue;"><b>31</b>:<b>38</b></a> Hyperlinks in Report Results </li>
+						<li><a style="cursor:pointer; color:blue;"><b>32</b>:<b>39</b></a> Printing/Downloading the Location Details Report </li>
+						<li><a style="cursor:pointer; color:blue;"><b>34</b>:<b>26</b></a> Q&A Session </li>
+					</ul>
+				<br><br>
+					<h5>Advanced Training for the Watershed Resources Registry (WRR)</h5>
+					<video id="video2" width="640" height="360" controls>
+						<source src="videos/Advanced Training for the Watershed Resources Registry (WRR).mp4" type="video/mp4">
+					</video>
+					<br>
+					<b><i>Transcript: </i></b><a href="./transcripts/AdvancedTrainingTranscript_072821.pdf" target="_blank">View Here</a>
+					<br><br>
+					<ul id="group2"><b>Time Stamps</b>
+						<li><a style="cursor:pointer; color:blue;"><b>0</b>:<b>16</b></a> Emily Gentry’s Introduction  </li>
+						<li><a style="cursor:pointer; color:blue;"><b>1</b>:<b>05</b></a> Additional Resources Page </li>
+						<li><a style="cursor:pointer; color:blue;"><b>1</b>:<b>38</b></a> Updates Page </li>
+						<li><a style="cursor:pointer; color:blue;"><b>2</b>:<b>02</b></a> Disclaimers and Clearing your cache </li>
+						<li><a style="cursor:pointer; color:blue;"><b>3</b>:<b>05</b></a> Tutorial Panel </li>
+						<li><a style="cursor:pointer; color:blue;"><b>4</b>:<b>21</b></a> Search Bar </li>
+						<li><a style="cursor:pointer; color:blue;"><b>5</b>:<b>37</b></a> Section One: Attribute Information and the Attribute Table </li>
+						<li><a style="cursor:pointer; color:blue;"><b>6</b>:<b>47</b></a> Accessing the Attribute Table through a data layer’s drop-down menu </li>
+						<li><a style="cursor:pointer; color:blue;"><b>7</b>:<b>36</b></a> Opening and Closing the Attribute Table manually </li>
+						<li><a style="cursor:pointer; color:blue;"><b>8</b>:<b>46</b></a> Accessing the Attribute Table through a pop-up </li>
+						<li><a style="cursor:pointer; color:blue;"><b>10</b>:<b>26</b></a> Exploring features within the attribute table </li>
+						<li><a style="cursor:pointer; color:blue;"><b>11</b>:<b>00</b></a> A Major Caveat </li>
+						<li><a style="cursor:pointer; color:blue;"><b>14</b>:<b>17</b></a> Section Two: Adding Data </li>
+						<li><a style="cursor:pointer; color:blue;"><b>14</b>:<b>45</b></a> Adding Data via Search </li>
+						<li><a style="cursor:pointer; color:blue;"><b>15</b>:<b>46</b></a> The Layers link in Adding Data Panel  </li>
+						<li><a style="cursor:pointer; color:blue;"><b>16</b>:<b>28</b></a> Inactive data layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>17</b>:<b>04</b></a> Time lags with data layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>17</b>:<b>39</b></a> Adding Data via URL </li>
+						<li><a style="cursor:pointer; color:blue;"><b>18</b>:<b>48</b></a> Sub-layer control for manually added data layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>19</b>:<b>36</b></a> Pop-up in pre-loaded data layers vs. added data layers </li>
+						<li><a style="cursor:pointer; color:blue;"><b>20</b>:<b>23</b></a> Adding data via file </li>
+						<li><a style="cursor:pointer; color:blue;"><b>21</b>:<b>11</b></a> Processing files before adding them to WRR </li>
+						<li><a style="cursor:pointer; color:blue;"><b>22</b>:<b>42</b></a> Section Three: The Select by Rectangle Tool </li>
+						<li><a style="cursor:pointer; color:blue;"><b>23</b>:<b>30</b></a> Uploading Shapefiles in Adding Data vs. Location Details </li>
+						<li><a style="cursor:pointer; color:blue;"><b>24</b>:<b>30</b></a> Using Select by Rectangle to define your AOI </li>
+						<li><a style="cursor:pointer; color:blue;"><b>26</b>:<b>19</b></a> Select by Rectangle and NEPAssist </li>
+						<li><a style="cursor:pointer; color:blue;"><b>27</b>:<b>28</b></a> Select by Rectangle and NHD Plus Catchments </li>
+						<li><a style="cursor:pointer; color:blue;"><b>29</b>:<b>38</b></a> Ellen Bryson’s Comments </li>
+						<li><a style="cursor:pointer; color:blue;"><b>31</b>:<b>13</b></a> Q&A Session </li>
+					</ul>
+				<br><br>
+				<script>timestamps();</script>
+                <h3>Useful Links:</h3>
+				<ul class="list-group">
+                    <li class="list-group-item"><b>American Association of State Highway and Transportation Officials (AASHTO)'s Innovation Initiative</b><br/><a target="_blank" href="http://aii.transportation.org/Pages/Watershed-Resources-Registry.aspx">http://aii.transportation.org/Pages/Watershed-Resources-Registry.aspx</a></li>
+					<li class="list-group-item"><b>EnviroAtlas</b><br/><a target="_blank" href="https://www.epa.gov/enviroatlas">https://www.epa.gov/enviroatlas</a></li> 
+                    <li class="list-group-item"><b>Home Science: Backyard Conservation</b><br/><a target="_blank" href="https://www.homeadvisor.com/r/home-science-backyard-conservation/">https://www.homeadvisor.com/r/home-science-backyard-conservation/</a></li>
+					<li class="list-group-item"><b>Geomorphometry for Streams and Floodplains in the Chesapeake and Delaware Watersheds</b><br/><a target="_blank" href="https://www.sciencebase.gov/catalog/item/5cae39c3e4b0c3b00654cf57">https://www.sciencebase.gov/catalog/item/5cae39c3e4b0c3b00654cf57</a></li>  	
+                </ul> 
+				<br><br>
+				<h3>Additional Tools:</h3>
+				<ul class="list-group">
+                    <li class="list-group-item"><b>Stormwater Calculator</b><br/><a target="_blank" href="https://www.epa.gov/water-research/national-stormwater-calculator">https://www.epa.gov/water-research/national-stormwater-calculator</a></li>
+                    <li class="list-group-item"><b>How's My Waterway</b><br/><a target="_blank" href="https://www.epa.gov/waterdata/hows-my-waterway">https://www.epa.gov/waterdata/hows-my-waterway</a></li>
+                    <li class="list-group-item"><b>WikiWatersheds</b><br/><a target="_blank" href="https://wikiwatershed.org/">https://wikiwatershed.org/</a></li>
+					<li class="list-group-item"><b>NEPA Assist</b><br/><a target="_blank" href="https://www.epa.gov/nepa/nepassist">https://www.epa.gov/nepa/nepassist</a></li> 
+					<li class="list-group-item"><b>I-Tree</b><br/><a target="_blank" href="https://www.itreetools.org/">https://www.itreetools.org/</a></li>
+					<li class="list-group-item"><b>EJ Screen</b><br/><a target="_blank" href="https://www.epa.gov/ejscreen">https://www.epa.gov/ejscreen</a></li>
+					<li class="list-group-item"><b>Floodplain Ecosystem Service Mapper</b><br/><a target="_blank" href="https://www2.usgs.gov/water/southatlantic/projects/floodplains/">https://www2.usgs.gov/water/southatlantic/projects/floodplains/</a></li>
+					<li class="list-group-item"><b>FACET Tool (GitHub)</b><br/><a target="_blank" href="https://code.usgs.gov/water/facet">https://code.usgs.gov/water/facet</a></li>	
+                </ul>
+				<br><br>			
+            </div>
+        </div>
+
+       
+    </div>
+    <!-- /.container -->
+	
+
+<!-- InstanceEndEditable -->
+    <!-- Footer -->
+    <footer class="py-3 bg-wrr">
+        <div class="container">
+        	<div class="row">
+            	<div class="col">
+        			<img src="images/logo.png" alt="WRR Logo"/>
+                </div>
+                <div class="col-md-10 col-xs-12">
+					<p class="text-white" >Copyright &copy; Watershed Resources Registry 2022</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+<!-- InstanceEnd --></html>

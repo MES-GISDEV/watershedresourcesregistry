@@ -379,6 +379,18 @@
 			"category": "Water Resources"
 		},
 		{
+			"id": "mNK",
+			"wrrID": "EDMA_1980",
+			"title": "WQS Streams/Rivers",
+			"category": "Water Resources"
+		},
+		{
+			"id": "TLg",
+			"wrrID": "EDMA_6636",
+			"title": "Trout Streams/Rivers",
+			"category": "Water Resources"
+		},
+		{
 			"id": "H8F",
 			"wrrID": "ImportantBirdAreas_Polygon_8245",
 			"title": "Important Bird Areas Polygon",

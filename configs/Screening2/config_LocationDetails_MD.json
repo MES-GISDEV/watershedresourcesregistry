@@ -668,148 +668,148 @@
       "baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_UP/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_UP/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_UP_5282_0",
       "label": "Upland Preservation Opportunities",
       "layerName": "Upland Preservation",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_UP/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_UP/MapServer"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_UR/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_UR/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_UR_1819_0",
       "label": "Upland Restoration Opportunities",
       "layerName": "Upland Restoration",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_UR/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_UR/MapServer"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_WP/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_WP/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_WP_2841_0",
       "label": "Wetland Preservation Opportunities",
       "layerName": "Wetland Preservation",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_WP/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_WP/MapServer"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_WR/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_WR/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_WR_1915_0",
       "label": "Wetland Restoration Opportunities",
       "layerName": "Wetland Restoration",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_WR/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_WR/MapServer"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_RP/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_RP/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_RP_9075_0",
       "label": "Riparian Preservation Opportunities",
       "layerName": "Riparian Preservation",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_RP/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_RP/MapServer"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_RR/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_RR/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_RR_9994_0",
       "label": "Riparian Restoration Opportunities",
       "layerName": "Riparian Restoration",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_RR/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_RR/MapServer/"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_HP/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_HP/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_HP_2000_0",
       "label": "Stormwater Preservation Opportunities",
       "layerName": "Stormwater Natural Infrastructure Preservation",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_HP/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_HP/MapServer"
     },
     {
-      "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_HR/MapServer/0",
+      "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_HR/MapServer/0",
       "geometryType": "ArcGISTiledMapServiceLayer",
       "id": "MarylandWRR_HR_9498_0",
       "label": "Stormwater Restoration Opportunities",
       "layerName": "Stormwater Compromised Infrastructure Restoration",
       "layerVersion": 10.31,
       "selectedFields": {
-        "GRIDCODE": {
-          "name": "GRIDCODE",
-          "type": "esriFieldTypeDouble",
+        "gridcode": {
+          "name": "gridcode",
+          "type": "esriFieldTypeInteger",
           "alias": "Score",
           "label": ""
         }
       },
       "layerId": "0",
-      "baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_HR/MapServer/"
+      "baseURL": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_HR/MapServer"
     },
     {
       "url": "https://services.mesgis.com/arcgis/rest/services/WRR/NontidalWetlandMitigation/MapServer/0",
@@ -1114,7 +1114,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_UP/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_UP/MapServer/0",
         "layerName": "Upland Preservation",
         "id": "MarylandWRR_UP_5282_0",
         "allowDownload": true,
@@ -1123,7 +1123,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_UR/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_UR/MapServer/0",
         "layerName": "Upland Restoration",
         "id": "MarylandWRR_UR_1819_0",
         "allowDownload": true,
@@ -1132,7 +1132,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_WP/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_WP/MapServer/0",
         "layerName": "Wetland Preservation",
         "id": "MarylandWRR_WP_2841_0",
         "allowDownload": true,
@@ -1141,7 +1141,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_WR/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_WR/MapServer/0",
         "layerName": "Wetland Restoration",
         "id": "MarylandWRR_WR_1915_0",
         "allowDownload": true,
@@ -1150,7 +1150,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_RP/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_RP/MapServer/0",
         "layerName": "Riparian Preservation",
         "id": "MarylandWRR_RP_9075_0",
         "allowDownload": true,
@@ -1159,7 +1159,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_RR/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_RR/MapServer/0",
         "layerName": "Riparian Restoration",
         "id": "MarylandWRR_RR_9994_0",
         "allowDownload": true,
@@ -1168,7 +1168,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_HP/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_HP/MapServer/0",
         "layerName": "Stormwater Natural Infrastructure Preservation",
         "id": "MarylandWRR_HP_2000_0",
         "allowDownload": true,
@@ -1177,7 +1177,7 @@
         ]
       },
       {
-        "url": "https://services.mesgis.com/arcgis/rest/services/WRR/MarylandWRR_HR/MapServer/0",
+        "url": "https://gis.menv.com/server/rest/services/WRR/MarylandWRR_HR/MapServer/0",
         "layerName": "Stormwater Compromised Infrastructure Restoration",
         "id": "MarylandWRR_HR_9498_0",
         "allowDownload": true,

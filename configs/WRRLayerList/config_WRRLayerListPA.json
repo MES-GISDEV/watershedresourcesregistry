@@ -337,9 +337,51 @@
     "category": "Chapter 93"
   },
   {
+    "id": "uGj",
+    "wrrID": "PAFishBoat_8282",
+    "title": "Class A Streams",
+    "category": "Chapter 93"
+  },
+  {
+    "id": "b6K",
+    "wrrID": "PAFishBoat_1394",
+    "title": "WWCW Fisheries Lakes",
+    "category": "Chapter 93"
+  },
+  {
+    "id": "IlP",
+    "wrrID": "PAFishBoat_8636",
+    "title": "WWCW Fisheries Streams",
+    "category": "Chapter 93"
+  },
+  {
     "id": "UBh",
-    "wrrID": "PAFishBoat_9546",
+    "wrrID": "PAFishBoat_9843",
     "title": "Stocked Trout Water",
+    "category": "Chapter 93"
+  },
+  {
+    "id": "WZs",
+    "wrrID": "PAFishBoat_1561",
+    "title": "Stocked Trout Water Bodies (points)",
+    "category": "Chapter 93"
+  },
+  {
+    "id": "B96",
+    "wrrID": "PAFishBoat_7030",
+    "title": "Stocked Trout Water Bodies (polygons)",
+    "category": "Chapter 93"
+  },
+  {
+    "id": "CVS",
+    "wrrID": "PAFishBoat_6623",
+    "title": "Trout Natural Reproduction 2022",
+    "category": "Chapter 93"
+  },
+  {
+    "id": "Me7",
+    "wrrID": "PAFishBoat_8147",
+    "title": "Trout Stocked Streams 2021",
     "category": "Chapter 93"
   },
   {

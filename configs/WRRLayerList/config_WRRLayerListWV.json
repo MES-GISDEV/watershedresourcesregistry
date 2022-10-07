@@ -298,21 +298,62 @@
     "id": "c1p",
     "wrrID": "abandoned_mine_lands_4575",
     "title": "Abandoned Mine Lands",
-    "category": "Mining"
+    "category": "Energy Extraction"
   },
   {
     "id": "JtQ",
     "wrrID": "mining_reclamation_2117",
     "title": "Mining Reclamation",
-    "category": "Mining"
+    "category": "Energy Extraction"
   },
   {
     "id": "2aY",
     "wrrID": "special_reclamation_8757",
     "title": "Special Reclamation",
-    "category": "Mining"
+    "category": "Energy Extraction"
   },
-  
+  {
+    "id": "EDL",
+    "wrrID": "air_quality_8469",
+    "title": "Coal Plants",
+    "category": "Energy Extraction"
+  },
+  {
+    "id": "Nlb",
+    "wrrID": "air_quality_1431",
+    "title": "Pipeline Transportation of Natural Gas",
+    "category": "Energy Extraction"
+  },
+  {
+    "id": "nfb",
+    "wrrID": "air_quality_8522",
+    "title": "Pipeline Transportation Refine Petroleum",
+    "category": "Energy Extraction"
+  },
+  {
+    "id": "dG6",
+    "wrrID": "air_quality_1413",
+    "title": "Natural Gas Distribution",
+    "category": "Energy Extraction"
+  },
+  {
+    "id": "J1l",
+    "wrrID": "air_quality_2862",
+    "title": "Natural Gas Liquid Extraction",
+    "category": "Energy Extraction"
+  },
+  {
+    "id": "8bN",
+    "wrrID": "air_quality_7125",
+    "title": "Crude Petroleum and Natural Gas Extraction",
+    "category": "Energy Extraction"
+  },
+  {
+    "id": "nNP",
+    "wrrID": "air_quality_8906",
+    "title": "Support Activities for Oil and Gas Extraction",
+    "category": "Energy Extraction"
+  },
   {
     "id": "P0c",
     "wrrID": "usace_regulatory_boundary_4206",
