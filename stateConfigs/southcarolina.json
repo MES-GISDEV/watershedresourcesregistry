@@ -1,23 +1,23 @@
 {
 	"theme": {
-    "name": "TabTheme",
-    "styles": [
-      "cyan",
-      "default",
-      "simpleblue",
-      "purple",
-      "red",
-      "yellow",
-      "green",
-      "blue"
-    ],
-    "version": "2.5",
-    "sharedTheme": {
-      "useHeader": false,
-      "useLogo": false,
-      "isPortalSupport": true
-    },
-    "customStyles": {
+		"name": "TabTheme",
+		"styles": [
+			"cyan",
+			"default",
+			"simpleblue",
+			"purple",
+			"red",
+			"yellow",
+			"green",
+			"blue"
+		],
+		"version": "2.5",
+		"sharedTheme": {
+			"useHeader": false,
+			"useLogo": false,
+			"isPortalSupport": true
+		},
+		"customStyles": {
 			"mainBackgroundColor": "#228bad"
 		}
 	},
@@ -119,7 +119,7 @@
 			},
 			{
 				"position": {
-					"right": 110,
+					"right": 60,
 					"top": 2,
 					"relativeTo": "browser",
 					"wleft" : 800,
@@ -128,28 +128,12 @@
 				"placeholderIndex": 1,
 				"id": "Federal_State_Layer_Tool_060718",
 				"name": "About",
-				"label": "State Tools",
+				"label": "External Resources",
 				"version": "2.23",
 				"closeable": true,
 				"uri": "widgets/LinksDropDown/Widget",
 				"config": "configs/LinksDropDown/stateConfigs/configDE.json",
 				"icon": "configs/LinksDropDown/icon.png"
-			},
-			{
-				"position": {
-					"right": 60,
-					"top": 2,
-					"relativeTo": "browser",
-					"wleft" : 800,
-					"wtop" : 25
-				},
-				"placeholderIndex": 1,
-				"id": "_27",
-				"name": "AddData",
-				"version": "2.23",
-				"closeable": true,
-				"uri": "widgets/AddData/Widget",
-				"config": "configs/AddData/config__27.json"
 			},
 			{
 				"position": {
@@ -214,7 +198,7 @@
 					"left": 95,
 					"top": 45,
 					"relativeTo": "map"
-					},
+				},
 				"placeholderIndex": 1,
 				"id": "config_widgets_Draw_Widget_43_1",
 				"name": "Draw",
@@ -356,7 +340,7 @@
                 "id": "widgets_Screening_Widget_21",
                 "icon": "configs\\Screening\\icon_LocationDetails.png",
                 "IsController": false
-            },
+			},
             {
                 "name": "Screening2",
                 "label": "TAC Report",
@@ -366,7 +350,7 @@
                 "id": "widgets_Screening_Widget_20",
                 "icon": "configs\\Screening2\\icon_LocationDetails.png",
                 "IsController": false
-            },
+			},
 			{
 				"id": "FindOps_30",
 				"name": "FindOpsMD",
@@ -454,7 +438,7 @@
                 "version": "2.23",
                 "uri": "widgets/ReportItems/Widget",
                 "config": "widgets/ReportItems/config.json"
-            },
+			},
 			{
                 "id": "Analysis_1",
                 "name": "Analysis",
@@ -463,235 +447,245 @@
                 "version": "2.23",
                 "uri": "widgets/Analysis/Widget",
                 "config": "widgets/Analysis/config.json"
-            }
+			},
+			{
+				"id": "AddData_27",
+				"name": "AddData",
+				"label": "Add Data",
+				"index": 4,
+				"version": "2.23",
+				"uri": "widgets/AddData/Widget",
+				"config": "configs/AddData/config__27.json"
+			}
+			
 		],
 		"groups": []
 	},
 	"mobileLayout": {
-    "widgetOnScreen": {
-      "widgets": [
-        {
-          "uri": "themes/TabTheme/widgets/Header/Widget",
-          "position": {
-            "left": 0,
-            "top": 0,
-            "width": 55,
-            "height": 44,
-            "relativeTo": "browser"
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "themes/TabTheme/widgets/Footer/Widget",
-          "position": {
-            "left": 0,
-            "width": 0,
-            "bottom": 0,
-            "height": 0,
-            "relativeTo": "browser"
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "themes/TabTheme/widgets/SidebarController/Widget",
-          "position": {
-            "left": 0,
-            "top": 44,
-            "bottom": 0,
-            "relativeTo": "browser"
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/HomeButton/Widget",
-          "position": {
-            "left": 7,
-            "top": 75
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/Scalebar/Widget",
-          "position": {
-            "left": 10,
-            "bottom": 40,
-            "relativeTo": "map"
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/Search/Widget",
-          "position": {
-            "left": 45,
-            "top": 5
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/Coordinate/Widget",
-          "position": {
-            "left": 10,
-            "bottom": 20,
-            "relativeTo": "map"
-          },
-          "version": "2.5"
-        },
-        {
-          "position": {
-            "left": 45,
-            "top": 45,
-            "width": 400,
-            "height": 410
-          }
-        },
-        {
-          "position": {
-            "left": 95,
-            "top": 45,
-            "width": 380,
-            "height": 410
-          }
-        },
-        {
-          "position": {
-            "left": 145,
-            "top": 45,
-            "width": 380,
-            "height": 410
-          }
-        },
-        {
-          "uri": "widgets/OverviewMap/Widget",
-          "position": {
-            "right": 0,
-            "bottom": 0
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/MyLocation/Widget",
-          "inPanel": false,
-          "position": {
-            "left": 7,
-            "top": 110
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/AttributeTable/Widget",
-          "position": {
-            "bottom": 0,
-            "relativeTo": "map"
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/Splash/Widget",
-          "visible": false,
-          "position": {
-            "relativeTo": "browser"
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/ZoomSlider/Widget",
-          "visible": true,
-          "position": {
-            "top": 5,
-            "left": 7
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/ExtentNavigate/Widget",
-          "visible": false,
-          "position": {
-            "top": 149,
-            "left": 7
-          },
-          "version": "2.5"
-        },
-        {
-          "uri": "widgets/FullScreen/Widget",
-          "visible": false,
-          "position": {
-            "right": 8,
-            "top": 8
-          },
-          "version": "2.5"
-        }
-      ]
+		"widgetOnScreen": {
+			"widgets": [
+				{
+					"uri": "themes/TabTheme/widgets/Header/Widget",
+					"position": {
+						"left": 0,
+						"top": 0,
+						"width": 55,
+						"height": 44,
+						"relativeTo": "browser"
+					},
+					"version": "2.5"
+				},
+				{
+					"uri": "themes/TabTheme/widgets/Footer/Widget",
+					"position": {
+						"left": 0,
+						"width": 0,
+						"bottom": 0,
+						"height": 0,
+						"relativeTo": "browser"
+					},
+					"version": "2.5"
+				},
+				{
+					"uri": "themes/TabTheme/widgets/SidebarController/Widget",
+					"position": {
+						"left": 0,
+						"top": 44,
+						"bottom": 0,
+						"relativeTo": "browser"
+					},
+					"version": "2.5"
+				},
+				{
+					"uri": "widgets/HomeButton/Widget",
+					"position": {
+						"left": 7,
+						"top": 75
+					},
+					"version": "2.5"
+				},
+				{
+					"uri": "widgets/Scalebar/Widget",
+					"position": {
+						"left": 10,
+						"bottom": 40,
+						"relativeTo": "map"
+					},
+					"version": "2.5"
+				},
+				{
+	"uri": "widgets/Search/Widget",
+	"position": {
+	"left": 45,
+	"top": 5
+	},
+	"version": "2.5"
+	},
+	{
+	"uri": "widgets/Coordinate/Widget",
+	"position": {
+	"left": 10,
+	"bottom": 20,
+	"relativeTo": "map"
+	},
+	"version": "2.5"
+	},
+	{
+	"position": {
+	"left": 45,
+	"top": 45,
+	"width": 400,
+	"height": 410
+	}
+	},
+	{
+	"position": {
+	"left": 95,
+	"top": 45,
+	"width": 380,
+	"height": 410
+	}
+	},
+	{
+	"position": {
+	"left": 145,
+	"top": 45,
+	"width": 380,
+	"height": 410
+	}
+	},
+	{
+	"uri": "widgets/OverviewMap/Widget",
+	"position": {
+	"right": 0,
+	"bottom": 0
+	},
+	"version": "2.5"
+	},
+	{
+	"uri": "widgets/MyLocation/Widget",
+	"inPanel": false,
+	"position": {
+	"left": 7,
+	"top": 110
+	},
+	"version": "2.5"
+	},
+	{
+	"uri": "widgets/AttributeTable/Widget",
+	"position": {
+	"bottom": 0,
+	"relativeTo": "map"
+	},
+	"version": "2.5"
+	},
+	{
+	"uri": "widgets/Splash/Widget",
+	"visible": false,
+	"position": {
+	"relativeTo": "browser"
+	},
+	"version": "2.5"
+	},
+	{
+	"uri": "widgets/ZoomSlider/Widget",
+	"visible": true,
+	"position": {
+	"top": 5,
+	"left": 7
+	},
+	"version": "2.5"
+	},
+	{
+	"uri": "widgets/ExtentNavigate/Widget",
+	"visible": false,
+	"position": {
+	"top": 149,
+	"left": 7
+	},
+	"version": "2.5"
+	},
+	{
+	"uri": "widgets/FullScreen/Widget",
+	"visible": false,
+	"position": {
+	"right": 8,
+	"top": 8
+	},
+	"version": "2.5"
+	}
+	]
     },
     "widgetPool": {
-      "panel": {
-        "uri": "themes/TabTheme/panels/TabPanel/Panel",
-        "position": {
-          "top": 44,
-          "left": 0,
-          "bottom": 22,
-          "relativeTo": "browser"
-        }
-      }
+	"panel": {
+	"uri": "themes/TabTheme/panels/TabPanel/Panel",
+	"position": {
+	"top": 44,
+	"left": 0,
+	"bottom": 22,
+	"relativeTo": "browser"
+	}
+	}
     },
     "map": {
-      "position": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 55
-      }
+	"position": {
+	"top": 0,
+	"right": 0,
+	"bottom": 0,
+	"left": 55
+	}
     }
-  },
-  "loadingPage": {
+	},
+	"loadingPage": {
     "backgroundColor": "#51773f",
     "backgroundImage": {
-      "visible": false
+	"visible": false
     },
     "loadingGif": {
-      "visible": true,
-      "uri": "configs/loading/images/predefined_loading_1.gif",
-      "width": 58,
-      "height": 29
+	"visible": true,
+	"uri": "configs/loading/images/predefined_loading_1.gif",
+	"width": 58,
+	"height": 29
     }
-  },
-  "wabVersion": "2.5",
-  "isWebTier": false,
-  "httpProxy": {
+	},
+	"wabVersion": "2.5",
+	"isWebTier": false,
+	"httpProxy": {
     "useProxy": true,
     "alwaysUseProxy": false,
     "url": "https://localhost/WRRProxy/proxy.ashx",
     "rules": [{
-		"urlPrefix": "https://maryland.maps.arcgis.com/",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "https://maryland.maps.arcgis.com/",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "http://services.mesgis.com/arcgis",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "http://services.mesgis.com/arcgis",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "https://www.arcgis.com/sharing",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "https://www.arcgis.com/sharing",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "https://landscape10.arcgis.com",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "https://landscape10.arcgis.com",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "https://landscape1.arcgis.com",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "https://landscape1.arcgis.com",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "https://services.arcgis.com",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "https://services.arcgis.com",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "http://mdewin64.mde.state.md.us",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "http://mdewin64.mde.state.md.us",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "https://services.mesgis.com/arcgis",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "https://services.mesgis.com/arcgis",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	},{
-		"urlPrefix": "https://landscape11.arcgis.com",
-		"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+	"urlPrefix": "https://landscape11.arcgis.com",
+	"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
 	}]
-  },
-  "dataSource": {
+	},
+	"dataSource": {
     "dataSources": {},
     "settings": {}
-  },
-  "logoLink": "https://watershedresourcesregistry.org/"
-}
+	},
+	"logoLink": "https://watershedresourcesregistry.org/"
+	}	
