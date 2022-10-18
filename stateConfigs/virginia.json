@@ -494,176 +494,200 @@
 						"relativeTo": "browser"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/HomeButton/Widget",
 					"position": {
-					"left": 7,
-					"top": 75,
-					"relativeTo": "map"
+						"left": 7,
+						"top": 75,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/Scalebar/Widget",
 					"position": {
-					"left": 10,
-					"bottom": 40,
-					"relativeTo": "map"
+						"left": 10,
+						"bottom": 40,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/Search/Widget",
 					"position": {
-					"left": 45,
-					"top": 5,
-					"relativeTo": "map"
+						"left": 45,
+						"top": 5,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/Coordinate/Widget",
 					"position": {
-					"left": 10,
-					"bottom": 20,
-					"relativeTo": "map"
+						"left": 10,
+						"bottom": 20,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"position": {
-					"right": 110,
-					"top": 45,
-					"relativeTo": "map"
+						"right": 110,
+						"top": 45,
+						"relativeTo": "map"
 					}
-					},
-					{
+				},
+				{
 					"position": {
-					"right": 60,
-					"top": 45,
-					"relativeTo": "map"
+						"right": 60,
+						"top": 45,
+						"relativeTo": "map"
 					}
-					},
-					{
+				},
+				{
 					"position": {
-					"right": 10,
-					"top": 45,
-					"relativeTo": "map"
+						"right": 10,
+						"top": 45,
+						"relativeTo": "map"
 					}
-					},
-					{
+				},
+				{
 					"uri": "widgets/OverviewMap/Widget",
 					"position": {
-					"right": 0,
-					"bottom": 0,
-					"relativeTo": "map"
+						"right": 0,
+						"bottom": 0,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/MyLocation/Widget",
 					"inPanel": false,
 					"position": {
-					"left": 7,
-					"top": 115,
-					"relativeTo": "map"
+						"left": 7,
+						"top": 115,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/AttributeTable/Widget",
 					"position": {
-					"bottom": 0,
-					"relativeTo": "map"
+						"bottom": 0,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/Splash/Widget",
 					"visible": false,
 					"position": {
-					"relativeTo": "browser"
+						"relativeTo": "browser"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/ZoomSlider/Widget",
 					"visible": true,
 					"position": {
-					"top": 5,
-					"left": 7,
-					"relativeTo": "map"
+						"top": 5,
+						"left": 7,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/ExtentNavigate/Widget",
 					"visible": false,
 					"position": {
-					"top": 195,
-					"left": 7,
-					"relativeTo": "map"
+						"top": 195,
+						"left": 7,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					},
-					{
+				},
+				{
 					"uri": "widgets/FullScreen/Widget",
 					"visible": false,
 					"position": {
-					"top": 155,
-					"left": 7,
-					"relativeTo": "map"
+						"top": 155,
+						"left": 7,
+						"relativeTo": "map"
 					},
 					"version": "2.23"
-					}
-					]
-					},
-					"widgetPool": {
-					"panel": {
-					"uri": "themes/TabTheme/panels/TabPanel/Panel",
-					"position": {
+				}
+			]
+		},
+		"widgetPool": {
+			"panel": {
+				"uri": "themes/TabTheme/panels/TabPanel/Panel",
+				"position": {
 					"top": 44,
 					"left": 0,
 					"bottom": 22,
 					"relativeTo": "browser"
-					}
-					}
-					},
-					"map": {
-					"position": {
-					"top": 0,
-					"right": 0,
-					"bottom": 0,
-					"left": 55
-					}
-					}
-					},
-					"loadingPage": {
-					"backgroundColor": "#51773f",
-					"backgroundImage": {
-					"visible": false
-					},
-					"loadingGif": {
-					"visible": true,
-					"uri": "/webappbuilder/apps/14/configs/loading/images/predefined_loading_4.gif",
-					"width": 34,
-					"height": 34
-					}
-					},
-					"wabVersion": "2.23",
-					"isTemplateApp": true,
-					"isWebTier": false,
-					"httpProxy": {
-					"useProxy": true,
-					"alwaysUseProxy": false,
-					"url": "",
-					"rules": []
-					},
-					"dataSource": {
-					"dataSources": {},
-					"settings": {}
-					},
-					"logoAlt": "",
-					"logoLink": ""
-					}																					
+				}
+			}
+		},
+		"map": {
+			"position": {
+				"top": 0,
+				"right": 0,
+				"bottom": 0,
+				"left": 55
+			}
+		}
+	},
+	"loadingPage": {
+		"backgroundColor": "#51773f",
+		"backgroundImage": {
+			"visible": false
+		},
+		"loadingGif": {
+			"visible": true,
+			"uri": "/webappbuilder/apps/14/configs/loading/images/predefined_loading_4.gif",
+			"width": 34,
+			"height": 34
+		}
+	},
+	"wabVersion": "2.23",
+	"isTemplateApp": true,
+	"isWebTier": false,
+	"httpProxy": {
+		"useProxy": true,
+		"alwaysUseProxy": false,
+		"url": "https://localhost/WRRProxy/proxy.ashx",
+		"rules": [{
+			"urlPrefix": "https://maryland.maps.arcgis.com/",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "http://services.mesgis.com/arcgis",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://www.arcgis.com/sharing",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://landscape10.arcgis.com",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://landscape1.arcgis.com",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://services.arcgis.com",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "http://mdewin64.mde.state.md.us",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://services.mesgis.com/arcgis",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+		}]
+	},
+	"dataSource": {
+		"dataSources": {},
+		"settings": {}
+	},
+	"logoAlt": "",
+	"logoLink": ""
+}																					

@@ -1,691 +1,1479 @@
 {
-  "aoiTabText": "AOI",
-  "reportTabText": "Report",
-  "placenameButtonText": "Placename",
-  "drawToolsButtonText": "Draw",
-  "shapefileButtonText": "Shapefile",
-  "coordinatesButtonText": "Coordinates",
-  "showPlacenameWidget": false,
-  "showDrawToolsWidget": true,
-  "showShapefileWidget": true,
-  "showCoordinatesWidget": false,
-  "allowShapefilesUpload": false,
-  "areaUnits": "Standard",
-  "maxFeaturesForAnalysis": 1000,
-  "searchTolerance": 20,
-  "traverseUnit": "uSSurveyFeet",
-  "traverseDirectionUnit": "decimalDegree",
-  "defaultBufferDistance": 0,
-  "defaultBufferUnit": "UNIT_FOOT",
-  "reportSettings": {
-    "printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
-    "footnote": "",
-    "logo": "${appPath}/widgets/Screening/images/default-logo.png",
-    "columnTitleColor": "#c6d9ec",
-    "reportTitle": "Screening Report"
-  },
-  "searchSourceSettings": {
-    "allPlaceholder": "",
-    "showInfoWindowOnSelect": true,
-    "sources": [
-      {
-        "url": "http://geodata.md.gov/imap/rest/services/GeocodeServices/MD_CompositeLocator/GeocodeServer",
-        "name": "MD Statewide Composite Locator",
-        "singleLineFieldName": "SingleLine",
-        "placeholder": "MD Statewide Composite Locator",
-        "countryCode": "",
-        "zoomScale": 50000,
-        "maxSuggestions": 6,
-        "maxResults": 6,
-        "searchInCurrentMapExtent": false,
-        "enableLocalSearch": false,
-        "localSearchMinScale": 300000,
-        "localSearchDistance": 50000,
-        "type": "locator"
-      },
-      {
-        "name": "MD Composite Locator (SHAREPOINT ONLY)",
-        "url": "https://utility.arcgis.com/usrsvcs/servers/8fade5b4c1ab46ee82a5398ca7bd231c/rest/services/SharePoint/MD_CompositeLocatorSharePoint/GeocodeServer",
-        "singleLineFieldName": "SingleLine",
-        "placeholder": "MD Composite Locator (SHAREPOINT ONLY)",
-        "maxResults": 6,
-        "searchInCurrentMapExtent": false,
-        "type": "locator",
-        "enableLocalSearch": false,
-        "localSearchMinScale": 300000,
-        "localSearchDistance": 50000
-      }
-    ]
-  },
-  "placenameSymbology": {
-    "point": {
-      "angle": 0,
-      "xoffset": 0,
-      "yoffset": 0,
-      "type": "esriPMS",
-      "url": null,
-      "imageData": "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",
-      "contentType": "image/png",
-      "width": 24.99975,
-      "height": 24.99975
-    },
-    "polyline": {
-      "color": [
-        0,
-        0,
-        0,
-        255
-      ],
-      "width": 4,
-      "type": "esriSLS",
-      "style": "esriSLSSolid"
-    },
-    "polygon": {
-      "color": [
-        136,
-        136,
-        136,
-        63
-      ],
-      "outline": {
-        "color": [
-          112,
-          112,
-          112,
-          255
-        ],
-        "width": 1,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    },
-    "aoiSymbol": {
-      "color": [
-        255,
-        255,
-        255,
-        0
-      ],
-      "outline": {
-        "color": [
-          255,
-          0,
-          0,
-          255
-        ],
-        "width": 1.5,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    }
-  },
-  "drawToolSymbology": {
-    "point": {
-      "angle": 0,
-      "xoffset": 0,
-      "yoffset": 0,
-      "type": "esriPMS",
-      "url": null,
-      "imageData": "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",
-      "contentType": "image/png",
-      "width": 24.99975,
-      "height": 24.99975
-    },
-    "polyline": {
-      "color": [
-        0,
-        0,
-        0,
-        255
-      ],
-      "width": 4,
-      "type": "esriSLS",
-      "style": "esriSLSSolid"
-    },
-    "polygon": {
-      "color": [
-        136,
-        136,
-        136,
-        63
-      ],
-      "outline": {
-        "color": [
-          112,
-          112,
-          112,
-          255
-        ],
-        "width": 1,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    },
-    "aoiSymbol": {
-      "color": [
-        255,
-        255,
-        255,
-        0
-      ],
-      "outline": {
-        "color": [
-          255,
-          0,
-          0,
-          255
-        ],
-        "width": 1.5,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    }
-  },
-  "shapefileSymbology": {
-    "point": {
-      "angle": 0,
-      "xoffset": 0,
-      "yoffset": 0,
-      "type": "esriPMS",
-      "url": null,
-      "imageData": "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",
-      "contentType": "image/png",
-      "width": 24.99975,
-      "height": 24.99975
-    },
-    "polyline": {
-      "color": [
-        0,
-        0,
-        0,
-        255
-      ],
-      "width": 4,
-      "type": "esriSLS",
-      "style": "esriSLSSolid"
-    },
-    "polygon": {
-      "color": [
-        136,
-        136,
-        136,
-        63
-      ],
-      "outline": {
-        "color": [
-          112,
-          112,
-          112,
-          255
-        ],
-        "width": 1,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    },
-    "aoiSymbol": {
-      "color": [
-        255,
-        255,
-        255,
-        0
-      ],
-      "outline": {
-        "color": [
-          255,
-          0,
-          0,
-          255
-        ],
-        "width": 1.5,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    }
-  },
-  "coordinatesSymbology": {
-    "point": {
-      "angle": 0,
-      "xoffset": 0,
-      "yoffset": 0,
-      "type": "esriPMS",
-      "url": null,
-      "imageData": "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",
-      "contentType": "image/png",
-      "width": 24.99975,
-      "height": 24.99975
-    },
-    "polyline": {
-      "color": [
-        0,
-        0,
-        0,
-        255
-      ],
-      "width": 4,
-      "type": "esriSLS",
-      "style": "esriSLSSolid"
-    },
-    "polygon": {
-      "color": [
-        136,
-        136,
-        136,
-        63
-      ],
-      "outline": {
-        "color": [
-          112,
-          112,
-          112,
-          255
-        ],
-        "width": 1,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    },
-    "aoiSymbol": {
-      "color": [
-        255,
-        255,
-        255,
-        0
-      ],
-      "outline": {
-        "color": [
-          255,
-          0,
-          0,
-          255
-        ],
-        "width": 1.5,
-        "type": "esriSLS",
-        "style": "esriSLSSolid"
-      },
-      "type": "esriSFS",
-      "style": "esriSFSSolid"
-    }
-  },
-  "aoiSymbol": {
-    "color": [
-      255,
-      255,
-      255,
-      0
-    ],
-    "outline": {
-      "color": [
-        255,
-        0,
-        0,
-        255
-      ],
-      "width": 1.5,
-      "type": "esriSLS",
-      "style": "esriSLSSolid"
-    },
-    "type": "esriSFS",
-    "style": "esriSFSSolid"
-  },
-  "layers": [
-    {
-      "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
-      "geometryType": "esriGeometryPolygon",
-      "id": "wbd_7728_4",
-      "label": "8-digit HU",
-      "layerName": "USGS Watershed Boundaries",
-      "selectedFields": {
-        "huc8": {
-          "name": "huc8",
-          "type": "esriFieldTypeString",
-          "alias": "HUC8",
-		  "label": ""
-        },
-		"name": {
-          "name": "name",
-          "type": "esriFieldTypeString",
-          "alias": "Name"
-        },
-		"states": {
-          "name": "states",
-          "type": "esriFieldTypeString",
-          "alias": "States"
-        },
-		"areaacres": {
-          "name": "areaacres",
-          "type": "esriFieldTypeString",
-          "alias": "Area Acres"
-        }
-      },
-      "layerId": "4",
-      "baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
-    },
-	{
-      "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
-      "geometryType": "esriGeometryPolygon",
-      "id": "wbd_7728_6",
-      "label": "12-digit HU",
-      "layerName": "USGS Watershed Boundaries",
-      "selectedFields": {
-        "huc12": {
-          "name": "huc12",
-          "type": "esriFieldTypeString",
-          "alias": "HUC12",
-		  "label": ""
-        },
-		"name": {
-          "name": "name",
-          "type": "esriFieldTypeString",
-          "alias": "Name"
-        },
-		"states": {
-          "name": "states",
-          "type": "esriFieldTypeString",
-          "alias": "States"
-        },
-		"areaacres": {
-          "name": "areaacres",
-          "type": "esriFieldTypeString",
-          "alias": "Area Acres"
-        },
-		"hutype": {
-          "name": "hutype",
-          "type": "esriFieldTypeString",
-          "alias": "HU Type"
-        },
-		"tohuc": {
-          "name": "tohuc",
-          "type": "esriFieldTypeString",
-          "alias": "ToHUC"
-        }
-      },
-      "layerId": "6",
-      "baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
-    },
-	{
-      "url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
-      "geometryType": "esriGeometryPolyline",
-      "id": "NHDPlus_HR_3890_4",
-      "label": "USGS NHD - Flow Direction",
-      "layerName": "USGS NHD Plus High Resolution",
-      "selectedFields": {
-        "FCODE": {
-          "name": "FCODE",
-          "type": "esriFieldTypeInteger",
-          "alias": "FCode"
-        },
-        "STREAMORDE": {
-          "name": "STREAMORDE",
-          "type": "esriFieldTypeSmallInteger",
-          "alias": "Stream Order"
-        },
-        "TOTDASQKM": {
-          "name": "TOTDASQKM",
-          "type": "esriFieldTypeDouble",
-          "alias": "Total Drainage Area Sq Km"
-        },
-		"ARBOLATESU": {
-          "name": "ARBOLATESU",
-          "type": "esriFieldTypeDouble",
-          "alias": "Upstream Cumulative Stream Km"
-        },
-        "STREAMORDE": {
-          "name": "STREAMORDE",
-          "type": "esriFieldTypeSmallInteger",
-          "alias": "Stream Order"
-        }
-      },
-      "layerId": "4",
-      "baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/"
-    },
-	{
-      "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
-      "geometryType": "esriGeometryPolyline",
-      "id": "303D_NP21_372_1",
-      "label": "303d Streams - Line",
-      "layerName": "303d Streams",
-      "selectedFields": {
-        "WBD_HUC12": {
-          "name": "WBD_HUC12",
-          "type": "esriFieldTypeString",
-          "alias": "How's My Waterway?"
-        },
-		"REACHCODE": {
-          "name": "REACHCODE",
-          "type": "esriFieldTypeString",
-          "alias": "REACHCODE"
-        }
-      },
-      "layerId": "1",
-      "baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/"
-    },
-    {
-      "url": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0",
-      "geometryType": "esriGeometryPolygon",
-      "id": "Wetlands_590_0",
-      "label": "NWI - Wetlands",
-      "layerName": "USFWS NWI",
-      "selectedFields": {
-        "Wetlands.WETLAND_TYPE": {
-          "name": "Wetlands.WETLAND_TYPE",
-          "type": "esriFieldTypeString",
-          "alias": "Wetland Type"
-        },
-        "Wetlands.ACRES": {
-          "name": "Wetlands.ACRES",
-          "type": "esriFieldTypeDouble",
-          "alias": "Acres"
-        },
-        "Wetlands.ATTRIBUTE": {
-          "name": "Wetlands.ATTRIBUTE",
-          "type": "esriFieldTypeString",
-          "alias": "Attribute"
-        }
-      },
-      "layerId": "0",
-      "baseURL": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/"
-    },
-	{
-      "url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer/0",
-      "id": "ShorelineInventoryLayers_1151_0",
-      "label": "Virginia Tidal Marsh Inventory",
-      "layerName": "Virginia Tidal Marsh Inventory",
-      "selectedFields": {
-        "MarshType": {
-          "name": "MarshType",
-          "alias": "Marsh Type"
-        },
-		"Acres": {
-          "name": "Acres",
-          "alias": "Acres"
-        }
-      },
-      "layerId": "0",
-      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer"
-    },
-	{
-      "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
-      "id": "VulnerabilityAssessments_1753_0",
-      "label": "Tidal Marsh Vulnerability Assessments (2050)",
-      "layerName": "Tidal Marsh Vulnerability Assessments",
-      "selectedFields": {
-        "salinity": {
-          "name": "salinity",
-          "alias": "Salinity"
-        },
-		"ErosionVuln": {
-          "name": "ErosionVuln",
-          "alias": "Erosion Vulnerability"
-        },
-		"Marsh2050": {
-          "name": "Marsh2050",
-          "alias": "2050 Marsh change extent"
-        },
-		"SalinVuln": {
-          "name": "SalinVuln",
-          "alias": "Salinization Vulnerability"
-        },
-		"C2050Class": {
-          "name": "C2050Class",
-          "alias": "Combined 2050 vulnerability classification"
-        }
-      },
-      "layerId": "0",
-      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0"
-    },
-	{
-      "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
-      "id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
-      "label": "NonTidal NWI Habitat and Water Quality 4 yrs",
-      "layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
-      "selectedFields": {
-        "ATTRIBUTE": {
-          "name": "ATTRIBUTE",
-          "alias": "ATTRIBUTE"
-        },
-		"WETLAND_TYPE": {
-          "name": "WETLAND_TYPE",
-          "alias": "WETLAND TYPE"
-        },
-		"ACRES": {
-          "name": "ACRES",
-          "alias": "ACRES"
-        },
-		"PROJECT_NAME": {
-          "name": "PROJECT_NAME",
-          "alias": "PROJECT NAME"
-        },
-		"HStress01": {
-          "name": "HStress01",
-          "alias": "HqStress01"
-        },
-		"WQStres01": {
-          "name": "WQStres01",
-          "alias": "WQStress01"
-        },
-		"HStress06": {
-          "name": "HStress06",
-          "alias": "HStress06"
-        },
-		"WQStres06": {
-          "name": "WQStres06",
-          "alias": "WQStress06"
-        },
-		"HStress11": {
-          "name": "HStress11",
-          "alias": "HStress11"
-        },
-		"WQStres11": {
-          "name": "WQStres11",
-          "alias": "WQStres11"
-        },
-		"HStress16": {
-          "name": "HStress16",
-          "alias": "HStress16"
-        },
-		"WQStres16": {
-          "name": "WQStres16",
-          "alias": "WQStres16"
-        }
-      },
-      "layerId": "2",
-      "baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer"
-    }
-  ],
-  "downloadSettings": {
-    "type": "syncEnable",
-    "layers": [
-      {
-        "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
-        "layerName": "12-digit HU",
-        "id": "wbd_7728_6",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      },
-      {
-        "url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
-        "layerName": "8-digit HU",
-        "id": "wbd_7728_4",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      },
-	  {
-        "url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
-        "layerName": "USGS NHD - Flow Direction",
-        "id": "NHDPlus_HR_3890_4",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      },
-	  {
-        "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
-        "layerName": "303d Streams - Line",
-        "id": "303D_NP21_372_1",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      },
-	  {
-        "url": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0",
-        "layerName": "NWI - Wetlands",
-        "id": "Wetlands_590_0",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      },
-	  {
-        "url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer/0",
-		"id": "ShorelineInventoryLayers_1151_0",
-		"layerName": "Virginia Tidal Marsh Inventory",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      },
-	  {
-        "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
-        "id": "VulnerabilityAssessments_1753_0",
-        "layerName": "Tidal Marsh Vulnerability Assessments",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      },
-	  {
-        "url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
-        "id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
-        "layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
-        "allowDownload": true,
-        "downloadingFileOption": [
-          "csv"
-        ]
-      }
-    ],
-    "extractDataTaskURL": "",
-    "downloadingFileOptions": [
-      "csv"
-    ]
-  }
+	"aoiTabText": "AOI",
+	"reportTabText": "Report",
+	"placenameButtonText": "Placename",
+	"drawToolsButtonText": "Draw",
+	"shapefileButtonText": "Shapefile",
+	"coordinatesButtonText": "Coordinates",
+	"showPlacenameWidget": false,
+	"showDrawToolsWidget": true,
+	"showShapefileWidget": true,
+	"showCoordinatesWidget": false,
+	"allowShapefilesUpload": false,
+	"areaUnits": "Standard",
+	"maxFeaturesForAnalysis": 1000,
+	"searchTolerance": 20,
+	"traverseUnit": "uSSurveyFeet",
+	"traverseDirectionUnit": "decimalDegree",
+	"defaultBufferDistance": 0,
+	"defaultBufferUnit": "UNIT_FOOT",
+	"reportSettings": {
+		"printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+		"footnote": "",
+		"logo": "${appPath}/widgets/Screening/images/default-logo.png",
+		"columnTitleColor": "#c6d9ec",
+		"reportTitle": "Screening Report"
+	},
+	"searchSourceSettings": {
+		"allPlaceholder": "",
+		"showInfoWindowOnSelect": true,
+		"sources": [
+			{
+				"url": "http://geodata.md.gov/imap/rest/services/GeocodeServices/MD_CompositeLocator/GeocodeServer",
+				"name": "MD Statewide Composite Locator",
+				"singleLineFieldName": "SingleLine",
+				"placeholder": "MD Statewide Composite Locator",
+				"countryCode": "",
+				"zoomScale": 50000,
+				"maxSuggestions": 6,
+				"maxResults": 6,
+				"searchInCurrentMapExtent": false,
+				"enableLocalSearch": false,
+				"localSearchMinScale": 300000,
+				"localSearchDistance": 50000,
+				"type": "locator"
+			},
+			{
+				"name": "MD Composite Locator (SHAREPOINT ONLY)",
+				"url": "https://utility.arcgis.com/usrsvcs/servers/8fade5b4c1ab46ee82a5398ca7bd231c/rest/services/SharePoint/MD_CompositeLocatorSharePoint/GeocodeServer",
+				"singleLineFieldName": "SingleLine",
+				"placeholder": "MD Composite Locator (SHAREPOINT ONLY)",
+				"maxResults": 6,
+				"searchInCurrentMapExtent": false,
+				"type": "locator",
+				"enableLocalSearch": false,
+				"localSearchMinScale": 300000,
+				"localSearchDistance": 50000
+			}
+		]
+	},
+	"placenameSymbology": {
+		"point": {
+			"angle": 0,
+			"xoffset": 0,
+			"yoffset": 0,
+			"type": "esriPMS",
+			"url": null,
+			"imageData": "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",
+			"contentType": "image/png",
+			"width": 24.99975,
+			"height": 24.99975
+		},
+		"polyline": {
+			"color": [
+				0,
+				0,
+				0,
+				255
+			],
+			"width": 4,
+			"type": "esriSLS",
+			"style": "esriSLSSolid"
+		},
+		"polygon": {
+			"color": [
+				136,
+				136,
+				136,
+				63
+			],
+			"outline": {
+				"color": [
+					112,
+					112,
+					112,
+					255
+				],
+				"width": 1,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		},
+		"aoiSymbol": {
+			"color": [
+				255,
+				255,
+				255,
+				0
+			],
+			"outline": {
+				"color": [
+					255,
+					0,
+					0,
+					255
+				],
+				"width": 1.5,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		}
+	},
+	"drawToolSymbology": {
+		"point": {
+			"angle": 0,
+			"xoffset": 0,
+			"yoffset": 0,
+			"type": "esriPMS",
+			"url": null,
+			"imageData": "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",
+			"contentType": "image/png",
+			"width": 24.99975,
+			"height": 24.99975
+		},
+		"polyline": {
+			"color": [
+				0,
+				0,
+				0,
+				255
+			],
+			"width": 4,
+			"type": "esriSLS",
+			"style": "esriSLSSolid"
+		},
+		"polygon": {
+			"color": [
+				136,
+				136,
+				136,
+				63
+			],
+			"outline": {
+				"color": [
+					112,
+					112,
+					112,
+					255
+				],
+				"width": 1,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		},
+		"aoiSymbol": {
+			"color": [
+				255,
+				255,
+				255,
+				0
+			],
+			"outline": {
+				"color": [
+					255,
+					0,
+					0,
+					255
+				],
+				"width": 1.5,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		}
+	},
+	"shapefileSymbology": {
+		"point": {
+			"angle": 0,
+			"xoffset": 0,
+			"yoffset": 0,
+			"type": "esriPMS",
+			"url": null,
+			"imageData": "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",
+			"contentType": "image/png",
+			"width": 24.99975,
+			"height": 24.99975
+		},
+		"polyline": {
+			"color": [
+				0,
+				0,
+				0,
+				255
+			],
+			"width": 4,
+			"type": "esriSLS",
+			"style": "esriSLSSolid"
+		},
+		"polygon": {
+			"color": [
+				136,
+				136,
+				136,
+				63
+			],
+			"outline": {
+				"color": [
+					112,
+					112,
+					112,
+					255
+				],
+				"width": 1,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		},
+		"aoiSymbol": {
+			"color": [
+				255,
+				255,
+				255,
+				0
+			],
+			"outline": {
+				"color": [
+					255,
+					0,
+					0,
+					255
+				],
+				"width": 1.5,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		}
+	},
+	"coordinatesSymbology": {
+		"point": {
+			"angle": 0,
+			"xoffset": 0,
+			"yoffset": 0,
+			"type": "esriPMS",
+			"url": null,
+			"imageData": "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",
+			"contentType": "image/png",
+			"width": 24.99975,
+			"height": 24.99975
+		},
+		"polyline": {
+			"color": [
+				0,
+				0,
+				0,
+				255
+			],
+			"width": 4,
+			"type": "esriSLS",
+			"style": "esriSLSSolid"
+		},
+		"polygon": {
+			"color": [
+				136,
+				136,
+				136,
+				63
+			],
+			"outline": {
+				"color": [
+					112,
+					112,
+					112,
+					255
+				],
+				"width": 1,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		},
+		"aoiSymbol": {
+			"color": [
+				255,
+				255,
+				255,
+				0
+			],
+			"outline": {
+				"color": [
+					255,
+					0,
+					0,
+					255
+				],
+				"width": 1.5,
+				"type": "esriSLS",
+				"style": "esriSLSSolid"
+			},
+			"type": "esriSFS",
+			"style": "esriSFSSolid"
+		}
+	},
+	"aoiSymbol": {
+		"color": [
+			255,
+			255,
+			255,
+			0
+		],
+		"outline": {
+			"color": [
+				255,
+				0,
+				0,
+				255
+			],
+			"width": 1.5,
+			"type": "esriSLS",
+			"style": "esriSLSSolid"
+		},
+		"type": "esriSFS",
+		"style": "esriSFSSolid"
+	},
+	"layers": [
+		{
+			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
+			"geometryType": "esriGeometryPolygon",
+			"id": "wbd_7728_4",
+			"label": "8-digit HU",
+			"layerName": "USGS Watershed Boundaries",
+			"selectedFields": {
+				"huc8": {
+					"name": "huc8",
+					"type": "esriFieldTypeString",
+					"alias": "HUC8",
+					"label": ""
+				},
+				"name": {
+					"name": "name",
+					"type": "esriFieldTypeString",
+					"alias": "Name"
+				},
+				"states": {
+					"name": "states",
+					"type": "esriFieldTypeString",
+					"alias": "States"
+				},
+				"areaacres": {
+					"name": "areaacres",
+					"type": "esriFieldTypeString",
+					"alias": "Area Acres"
+				}
+			},
+			"layerId": "4",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
+		},
+		{
+			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
+			"geometryType": "esriGeometryPolygon",
+			"id": "wbd_7728_6",
+			"label": "12-digit HU",
+			"layerName": "USGS Watershed Boundaries",
+			"selectedFields": {
+				"huc12": {
+					"name": "huc12",
+					"type": "esriFieldTypeString",
+					"alias": "HUC12",
+					"label": ""
+				},
+				"name": {
+					"name": "name",
+					"type": "esriFieldTypeString",
+					"alias": "Name"
+				},
+				"states": {
+					"name": "states",
+					"type": "esriFieldTypeString",
+					"alias": "States"
+				},
+				"areaacres": {
+					"name": "areaacres",
+					"type": "esriFieldTypeString",
+					"alias": "Area Acres"
+				},
+				"hutype": {
+					"name": "hutype",
+					"type": "esriFieldTypeString",
+					"alias": "HU Type"
+				},
+				"tohuc": {
+					"name": "tohuc",
+					"type": "esriFieldTypeString",
+					"alias": "ToHUC"
+				}
+			},
+			"layerId": "6",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
+		},
+		{
+			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
+			"geometryType": "esriGeometryPolyline",
+			"id": "NHDPlus_HR_3890_4",
+			"label": "USGS NHD - Flow Direction",
+			"layerName": "USGS NHD Plus High Resolution",
+			"selectedFields": {
+				"FCODE": {
+					"name": "FCODE",
+					"type": "esriFieldTypeInteger",
+					"alias": "FCode"
+				},
+				"STREAMORDE": {
+					"name": "STREAMORDE",
+					"type": "esriFieldTypeSmallInteger",
+					"alias": "Stream Order"
+				},
+				"TOTDASQKM": {
+					"name": "TOTDASQKM",
+					"type": "esriFieldTypeDouble",
+					"alias": "Total Drainage Area Sq Km"
+				},
+				"ARBOLATESU": {
+					"name": "ARBOLATESU",
+					"type": "esriFieldTypeDouble",
+					"alias": "Upstream Cumulative Stream Km"
+				},
+				"STREAMORDE": {
+					"name": "STREAMORDE",
+					"type": "esriFieldTypeSmallInteger",
+					"alias": "Stream Order"
+				}
+			},
+			"layerId": "4",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/"
+		},
+		{
+			"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
+			"geometryType": "esriGeometryPolyline",
+			"id": "303D_NP21_372_1",
+			"label": "303d Streams - Line",
+			"layerName": "303d Streams",
+			"selectedFields": {
+				"WBD_HUC12": {
+					"name": "WBD_HUC12",
+					"type": "esriFieldTypeString",
+					"alias": "How's My Waterway?"
+				},
+				"REACHCODE": {
+					"name": "REACHCODE",
+					"type": "esriFieldTypeString",
+					"alias": "REACHCODE"
+				}
+			},
+			"layerId": "1",
+			"baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/"
+		},
+		{
+			"url": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0",
+			"geometryType": "esriGeometryPolygon",
+			"id": "Wetlands_590_0",
+			"label": "NWI - Wetlands",
+			"layerName": "USFWS NWI",
+			"selectedFields": {
+				"Wetlands.WETLAND_TYPE": {
+					"name": "Wetlands.WETLAND_TYPE",
+					"type": "esriFieldTypeString",
+					"alias": "Wetland Type"
+				},
+				"Wetlands.ACRES": {
+					"name": "Wetlands.ACRES",
+					"type": "esriFieldTypeDouble",
+					"alias": "Acres"
+				},
+				"Wetlands.ATTRIBUTE": {
+					"name": "Wetlands.ATTRIBUTE",
+					"type": "esriFieldTypeString",
+					"alias": "Attribute"
+				}
+			},
+			"layerId": "0",
+			"baseURL": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/"
+		},
+		{
+			"url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer/0",
+			"id": "ShorelineInventoryLayers_1151_0",
+			"label": "Virginia Tidal Marsh Inventory",
+			"layerName": "Virginia Tidal Marsh Inventory",
+			"selectedFields": {
+				"MarshType": {
+					"name": "MarshType",
+					"alias": "Marsh Type"
+				},
+				"Acres": {
+					"name": "Acres",
+					"alias": "Acres"
+				}
+			},
+			"layerId": "0",
+			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer"
+		},
+		{
+			"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
+			"id": "VulnerabilityAssessments_1753_0",
+			"label": "Tidal Marsh Vulnerability Assessments (2050)",
+			"layerName": "Tidal Marsh Vulnerability Assessments",
+			"selectedFields": {
+				"salinity": {
+					"name": "salinity",
+					"alias": "Salinity"
+				},
+				"ErosionVuln": {
+					"name": "ErosionVuln",
+					"alias": "Erosion Vulnerability"
+				},
+				"Marsh2050": {
+					"name": "Marsh2050",
+					"alias": "2050 Marsh change extent"
+				},
+				"SalinVuln": {
+					"name": "SalinVuln",
+					"alias": "Salinization Vulnerability"
+				},
+				"C2050Class": {
+					"name": "C2050Class",
+					"alias": "Combined 2050 vulnerability classification"
+				}
+			},
+			"layerId": "0",
+			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0"
+		},
+		{
+			"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
+			"id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
+			"label": "NonTidal NWI Habitat and Water Quality 4 yrs",
+			"layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
+			"selectedFields": {
+				"ATTRIBUTE": {
+					"name": "ATTRIBUTE",
+					"alias": "ATTRIBUTE"
+				},
+				"WETLAND_TYPE": {
+					"name": "WETLAND_TYPE",
+					"alias": "WETLAND TYPE"
+				},
+				"ACRES": {
+					"name": "ACRES",
+					"alias": "ACRES"
+				},
+				"PROJECT_NAME": {
+					"name": "PROJECT_NAME",
+					"alias": "PROJECT NAME"
+				},
+				"HStress01": {
+					"name": "HStress01",
+					"alias": "HqStress01"
+				},
+				"WQStres01": {
+					"name": "WQStres01",
+					"alias": "WQStress01"
+				},
+				"HStress06": {
+					"name": "HStress06",
+					"alias": "HStress06"
+				},
+				"WQStres06": {
+					"name": "WQStres06",
+					"alias": "WQStress06"
+				},
+				"HStress11": {
+					"name": "HStress11",
+					"alias": "HStress11"
+				},
+				"WQStres11": {
+					"name": "WQStres11",
+					"alias": "WQStres11"
+				},
+				"HStress16": {
+					"name": "HStress16",
+					"alias": "HStress16"
+				},
+				"WQStres16": {
+					"name": "WQStres16",
+					"alias": "WQStres16"
+				}
+			},
+			"layerId": "2",
+			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer"
+		},
+		{
+			"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/0",
+			"geometryType": "esriGeometryPolyline",
+			"id": "Virginia_ATTAINS_2506",
+			"label": "",
+			"layerName": "ATTAINS Assessment Lines",
+			"layerVersion": 10.81,
+			"selectedFields": {
+				"reportingcycle": {
+					"name": "reportingcycle",
+					"type": "esriFieldTypeInteger",
+					"alias": "ReportingCycle",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Cycle Year"
+				},
+				"assessmentunitname": {
+					"name": "assessmentunitname",
+					"type": "esriFieldTypeString",
+					"alias": "AssessmentUnitName",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Assessment Unit Name"
+				},
+				"waterbodyreportlink": {
+					"name": "waterbodyreportlink",
+					"type": "esriFieldTypeString",
+					"alias": "Waterbody Report Link",
+					"length": 4000,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Waterbody Report Link"
+				},
+				"ircategory": {
+					"name": "ircategory",
+					"type": "esriFieldTypeString",
+					"alias": "IR Category",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "IR Category"
+				},
+				"overallstatus": {
+					"name": "overallstatus",
+					"type": "esriFieldTypeString",
+					"alias": "Overall Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Overall Status"
+				},
+				"isassessed": {
+					"name": "isassessed",
+					"type": "esriFieldTypeString",
+					"alias": "Is Assessed",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Assessed"
+				},
+				"isimpaired": {
+					"name": "isimpaired",
+					"type": "esriFieldTypeString",
+					"alias": "Is Impaired",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Impaired"
+				},
+				"isthreatened": {
+					"name": "isthreatened",
+					"type": "esriFieldTypeString",
+					"alias": "Is Threatened",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Threatened"
+				},
+				"on303dlist": {
+					"name": "on303dlist",
+					"type": "esriFieldTypeString",
+					"alias": "On303dList",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "On 303d List"
+				},
+				"hastmdl": {
+					"name": "hastmdl",
+					"type": "esriFieldTypeString",
+					"alias": "Has TMDL",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Has TMDL Report"
+				}
+			},
+			"layerId": "0",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/1",
+			"geometryType": "esriGeometryPolygon",
+			"id": "Virginia_ATTAINS_2459",
+			"label": "",
+			"layerName": "ATTAINS Assessment Areas",
+			"layerVersion": 10.81,
+			"selectedFields": {
+				"reportingcycle": {
+					"name": "reportingcycle",
+					"type": "esriFieldTypeInteger",
+					"alias": "ReportingCycle",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Cycle Year"
+				},
+				"assessmentunitname": {
+					"name": "assessmentunitname",
+					"type": "esriFieldTypeString",
+					"alias": "AssessmentUnitName",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Assessment Unit Name"
+				},
+				"waterbodyreportlink": {
+					"name": "waterbodyreportlink",
+					"type": "esriFieldTypeString",
+					"alias": "Waterbody Report Link",
+					"length": 4000,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Waterbody Report Link"
+				},
+				"ircategory": {
+					"name": "ircategory",
+					"type": "esriFieldTypeString",
+					"alias": "IR Category",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "IR Category"
+				},
+				"overallstatus": {
+					"name": "overallstatus",
+					"type": "esriFieldTypeString",
+					"alias": "Overall Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Overall Status"
+				},
+				"isassessed": {
+					"name": "isassessed",
+					"type": "esriFieldTypeString",
+					"alias": "Is Assessed",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Assessed"
+				},
+				"isimpaired": {
+					"name": "isimpaired",
+					"type": "esriFieldTypeString",
+					"alias": "Is Impaired",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Impaired"
+				},
+				"isthreatened": {
+					"name": "isthreatened",
+					"type": "esriFieldTypeString",
+					"alias": "Is Threatened",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Threatened"
+				},
+				"on303dlist": {
+					"name": "on303dlist",
+					"type": "esriFieldTypeString",
+					"alias": "On303dList",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "On 303d List"
+				},
+				"hastmdl": {
+					"name": "hastmdl",
+					"type": "esriFieldTypeString",
+					"alias": "Has TMDL",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Has TMDL Report"
+				}
+			},
+			"layerId": "1",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/2",
+			"geometryType": "esriGeometryPolygon",
+			"id": "Virginia_ATTAINS_8409",
+			"label": "",
+			"layerName": "ATTAINS Assessment Unit Catchment Associations",
+			"layerVersion": 10.81,
+			"selectedFields": {
+				"reportingcycle": {
+					"name": "reportingcycle",
+					"type": "esriFieldTypeInteger",
+					"alias": "ReportingCycle",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Cycle Year"
+				},
+				"assessmentunitname": {
+					"name": "assessmentunitname",
+					"type": "esriFieldTypeString",
+					"alias": "AssessmentUnitName",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Assessment Unit Name"
+				},
+				"waterbodyreportlink": {
+					"name": "waterbodyreportlink",
+					"type": "esriFieldTypeString",
+					"alias": "Waterbody Report Link",
+					"length": 4000,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Waterbody Report Link"
+				},
+				"ircategory": {
+					"name": "ircategory",
+					"type": "esriFieldTypeString",
+					"alias": "IR Category",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "IR Category"
+				},
+				"overallstatus": {
+					"name": "overallstatus",
+					"type": "esriFieldTypeString",
+					"alias": "Overall Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Overall Status"
+				},
+				"isassessed": {
+					"name": "isassessed",
+					"type": "esriFieldTypeString",
+					"alias": "Is Assessed",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Assessed"
+				},
+				"isimpaired": {
+					"name": "isimpaired",
+					"type": "esriFieldTypeString",
+					"alias": "Is Impaired",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Impaired"
+				},
+				"isthreatened": {
+					"name": "isthreatened",
+					"type": "esriFieldTypeString",
+					"alias": "Is Threatened",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Threatened"
+				},
+				"on303dlist": {
+					"name": "on303dlist",
+					"type": "esriFieldTypeString",
+					"alias": "On303dList",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "On 303d List"
+				},
+				"hastmdl": {
+					"name": "hastmdl",
+					"type": "esriFieldTypeString",
+					"alias": "Has TMDL",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Has TMDL Plan"
+				}
+			},
+			"layerId": "2",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/185",
+			"geometryType": "esriGeometryPolygon",
+			"id": "EDMA_5037",
+			"label": "",
+			"layerName": "TMDL Watersheds",
+			"layerVersion": 10.71,
+			"selectedFields": {
+				"WSHD_NAME": {
+					"name": "WSHD_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "WSHD_NAME",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"PJ_RPT_FINAL_APPRVD_LINK": {
+					"name": "PJ_RPT_FINAL_APPRVD_LINK",
+					"type": "esriFieldTypeString",
+					"alias": "PJ_RPT_FINAL_APPRVD_LINK",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"POL_NAME": {
+					"name": "POL_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "POL_NAME",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"layerId": "185",
+			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/193",
+			"geometryType": "esriGeometryPoint",
+			"id": "EDMA_1284",
+			"label": "",
+			"layerName": "VWP General Permits",
+			"layerVersion": 10.71,
+			"selectedFields": {
+				"PERMIT_NO": {
+					"name": "PERMIT_NO",
+					"type": "esriFieldTypeString",
+					"alias": "Permit Number",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"FAC_NAME": {
+					"name": "FAC_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "Facility Name",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"VWP_GP_CLASSIFICATION": {
+					"name": "VWP_GP_CLASSIFICATION",
+					"type": "esriFieldTypeString",
+					"alias": "Classification",
+					"length": 8,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"layerId": "193",
+			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/192",
+			"geometryType": "esriGeometryPoint",
+			"id": "EDMA_5936",
+			"label": "",
+			"layerName": "VWP Individual Permits",
+			"layerVersion": 10.71,
+			"selectedFields": {
+				"PERMIT_NO": {
+					"name": "PERMIT_NO",
+					"type": "esriFieldTypeString",
+					"alias": "Permit Number",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"FAC_NAME": {
+					"name": "FAC_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "Facility Name",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"VWP_CLASSIFICATION": {
+					"name": "VWP_CLASSIFICATION",
+					"type": "esriFieldTypeString",
+					"alias": "Classification",
+					"length": 8,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"layerId": "192",
+			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/98",
+			"geometryType": "esriGeometryPoint",
+			"id": "EDMA_7446",
+			"label": "",
+			"layerName": "Renewable Energy Permits",
+			"layerVersion": 10.71,
+			"selectedFields": {
+				"PMT_NBR": {
+					"name": "PMT_NBR",
+					"type": "esriFieldTypeString",
+					"alias": "Pmt_Nbr",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"PERM_ID": {
+					"name": "PERM_ID",
+					"type": "esriFieldTypeString",
+					"alias": "PERM_ID",
+					"length": 12,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"PERM_NAME": {
+					"name": "PERM_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "PERM_NAME",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"PERMIT_STATUS": {
+					"name": "PERMIT_STATUS",
+					"type": "esriFieldTypeString",
+					"alias": "PERMIT_STATUS",
+					"length": 115,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"layerId": "98",
+			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/104",
+			"geometryType": "esriGeometryPoint",
+			"id": "EDMA_9790",
+			"label": "",
+			"layerName": "Petroleum Release Sites",
+			"layerVersion": 10.71,
+			"selectedFields": {
+				"PCNUM": {
+					"name": "PCNUM",
+					"type": "esriFieldTypeString",
+					"alias": "Pollution Complaint Number",
+					"length": 9,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"RST_FAC_ID": {
+					"name": "RST_FAC_ID",
+					"type": "esriFieldTypeString",
+					"alias": "CEDS Facility ID",
+					"length": 12,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"RST_NAME": {
+					"name": "RST_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "Release Site Name",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"RST_PRIORITY": {
+					"name": "RST_PRIORITY",
+					"type": "esriFieldTypeString",
+					"alias": "Priority",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"RST_FED_REG_TANK": {
+					"name": "RST_FED_REG_TANK",
+					"type": "esriFieldTypeString",
+					"alias": "Federally Regulated Tank Site",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"RST_STATUS_IND": {
+					"name": "RST_STATUS_IND",
+					"type": "esriFieldTypeString",
+					"alias": "Release Site Status",
+					"length": 8,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"RST_SUSPECT_CONFIRM_IND": {
+					"name": "RST_SUSPECT_CONFIRM_IND",
+					"type": "esriFieldTypeString",
+					"alias": "Suspect/Confirm Indication",
+					"length": 10,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"RST_CASE_CLOSED": {
+					"name": "RST_CASE_CLOSED",
+					"type": "esriFieldTypeDate",
+					"alias": "Closure Date",
+					"length": 8,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Closure Date"
+				}
+			},
+			"layerId": "104",
+			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/100",
+			"geometryType": "esriGeometryPoint",
+			"id": "EDMA_5442",
+			"label": "",
+			"layerName": "Solid Waste Permits",
+			"layerVersion": 10.71,
+			"selectedFields": {
+				"PMT_ID": {
+					"name": "PMT_ID",
+					"type": "esriFieldTypeString",
+					"alias": "Solid Waste Facility ID",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"PMT_ID_1": {
+					"name": "PMT_ID_1",
+					"type": "esriFieldTypeString",
+					"alias": "Permit ID",
+					"length": 12,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"POS_DESC": {
+					"name": "POS_DESC",
+					"type": "esriFieldTypeString",
+					"alias": "Permit Operating Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"SIT_NAME": {
+					"name": "SIT_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "Facility Site Name",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Facility Name"
+				}
+			},
+			"layerId": "100",
+			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/119",
+			"geometryType": "esriGeometryPoint",
+			"id": "EDMA_4559",
+			"label": "",
+			"layerName": "VPDES Outfalls",
+			"layerVersion": 10.71,
+			"selectedFields": {
+				"OUTFALL_ID": {
+					"name": "OUTFALL_ID",
+					"type": "esriFieldTypeString",
+					"alias": "OUTFALL_ID",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Outfall ID"
+				},
+				"VAP_PMT_NO": {
+					"name": "VAP_PMT_NO",
+					"type": "esriFieldTypeString",
+					"alias": "VAP_PMT_NO",
+					"length": 9,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"VAP_TYPE": {
+					"name": "VAP_TYPE",
+					"type": "esriFieldTypeString",
+					"alias": "VAP_TYPE",
+					"length": 8,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"FAC_NAME": {
+					"name": "FAC_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "FAC_NAME",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Facility Name"
+				}
+			},
+			"layerId": "119",
+			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		}
+	],
+	"downloadSettings": {
+		"type": "syncEnable",
+		"layers": [
+			{
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
+				"layerName": "12-digit HU",
+				"id": "wbd_7728_6",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
+				"layerName": "8-digit HU",
+				"id": "wbd_7728_4",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
+				"layerName": "USGS NHD - Flow Direction",
+				"id": "NHDPlus_HR_3890_4",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
+				"layerName": "303d Streams - Line",
+				"id": "303D_NP21_372_1",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0",
+				"layerName": "NWI - Wetlands",
+				"id": "Wetlands_590_0",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer/0",
+				"id": "ShorelineInventoryLayers_1151_0",
+				"layerName": "Virginia Tidal Marsh Inventory",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
+				"id": "VulnerabilityAssessments_1753_0",
+				"layerName": "Tidal Marsh Vulnerability Assessments",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
+				"id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
+				"layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/0",
+				"layerName": "ATTAINS Assessment Lines",
+				"id": "Virginia_ATTAINS_2506",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/1",
+				"layerName": "ATTAINS Assessment Areas",
+				"id": "Virginia_ATTAINS_2459",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/2",
+				"layerName": "ATTAINS Assessment Unit Catchment Associations",
+				"id": "Virginia_ATTAINS_8409",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/185",
+				"layerName": "TMDL Watersheds",
+				"id": "EDMA_5037",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/193",
+				"layerName": "VWP General Permits",
+				"id": "EDMA_1284",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/192",
+				"layerName": "VWP Individual Permits",
+				"id": "EDMA_5936",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/98",
+				"layerName": "Renewable Energy Permits",
+				"id": "EDMA_7446",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/104",
+				"layerName": "Petroleum Release Sites",
+				"id": "EDMA_9790",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/100",
+				"layerName": "Solid Waste Permits",
+				"id": "EDMA_5442",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/119",
+				"layerName": "VPDES Outfalls",
+				"id": "EDMA_4559",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			}
+		],
+		"extractDataTaskURL": "",
+		"downloadingFileOptions": [
+			"csv"
+		]
+	}
 }
