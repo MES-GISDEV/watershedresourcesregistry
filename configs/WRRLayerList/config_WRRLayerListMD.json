@@ -1,1156 +1,1186 @@
 {
-  "layers": [
-  {
-    "id": "VT3",
-    "wrrID": "MarylandWRR_RP_9075",
-    "title": "Riparian Preservation",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "qjs",
-    "wrrID": "MarylandWRR_RP_1m_7335",
-    "title": "Riparian Preservation 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "kVO",
-    "wrrID": "MarylandWRR_RR_9994",
-    "title": "Riparian Restoration",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "BiS",
-    "wrrID": "MarylandWRR_RR_1m_847",
-    "title": "Riparian Restoration 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "v2C",
-    "wrrID": "MarylandWRR_HP_2000",
-    "title": "Stormwater Natural Infrastructure Preservation",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "RU0",
-    "wrrID": "MarylandWRR_HP_1m_799",
-    "title": "Stormwater Natural Infrastructure Preservation 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "HT6",
-    "wrrID": "MarylandWRR_HR_9498",
-    "title": "Stormwater Compromised Infrastructure Restoration",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "g1X",
-    "wrrID": "MarylandWRR_HR_1m_1316",
-    "title": "Stormwater Compromised Infrastructure Restoration 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "AxH",
-    "wrrID": "MarylandWRR_UP_5282",
-    "title": "Upland Preservation",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "Vvz",
-    "wrrID": "MarylandWRR_UP_1m_9970",
-    "title": "Upland Preservation 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "BTV",
-    "wrrID": "MarylandWRR_UR_1819",
-    "title": "Upland Restoration",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "IDP",
-    "wrrID": "MarylandWRR_UR_1m_3923",
-    "title": "Upland Restoration 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "Ucv",
-    "wrrID": "MarylandWRR_WP_2841",
-    "title": "Wetland Preservation",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "2Um",
-    "wrrID": "MarylandWRR_WP_1m_8940",
-    "title": "Wetland Preservation 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "5G9",
-    "wrrID": "MarylandWRR_WR_1915",
-    "title": "Wetland Restoration",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "b72",
-    "wrrID": "MarylandWRR_WR_1m_542",
-    "title": "Wetland Restoration 1 meter",
-    "category": "WRR Suitability Analyses"
-  },
-  {
-    "id": "yHP",
-    "wrrID": "survey123_f428e20cada347319bfc88cd00a82a98_fieldworker_6756",
-    "title": "Site Description",
-    "category": "Site Visits"
-  },
-  {
-    "id": "Ruk",
-    "wrrID": "ScreeningPts_6682",
-    "title": "MDE Wetland and Waterways Permits",
-    "category": "Permits"
-  },
-  {
-    "id": "P1q",
-    "wrrID": "NontidalWetlandMitigation_6770",
-    "title": "Nontidal Wetland Mitigation Sites",
-    "category": "Permits"
-  },
-  {
-    "id": "akT",
-    "wrrID": "ORM_2001",
-    "title": "ORM - Updated 8/10/22",
-    "category": "USACE Permit Status"
-  },
-  {
-    "id": "a89",
-    "wrrID": "RIBITS_3526",
-    "title": "RIBITS - Banks & Service Areas",
-    "category": "USACE Permit Status"
-  },
-  {
-    "id": "b5d",
-    "wrrID": "RIBITS_9950",
-    "title": "RIBITS - ILFs",
-    "category": "USACE Permit Status"
-  },
-  {
-    "id": "bSy",
-    "wrrID": "MD_PoliticalBoundaries_2630",
-    "title": "County Boundary",
-    "category": "Boundaries"
-  },
-  {
-    "id": "49X",
-    "wrrID": "USA_States_Generalized_2453",
-    "title": "State Boundary",
-    "category": "Boundaries"
-  },
-  {
-    "id": "Dl9",
-    "wrrID": "MD_ProtectedLands_3938",
-    "title": "Protected Lands",
-    "category": "Land Planning"
-  },
-  {
-    "id": "MMO",
-    "wrrID": "MD_ProtectedLands_6388",
-    "title": "Protected Lands - Queried for Model",
-    "category": "Land Planning"
-  },
-  {
-    "id": "Sck",
-    "wrrID": "Priority_Funding_Areas_8238",
-    "title": "Priority Funding Areas",
-    "category": "Land Planning"
-  },
-  {
-    "id": "l82",
-    "wrrID": "NLCD_2016_Land_Cover_L48_1724",
-    "title": "NLCD 2016",
-    "category": "Land Use / Land Cover"
-  },
-  {
-    "id": "rY2",
-    "wrrID": "ChesapeakeBayWatershedLandCover_5196",
-    "title": "Chesapeake Conservancy Landcover",
-    "category": "Land Use / Land Cover"
-  },
-  {
-    "id": "KP3",
-    "wrrID": "Generalized_Sewer_5359",
-    "title": "Generalized Sewer",
-    "category": "Land Use / Land Cover"
-  },
-  {
-    "id": "wIr",
-    "wrrID": "Generalized_Zoning_3736",
-    "title": "Generalized Zoning",
-    "category": "Land Use / Land Cover"
-  },
-  {
-    "id": "DvL",
-    "wrrID": "MD_ArchivedLandUseLandCover_2786",
-    "title": "MD Archived Land Use Land Cover",
-    "category": "Land Use / Land Cover"
-  },
-  {
-    "id": "0EJ",
-    "wrrID": "MD_LandUseLandCover_283",
-    "title": "MD Land Use Land Cover",
-    "category": "Land Use / Land Cover"
-  },
-  {
-    "id": "p5X",
-    "wrrID": "MD_PropertyData_3858",
-    "title": "MD Tax Maps (Map Service)",
-    "category": "Property Data"
-  },
-  {
-    "id": "f73",
-    "wrrID": "MD_PropertyData_3392",
-    "title": "MD Tax Maps (Image Service)",
-    "category": "Property Data"
-  },
-  {
-    "id": "RMV",
-    "wrrID": "MD_ParcelBoundaries_2364",
-    "title": "Parcel Boundaries",
-    "category": "Property Data"
-  },
-  {
-    "id": "zGj",
-    "wrrID": "58ff5bd0e4b006455f2d628b_8981",
-    "title": "Terrestrial Cores",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "SJE",
-    "wrrID": "58ff5bd0e4b006455f2d628b_5638",
-    "title": "Grassland Bird Cores",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "O8u",
-    "wrrID": "58ff5bd0e4b006455f2d628b_968",
-    "title": "Terrestrial Core Connectors",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "Hjw",
-    "wrrID": "58ff5bd0e4b006455f2d628b_6997",
-    "title": "Road-bounded Natural Block",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "WEk",
-    "wrrID": "5900fd76e4b0c2e071a84cab_9226",
-    "title": "Nature's Network Conservation Design, Core Areas and Connectors",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "AP1",
-    "wrrID": "58ed14e6e4b0b4d95d3353ea_9905",
-    "title": "Habitat Importance for Imperiled Species",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "IQS",
-    "wrrID": "58a75b0ee4b025c464286d63_454",
-    "title": "Habitat Condition for Imperiled Species",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "yNR",
-    "wrrID": "5919f1bee4b0a7fdb43b33f3_9283",
-    "title": "Core Habitat for Imperiled Species",
-    "category": "Nature's Network"
-  },
-  {
-    "id": "Fbt",
-    "wrrID": "MD_FocalAreas_9800",
-    "title": "Targeted Ecological Areas",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "VMH",
-    "wrrID": "NCED_CompleteDB_9739",
-    "title": "Conservation Easements (NCED)",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "q4D",
-    "wrrID": "MD_GreenInfrastructure_1817",
-    "title": "Green Infrastructure",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "3qc",
-    "wrrID": "MD_BiodiversityConservationNetwork_4402",
-    "title": "Biodiversity Conservation Network",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "X2j",
-    "wrrID": "MD_LivingResources_785",
-    "title": "Sensitive Species Project Review Areas",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "AHn",
-    "wrrID": "Stronghold_Watersheds_9412",
-    "title": "Stronghold Watersheds",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "J2T",
-    "wrrID": "MD_CriticalAreas_1256",
-    "title": "MD Critical Areas (Towns)",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "t3q",
-    "wrrID": "MD_CriticalAreas_7346",
-    "title": "MD Critical Areas (Counties)",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "bKN",
-    "wrrID": "MD_BlueInfrastructure_5418",
-    "title": "MD Blue Infrastructure Ranks",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "m31",
-    "wrrID": "ImportantBirdAreas_Point_317",
-    "title": "Important Bird Areas Point",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "2Fg",
-    "wrrID": "ImportantBirdAreas_Polygon_2214",
-    "title": "Important Bird Areas Polygon",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "6Rq",
-    "wrrID": "MD_LivingResources_9764",
-    "title": "Forest Interior Dwelling Species",
-    "category": "Priority Conservation Areas"
-  },
-  {
-    "id": "3YN",
-    "wrrID": "MD_SiteSensitivity_2908",
-    "title": "Tier II Watersheds or Target Ecological Areas",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
-  },
-  {
-    "id": "Rm0",
-    "wrrID": "MD_SiteSensitivity_3194",
-    "title": "Catchments with Low Impervious Cover (less than 10%)",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
-  },
-  {
-    "id": "PKO",
-    "wrrID": "MD_SiteSensitivity_3865",
-    "title": "Within 1 mile of protected areas",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
-  },
-  {
-    "id": "uK1",
-    "wrrID": "MD_ImpactSiteSensitivity_9116",
-    "title": "Impact Site Sensitivity Score (0-3)",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
-  },
-  {
-    "id": "kvN",
-    "wrrID": "MD_SiteSensitivity_2908",
-    "title": "Tier II Watersheds or Target Ecological Areas",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
-  },
-  {
-    "id": "vOq",
-    "wrrID": "MD_SiteSensitivity_3194",
-    "title": "Catchments with Low Impervious Cover (less than 10%)",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
-  },
-  {
-    "id": "NPH",
-    "wrrID": "MD_SiteSensitivity_2109",
-    "title": "Within 1 mile of (but not in) protected areas",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
-  },
-  {
-    "id": "acm",
-    "wrrID": "MD_MitigationSiteSensitivity_3925",
-    "title": "Mitigation Site Sensitivity Score (0-3)",
-    "category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
-  },
-  {
-    "id": "i83",
-    "wrrID": "Culvert_Pilot_341",
-    "title": "SHA Conveyance Flat",
-    "category": "Culvert Prioritization Gap Analysis"
-  },
-  {
-    "id": "zU6",
-    "wrrID": "Culvert_Pilot_8559",
-    "title": "NAACC MD Culverts",
-    "category": "Culvert Prioritization Gap Analysis"
-  },
-  {
-    "id": "5qr",
-    "wrrID": "Culvert_Pilot_9732",
-    "title": "MDE Culvert",
-    "category": "Culvert Prioritization Gap Analysis"
-  },
-  {
-    "id": "xzg",
-    "wrrID": "ChesFPP_4088",
-    "title": "Diadromous Fish Prioritization",
-    "category": "Fish Passage Connectivity"
-  },
-  {
-    "id": "SCw",
-    "wrrID": "ChesFPP_3356",
-    "title": "Brook Trout Prioritization",
-    "category": "Fish Passage Connectivity"
-  },
-  {
-    "id": "usK",
-    "wrrID": "ChesFPP_7947",
-    "title": "Resident Fish Prioritization",
-    "category": "Fish Passage Connectivity"
-  },
-  {
-    "id": "O2i",
-    "wrrID": "ChesFPP_3173",
-    "title": "Road Stream Crossing",
-    "category": "Fish Passage Connectivity"
-  },
-  {
-    "id": "hdx",
-    "wrrID": "MD_ShorelineChanges_8012",
-    "title": "Legacy Historical Shorelines by Years",
-    "category": "Water"
-  },
-  {
-    "id": "0cd",
-    "wrrID": "MD_ShorelineChanges_5188",
-    "title": "Limited Area Shorelines by Decade",
-    "category": "Water"
-  },
-  {
-    "id": "8kh",
-    "wrrID": "MD_ShorelineChanges_2202",
-    "title": "Historic Shoreline Rate of Change Baselines",
-    "category": "Water"
-  },
-  {
-    "id": "8y8",
-    "wrrID": "MD_ShorelineChanges_7593",
-    "title": "Historic Shoreline Rate of Change Transects",
-    "category": "Water"
-  },
-  {
-    "id": "xaf",
-    "wrrID": "NPDES_NP21_6574",
-    "title": "NPDES Outfalls",
-    "category": "Stormwater"
-  },
-  {
-    "id": "xS0",
-    "wrrID": "SWP_2016_712",
-    "title": "Stormwater Print 2016",
-    "category": "Stormwater"
-  },
-  {
-    "id": "bW8",
-    "wrrID": "SWP_2016_Generalized_Counties_6329",
-    "title": "Stormwater Print 2016 Generalized Counties",
-    "category": "Stormwater"
-  },
-  {
-    "id": "YdD",
-    "wrrID": "MD_UseClasses_2019_2786",
-    "title": "Stream Designated Use",
-    "category": "Water Quality"
-  },
-  {
-    "id": "jUd",
-    "wrrID": "MD_WaterQuality_9380",
-    "title": "MD Tier II Catchments",
-    "category": "Water Quality"
-  },
-  {
-    "id": "Gyl",
-    "wrrID": "NPS_Watershed_Plans_4749",
-    "title": "319 Watersheds",
-    "category": "Water Quality"
-  },
-  {
-    "id": "poy",
-    "wrrID": "MS4_Phase_I_Boundaries_3897",
-    "title": "MS4 Phase 1",
-    "category": "Water Quality"
-  },
-  {
-    "id": "sxK",
-    "wrrID": "MS4_Phase_II_Boundaries_1395",
-    "title": "MS4 Phase 2",
-    "category": "Water Quality"
-  },
-  {
-    "id": "Ugr",
-    "wrrID": "SDWIS_WMERC_3559",
-    "title": "Drinking Water Layers",
-    "category": "Water Quality"
-  },
-  {
-    "id": "YdD",
-    "wrrID": "MD_UseClasses_2019_8138",
-    "title": "MD Use Classes",
-    "category": "Water Quality"
-  },
-  {
-    "id": "usm",
-    "wrrID": "WRR_MD_ATTAINS_60",
-    "title": "ATTAINS Assessment Points",
-    "category": "ATTAINS"
-  },
-  {
-    "id": "iEb",
-    "wrrID": "WRR_MD_ATTAINS_6932",
-    "title": "ATTAINS Assessment Lines",
-    "category": "ATTAINS"
-  },
-  {
-    "id": "7x6",
-    "wrrID": "WRR_MD_ATTAINS_2036",
-    "title": "ATTAINS Assessment Areas",
-    "category": "ATTAINS"
-  },
-  {
-    "id": "Sbj",
-    "wrrID": "WRR_MD_ATTAINS_6302",
-    "title": "ATTAINS Assessment Unit Catchment Associations",
-    "category": "ATTAINS"
-  },
-  {
-    "id": "3hl",
-    "wrrID": "MD_ShorelineChanges_6886",
-    "title": "Anne Arundel",
-    "category": "10 years Shoreline Erosion Level"
-  },
-  {
-    "id": "1ck",
-    "wrrID": "MD_ShorelineChanges_2951",
-    "title": "Anne Arundel",
-    "category": "30 years Shoreline Erosion Level"
-  },
-  {
-    "id": "ixv",
-    "wrrID": "MD_ShorelineChanges_359",
-    "title": "Baltimore",
-    "category": "10 years Shoreline Erosion Level"
-  },
-  {
-      "id": "9f1",
-    "wrrID": "MD_ShorelineChanges_6737",
-    "title": "Baltimore",
-    "category": "30 years Shoreline Erosion Level"
-  },
-  {
-    "id": "une",
-    "wrrID": "MD_ShorelineChanges_782",
-    "title": "Calvert",
-    "category": "10 years Shoreline Erosion Level"
-  },
-  {
-    "id": "ypb",
-    "wrrID": "MD_ShorelineChanges_882",
-    "title": "Hartford",
-    "category": "30 years Shoreline Erosion Level"
-  },
-  {
-    "id": "1c9",
-    "wrrID": "MD_ShorelineChanges_8716",
-    "title": "Hartford",
-    "category": "10 years Shoreline Erosion Level"
-  },
-  {
-    "id": "km4",
-    "wrrID": "MD_ShorelineChanges_9913",
-    "title": "Prince George's",
-    "category": "30 years Shoreline Erosion Level"
-  },
-  {
-    "id": "da7",
-    "wrrID": "MD_ShorelineChanges_4474",
-    "title": "Prince George's",
-    "category": "10 years Shoreline Erosion Level"
-  },
-  {
-    "id": "r28",
-    "wrrID": "MD_SubmergedAquaticVegetation_1717",
-    "title": "Submerged Aquatic Vegetation (SAV) - 2020",
-    "category": "Biota"
-  },
-  {
-    "id": "nq1",
-    "wrrID": "BUILD_EditService_5553",
-    "title": "Upcoming Dredging",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "5ln",
-    "wrrID": "BUILD_EditService_1180",
-    "title": "Potential Restoration Projects",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "h9b",
-    "wrrID": "BUILD_EditService_3434",
-    "title": "Lost Islands",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "ri4",
-    "wrrID": "BUILD_EditService_460",
-    "title": "Dredged Material Placement Sites",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "kvc",
-    "wrrID": "BUILD_EditService_3133",
-    "title": "Navigational Channel Depth Surveys",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "84m",
-    "wrrID": "BUILD_EditService_6484",
-    "title": "Previous Dredge Projects",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "r21",
-    "wrrID": "BUILD_EditService_1356",
-    "title": "Estimated Channel Conditions",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "adc",
-    "wrrID": "BUILD_EditService_3561",
-    "title": "USACE NAV Channels",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "x4b",
-    "wrrID": "BUILD_EditService_9836",
-    "title": "Dredging Project Buffers",
-    "category": "BUILD Beneficial Use"
-  },
-  {
-    "id": "w2q",
-    "wrrID": "OptiSites",
-    "title": "High Performance Pond Partnership Sites",
-    "category": "Opti Sites"
-  },
-  {
-    "id": "cRc",
-    "wrrID": "MD_SeaLevelAffectingMarshesModel_2113",
-    "title": "Current Marshes by Type (SLAMM)",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "q59",
-    "wrrID": "MD_SeaLevelAffectingMarshesModel_9686",
-    "title": "Year 2050 - 1.3 Foot Rise (SLAMM)",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "bV8",
-    "wrrID": "MD_SeaLevelAffectingMarshesModel_1879",
-    "title": "Year 2100 - 3.4 Foot Rise (SLAMM)",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "Kpo",
-    "wrrID": "MD_SeaLevelAffectingMarshesModel_7131",
-    "title": "New Wetland Areas - Year 2050 (SLAMM)",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "pN4",
-    "wrrID": "MD_SeaLevelAffectingMarshesModel_2949",
-    "title": "New Wetland Areas - Year 2100 (SLAMM)",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "Rra",
-    "wrrID": "MD_CoastalResiliencyAssessment_7590",
-    "title": "Shoreline Protection Areas",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "xIk",
-    "wrrID": "MD_CoastalResiliencyAssessment_171",
-    "title": "Marsh Protection Potential",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "bzC",
-    "wrrID": "MD_SeaLevelRiseVulnerability_3876",
-    "title": "Sea Level Rise Vulnerability",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "7Yd",
-    "wrrID": "MD_CoastSmartCRAB_2936",
-    "title": "Coast Smart Climate Ready Action Boundary (CRAB)",
-    "category": "Coastal Resiliency"
-  },
-  {
-    "id": "Sp2",
-    "wrrID": "NHDPlus_HR_9228",
-    "title": "NHD Plus Sink",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "v4S",
-    "wrrID": "NHDPlus_HR_9535",
-    "title": "NHD Point",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "kN6",
-    "wrrID": "NHDPlus_HR_1625",
-    "title": "Network NHD Flowline",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "Q6I",
-    "wrrID": "NHDPlus_HR_25",
-    "title": "Non-Network NHD Flowline",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "AAa",
-    "wrrID": "NHDPlus_HR_107",
-    "title": "Flow Direction",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "5AM",
-    "wrrID": "NHDPlus_HR_2803",
-    "title": "NHD Plus Wall",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "E4E",
-    "wrrID": "NHDPlus_HR_9552",
-    "title": "NHD Plus Burn Line Event",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "k7Y",
-    "wrrID": "NHDPlus_HR_7911",
-    "title": "NHD Line",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "uWL",
-    "wrrID": "NHDPlus_HR_1178",
-    "title": "NHD Area",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "c4j",
-    "wrrID": "NHDPlus_HR_442",
-    "title": "NHD Waterbody",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "TDL",
-    "wrrID": "NHDPlus_HR_7575",
-    "title": "NHD Plus Catchment",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "TLX",
-    "wrrID": "NHDPlus_HR_6523",
-    "title": "WBD HU12",
-    "category": "National Hydrography Dataset"
-  },
-  {
-    "id": "4Wj",
-    "wrrID": "MD_USGSTopoQuads_9920",
-    "title": "USGS Topographic Quads",
-    "category": "Water"
-  },
-  {
-    "id": "Ecf",
-    "wrrID": "MD_MarineBoundaries_7932",
-    "title": "Shoreline",
-    "category": "Water"
-  },
-  {
-    "id": "baA",
-    "wrrID": "MD_Waterbodies_8948",
-    "title": "MD Lakes (Detailed)",
-    "category": "Water"
-  },
-  {
-    "id": "x8T",
-    "wrrID": "nhd_8598",
-    "title": "Rivers and Streams (NHD Small Scale)",
-    "category": "Water"
-  },
-  {
-    "id": "dBd",
-    "wrrID": "nhd_2901",
-    "title": "Rivers and Streams (NHD Large Scale)",
-    "category": "Water"
-  },
-  {
-    "id": "GqD",
-    "wrrID": "ReservoirsImpoundments_UseClasses_2012_6101",
-    "title": "Reservoirs Impoundments Use Classes 2012",
-    "category": "Water"
-  },
-  {
-    "id": "uvp",
-    "wrrID": "TidalWaters_UseClasses_2012_Final_2378",
-    "title": "Tidal Waters Use Classes 2012",
-    "category": "Water"
-  },
-  {
-    "id": "Omn",
-    "wrrID": "wbd_221",
-    "title": "USGS Watershed Boundaries",
-    "category": "Watersheds"
-  },
-  {
-    "id": "iMi",
-    "wrrID": "wbd_6336",
-    "title": "Federal 12-digit HU",
-    "category": "Watersheds"
-  },
-  {
-    "id": "PSX",
-    "wrrID": "wbd_5011",
-    "title": "Federal 8-digit HU",
-    "category": "Watersheds"
-  },
-  {
-    "id": "W3p",
-    "wrrID": "MD_Watersheds_1974",
-    "title": "MD 12 Digit Watersheds",
-    "category": "Watersheds"
-  },
-  {
-    "id": "de8",
-    "wrrID": "MD_Watersheds_184",
-    "title": "MD 8 Digit Watersheds",
-    "category": "Watersheds"
-  },
-  {
-    "id": "iX3",
-    "wrrID": "Wetlands_7862",
-    "title": "USFWS NWI",
-    "category": "Wetlands"
-  },
-  {
-    "id": "HJJ",
-    "wrrID": "MD_Wetlands_4515",
-    "title": "MD Wetlands of Special State Concern",
-    "category": "Wetlands"
-  },
-  {
-    "id": "8vr",
-    "wrrID": "MD_Wetlands_8661",
-    "title": "MD DNR Wetlands",
-    "category": "Wetlands"
-  },
-  {
-    "id": "R6v",
-    "wrrID": "MD_WetlandMaps1972_918",
-    "title": "Maryland Wetland Maps 1972",
-    "category": "Wetlands"
-  },
-  {
-    "id": "vg5",
-    "wrrID": "MD_Floodplain_8724",
-    "title": "MD Floodplain - Preliminary",
-    "category": "Floodplain"
-  },
-  {
-    "id": "D6D",
-    "wrrID": "MD_Floodplain_5950",
-    "title": "MD Floodplain - Effective",
-    "category": "Floodplain"
-  },
-  {
-    "id": "j9k",
-    "wrrID": "NFHLWMS_507",
-    "title": "Flood Hazard Zones",
-    "category": "Floodplain"
-  },
-  {
-    "id": "Tu3",
-    "wrrID": "MD_CanopyCover_2447",
-    "title": "MD Canopy Cover",
-    "category": "Forest"
-  },
-  {
-    "id": "FcD",
-    "wrrID": "MD_LivingResources_9538",
-    "title": "Forest Interior Dwelling Species",
-    "category": "Forest"
-  },
-  {
-    "id": "Sok",
-    "wrrID": "Soils_3338",
-    "title": "gSSURGO Soils",
-    "category": "Geology and Soils"
-  },
-  {
-    "id": "WYN",
-    "wrrID": "MD_Geology_9350",
-    "title": "MD Physiographic Provinces",
-    "category": "Geology and Soils"
-  },
-  {
-    "id": "PzC",
-    "wrrID": "MD_Geology_9181",
-    "title": "MD Geologic Formations",
-    "category": "Geology and Soils"
-  },
-  {
-    "id": "csx",
-    "wrrID": "MD_Geology_4152",
-    "title": "Hydric Soils",
-    "category": "Geology and Soils"
-  },
-  {
-    "id": "qMv",
-    "wrrID": "MD_Shellfish_3607",
-    "title": "Shellfish",
-    "category": "Biota"
-  },
-  {
-    "id": "hsP",
-    "wrrID": "MD_Finfish_5087",
-    "title": "Finfish",
-    "category": "Biota"
-  },
-  {
-    "id": "8QY",
-    "wrrID": "MD_StreamHealth_7148",
-    "title": "Maryland Biological Stream Survey Streams",
-    "category": "Biota"
-  },
-  {
-    "id": "UGI",
-    "wrrID": "MD_StreamHealth_4099",
-    "title": "Maryland Biological Stream Survey Sites",
-    "category": "Biota"
-  },
-  {
-    "id": "2a0",
-    "wrrID": "MD_StreamHealth_5491",
-    "title": "Stream Wader Sites Volunteer Collected",
-    "category": "Biota"
-  },
-  {
-    "id": "6BG",
-    "wrrID": "MD_StreamHealth_8810",
-    "title": "Stream Reaches",
-    "category": "Biota"
-  },
-  {
-    "id": "FJb",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_4330",
-    "title": "SAV 2007",
-    "category": "Biota"
-  },
-  {
-    "id": "UYA",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_2572",
-    "title": "SAV 2008",
-    "category": "Biota"
-  },
-  {
-    "id": "md2",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_9498",
-    "title": "SAV 2009",
-    "category": "Biota"
-  },
-  {
-    "id": "Nw8",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_5271",
-    "title": "SAV 2010",
-    "category": "Biota"
-  },
-  {
-    "id": "ydE",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_3599",
-    "title": "SAV 2011",
-    "category": "Biota"
-  },
-  {
-    "id": "WIP",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_3167",
-    "title": "SAV 2012",
-    "category": "Biota"
-  },
-  {
-    "id": "wuU",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_7259",
-    "title": "SAV 2013",
-    "category": "Biota"
-  },
-  {
-    "id": "KIH",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_8035",
-    "title": "SAV 2014",
-    "category": "Biota"
-  },
-  {
-    "id": "D4b",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_4764",
-    "title": "SAV 2015",
-    "category": "Biota"
-  },
-  {
-    "id": "nSB",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_6985",
-    "title": "SAV 2016",
-    "category": "Biota"
-  },
-  {
-    "id": "wbJ",
-    "wrrID": "MD_ArchivedSubmergedAquaticVegetation_6350",
-    "title": "SAV 2017",
-    "category": "Biota"
-  },
-  {
-    "id": "QmN",
-    "wrrID": "MD_LivingResources_9817",
-    "title": "Fish Blockage Locations",
-    "category": "Biota"
-  },
-  {
-    "id": "5Fg",
-    "wrrID": "MD_statewide_dem_ft_1821",
-    "title": "MD Statewide DEM (ft)",
-    "category": "LiDAR"
-  },
-  {
-    "id": "Wrj",
-    "wrrID": "MD_statewide_hillshade_m_7268",
-    "title": "MD Statewide Hillshade - Black and White",
-    "category": "LiDAR"
-  },
-  {
-    "id": "AIe",
-    "wrrID": "MD_statewide_shadedRelief_RGB_7861",
-    "title": "MD Statewide Hillshade - Color",
-    "category": "LiDAR"
-  },
-  {
-    "id": "XZc",
-    "wrrID": "NAIPImagery2005_4348",
-    "title": "NAIP 2005",
-    "category": "Imagery"
-  },
-  {
-    "id": "IqW",
-    "wrrID": "NAIPImagery2007_5820",
-    "title": "NAIP 2007",
-    "category": "Imagery"
-  },
-  {
-    "id": "TWX",
-    "wrrID": "NAIPImagery2009_6791",
-    "title": "NAIP 2009",
-    "category": "Imagery"
-  },
-  {
-    "id": "DVq",
-    "wrrID": "NAIPImagery2011_9360",
-    "title": "NAIP 2011",
-    "category": "Imagery"
-  },
-  {
-    "id": "qTE",
-    "wrrID": "NAIPImagery2013_3562",
-    "title": "NAIP 2013",
-    "category": "Imagery"
-  },
-  {
-    "id": "ehV",
-    "wrrID": "MD_NAIPImagery_4449",
-    "title": "NAIP 2018",
-    "category": "Imagery"
-  },
-  {
-    "id": "Xay",
-    "wrrID": "MD_ThreeInchImagery_8395",
-    "title": "MD 3 Inch Imagery - 2014 (Rockville), 2016 (Easton), and 2017 (Annapolis, Gaithersburg, Port of Baltimore, Westminster)",
-    "category": "Imagery"
-  },
-  {
-    "id": "VHz",
-    "wrrID": "SixInchImagery2007_2008_8705",
-    "title": "MD 6 Inch (2007-2008)",
-    "category": "Imagery"
-  },
-  {
-    "id": "HAk",
-    "wrrID": "SixInchImagery2010_2011_4257",
-    "title": "MD 6 Inch (2010-2011)",
-    "category": "Imagery"
-  },
-  {
-    "id": "pWK",
-    "wrrID": "SixInchImagery2011_2013_1402",
-    "title": "MD 6 inch Imagery (2011-2013)",
-    "category": "Imagery"
-  },
-  {
-    "id": "S8P",
-    "wrrID": "SixInchImagery2013_2014_7460",
-    "title": "MD 6 inch Imagery (2013-2014)",
-    "category": "Imagery"
-  },
-  {
-    "id": "FbT",
-    "wrrID": "SixInchImagery2014_2016_4305",
-    "title": "MD 6 inch Imagery (2014-2016)",
-    "category": "Imagery"
-  },
-  {
-    "id": "LJG",
-    "wrrID": "MD_SixInchImagery_1976",
-    "title": "MD 6 inch Imagery (2016-2017)",
-    "category": "Imagery"
-  },
-  {
-    "id": "8vL",
-    "wrrID": "MD_USGSTopoQuads_9920",
-    "title": "USGS Topographic Quads",
-    "category": "Imagery"
-  },
-  {
-    "id": "a23",
-    "wrrID": "ColorInfraredDOQs_3546",
-    "title": "Color infrared (CIR) digital orthophotoquad (DOQ)",
-    "category": "Imagery"
-  },
-  {
-    "id": "9sE",
-    "wrrID": "PanchromaticDOQs_9282",
-    "title": "Maryland Panchromatic digital orthophotoquad (DOQ)",
-    "category": "Imagery"
-  }
-]
+	"layers": [
+		{
+			"id": "VT3",
+			"wrrID": "MarylandWRR_RP_9075",
+			"title": "Riparian Preservation",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "qjs",
+			"wrrID": "MarylandWRR_RP_1m_7335",
+			"title": "Riparian Preservation 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "kVO",
+			"wrrID": "MarylandWRR_RR_9994",
+			"title": "Riparian Restoration",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "BiS",
+			"wrrID": "MarylandWRR_RR_1m_847",
+			"title": "Riparian Restoration 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "v2C",
+			"wrrID": "MarylandWRR_HP_2000",
+			"title": "Stormwater Natural Infrastructure Preservation",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "RU0",
+			"wrrID": "MarylandWRR_HP_1m_799",
+			"title": "Stormwater Natural Infrastructure Preservation 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "HT6",
+			"wrrID": "MarylandWRR_HR_9498",
+			"title": "Stormwater Compromised Infrastructure Restoration",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "g1X",
+			"wrrID": "MarylandWRR_HR_1m_1316",
+			"title": "Stormwater Compromised Infrastructure Restoration 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "AxH",
+			"wrrID": "MarylandWRR_UP_5282",
+			"title": "Upland Preservation",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "Vvz",
+			"wrrID": "MarylandWRR_UP_1m_9970",
+			"title": "Upland Preservation 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "BTV",
+			"wrrID": "MarylandWRR_UR_1819",
+			"title": "Upland Restoration",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "IDP",
+			"wrrID": "MarylandWRR_UR_1m_3923",
+			"title": "Upland Restoration 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "Ucv",
+			"wrrID": "MarylandWRR_WP_2841",
+			"title": "Wetland Preservation",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "2Um",
+			"wrrID": "MarylandWRR_WP_1m_8940",
+			"title": "Wetland Preservation 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "5G9",
+			"wrrID": "MarylandWRR_WR_1915",
+			"title": "Wetland Restoration",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "b72",
+			"wrrID": "MarylandWRR_WR_1m_542",
+			"title": "Wetland Restoration 1 meter",
+			"category": "WRR Suitability Analyses"
+		},
+		{
+			"id": "yHP",
+			"wrrID": "survey123_f428e20cada347319bfc88cd00a82a98_fieldworker_6756",
+			"title": "Site Description",
+			"category": "Site Visits"
+		},
+		{
+			"id": "Ruk",
+			"wrrID": "ScreeningPts_6682",
+			"title": "MDE Wetland and Waterways Permits",
+			"category": "Permits"
+		},
+		{
+			"id": "P1q",
+			"wrrID": "NontidalWetlandMitigation_6770",
+			"title": "Nontidal Wetland Mitigation Sites",
+			"category": "Permits"
+		},
+		{
+			"id": "akT",
+			"wrrID": "ORM_2001",
+			"title": "ORM - Updated 8/10/22",
+			"category": "USACE Permit Status"
+		},
+		{
+			"id": "a89",
+			"wrrID": "RIBITS_3526",
+			"title": "RIBITS - Banks & Service Areas",
+			"category": "USACE Permit Status"
+		},
+		{
+			"id": "b5d",
+			"wrrID": "RIBITS_9950",
+			"title": "RIBITS - ILFs",
+			"category": "USACE Permit Status"
+		},
+		{
+			"id": "bSy",
+			"wrrID": "MD_PoliticalBoundaries_2630",
+			"title": "County Boundary",
+			"category": "Boundaries"
+		},
+		{
+			"id": "49X",
+			"wrrID": "USA_States_Generalized_2453",
+			"title": "State Boundary",
+			"category": "Boundaries"
+		},
+		{
+			"id": "Dl9",
+			"wrrID": "MD_ProtectedLands_3938",
+			"title": "Protected Lands",
+			"category": "Land Planning"
+		},
+		{
+			"id": "MMO",
+			"wrrID": "MD_ProtectedLands_6388",
+			"title": "Protected Lands - Queried for Model",
+			"category": "Land Planning"
+		},
+		{
+			"id": "Sck",
+			"wrrID": "Priority_Funding_Areas_8238",
+			"title": "Priority Funding Areas",
+			"category": "Land Planning"
+		},
+		{
+			"id": "l82",
+			"wrrID": "NLCD_2016_Land_Cover_L48_1724",
+			"title": "NLCD 2016",
+			"category": "Land Use / Land Cover"
+		},
+		{
+			"id": "rY2",
+			"wrrID": "ChesapeakeBayWatershedLandCover_5196",
+			"title": "Chesapeake Conservancy Landcover",
+			"category": "Land Use / Land Cover"
+		},
+		{
+			"id": "KP3",
+			"wrrID": "Generalized_Sewer_5359",
+			"title": "Generalized Sewer",
+			"category": "Land Use / Land Cover"
+		},
+		{
+			"id": "wIr",
+			"wrrID": "Generalized_Zoning_3736",
+			"title": "Generalized Zoning",
+			"category": "Land Use / Land Cover"
+		},
+		{
+			"id": "DvL",
+			"wrrID": "MD_ArchivedLandUseLandCover_2786",
+			"title": "MD Archived Land Use Land Cover",
+			"category": "Land Use / Land Cover"
+		},
+		{
+			"id": "0EJ",
+			"wrrID": "MD_LandUseLandCover_283",
+			"title": "MD Land Use Land Cover",
+			"category": "Land Use / Land Cover"
+		},
+		{
+			"id": "p5X",
+			"wrrID": "MD_PropertyData_3858",
+			"title": "MD Tax Maps (Map Service)",
+			"category": "Property Data"
+		},
+		{
+			"id": "f73",
+			"wrrID": "MD_PropertyData_3392",
+			"title": "MD Tax Maps (Image Service)",
+			"category": "Property Data"
+		},
+		{
+			"id": "RMV",
+			"wrrID": "MD_ParcelBoundaries_2364",
+			"title": "Parcel Boundaries",
+			"category": "Property Data"
+		},
+		{
+			"id": "zGj",
+			"wrrID": "58ff5bd0e4b006455f2d628b_8981",
+			"title": "Terrestrial Cores",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "SJE",
+			"wrrID": "58ff5bd0e4b006455f2d628b_5638",
+			"title": "Grassland Bird Cores",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "O8u",
+			"wrrID": "58ff5bd0e4b006455f2d628b_968",
+			"title": "Terrestrial Core Connectors",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "Hjw",
+			"wrrID": "58ff5bd0e4b006455f2d628b_6997",
+			"title": "Road-bounded Natural Block",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "WEk",
+			"wrrID": "5900fd76e4b0c2e071a84cab_9226",
+			"title": "Nature's Network Conservation Design, Core Areas and Connectors",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "AP1",
+			"wrrID": "58ed14e6e4b0b4d95d3353ea_9905",
+			"title": "Habitat Importance for Imperiled Species",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "IQS",
+			"wrrID": "58a75b0ee4b025c464286d63_454",
+			"title": "Habitat Condition for Imperiled Species",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "yNR",
+			"wrrID": "5919f1bee4b0a7fdb43b33f3_9283",
+			"title": "Core Habitat for Imperiled Species",
+			"category": "Nature's Network"
+		},
+		{
+			"id": "Fbt",
+			"wrrID": "MD_FocalAreas_9800",
+			"title": "Targeted Ecological Areas",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "VMH",
+			"wrrID": "NCED_CompleteDB_9739",
+			"title": "Conservation Easements (NCED)",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "q4D",
+			"wrrID": "MD_GreenInfrastructure_1817",
+			"title": "Green Infrastructure",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "3qc",
+			"wrrID": "MD_BiodiversityConservationNetwork_4402",
+			"title": "Biodiversity Conservation Network",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "X2j",
+			"wrrID": "MD_LivingResources_785",
+			"title": "Sensitive Species Project Review Areas",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "AHn",
+			"wrrID": "Stronghold_Watersheds_9412",
+			"title": "Stronghold Watersheds",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "J2T",
+			"wrrID": "MD_CriticalAreas_1256",
+			"title": "MD Critical Areas (Towns)",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "t3q",
+			"wrrID": "MD_CriticalAreas_7346",
+			"title": "MD Critical Areas (Counties)",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "bKN",
+			"wrrID": "MD_BlueInfrastructure_5418",
+			"title": "MD Blue Infrastructure Ranks",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "m31",
+			"wrrID": "ImportantBirdAreas_Point_317",
+			"title": "Important Bird Areas Point",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "2Fg",
+			"wrrID": "ImportantBirdAreas_Polygon_2214",
+			"title": "Important Bird Areas Polygon",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "6Rq",
+			"wrrID": "MD_LivingResources_9764",
+			"title": "Forest Interior Dwelling Species",
+			"category": "Priority Conservation Areas"
+		},
+		{
+			"id": "3YN",
+			"wrrID": "MD_SiteSensitivity_2908",
+			"title": "Tier II Watersheds or Target Ecological Areas",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
+		},
+		{
+			"id": "Rm0",
+			"wrrID": "MD_SiteSensitivity_3194",
+			"title": "Catchments with Low Impervious Cover (less than 10%)",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
+		},
+		{
+			"id": "PKO",
+			"wrrID": "MD_SiteSensitivity_3865",
+			"title": "Within 1 mile of protected areas",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
+		},
+		{
+			"id": "uK1",
+			"wrrID": "MD_ImpactSiteSensitivity_9116",
+			"title": "Impact Site Sensitivity Score (0-3)",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Impacts"
+		},
+		{
+			"id": "kvN",
+			"wrrID": "MD_SiteSensitivity_2908",
+			"title": "Tier II Watersheds or Target Ecological Areas",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
+		},
+		{
+			"id": "vOq",
+			"wrrID": "MD_SiteSensitivity_3194",
+			"title": "Catchments with Low Impervious Cover (less than 10%)",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
+		},
+		{
+			"id": "NPH",
+			"wrrID": "MD_SiteSensitivity_2109",
+			"title": "Within 1 mile of (but not in) protected areas",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
+		},
+		{
+			"id": "acm",
+			"wrrID": "MD_MitigationSiteSensitivity_3925",
+			"title": "Mitigation Site Sensitivity Score (0-3)",
+			"category": "Maryland Stream Mitigation Framework Layers: Site Sensitivity Analysis for Stream Mitigation"
+		},
+		{
+			"id": "i83",
+			"wrrID": "Culvert_Pilot_341",
+			"title": "SHA Conveyance Flat",
+			"category": "Culvert Prioritization Gap Analysis"
+		},
+		{
+			"id": "zU6",
+			"wrrID": "Culvert_Pilot_8559",
+			"title": "NAACC MD Culverts",
+			"category": "Culvert Prioritization Gap Analysis"
+		},
+		{
+			"id": "5qr",
+			"wrrID": "Culvert_Pilot_9732",
+			"title": "MDE Culvert",
+			"category": "Culvert Prioritization Gap Analysis"
+		},
+		{
+			"id": "xzg",
+			"wrrID": "ChesFPP_4088",
+			"title": "Diadromous Fish Prioritization",
+			"category": "Fish Passage Connectivity"
+		},
+		{
+			"id": "SCw",
+			"wrrID": "ChesFPP_3356",
+			"title": "Brook Trout Prioritization",
+			"category": "Fish Passage Connectivity"
+		},
+		{
+			"id": "usK",
+			"wrrID": "ChesFPP_7947",
+			"title": "Resident Fish Prioritization",
+			"category": "Fish Passage Connectivity"
+		},
+		{
+			"id": "O2i",
+			"wrrID": "ChesFPP_3173",
+			"title": "Road Stream Crossing",
+			"category": "Fish Passage Connectivity"
+		},
+		{
+			"id": "hdx",
+			"wrrID": "MD_ShorelineChanges_8012",
+			"title": "Legacy Historical Shorelines by Years",
+			"category": "Water"
+		},
+		{
+			"id": "0cd",
+			"wrrID": "MD_ShorelineChanges_5188",
+			"title": "Limited Area Shorelines by Decade",
+			"category": "Water"
+		},
+		{
+			"id": "8kh",
+			"wrrID": "MD_ShorelineChanges_2202",
+			"title": "Historic Shoreline Rate of Change Baselines",
+			"category": "Water"
+		},
+		{
+			"id": "8y8",
+			"wrrID": "MD_ShorelineChanges_7593",
+			"title": "Historic Shoreline Rate of Change Transects",
+			"category": "Water"
+		},
+		{
+			"id": "xaf",
+			"wrrID": "NPDES_NP21_6574",
+			"title": "NPDES Outfalls",
+			"category": "Stormwater"
+		},
+		{
+			"id": "xS0",
+			"wrrID": "SWP_2016_712",
+			"title": "Stormwater Print 2016",
+			"category": "Stormwater"
+		},
+		{
+			"id": "bW8",
+			"wrrID": "SWP_2016_Generalized_Counties_6329",
+			"title": "Stormwater Print 2016 Generalized Counties",
+			"category": "Stormwater"
+		},
+		{
+			"id": "YdD",
+			"wrrID": "MD_UseClasses_2019_2786",
+			"title": "Stream Designated Use",
+			"category": "Water Quality"
+		},
+		{
+			"id": "jUd",
+			"wrrID": "MD_WaterQuality_9380",
+			"title": "MD Tier II Catchments",
+			"category": "Water Quality"
+		},
+		{
+			"id": "Gyl",
+			"wrrID": "NPS_Watershed_Plans_4749",
+			"title": "319 Watersheds",
+			"category": "Water Quality"
+		},
+		{
+			"id": "poy",
+			"wrrID": "MS4_Phase_I_Boundaries_3897",
+			"title": "MS4 Phase 1",
+			"category": "Water Quality"
+		},
+		{
+			"id": "sxK",
+			"wrrID": "MS4_Phase_II_Boundaries_1395",
+			"title": "MS4 Phase 2",
+			"category": "Water Quality"
+		},
+		{
+			"id": "Ugr",
+			"wrrID": "SDWIS_WMERC_3559",
+			"title": "Drinking Water Layers",
+			"category": "Water Quality"
+		},
+		{
+			"id": "YdD",
+			"wrrID": "MD_UseClasses_2019_8138",
+			"title": "MD Use Classes",
+			"category": "Water Quality"
+		},
+		{
+			"id": "usm",
+			"wrrID": "WRR_MD_ATTAINS_60",
+			"title": "ATTAINS Assessment Points",
+			"category": "ATTAINS"
+		},
+		{
+			"id": "iEb",
+			"wrrID": "WRR_MD_ATTAINS_6932",
+			"title": "ATTAINS Assessment Lines",
+			"category": "ATTAINS"
+		},
+		{
+			"id": "7x6",
+			"wrrID": "WRR_MD_ATTAINS_2036",
+			"title": "ATTAINS Assessment Areas",
+			"category": "ATTAINS"
+		},
+		{
+			"id": "Sbj",
+			"wrrID": "WRR_MD_ATTAINS_6302",
+			"title": "ATTAINS Assessment Unit Catchment Associations",
+			"category": "ATTAINS"
+		},
+		{
+			"id": "3hl",
+			"wrrID": "MD_ShorelineChanges_6886",
+			"title": "Anne Arundel",
+			"category": "10 years Shoreline Erosion Level"
+		},
+		{
+			"id": "1ck",
+			"wrrID": "MD_ShorelineChanges_2951",
+			"title": "Anne Arundel",
+			"category": "30 years Shoreline Erosion Level"
+		},
+		{
+			"id": "ixv",
+			"wrrID": "MD_ShorelineChanges_359",
+			"title": "Baltimore",
+			"category": "10 years Shoreline Erosion Level"
+		},
+		{
+			"id": "9f1",
+			"wrrID": "MD_ShorelineChanges_6737",
+			"title": "Baltimore",
+			"category": "30 years Shoreline Erosion Level"
+		},
+		{
+			"id": "une",
+			"wrrID": "MD_ShorelineChanges_782",
+			"title": "Calvert",
+			"category": "10 years Shoreline Erosion Level"
+		},
+		{
+			"id": "ypb",
+			"wrrID": "MD_ShorelineChanges_882",
+			"title": "Hartford",
+			"category": "30 years Shoreline Erosion Level"
+		},
+		{
+			"id": "1c9",
+			"wrrID": "MD_ShorelineChanges_8716",
+			"title": "Hartford",
+			"category": "10 years Shoreline Erosion Level"
+		},
+		{
+			"id": "km4",
+			"wrrID": "MD_ShorelineChanges_9913",
+			"title": "Prince George's",
+			"category": "30 years Shoreline Erosion Level"
+		},
+		{
+			"id": "da7",
+			"wrrID": "MD_ShorelineChanges_4474",
+			"title": "Prince George's",
+			"category": "10 years Shoreline Erosion Level"
+		},
+		{
+			"id": "r28",
+			"wrrID": "MD_SubmergedAquaticVegetation_1717",
+			"title": "Submerged Aquatic Vegetation (SAV) - 2020",
+			"category": "Biota"
+		},
+		{
+			"id": "nq1",
+			"wrrID": "BUILD_EditService_5553",
+			"title": "Upcoming Dredging",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "5ln",
+			"wrrID": "BUILD_EditService_1180",
+			"title": "Potential Restoration Projects",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "h9b",
+			"wrrID": "BUILD_EditService_3434",
+			"title": "Lost Islands",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "ri4",
+			"wrrID": "BUILD_EditService_460",
+			"title": "Dredged Material Placement Sites",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "kvc",
+			"wrrID": "BUILD_EditService_3133",
+			"title": "Navigational Channel Depth Surveys",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "84m",
+			"wrrID": "BUILD_EditService_6484",
+			"title": "Previous Dredge Projects",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "r21",
+			"wrrID": "BUILD_EditService_1356",
+			"title": "Estimated Channel Conditions",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "adc",
+			"wrrID": "BUILD_EditService_3561",
+			"title": "USACE NAV Channels",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "x4b",
+			"wrrID": "BUILD_EditService_9836",
+			"title": "Dredging Project Buffers",
+			"category": "BUILD Beneficial Use"
+		},
+		{
+			"id": "w2q",
+			"wrrID": "OptiSites",
+			"title": "High Performance Pond Partnership Sites",
+			"category": "Opti Sites"
+		},
+		{
+			"id": "cRc",
+			"wrrID": "MD_SeaLevelAffectingMarshesModel_2113",
+			"title": "Current Marshes by Type (SLAMM)",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "q59",
+			"wrrID": "MD_SeaLevelAffectingMarshesModel_9686",
+			"title": "Year 2050 - 1.3 Foot Rise (SLAMM)",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "bV8",
+			"wrrID": "MD_SeaLevelAffectingMarshesModel_1879",
+			"title": "Year 2100 - 3.4 Foot Rise (SLAMM)",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "Kpo",
+			"wrrID": "MD_SeaLevelAffectingMarshesModel_7131",
+			"title": "New Wetland Areas - Year 2050 (SLAMM)",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "pN4",
+			"wrrID": "MD_SeaLevelAffectingMarshesModel_2949",
+			"title": "New Wetland Areas - Year 2100 (SLAMM)",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "Rra",
+			"wrrID": "MD_CoastalResiliencyAssessment_7590",
+			"title": "Shoreline Protection Areas",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "xIk",
+			"wrrID": "MD_CoastalResiliencyAssessment_171",
+			"title": "Marsh Protection Potential",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "bzC",
+			"wrrID": "MD_SeaLevelRiseVulnerability_3876",
+			"title": "Sea Level Rise Vulnerability",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "7Yd",
+			"wrrID": "MD_CoastSmartCRAB_2936",
+			"title": "Coast Smart Climate Ready Action Boundary (CRAB)",
+			"category": "Coastal Resiliency"
+		},
+		{
+			"id": "Sp2",
+			"wrrID": "NHDPlus_HR_9228",
+			"title": "NHD Plus Sink",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "v4S",
+			"wrrID": "NHDPlus_HR_9535",
+			"title": "NHD Point",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "kN6",
+			"wrrID": "NHDPlus_HR_1625",
+			"title": "Network NHD Flowline",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "Q6I",
+			"wrrID": "NHDPlus_HR_25",
+			"title": "Non-Network NHD Flowline",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "AAa",
+			"wrrID": "NHDPlus_HR_107",
+			"title": "Flow Direction",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "5AM",
+			"wrrID": "NHDPlus_HR_2803",
+			"title": "NHD Plus Wall",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "E4E",
+			"wrrID": "NHDPlus_HR_9552",
+			"title": "NHD Plus Burn Line Event",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "k7Y",
+			"wrrID": "NHDPlus_HR_7911",
+			"title": "NHD Line",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "uWL",
+			"wrrID": "NHDPlus_HR_1178",
+			"title": "NHD Area",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "c4j",
+			"wrrID": "NHDPlus_HR_442",
+			"title": "NHD Waterbody",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "TDL",
+			"wrrID": "NHDPlus_HR_7575",
+			"title": "NHD Plus Catchment",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "TLX",
+			"wrrID": "NHDPlus_HR_6523",
+			"title": "WBD HU12",
+			"category": "National Hydrography Dataset"
+		},
+		{
+			"id": "4Wj",
+			"wrrID": "MD_USGSTopoQuads_9920",
+			"title": "USGS Topographic Quads",
+			"category": "Water"
+		},
+		{
+			"id": "Ecf",
+			"wrrID": "MD_MarineBoundaries_7932",
+			"title": "Shoreline",
+			"category": "Water"
+		},
+		{
+			"id": "baA",
+			"wrrID": "MD_Waterbodies_8948",
+			"title": "MD Lakes (Detailed)",
+			"category": "Water"
+		},
+		{
+			"id": "x8T",
+			"wrrID": "nhd_8598",
+			"title": "Rivers and Streams (NHD Small Scale)",
+			"category": "Water"
+		},
+		{
+			"id": "dBd",
+			"wrrID": "nhd_2901",
+			"title": "Rivers and Streams (NHD Large Scale)",
+			"category": "Water"
+		},
+		{
+			"id": "GqD",
+			"wrrID": "ReservoirsImpoundments_UseClasses_2012_6101",
+			"title": "Reservoirs Impoundments Use Classes 2012",
+			"category": "Water"
+		},
+		{
+			"id": "uvp",
+			"wrrID": "TidalWaters_UseClasses_2012_Final_2378",
+			"title": "Tidal Waters Use Classes 2012",
+			"category": "Water"
+		},
+		{
+			"id": "Omn",
+			"wrrID": "wbd_221",
+			"title": "USGS Watershed Boundaries",
+			"category": "Watersheds"
+		},
+		{
+			"id": "iMi",
+			"wrrID": "wbd_6336",
+			"title": "Federal 12-digit HU",
+			"category": "Watersheds"
+		},
+		{
+			"id": "PSX",
+			"wrrID": "wbd_5011",
+			"title": "Federal 8-digit HU",
+			"category": "Watersheds"
+		},
+		{
+			"id": "W3p",
+			"wrrID": "MD_Watersheds_1974",
+			"title": "MD 12 Digit Watersheds",
+			"category": "Watersheds"
+		},
+		{
+			"id": "de8",
+			"wrrID": "MD_Watersheds_184",
+			"title": "MD 8 Digit Watersheds",
+			"category": "Watersheds"
+		},
+		{
+			"id": "iX3",
+			"wrrID": "Wetlands_7862",
+			"title": "USFWS NWI",
+			"category": "Wetlands"
+		},
+		{
+			"id": "HJJ",
+			"wrrID": "MD_Wetlands_4515",
+			"title": "MD Wetlands of Special State Concern",
+			"category": "Wetlands"
+		},
+		{
+			"id": "8vr",
+			"wrrID": "MD_Wetlands_8661",
+			"title": "MD DNR Wetlands",
+			"category": "Wetlands"
+		},
+		{
+			"id": "R6v",
+			"wrrID": "MD_WetlandMaps1972_918",
+			"title": "Maryland Wetland Maps 1972",
+			"category": "Wetlands"
+		},
+		{
+			"id": "vg5",
+			"wrrID": "MD_Floodplain_8724",
+			"title": "MD Floodplain - Preliminary",
+			"category": "Floodplain"
+		},
+		{
+			"id": "D6D",
+			"wrrID": "MD_Floodplain_5950",
+			"title": "MD Floodplain - Effective",
+			"category": "Floodplain"
+		},
+		{
+			"id": "j9k",
+			"wrrID": "NFHLWMS_507",
+			"title": "Flood Hazard Zones",
+			"category": "Floodplain"
+		},
+		{
+			"id": "Tu3",
+			"wrrID": "MD_CanopyCover_2447",
+			"title": "MD Canopy Cover",
+			"category": "Forest"
+		},
+		{
+			"id": "FcD",
+			"wrrID": "MD_LivingResources_9538",
+			"title": "Forest Interior Dwelling Species",
+			"category": "Forest"
+		},
+		{
+			"id": "Sok",
+			"wrrID": "Soils_3338",
+			"title": "gSSURGO Soils",
+			"category": "Geology and Soils"
+		},
+		{
+			"id": "WYN",
+			"wrrID": "MD_Geology_9350",
+			"title": "MD Physiographic Provinces",
+			"category": "Geology and Soils"
+		},
+		{
+			"id": "PzC",
+			"wrrID": "MD_Geology_9181",
+			"title": "MD Geologic Formations",
+			"category": "Geology and Soils"
+		},
+		{
+			"id": "csx",
+			"wrrID": "MD_Geology_4152",
+			"title": "Hydric Soils",
+			"category": "Geology and Soils"
+		},
+		{
+			"id": "qMv",
+			"wrrID": "MD_Shellfish_3607",
+			"title": "Shellfish",
+			"category": "Biota"
+		},
+		{
+			"id": "hsP",
+			"wrrID": "MD_Finfish_5087",
+			"title": "Finfish",
+			"category": "Biota"
+		},
+		{
+			"id": "8QY",
+			"wrrID": "MD_StreamHealth_7148",
+			"title": "Maryland Biological Stream Survey Streams",
+			"category": "Biota"
+		},
+		{
+			"id": "UGI",
+			"wrrID": "MD_StreamHealth_4099",
+			"title": "Maryland Biological Stream Survey Sites",
+			"category": "Biota"
+		},
+		{
+			"id": "2a0",
+			"wrrID": "MD_StreamHealth_5491",
+			"title": "Stream Wader Sites Volunteer Collected",
+			"category": "Biota"
+		},
+		{
+			"id": "6BG",
+			"wrrID": "MD_StreamHealth_8810",
+			"title": "Stream Reaches",
+			"category": "Biota"
+		},
+		{
+			"id": "FJb",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_4330",
+			"title": "SAV 2007",
+			"category": "Biota"
+		},
+		{
+			"id": "UYA",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_2572",
+			"title": "SAV 2008",
+			"category": "Biota"
+		},
+		{
+			"id": "md2",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_9498",
+			"title": "SAV 2009",
+			"category": "Biota"
+		},
+		{
+			"id": "Nw8",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_5271",
+			"title": "SAV 2010",
+			"category": "Biota"
+		},
+		{
+			"id": "ydE",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_3599",
+			"title": "SAV 2011",
+			"category": "Biota"
+		},
+		{
+			"id": "WIP",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_3167",
+			"title": "SAV 2012",
+			"category": "Biota"
+		},
+		{
+			"id": "wuU",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_7259",
+			"title": "SAV 2013",
+			"category": "Biota"
+		},
+		{
+			"id": "KIH",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_8035",
+			"title": "SAV 2014",
+			"category": "Biota"
+		},
+		{
+			"id": "D4b",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_4764",
+			"title": "SAV 2015",
+			"category": "Biota"
+		},
+		{
+			"id": "nSB",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_6985",
+			"title": "SAV 2016",
+			"category": "Biota"
+		},
+		{
+			"id": "wbJ",
+			"wrrID": "MD_ArchivedSubmergedAquaticVegetation_6350",
+			"title": "SAV 2017",
+			"category": "Biota"
+		},
+		{
+			"id": "QmN",
+			"wrrID": "MD_LivingResources_9817",
+			"title": "Fish Blockage Locations",
+			"category": "Biota"
+		},
+		{
+			"id": "5Fg",
+			"wrrID": "MD_statewide_dem_ft_1821",
+			"title": "MD Statewide DEM (ft)",
+			"category": "LiDAR"
+		},
+		{
+			"id": "Wrj",
+			"wrrID": "MD_statewide_hillshade_m_7268",
+			"title": "MD Statewide Hillshade - Black and White",
+			"category": "LiDAR"
+		},
+		{
+			"id": "AIe",
+			"wrrID": "MD_statewide_shadedRelief_RGB_7861",
+			"title": "MD Statewide Hillshade - Color",
+			"category": "LiDAR"
+		},
+		{
+			"id": "XZc",
+			"wrrID": "NAIPImagery2005_4348",
+			"title": "NAIP 2005",
+			"category": "Imagery"
+		},
+		{
+			"id": "IqW",
+			"wrrID": "NAIPImagery2007_5820",
+			"title": "NAIP 2007",
+			"category": "Imagery"
+		},
+		{
+			"id": "TWX",
+			"wrrID": "NAIPImagery2009_6791",
+			"title": "NAIP 2009",
+			"category": "Imagery"
+		},
+		{
+			"id": "DVq",
+			"wrrID": "NAIPImagery2011_9360",
+			"title": "NAIP 2011",
+			"category": "Imagery"
+		},
+		{
+			"id": "qTE",
+			"wrrID": "NAIPImagery2013_3562",
+			"title": "NAIP 2013",
+			"category": "Imagery"
+		},
+		{
+			"id": "ehV",
+			"wrrID": "MD_NAIPImagery_4449",
+			"title": "NAIP 2018",
+			"category": "Imagery"
+		},
+		{
+			"id": "Xay",
+			"wrrID": "MD_ThreeInchImagery_8395",
+			"title": "MD 3 Inch Imagery - 2014 (Rockville), 2016 (Easton), and 2017 (Annapolis, Gaithersburg, Port of Baltimore, Westminster)",
+			"category": "Imagery"
+		},
+		{
+			"id": "VHz",
+			"wrrID": "SixInchImagery2007_2008_8705",
+			"title": "MD 6 Inch (2007-2008)",
+			"category": "Imagery"
+		},
+		{
+			"id": "HAk",
+			"wrrID": "SixInchImagery2010_2011_4257",
+			"title": "MD 6 Inch (2010-2011)",
+			"category": "Imagery"
+		},
+		{
+			"id": "pWK",
+			"wrrID": "SixInchImagery2011_2013_1402",
+			"title": "MD 6 inch Imagery (2011-2013)",
+			"category": "Imagery"
+		},
+		{
+			"id": "S8P",
+			"wrrID": "SixInchImagery2013_2014_7460",
+			"title": "MD 6 inch Imagery (2013-2014)",
+			"category": "Imagery"
+		},
+		{
+			"id": "FbT",
+			"wrrID": "SixInchImagery2014_2016_4305",
+			"title": "MD 6 inch Imagery (2014-2016)",
+			"category": "Imagery"
+		},
+		{
+			"id": "LJG",
+			"wrrID": "MD_SixInchImagery_1976",
+			"title": "MD 6 inch Imagery (2016-2017)",
+			"category": "Imagery"
+		},
+		{
+			"id": "8vL",
+			"wrrID": "MD_USGSTopoQuads_9920",
+			"title": "USGS Topographic Quads",
+			"category": "Imagery"
+		},
+		{
+			"id": "a23",
+			"wrrID": "ColorInfraredDOQs_3546",
+			"title": "Color infrared (CIR) digital orthophotoquad (DOQ)",
+			"category": "Imagery"
+		},
+		{
+			"id": "9sE",
+			"wrrID": "PanchromaticDOQs_9282",
+			"title": "Maryland Panchromatic digital orthophotoquad (DOQ)",
+			"category": "Imagery"
+		},
+		{
+			"id": "l5n",
+			"wrrID": "wbd_4722",
+			"title": "Federal HUC 8",
+			"category": "Misc - can be moved easily"
+		},
+		{
+			"id": "WBn",
+			"wrrID": "wbd_5548",
+			"title": "Federal HUC 12",
+			"category": "Misc - can be moved easily"
+		},
+		{
+			"id": "liy",
+			"wrrID": "NaturalGas_InterIntrastate_Pipelines_US_EIA_5938",
+			"title": "Natural Gas Interstate and intrastate Pipelines",
+			"category": "Misc - can be moved easily"
+		},
+        {
+			"id": "apl",
+			"wrrID": "Lng_ImportExportTerminals_US_EIA_7164",
+			"title": "Liquid Natural Gas Import and Export Terminals",
+			"category": "Misc - can be moved easily"
+		},
+		{
+			"id": "UMT",
+			"wrrID": "PetroleumProduct_Pipelines_US_EIA_4200",
+			"title": "Petroleum Product Pipelines",
+			"category": "Misc - can be moved easily"
+		}
+	]
 }

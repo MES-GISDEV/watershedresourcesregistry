@@ -418,61 +418,133 @@
 			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
 		},
 		{
-			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
+			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/5",
 			"geometryType": "esriGeometryPolyline",
-			"id": "NHDPlus_HR_3890_4",
-			"label": "USGS NHD - Flow Direction",
-			"layerName": "USGS NHD Plus High Resolution",
+			"id": "NHDPlus_HR_4669",
+			"label": "",
+			"layerName": "NHDPlus_HR - FlowDirection",
+			"layerVersion": 10.81,
+			"layerId": "5",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/",
 			"selectedFields": {
-				"FCODE": {
-					"name": "FCODE",
+				"gnis_id": {
+					"name": "gnis_id",
+					"type": "esriFieldTypeString",
+					"alias": "GNIS_ID",
+					"length": 10,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"ftype": {
+					"name": "ftype",
 					"type": "esriFieldTypeInteger",
-					"alias": "FCode"
+					"alias": "FType",
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
 				},
-				"STREAMORDE": {
-					"name": "STREAMORDE",
+				"streamleve": {
+					"name": "streamleve",
 					"type": "esriFieldTypeSmallInteger",
-					"alias": "Stream Order"
+					"alias": "StreamLevel",
+					"description": null,
+				"isViewOverride": false,
+				"label": "Stream Level"
 				},
-				"TOTDASQKM": {
-					"name": "TOTDASQKM",
-					"type": "esriFieldTypeDouble",
-					"alias": "Total Drainage Area Sq Km"
+				"streamorde": {
+				"name": "streamorde",
+				"type": "esriFieldTypeSmallInteger",
+				"alias": "StreamOrder",
+				"description": null,
+				"isViewOverride": false,
+				"label": "Stream Order"
 				},
-				"ARBOLATESU": {
-					"name": "ARBOLATESU",
-					"type": "esriFieldTypeDouble",
-					"alias": "Upstream Cumulative Stream Km"
+				"startflag": {
+				"name": "startflag",
+				"type": "esriFieldTypeSmallInteger",
+				"alias": "IsHeadwater",
+				"description": null,
+				"isViewOverride": false,
+				"domain": {
+				"name": "NoYes Domain",
+				"type": "codedValue",
+				"codedValues": [
+				{
+                "name": "Yes",
+                "code": 1
 				},
-				"STREAMORDE": {
-					"name": "STREAMORDE",
-					"type": "esriFieldTypeSmallInteger",
-					"alias": "Stream Order"
+				{
+                "name": "No",
+                "code": 0
 				}
-			},
-			"layerId": "4",
-			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/"
+				],
+				"_inherited": {
+				"p": 1
+				}
+				},
+				"label": "Is Headwater"
+				},
+				"terminalfl": {
+				"name": "terminalfl",
+				"type": "esriFieldTypeSmallInteger",
+				"alias": "IsNetworkEnd",
+				"description": null,
+				"isViewOverride": false,
+				"domain": {
+				"name": "NoYes Domain",
+				"type": "codedValue",
+				"codedValues": [
+				{
+                "name": "Yes",
+                "code": 1
+				},
+				{
+                "name": "No",
+                "code": 0
+				}
+				],
+				"_inherited": {
+				"p": 1
+				}
+				},
+				"label": "Is Network End"
+				},
+				"totdasqkm": {
+				"name": "totdasqkm",
+				"type": "esriFieldTypeDouble",
+				"alias": "TotalDrainageAreaSqKm",
+				"description": null,
+				"isViewOverride": false,
+				"label": "Total Drainage Area Sq Km"
+				}
+				},
+				"groupbyfieldCheckBoxStatus": true,
+				"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+				}
 		},
 		{
-			"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
-			"geometryType": "esriGeometryPolyline",
-			"id": "303D_NP21_372_1",
-			"label": "303d Streams - Line",
-			"layerName": "303d Streams",
-			"selectedFields": {
-				"WBD_HUC12": {
-					"name": "WBD_HUC12",
-					"type": "esriFieldTypeString",
-					"alias": "How's My Waterway?"
-				},
-				"REACHCODE": {
-					"name": "REACHCODE",
-					"type": "esriFieldTypeString",
-					"alias": "REACHCODE"
-				}
+		"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
+		"geometryType": "esriGeometryPolyline",
+		"id": "303D_NP21_372_1",
+		"label": "303d Streams - Line",
+		"layerName": "303d Streams",
+		"selectedFields": {
+			"WBD_HUC12": {
+				"name": "WBD_HUC12",
+				"type": "esriFieldTypeString",
+				"alias": "How's My Waterway?"
 			},
-			"layerId": "1",
-			"baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/"
+			"REACHCODE": {
+				"name": "REACHCODE",
+				"type": "esriFieldTypeString",
+				"alias": "REACHCODE"
+			}
+		},
+		"layerId": "1",
+		"baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/"
 		},
 		{
 			"url": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0",
@@ -508,13 +580,49 @@
 			"selectedFields": {
 				"MarshType": {
 					"name": "MarshType",
-					"alias": "Marsh Type"
+					"type": "esriFieldTypeString",
+					"alias": "MarshType",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Marsh Type"
+				},
+				"CommunType": {
+					"name": "CommunType",
+					"type": "esriFieldTypeString",
+					"alias": "CommunType",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Community Type"
+				},
+				"Dominant_P": {
+					"name": "Dominant_P",
+					"type": "esriFieldTypeString",
+					"alias": "Dominant_P",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Dominant_P"
 				},
 				"Acres": {
 					"name": "Acres",
-					"alias": "Acres"
+					"type": "esriFieldTypeDouble",
+					"alias": "Acres",
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"FieldCheck": {
+					"name": "FieldCheck",
+					"type": "esriFieldTypeString",
+					"alias": "FieldCheck",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Field Check"
 				}
-			},
+			},			
 			"layerId": "0",
 			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer"
 		},
@@ -526,25 +634,32 @@
 			"selectedFields": {
 				"salinity": {
 					"name": "salinity",
-					"alias": "Salinity"
-				},
-				"ErosionVuln": {
-					"name": "ErosionVuln",
-					"alias": "Erosion Vulnerability"
-				},
-				"Marsh2050": {
-					"name": "Marsh2050",
-					"alias": "2050 Marsh change extent"
-				},
-				"SalinVuln": {
-					"name": "SalinVuln",
-					"alias": "Salinization Vulnerability"
+					"type": "esriFieldTypeString",
+					"alias": "salinity",
+					"length": 10,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Salinity"
 				},
 				"C2050Class": {
 					"name": "C2050Class",
-					"alias": "Combined 2050 vulnerability classification"
+					"type": "esriFieldTypeString",
+					"alias": "Combined 2050 vulnerability classification",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"C2100Class": {
+					"name": "C2100Class",
+					"type": "esriFieldTypeString",
+					"alias": "Combined 2100 vulnerability classification",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
 				}
-			},
+			},			
 			"layerId": "0",
 			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0"
 		},
@@ -556,51 +671,47 @@
 			"selectedFields": {
 				"ATTRIBUTE": {
 					"name": "ATTRIBUTE",
-					"alias": "ATTRIBUTE"
+					"type": "esriFieldTypeString",
+					"alias": "ATTRIBUTE",
+					"length": 20,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Attribute"
 				},
 				"WETLAND_TYPE": {
 					"name": "WETLAND_TYPE",
-					"alias": "WETLAND TYPE"
+					"type": "esriFieldTypeString",
+					"alias": "WETLAND_TYPE",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Wetland Type"
 				},
 				"ACRES": {
 					"name": "ACRES",
-					"alias": "ACRES"
-				},
-				"PROJECT_NAME": {
-					"name": "PROJECT_NAME",
-					"alias": "PROJECT NAME"
-				},
-				"HStress01": {
-					"name": "HStress01",
-					"alias": "HqStress01"
-				},
-				"WQStres01": {
-					"name": "WQStres01",
-					"alias": "WQStress01"
-				},
-				"HStress06": {
-					"name": "HStress06",
-					"alias": "HStress06"
-				},
-				"WQStres06": {
-					"name": "WQStres06",
-					"alias": "WQStress06"
-				},
-				"HStress11": {
-					"name": "HStress11",
-					"alias": "HStress11"
-				},
-				"WQStres11": {
-					"name": "WQStres11",
-					"alias": "WQStres11"
+					"type": "esriFieldTypeDouble",
+					"alias": "ACRES",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Acres"
 				},
 				"HStress16": {
 					"name": "HStress16",
-					"alias": "HStress16"
+					"type": "esriFieldTypeString",
+					"alias": "HStress16",
+					"length": 30,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
 				},
 				"WQStres16": {
 					"name": "WQStres16",
-					"alias": "WQStres16"
+					"type": "esriFieldTypeString",
+					"alias": "WQStres16",
+					"length": 30,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
 				}
 			},
 			"layerId": "2",
@@ -1303,7 +1414,130 @@
 				"sortOrder": "Asc",
 				"sortingField": "esriCTCountField"
 			}
-		}
+		},
+		{
+			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/0",
+			"geometryType": "esriGeometryPolyline",
+			"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_9798",
+			"label": "",
+			"layerName": "NaturalGas_InterIntrastate_Pipelines_US_EIA",
+			"layerVersion": 10.81,
+			"selectedFields": {
+				"TYPEPIPE": {
+					"name": "TYPEPIPE",
+					"type": "esriFieldTypeString",
+					"alias": "TYPEPIPE",
+					"length": 10,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "TypePipe"
+				},
+				"Operator": {
+					"name": "Operator",
+					"type": "esriFieldTypeString",
+					"alias": "Operator",
+					"length": 50,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"Status": {
+					"name": "Status",
+					"type": "esriFieldTypeString",
+					"alias": "Status",
+					"length": 50,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/Market_Hubs_Natural_Gas/FeatureServer/0",
+			"geometryType": "esriGeometryPoint",
+			"id": "Market_Hubs_Natural_Gas_1390",
+			"label": "",
+			"layerName": "Market_Hubs_Natural_Gas",
+			"layerVersion": 10.81,
+			"selectedFields": {
+				"HubName": {
+					"name": "HubName",
+					"type": "esriFieldTypeString",
+					"alias": "HubName",
+					"length": 100,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Hub Name"
+				}
+			},
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/Market_Hubs_Natural_Gas/FeatureServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/PetroleumProduct_Pipelines_US_EIA/FeatureServer/0",
+			"geometryType": "esriGeometryPolyline",
+			"id": "PetroleumProduct_Pipelines_US_EIA_2738",
+			"label": "",
+			"layerName": "PetroleumProduct_Pipelines_US_EIA",
+			"layerVersion": 10.81,
+			"selectedFields": {
+				"Opername": {
+					"name": "Opername",
+					"type": "esriFieldTypeString",
+					"alias": "Opername",
+					"length": 75,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"Pipename": {
+					"name": "Pipename",
+					"type": "esriFieldTypeString",
+					"alias": "Pipename",
+					"length": 100,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/PetroleumProduct_Pipelines_US_EIA/FeatureServer/",
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		}		
 	],
 	"downloadSettings": {
 		"type": "syncEnable",
@@ -1327,9 +1561,9 @@
 				]
 			},
 			{
-				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/5",
 				"layerName": "USGS NHD - Flow Direction",
-				"id": "NHDPlus_HR_3890_4",
+				"id": "NHDPlus_HR_4669",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
@@ -1469,6 +1703,33 @@
 				"downloadingFileOption": [
 					"csv"
 				]
+			},
+			{
+				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/0",
+				"layerName": "NaturalGas_InterIntrastate_Pipelines_US_EIA",
+				"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_9798",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/Market_Hubs_Natural_Gas/FeatureServer/0",
+				"layerName": "Market_Hubs_Natural_Gas",
+				"id": "Market_Hubs_Natural_Gas_1390",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/PetroleumProduct_Pipelines_US_EIA/FeatureServer/0",
+				"layerName": "PetroleumProduct_Pipelines_US_EIA",
+				"id": "PetroleumProduct_Pipelines_US_EIA_2738",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
 			}
 		],
 		"extractDataTaskURL": "",
@@ -1476,4 +1737,4 @@
 			"csv"
 		]
 	}
-}
+}						
