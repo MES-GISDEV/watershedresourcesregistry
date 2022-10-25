@@ -336,7 +336,7 @@
                 "label": "Water Resources Report",
                 "version": "2.23",
                 "uri": "widgets/Screening/Widget",
-                "config": "configs/Screening/config_widgets_Screening_Widget_21.json",
+                "config": "configs/Screening/config_LocationDetails_WV_2.json",
                 "id": "widgets_Screening_Widget_21",
                 "icon": "configs\\Screening\\icon_LocationDetails.png",
                 "IsController": false
