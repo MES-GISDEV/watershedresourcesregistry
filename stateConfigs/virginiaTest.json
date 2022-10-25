@@ -28,7 +28,7 @@
 		"mdem-geoserver.baronweather.com"
 	],
 	"title": "Watershed Resources Registry",
-	"subtitle": "Delaware Version",
+	"subtitle": "Virginia Version",
 	"keepAppState": true,
 	"logo": "images/logo.png",
 	"geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
@@ -336,7 +336,7 @@
                 "label": "Water Resources Report",
                 "version": "2.23",
                 "uri": "widgets/Screening/Widget",
-                "config": "configs/Screening/config_widgets_Screening_Widget_21.json",
+                "config": "configs/Screening/config_LocationDetails_VA_2.json",
                 "id": "widgets_Screening_Widget_21",
                 "icon": "configs\\Screening\\icon_LocationDetails.png",
                 "IsController": false
@@ -346,7 +346,7 @@
                 "label": "TAC Report",
                 "version": "2.23",
                 "uri": "widgets/Screening2/Widget",
-                "config": "configs/Screening2/config_LocationDetails_DE.json",
+                "config": "configs/Screening2/config_LocationDetails_VA.json",
                 "id": "widgets_Screening_Widget_20",
                 "icon": "configs\\Screening2\\icon_LocationDetails.png",
                 "IsController": false
@@ -390,7 +390,7 @@
 			"bottom": 24,
 			"left": 55
 		},
-		"itemId": "359cc2321e734d86a0bb646e8ada0c52",
+		"itemId": "bae55591db4b4a38ab69d60dc4b3cfda",
 		"mapOptions": {},
 		"id": "map",
 		"portalUrl": "https://maryland.maps.arcgis.com",
@@ -414,7 +414,7 @@
 				"version": "2.3",
 				"label": "WRR Layer List",
 				"uri": "widgets/JoinedLayerLists/Widget",
-				"config": "configs/WRRLayerList/config_WRRLayerListDE.json",
+				"config": "configs/WRRLayerList/config_WRRLayerListVA.json",
 				"index": 0,
 				"id": "widgets_JoinedLayerLists_Widget_39",
 				"icon": "configs\\WRRLayerList\\icon_layers.png",
@@ -454,7 +454,6 @@
 				"label": "Add Data",
 				"index": 4,
 				"version": "2.23",
-				"closeable": true,
 				"uri": "widgets/AddData/Widget",
 				"config": "configs/AddData/config__27.json"
 			}
@@ -487,184 +486,208 @@
 					"version": "2.23"
 				},
 				{
-				"uri": "themes/TabTheme/widgets/SidebarController/Widget",
-				"position": {
-				"left": 0,
-				"top": 44,
-				"bottom": 0,
-				"relativeTo": "browser"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/HomeButton/Widget",
-				"position": {
-				"left": 7,
-				"top": 75,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
+					"uri": "themes/TabTheme/widgets/SidebarController/Widget",
+					"position": {
+						"left": 0,
+						"top": 44,
+						"bottom": 0,
+						"relativeTo": "browser"
+					},
+					"version": "2.23"
 				},
 				{
-				"uri": "widgets/Scalebar/Widget",
-				"position": {
-				"left": 10,
-				"bottom": 40,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/Search/Widget",
-				"position": {
-				"left": 45,
-				"top": 5,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
+					"uri": "widgets/HomeButton/Widget",
+					"position": {
+						"left": 7,
+						"top": 75,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
 				},
 				{
-				"uri": "widgets/Coordinate/Widget",
-				"position": {
-				"left": 10,
-				"bottom": 20,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
+					"uri": "widgets/Scalebar/Widget",
+					"position": {
+						"left": 10,
+						"bottom": 40,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
 				},
 				{
-				"position": {
-				"right": 110,
-				"top": 45,
-				"relativeTo": "map"
+					"uri": "widgets/Search/Widget",
+					"position": {
+						"left": 45,
+						"top": 5,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
+				},
+				{
+					"uri": "widgets/Coordinate/Widget",
+					"position": {
+						"left": 10,
+						"bottom": 20,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
+				},
+				{
+					"position": {
+						"right": 110,
+						"top": 45,
+						"relativeTo": "map"
+					}
+				},
+				{
+					"position": {
+						"right": 60,
+						"top": 45,
+						"relativeTo": "map"
+					}
+				},
+				{
+					"position": {
+						"right": 10,
+						"top": 45,
+						"relativeTo": "map"
+					}
+				},
+				{
+					"uri": "widgets/OverviewMap/Widget",
+					"position": {
+						"right": 0,
+						"bottom": 0,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
+				},
+				{
+					"uri": "widgets/MyLocation/Widget",
+					"inPanel": false,
+					"position": {
+						"left": 7,
+						"top": 115,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
+				},
+				{
+					"uri": "widgets/AttributeTable/Widget",
+					"position": {
+						"bottom": 0,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
+				},
+				{
+					"uri": "widgets/Splash/Widget",
+					"visible": false,
+					"position": {
+						"relativeTo": "browser"
+					},
+					"version": "2.23"
+				},
+				{
+					"uri": "widgets/ZoomSlider/Widget",
+					"visible": true,
+					"position": {
+						"top": 5,
+						"left": 7,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
+				},
+				{
+					"uri": "widgets/ExtentNavigate/Widget",
+					"visible": false,
+					"position": {
+						"top": 195,
+						"left": 7,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
+				},
+				{
+					"uri": "widgets/FullScreen/Widget",
+					"visible": false,
+					"position": {
+						"top": 155,
+						"left": 7,
+						"relativeTo": "map"
+					},
+					"version": "2.23"
 				}
-				},
-				{
-				"position": {
-				"right": 60,
-				"top": 45,
-				"relativeTo": "map"
-				}
-				},
-				{
-				"position": {
-				"right": 10,
-				"top": 45,
-				"relativeTo": "map"
-				}
-				},
-				{
-				"uri": "widgets/OverviewMap/Widget",
-				"position": {
-				"right": 0,
-				"bottom": 0,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/MyLocation/Widget",
-				"inPanel": false,
-				"position": {
-				"left": 7,
-				"top": 115,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/AttributeTable/Widget",
-				"position": {
-				"bottom": 0,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/Splash/Widget",
-				"visible": false,
-				"position": {
-				"relativeTo": "browser"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/ZoomSlider/Widget",
-				"visible": true,
-				"position": {
-				"top": 5,
-				"left": 7,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/ExtentNavigate/Widget",
-				"visible": false,
-				"position": {
-				"top": 195,
-				"left": 7,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
-				},
-				{
-				"uri": "widgets/FullScreen/Widget",
-				"visible": false,
-				"position": {
-				"top": 155,
-				"left": 7,
-				"relativeTo": "map"
-				},
-				"version": "2.23"
-				}
-				]
-				},
-				"widgetPool": {
-				"panel": {
+			]
+		},
+		"widgetPool": {
+			"panel": {
 				"uri": "themes/TabTheme/panels/TabPanel/Panel",
 				"position": {
-				"top": 44,
-				"left": 0,
-				"bottom": 22,
-				"relativeTo": "browser"
+					"top": 44,
+					"left": 0,
+					"bottom": 22,
+					"relativeTo": "browser"
 				}
-				}
-				},
-				"map": {
-				"position": {
+			}
+		},
+		"map": {
+			"position": {
 				"top": 0,
 				"right": 0,
 				"bottom": 0,
 				"left": 55
-				}
-				}
-				},
-				"loadingPage": {
-				"backgroundColor": "#51773f",
-				"backgroundImage": {
-				"visible": false
-				},
-				"loadingGif": {
-				"visible": true,
-				"uri": "/webappbuilder/apps/14/configs/loading/images/predefined_loading_4.gif",
-				"width": 34,
-				"height": 34
-				}
-				},
-				"wabVersion": "2.23",
-				"isTemplateApp": true,
-				"isWebTier": false,
-				"httpProxy": {
-				"useProxy": true,
-				"alwaysUseProxy": false,
-				"url": "",
-				"rules": []
-				},
-				"dataSource": {
-				"dataSources": {},
-				"settings": {}
-				},
-				"logoAlt": "",
-				"logoLink": ""
-				}																								
+			}
+		}
+	},
+	"loadingPage": {
+		"backgroundColor": "#51773f",
+		"backgroundImage": {
+			"visible": false
+		},
+		"loadingGif": {
+			"visible": true,
+			"uri": "/webappbuilder/apps/14/configs/loading/images/predefined_loading_4.gif",
+			"width": 34,
+			"height": 34
+		}
+	},
+	"wabVersion": "2.23",
+	"isTemplateApp": true,
+	"isWebTier": false,
+	"httpProxy": {
+		"useProxy": true,
+		"alwaysUseProxy": false,
+		"url": "https://localhost/WRRProxy/proxy.ashx",
+		"rules": [{
+			"urlPrefix": "https://maryland.maps.arcgis.com/",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "http://services.mesgis.com/arcgis",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://www.arcgis.com/sharing",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://landscape10.arcgis.com",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://landscape1.arcgis.com",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://services.arcgis.com",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "http://mdewin64.mde.state.md.us",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+			},{
+			"urlPrefix": "https://services.mesgis.com/arcgis",
+			"proxyUrl": "https://localhost/WRRProxy/proxy.ashx"
+		}]
+	},
+	"dataSource": {
+		"dataSources": {},
+		"settings": {}
+	},
+	"logoAlt": "",
+	"logoLink": ""
+}																					

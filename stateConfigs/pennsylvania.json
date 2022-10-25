@@ -119,7 +119,7 @@
 			},
 			{
 				"position": {
-					"right": 110,
+					"right": 60,
 					"top": 2,
 					"relativeTo": "browser",
 					"wleft" : 800,
@@ -128,28 +128,12 @@
 				"placeholderIndex": 1,
 				"id": "Federal_State_Layer_Tool_060718",
 				"name": "About",
-				"label": "State Tools",
+				"label": "External Resources",
 				"version": "2.23",
 				"closeable": true,
 				"uri": "widgets/LinksDropDown/Widget",
 				"config": "configs/LinksDropDown/stateConfigs/configDE.json",
 				"icon": "configs/LinksDropDown/icon.png"
-			},
-			{
-				"position": {
-					"right": 60,
-					"top": 2,
-					"relativeTo": "browser",
-					"wleft" : 800,
-					"wtop" : 25
-				},
-				"placeholderIndex": 1,
-				"id": "_27",
-				"name": "AddData",
-				"version": "2.23",
-				"closeable": true,
-				"uri": "widgets/AddData/Widget",
-				"config": "configs/AddData/config__27.json"
 			},
 			{
 				"position": {
@@ -352,7 +336,7 @@
                 "label": "Water Resources Report",
                 "version": "2.23",
                 "uri": "widgets/Screening/Widget",
-                "config": "configs/Screening/config_widgets_Screening_Widget_21.json",
+                "config": "configs/Screening/config_LocationDetails_PA_4.json",
                 "id": "widgets_Screening_Widget_21",
                 "icon": "configs\\Screening\\icon_LocationDetails.png",
                 "IsController": false
@@ -463,7 +447,16 @@
                 "version": "2.23",
                 "uri": "widgets/Analysis/Widget",
                 "config": "widgets/Analysis/config.json"
-            }
+            },
+			{
+				"id": "AddData_27",
+				"name": "AddData",
+				"label": "Add Data",
+				"index": 4,
+				"version": "2.23",
+				"uri": "widgets/AddData/Widget",
+				"config": "configs/AddData/config__27.json"
+			}
 		],
 		"groups": []
 	},
