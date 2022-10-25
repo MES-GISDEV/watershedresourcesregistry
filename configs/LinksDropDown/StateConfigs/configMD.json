@@ -1,7 +1,8 @@
 {
 	"nationalLinks":[
 		["Corps Stream Calculator", "https://www.nab.usace.army.mil/Missions/Regulatory/Mitigation/"],
-		["Freshwater Network Chesapeake Region", "https://maps.freshwaternetwork.org/chesapeake/"],		
+		["Freshwater Network Chesapeake Region", "https://maps.freshwaternetwork.org/chesapeake/"],
+		["SAV Interactive Map", "https://mobjack.vims.edu/sav/savwabmap/"],
 		["MERLIN", "https://gisapps.dnr.state.md.us/MERLIN/index.html"],
 		["Maryland Coastal Atlas", "https://gisapps.dnr.state.md.us/coastalatlas/WAB2/"],
 		["GreenPrint", "https://geodata.md.gov/greenprint/"],
