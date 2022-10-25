@@ -21,15 +21,15 @@
 		"printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
 		"footnote": "",
 		"logo": "${appPath}/widgets/Screening/images/default-logo.png",
-		"columnTitleColor": "#c6d9ec",
-		"reportTitle": "Screening Report"
+		"columnTitleColor": "#78af7f",
+		"reportTitle": "WRR Report (Pennsylvania)"
 	},
 	"searchSourceSettings": {
 		"allPlaceholder": "",
 		"showInfoWindowOnSelect": true,
 		"sources": [
 			{
-				"url": "http://geodata.md.gov/imap/rest/services/GeocodeServices/MD_CompositeLocator/GeocodeServer",
+				"url": "https://geodata.md.gov/imap/rest/services/GeocodeServices/MD_CompositeLocator/GeocodeServer",
 				"name": "MD Statewide Composite Locator",
 				"singleLineFieldName": "SingleLine",
 				"placeholder": "MD Statewide Composite Locator",
@@ -346,7 +346,7 @@
 		{
 			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
 			"geometryType": "esriGeometryPolygon",
-			"id": "wbd_7728_4",
+			"id": "wbd_3849_4",
 			"label": "8-digit HU",
 			"layerName": "USGS Watershed Boundaries",
 			"selectedFields": {
@@ -378,7 +378,7 @@
 		{
 			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
 			"geometryType": "esriGeometryPolygon",
-			"id": "wbd_7728_6",
+			"id": "wbd_3849_6",
 			"label": "12-digit HU",
 			"layerName": "USGS Watershed Boundaries",
 			"selectedFields": {
@@ -418,117 +418,40 @@
 			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/"
 		},
 		{
-			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/5",
+			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
 			"geometryType": "esriGeometryPolyline",
-			"id": "NHDPlus_HR_4669",
-			"label": "",
-			"layerName": "NHDPlus_HR - FlowDirection",
-			"layerVersion": 10.81,
-			"layerId": "5",
-			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/",
+			"id": "NHDPlus_HR_2519",
+			"label": "USGS NHD - Flow Direction",
+			"layerName": "USGS NHD Plus High Resolution",
 			"selectedFields": {
-				"gnis_id": {
-					"name": "gnis_id",
-					"type": "esriFieldTypeString",
-					"alias": "GNIS_ID",
-					"length": 10,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"ftype": {
-					"name": "ftype",
+				"FCODE": {
+					"name": "FCODE",
 					"type": "esriFieldTypeInteger",
-					"alias": "FType",
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
+					"alias": "FCode"
 				},
-				"streamleve": {
-					"name": "streamleve",
+				"STREAMORDE": {
+					"name": "STREAMORDE",
 					"type": "esriFieldTypeSmallInteger",
-					"alias": "StreamLevel",
-					"description": null,
-					"isViewOverride": false,
-					"label": "Stream Level"
+					"alias": "Stream Order"
 				},
-				"streamorde": {
-					"name": "streamorde",
-					"type": "esriFieldTypeSmallInteger",
-					"alias": "StreamOrder",
-					"description": null,
-					"isViewOverride": false,
-					"label": "Stream Order"
-				},
-				"startflag": {
-					"name": "startflag",
-					"type": "esriFieldTypeSmallInteger",
-					"alias": "IsHeadwater",
-					"description": null,
-					"isViewOverride": false,
-					"domain": {
-						"name": "NoYes Domain",
-						"type": "codedValue",
-						"codedValues": [
-							{
-								"name": "Yes",
-								"code": 1
-							},
-							{
-								"name": "No",
-								"code": 0
-							}
-						],
-						"_inherited": {
-							"p": 1
-						}
-					},
-					"label": "Is Headwater"
-				},
-				"terminalfl": {
-					"name": "terminalfl",
-					"type": "esriFieldTypeSmallInteger",
-					"alias": "IsNetworkEnd",
-					"description": null,
-					"isViewOverride": false,
-					"domain": {
-						"name": "NoYes Domain",
-						"type": "codedValue",
-						"codedValues": [
-							{
-								"name": "Yes",
-								"code": 1
-							},
-							{
-								"name": "No",
-								"code": 0
-							}
-						],
-						"_inherited": {
-							"p": 1
-						}
-					},
-					"label": "Is Network End"
-				},
-				"totdasqkm": {
-					"name": "totdasqkm",
+				"TOTDASQKM": {
+					"name": "TOTDASQKM",
 					"type": "esriFieldTypeDouble",
-					"alias": "TotalDrainageAreaSqKm",
-					"description": null,
-					"isViewOverride": false,
-					"label": "Total Drainage Area Sq Km"
+					"alias": "Total Drainage Area Sq Km"
+				},
+				"ARBOLATESU": {
+					"name": "ARBOLATESU",
+					"type": "esriFieldTypeDouble",
+					"alias": "Upstream Cumulative Stream Km"
 				}
 			},
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTTotalLengthField"
-			}
+			"layerId": "4",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/"
 		},
 		{
 			"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
 			"geometryType": "esriGeometryPolyline",
-			"id": "303D_NP21_372_1",
+			"id": "303D_NP21_9019",
 			"label": "303d Streams - Line",
 			"layerName": "303d Streams",
 			"selectedFields": {
@@ -547,183 +470,151 @@
 			"baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/"
 		},
 		{
-			"url": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0",
+			"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/Pennsylvania_ModeledProbabilityWetlands/MapServer/0",
 			"geometryType": "esriGeometryPolygon",
-			"id": "Wetlands_590_0",
-			"label": "NWI - Wetlands",
-			"layerName": "USFWS NWI",
+			"id": "Pennsylvania_ModeledProbabilityWetlands_6829",
+			"label": "Modeled Primary Watersheds",
+			"layerName": "Modeled Primary Wetlands",
 			"selectedFields": {
 				"Wetlands.WETLAND_TYPE": {
-					"name": "Wetlands.WETLAND_TYPE",
+					"name": "Class_name",
 					"type": "esriFieldTypeString",
-					"alias": "Wetland Type"
-				},
-				"Wetlands.ACRES": {
-					"name": "Wetlands.ACRES",
-					"type": "esriFieldTypeDouble",
-					"alias": "Acres"
-				},
-				"Wetlands.ATTRIBUTE": {
-					"name": "Wetlands.ATTRIBUTE",
-					"type": "esriFieldTypeString",
-					"alias": "Attribute"
+					"alias": "Class_name"
 				}
 			},
 			"layerId": "0",
-			"baseURL": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/"
+			"baseURL": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/Pennsylvania_ModeledProbabilityWetlands/MapServer/"
 		},
 		{
-			"url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer/0",
-			"id": "ShorelineInventoryLayers_1151_0",
-			"label": "Virginia Tidal Marsh Inventory",
-			"layerName": "Virginia Tidal Marsh Inventory",
-			"selectedFields": {
-				"MarshType": {
-					"name": "MarshType",
-					"type": "esriFieldTypeString",
-					"alias": "MarshType",
-					"length": 50,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Marsh Type"
-				},
-				"CommunType": {
-					"name": "CommunType",
-					"type": "esriFieldTypeString",
-					"alias": "CommunType",
-					"length": 254,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Community Type"
-				},
-				"Dominant_P": {
-					"name": "Dominant_P",
-					"type": "esriFieldTypeString",
-					"alias": "Dominant_P",
-					"length": 254,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Dominant_P"
-				},
-				"Acres": {
-					"name": "Acres",
-					"type": "esriFieldTypeDouble",
-					"alias": "Acres",
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"FieldCheck": {
-					"name": "FieldCheck",
-					"type": "esriFieldTypeString",
-					"alias": "FieldCheck",
-					"length": 5,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Field Check"
-				}
-			},			
-			"layerId": "0",
-			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer"
-		},
-		{
-			"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
-			"id": "VulnerabilityAssessments_1753_0",
-			"label": "Tidal Marsh Vulnerability Assessments (2050)",
-			"layerName": "Tidal Marsh Vulnerability Assessments",
-			"selectedFields": {
-				"salinity": {
-					"name": "salinity",
-					"type": "esriFieldTypeString",
-					"alias": "salinity",
-					"length": 10,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Salinity"
-				},
-				"C2050Class": {
-					"name": "C2050Class",
-					"type": "esriFieldTypeString",
-					"alias": "Combined 2050 vulnerability classification",
-					"length": 50,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"C2100Class": {
-					"name": "C2100Class",
-					"type": "esriFieldTypeString",
-					"alias": "Combined 2100 vulnerability classification",
-					"length": 50,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				}
-			},			
-			"layerId": "0",
-			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0"
-		},
-		{
-			"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
-			"id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
-			"label": "NonTidal NWI Habitat and Water Quality 4 yrs",
-			"layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
-			"selectedFields": {
-				"ATTRIBUTE": {
-					"name": "ATTRIBUTE",
-					"type": "esriFieldTypeString",
-					"alias": "ATTRIBUTE",
-					"length": 20,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Attribute"
-				},
-				"WETLAND_TYPE": {
-					"name": "WETLAND_TYPE",
-					"type": "esriFieldTypeString",
-					"alias": "WETLAND_TYPE",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Wetland Type"
-				},
-				"ACRES": {
-					"name": "ACRES",
-					"type": "esriFieldTypeDouble",
-					"alias": "ACRES",
-					"description": null,
-					"isViewOverride": false,
-					"label": "Acres"
-				},
-				"HStress16": {
-					"name": "HStress16",
-					"type": "esriFieldTypeString",
-					"alias": "HStress16",
-					"length": 30,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"WQStres16": {
-					"name": "WQStres16",
-					"type": "esriFieldTypeString",
-					"alias": "WQStres16",
-					"length": 30,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				}
-			},
-			"layerId": "2",
-			"baseURL": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer"
-		},
-		{
-			"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/0",
+			"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/DEP/MapServer/30",
 			"geometryType": "esriGeometryPolyline",
-			"id": "Virginia_ATTAINS_2506",
+			"id": "DEP_8350",
+			"label": "Existing Use - Streams CH93",
+			"layerName": "Existing Use",
+			"selectedFields": {
+				"SEGMENT_NA": {
+					"name": "SEGMENT_NA",
+					"type": "esriFieldTypeString",
+					"alias": "Segment Name"
+				},
+				"USE_DESCRI": {
+					"name": "USE_DESCRI",
+					"type": "esriFieldTypeString",
+					"alias": "Use Description"
+				},
+				"QUALIFIER": {
+					"name": "QUALIFIER",
+					"type": "esriFieldTypeString",
+					"alias": "Qualifier"
+				},
+				"MIGRATORY_": {
+					"name": "MIGRATORY_",
+					"type": "esriFieldTypeString",
+					"alias": "Migratory"
+				}
+			},
+			"layerId": "30",
+			"baseURL": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/DEP/MapServer/"
+		},
+		{
+			"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/DEP/MapServer/29",
+			"geometryType": "esriGeometryPolyline",
+			"id": "DEP_1699_29",
+			"label": "Designated Use - Streams CH93",
+			"layerName": "Designated Use",
+			"selectedFields": {
+				"SEGMENT_NA": {
+					"name": "SEGMENT_NA",
+					"type": "esriFieldTypeString",
+					"alias": "Segment Name"
+				},
+				"USE_DESCRI": {
+					"name": "USE_DESCRI",
+					"type": "esriFieldTypeString",
+					"alias": "Use Description"
+				},
+				"MIGRATORY_": {
+					"name": "MIGRATORY_",
+					"type": "esriFieldTypeString",
+					"alias": "Migratory"
+				}
+			},
+			"layerId": "29",
+			"baseURL": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/DEP/MapServer/"
+		},
+		{
+			"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/PAFishBoat/MapServer/3",
+			"geometryType": "esriGeometryPolyline",
+			"id": "PAFishBoat_9546",
+			"label": "Stocked Trout Waters",
+			"layerName": "Stocked Trout Waters",
+			"selectedFields": {
+				"GNIS_Name": {
+					"name": "GNIS_Name",
+					"type": "esriFieldTypeString",
+					"alias": "GNIS Name"
+				},
+				"Year_Round": {
+					"name": "Year_Round",
+					"type": "esriFieldTypeString",
+					"alias": "Year Round"
+				},
+				"EarlyOpen_": {
+					"name": "EarlyOpen_",
+					"type": "esriFieldTypeString",
+					"alias": "Early Open"
+				},
+				"Limits": {
+					"name": "Limits",
+					"type": "esriFieldTypeString",
+					"alias": "Limits"
+				}
+			},
+			"layerId": "3",
+			"baseURL": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/PAFishBoat/MapServer/"
+		},
+		{
+			"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/PAFishBoat/MapServer/31",
+			"geometryType": "esriGeometryPolyline",
+			"id": "PAFishBoat_1170",
+			"label": "Wilderness Trout Streams",
+			"layerName": "Wilderness Trout Streams",
+			"selectedFields": {
+				"WtrName": {
+					"name": "WtrName",
+					"type": "esriFieldTypeString",
+					"alias": "Water Name"
+				}
+			},
+			"layerId": "31",
+			"baseURL": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/PAFishBoat/MapServer/"
+		},
+		{
+			"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/TMDL_NP21/MapServer/1",
+			"geometryType": "esriGeometryPolyline",
+			"id": "TMDL_NP21_8692_1",
+			"label": "TMDL - Line",
+			"layerName": "TMDL - Line",
+			"layerVersion": 10.31,
+			"selectedFields": {
+				"REACHCODE": {
+					"name": "REACHCODE",
+					"type": "esriFieldTypeString",
+					"alias": "REACHCODE"
+				}
+			},
+			"layerId": "1",
+			"baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/TMDL_NP21/MapServer/"
+		},
+		{
+			"url": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/0",
+			"geometryType": "esriGeometryPolyline",
+			"id": "WRR_PA_ATTAINS_4771",
 			"label": "",
 			"layerName": "ATTAINS Assessment Lines",
 			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/",
 			"selectedFields": {
 				"reportingcycle": {
 					"name": "reportingcycle",
@@ -812,11 +703,27 @@
 					"length": 1,
 					"description": null,
 					"isViewOverride": false,
-					"label": "Has TMDL Report"
+					"label": "Has TMDL"
+				},
+				"trash": {
+					"name": "trash",
+					"type": "esriFieldTypeString",
+					"alias": "Trash",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"turbidity": {
+					"name": "turbidity",
+					"type": "esriFieldTypeString",
+					"alias": "Turbidity",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
 				}
 			},
-			"layerId": "0",
-			"baseURL": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
@@ -824,118 +731,14 @@
 			}
 		},
 		{
-			"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/1",
+			"url": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/1",
 			"geometryType": "esriGeometryPolygon",
-			"id": "Virginia_ATTAINS_2459",
+			"id": "WRR_PA_ATTAINS_9461",
 			"label": "",
 			"layerName": "ATTAINS Assessment Areas",
 			"layerVersion": 10.81,
-			"selectedFields": {
-				"reportingcycle": {
-					"name": "reportingcycle",
-					"type": "esriFieldTypeInteger",
-					"alias": "ReportingCycle",
-					"description": null,
-					"isViewOverride": false,
-					"label": "Cycle Year"
-				},
-				"assessmentunitname": {
-					"name": "assessmentunitname",
-					"type": "esriFieldTypeString",
-					"alias": "AssessmentUnitName",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Assessment Unit Name"
-				},
-				"waterbodyreportlink": {
-					"name": "waterbodyreportlink",
-					"type": "esriFieldTypeString",
-					"alias": "Waterbody Report Link",
-					"length": 4000,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Waterbody Report Link"
-				},
-				"ircategory": {
-					"name": "ircategory",
-					"type": "esriFieldTypeString",
-					"alias": "IR Category",
-					"length": 5,
-					"description": null,
-					"isViewOverride": false,
-					"label": "IR Category"
-				},
-				"overallstatus": {
-					"name": "overallstatus",
-					"type": "esriFieldTypeString",
-					"alias": "Overall Status",
-					"length": 50,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Overall Status"
-				},
-				"isassessed": {
-					"name": "isassessed",
-					"type": "esriFieldTypeString",
-					"alias": "Is Assessed",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Is Assessed"
-				},
-				"isimpaired": {
-					"name": "isimpaired",
-					"type": "esriFieldTypeString",
-					"alias": "Is Impaired",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Is Impaired"
-				},
-				"isthreatened": {
-					"name": "isthreatened",
-					"type": "esriFieldTypeString",
-					"alias": "Is Threatened",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Is Threatened"
-				},
-				"on303dlist": {
-					"name": "on303dlist",
-					"type": "esriFieldTypeString",
-					"alias": "On303dList",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": "On 303d List"
-				},
-				"hastmdl": {
-					"name": "hastmdl",
-					"type": "esriFieldTypeString",
-					"alias": "Has TMDL",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Has TMDL Report"
-				}
-			},
 			"layerId": "1",
-			"baseURL": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/",
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTTotalAreaField"
-			}
-		},
-		{
-			"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/2",
-			"geometryType": "esriGeometryPolygon",
-			"id": "Virginia_ATTAINS_8409",
-			"label": "",
-			"layerName": "ATTAINS Assessment Unit Catchment Associations",
-			"layerVersion": 10.81,
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/",
 			"selectedFields": {
 				"reportingcycle": {
 					"name": "reportingcycle",
@@ -1024,11 +827,9 @@
 					"length": 1,
 					"description": null,
 					"isViewOverride": false,
-					"label": "Has TMDL Plan"
+					"label": "Has TMDL"
 				}
 			},
-			"layerId": "2",
-			"baseURL": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
@@ -1036,43 +837,105 @@
 			}
 		},
 		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/185",
+			"url": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/2",
 			"geometryType": "esriGeometryPolygon",
-			"id": "EDMA_5037",
+			"id": "WRR_PA_ATTAINS_6912",
 			"label": "",
-			"layerName": "TMDL Watersheds",
-			"layerVersion": 10.71,
+			"layerName": "ATTAINS Assessment Catchment Associations",
+			"layerVersion": 10.81,
+			"layerId": "2",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/",
 			"selectedFields": {
-				"WSHD_NAME": {
-					"name": "WSHD_NAME",
-					"type": "esriFieldTypeString",
-					"alias": "WSHD_NAME",
-					"length": 255,
+				"reportingcycle": {
+					"name": "reportingcycle",
+					"type": "esriFieldTypeInteger",
+					"alias": "ReportingCycle",
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Cycle Year"
 				},
-				"PJ_RPT_FINAL_APPRVD_LINK": {
-					"name": "PJ_RPT_FINAL_APPRVD_LINK",
+				"assessmentunitname": {
+					"name": "assessmentunitname",
 					"type": "esriFieldTypeString",
-					"alias": "PJ_RPT_FINAL_APPRVD_LINK",
+					"alias": "AssessmentUnitName",
 					"length": 255,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Assessment Unit Name"
 				},
-				"POL_NAME": {
-					"name": "POL_NAME",
+				"waterbodyreportlink": {
+					"name": "waterbodyreportlink",
 					"type": "esriFieldTypeString",
-					"alias": "POL_NAME",
-					"length": 255,
+					"alias": "Waterbody Report Link",
+					"length": 4000,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Waterbody Report Link"
+				},
+				"ircategory": {
+					"name": "ircategory",
+					"type": "esriFieldTypeString",
+					"alias": "IR Category",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "IR Category"
+				},
+				"overallstatus": {
+					"name": "overallstatus",
+					"type": "esriFieldTypeString",
+					"alias": "Overall Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Overall Status"
+				},
+				"isassessed": {
+					"name": "isassessed",
+					"type": "esriFieldTypeString",
+					"alias": "Is Assessed",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Assessed"
+				},
+				"isimpaired": {
+					"name": "isimpaired",
+					"type": "esriFieldTypeString",
+					"alias": "Is Impaired",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Impaired"
+				},
+				"isthreatened": {
+					"name": "isthreatened",
+					"type": "esriFieldTypeString",
+					"alias": "Is Threatened",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Threatened"
+				},
+				"on303dlist": {
+					"name": "on303dlist",
+					"type": "esriFieldTypeString",
+					"alias": "On303dList",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "On 303d List"
+				},
+				"hastmdl": {
+					"name": "hastmdl",
+					"type": "esriFieldTypeString",
+					"alias": "Has TMDL",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Has TMDL"
 				}
 			},
-			"layerId": "185",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
@@ -1080,43 +943,78 @@
 			}
 		},
 		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/193",
-			"geometryType": "esriGeometryPoint",
-			"id": "EDMA_1284",
+			"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/TMDL_NP21/MapServer/1",
+			"geometryType": "esriGeometryPolyline",
+			"id": "TMDL_NP21_8692",
 			"label": "",
-			"layerName": "VWP General Permits",
-			"layerVersion": 10.71,
+			"layerName": "TMDL",
+			"layerVersion": 10.91,
+			"layerId": "1",
+			"baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/TMDL_NP21/MapServer/",
 			"selectedFields": {
-				"PERMIT_NO": {
-					"name": "PERMIT_NO",
+				"FEATUREDETAILURL": {
+					"name": "FEATUREDETAILURL",
 					"type": "esriFieldTypeString",
-					"alias": "Permit Number",
+					"alias": "FeatureDetailURL",
+					"length": 4000,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Feature Detail URL"
+				},
+				"CYCLE_YEAR": {
+					"name": "CYCLE_YEAR",
+					"type": "esriFieldTypeString",
+					"alias": "Cycle_Year",
+					"length": 4,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Cycle Year"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/27",
+			"geometryType": "esriGeometryPoint",
+			"id": "PAFishBoat_1394",
+			"label": "",
+			"layerName": "WWCW Fisheries Lakes",
+			"layerVersion": 10.91,
+			"layerId": "27",
+			"baseURL": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/",
+			"selectedFields": {
+				"WtrName": {
+					"name": "WtrName",
+					"type": "esriFieldTypeString",
+					"alias": "WtrName",
 					"length": 254,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Water Name"
 				},
-				"FAC_NAME": {
-					"name": "FAC_NAME",
+				"ReceivingW": {
+					"name": "ReceivingW",
 					"type": "esriFieldTypeString",
-					"alias": "Facility Name",
+					"alias": "ReceivingW",
 					"length": 50,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Receiving Water"
 				},
-				"VWP_GP_CLASSIFICATION": {
-					"name": "VWP_GP_CLASSIFICATION",
+				"County": {
+					"name": "County",
 					"type": "esriFieldTypeString",
-					"alias": "Classification",
-					"length": 8,
+					"alias": "County",
+					"length": 50,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "County"
 				}
 			},
-			"layerId": "193",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
@@ -1124,304 +1022,685 @@
 			}
 		},
 		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/192",
-			"geometryType": "esriGeometryPoint",
-			"id": "EDMA_5936",
+			"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/28",
+			"geometryType": "esriGeometryPolyline",
+			"id": "PAFishBoat_8636",
 			"label": "",
-			"layerName": "VWP Individual Permits",
-			"layerVersion": 10.71,
+			"layerName": "WWCW Fisheries Streams",
+			"layerVersion": 10.91,
+			"layerId": "28",
+			"baseURL": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/",
 			"selectedFields": {
-				"PERMIT_NO": {
-					"name": "PERMIT_NO",
+				"WtrName": {
+					"name": "WtrName",
 					"type": "esriFieldTypeString",
-					"alias": "Permit Number",
+					"alias": "WtrName",
 					"length": 254,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Water Name"
 				},
-				"FAC_NAME": {
-					"name": "FAC_NAME",
+				"SecUpper_1": {
+					"name": "SecUpper_1",
 					"type": "esriFieldTypeString",
-					"alias": "Facility Name",
+					"alias": "SecUpper_1",
+					"length": 150,
+					"description": null,
+					"isViewOverride": false,
+					"label": "SecUpper_1"
+				},
+				"SecLower_1": {
+					"name": "SecLower_1",
+					"type": "esriFieldTypeString",
+					"alias": "SecLower_1",
+					"length": 150,
+					"description": null,
+					"isViewOverride": false,
+					"label": "SecLower_1"
+				},
+				"County": {
+					"name": "County",
+					"type": "esriFieldTypeString",
+					"alias": "County",
 					"length": 50,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
-				},
-				"VWP_CLASSIFICATION": {
-					"name": "VWP_CLASSIFICATION",
+					"label": "County"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/3",
+			"geometryType": "esriGeometryPolyline",
+			"id": "PAFishBoat_9843",
+			"label": "",
+			"layerName": "Stocked Trout Waters",
+			"layerVersion": 10.91,
+			"layerId": "3",
+			"baseURL": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/",
+			"selectedFields": {
+				"GNIS_Name": {
+					"name": "GNIS_Name",
 					"type": "esriFieldTypeString",
-					"alias": "Classification",
+					"alias": "GNIS_Name",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": "GNIS Name"
+				},
+				"County": {
+					"name": "County",
+					"type": "esriFieldTypeString",
+					"alias": "County",
+					"length": 25,
+					"description": null,
+					"isViewOverride": false,
+					"label": "County"
+				},
+				"Year_Round": {
+					"name": "Year_Round",
+					"type": "esriFieldTypeString",
+					"alias": "Year_Round",
+					"length": 2,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Year Round"
+				},
+				"Limits": {
+					"name": "Limits",
+					"type": "esriFieldTypeString",
+					"alias": "Limits",
+					"length": 250,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Limits"
+				},
+				"Reg_Link": {
+					"name": "Reg_Link",
+					"type": "esriFieldTypeString",
+					"alias": "Reg_Link",
+					"length": 75,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Reg. Link"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/26",
+			"geometryType": "esriGeometryPolyline",
+			"id": "PAFishBoat_8147",
+			"label": "",
+			"layerName": "Trout Streamed Streams",
+			"layerVersion": 10.91,
+			"layerId": "26",
+			"baseURL": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/",
+			"selectedFields": {
+				"WRDS": {
+					"fieldName": "WRDS",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"WtrLatLon": {
+					"fieldName": "WtrLatLon",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"WtrLatDD": {
+					"fieldName": "WtrLatDD",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"WtrLonDD": {
+					"fieldName": "WtrLonDD",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"WtrName": {
+					"fieldName": "WtrName",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"SecNum": {
+					"fieldName": "SecNum",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 0,
+						"digitSeparator": true
+					}
+				},
+				"SecDate": {
+					"fieldName": "SecDate",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"dateFormat": "shortDateShortTime"
+					}
+				},
+				"SecUpperLi": {
+					"fieldName": "SecUpperLi",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"SecUpper_1": {
+					"fieldName": "SecUpper_1",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"SecLowerLi": {
+					"fieldName": "SecLowerLi",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"SecLower_1": {
+					"fieldName": "SecLower_1",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"GIS_Key": {
+					"fieldName": "GIS_Key",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"Length_FT_": {
+					"fieldName": "Length_FT_",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"Length_MI_": {
+					"fieldName": "Length_MI_",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"LL_Long_GI": {
+					"fieldName": "LL_Long_GI",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"LL_Lat_GIS": {
+					"fieldName": "LL_Lat_GIS",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"Reg_Name": {
+					"fieldName": "Reg_Name",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"Reg_Link": {
+					"fieldName": "Reg_Link",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"UL_Lat_GIS": {
+					"fieldName": "UL_Lat_GIS",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"UL_Long_GI": {
+					"fieldName": "UL_Long_GI",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"SpecReg": {
+					"fieldName": "SpecReg",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"GlobalID": {
+					"fieldName": "GlobalID",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"GIS_Key2": {
+					"fieldName": "GIS_Key2",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"Mid_Lat": {
+					"fieldName": "Mid_Lat",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"Mid_Long": {
+					"fieldName": "Mid_Long",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 2,
+						"digitSeparator": true
+					}
+				},
+				"Best_Fishi": {
+					"fieldName": "Best_Fishi",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"Mentored_Y": {
+					"fieldName": "Mentored_Y",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"Fishing_Ho": {
+					"fieldName": "Fishing_Ho",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"Wtr_Prog_N": {
+					"fieldName": "Wtr_Prog_N",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"County": {
+					"fieldName": "County",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox"
+				},
+				"RFP_WaterI": {
+					"fieldName": "RFP_WaterI",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 0,
+						"digitSeparator": true
+					}
+				},
+				"StockingYe": {
+					"fieldName": "StockingYe",
+					"label": null,
+					"tooltip": "",
+					"visible": true,
+					"stringFieldOption": "textbox",
+					"format": {
+						"places": 0,
+						"digitSeparator": true
+					}
+				}
+			},
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/25",
+			"geometryType": "esriGeometryPolyline",
+			"id": "PAFishBoat_6623",
+			"label": "",
+			"layerName": "Trout Natural Reproduction Streams",
+			"layerVersion": 10.91,
+			"layerId": "25",
+			"baseURL": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/",
+			"selectedFields": {
+				"WtrName": {
+					"name": "WtrName",
+					"type": "esriFieldTypeString",
+					"alias": "WtrName",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Water Name"
+				},
+				"County": {
+					"name": "County",
+					"type": "esriFieldTypeString",
+					"alias": "County",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "County"
+				},
+				"Limits": {
+					"name": "Limits",
+					"type": "esriFieldTypeString",
+					"alias": "Limits",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Limits"
+				},
+				"Trib": {
+					"name": "Trib",
+					"type": "esriFieldTypeString",
+					"alias": "Trib",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Tributary"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
+			"geometryType": "esriGeometryPolygon",
+			"id": "wbd_1906",
+			"label": "",
+			"layerName": "wbd - 8-digit HU  (Subbasin)",
+			"layerVersion": 10.81,
+			"layerId": "4",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/",
+			"selectedFields": {
+				"huc8": {
+					"name": "huc8",
+					"type": "esriFieldTypeString",
+					"alias": "HUC8",
 					"length": 8,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
-				}
-			},
-			"layerId": "192",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTCountField"
-			}
-		},
-		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/98",
-			"geometryType": "esriGeometryPoint",
-			"id": "EDMA_7446",
-			"label": "",
-			"layerName": "Renewable Energy Permits",
-			"layerVersion": 10.71,
-			"selectedFields": {
-				"PMT_NBR": {
-					"name": "PMT_NBR",
+					"label": "HUC 8"
+				},
+				"states": {
+					"name": "states",
 					"type": "esriFieldTypeString",
-					"alias": "Pmt_Nbr",
+					"alias": "States",
 					"length": 50,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "State(s)"
 				},
-				"PERM_ID": {
-					"name": "PERM_ID",
-					"type": "esriFieldTypeString",
-					"alias": "PERM_ID",
-					"length": 12,
+				"areaacres": {
+					"name": "areaacres",
+					"type": "esriFieldTypeDouble",
+					"alias": "AreaAcres",
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Area (Acres)"
 				},
-				"PERM_NAME": {
-					"name": "PERM_NAME",
+				"name": {
+					"name": "name",
 					"type": "esriFieldTypeString",
-					"alias": "PERM_NAME",
-					"length": 50,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"PERMIT_STATUS": {
-					"name": "PERMIT_STATUS",
-					"type": "esriFieldTypeString",
-					"alias": "PERMIT_STATUS",
-					"length": 115,
+					"alias": "Name",
+					"length": 120,
 					"description": null,
 					"isViewOverride": false,
 					"label": ""
 				}
 			},
-			"layerId": "98",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
-				"sortingField": "esriCTCountField"
+				"sortingField": "esriCTTotalAreaField"
 			}
 		},
 		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/104",
-			"geometryType": "esriGeometryPoint",
-			"id": "EDMA_9790",
+			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
+			"geometryType": "esriGeometryPolygon",
+			"id": "wbd_7326",
 			"label": "",
-			"layerName": "Petroleum Release Sites",
-			"layerVersion": 10.71,
+			"layerName": "wbd - 12-digit HU (Subwatershed)",
+			"layerVersion": 10.81,
+			"layerId": "6",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/",
 			"selectedFields": {
-				"PCNUM": {
-					"name": "PCNUM",
+				"huc12": {
+					"name": "huc12",
 					"type": "esriFieldTypeString",
-					"alias": "Pollution Complaint Number",
-					"length": 9,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"RST_FAC_ID": {
-					"name": "RST_FAC_ID",
-					"type": "esriFieldTypeString",
-					"alias": "CEDS Facility ID",
+					"alias": "HUC12",
 					"length": 12,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "HUC 12"
 				},
-				"RST_NAME": {
-					"name": "RST_NAME",
+				"name": {
+					"name": "name",
 					"type": "esriFieldTypeString",
-					"alias": "Release Site Name",
+					"alias": "Name",
+					"length": 120,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Name"
+				},
+				"states": {
+					"name": "states",
+					"type": "esriFieldTypeString",
+					"alias": "States",
 					"length": 50,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "State(s)"
 				},
-				"RST_PRIORITY": {
-					"name": "RST_PRIORITY",
+				"areaacres": {
+					"name": "areaacres",
+					"type": "esriFieldTypeDouble",
+					"alias": "AreaAcres",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Area (Acres)"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/DEP/MapServer/29",
+			"geometryType": "esriGeometryPolyline",
+			"id": "DEP_2971",
+			"label": "",
+			"layerName": "Designated Use",
+			"layerVersion": 10.91,
+			"layerId": "29",
+			"baseURL": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/DEP/MapServer/",
+			"selectedFields": {
+				"GNIS_NAME": {
+					"name": "GNIS_NAME",
 					"type": "esriFieldTypeString",
-					"alias": "Priority",
+					"alias": "GNIS_NAME",
+					"length": 65,
+					"description": null,
+					"isViewOverride": false,
+					"label": "GNIS Name"
+				},
+				"USE_DESCRI": {
+					"name": "USE_DESCRI",
+					"type": "esriFieldTypeString",
+					"alias": "USE_DESCRI",
+					"length": 254,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Use Description"
+				},
+				"DES_USE_ID": {
+					"name": "DES_USE_ID",
+					"type": "esriFieldTypeInteger",
+					"alias": "DES_USE_ID",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Designated User ID"
+				},
+				"MIGRATORY_": {
+					"name": "MIGRATORY_",
+					"type": "esriFieldTypeString",
+					"alias": "MIGRATORY_",
 					"length": 1,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
-				},
-				"RST_FED_REG_TANK": {
-					"name": "RST_FED_REG_TANK",
-					"type": "esriFieldTypeString",
-					"alias": "Federally Regulated Tank Site",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"RST_STATUS_IND": {
-					"name": "RST_STATUS_IND",
-					"type": "esriFieldTypeString",
-					"alias": "Release Site Status",
-					"length": 8,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"RST_SUSPECT_CONFIRM_IND": {
-					"name": "RST_SUSPECT_CONFIRM_IND",
-					"type": "esriFieldTypeString",
-					"alias": "Suspect/Confirm Indication",
-					"length": 10,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"RST_CASE_CLOSED": {
-					"name": "RST_CASE_CLOSED",
-					"type": "esriFieldTypeDate",
-					"alias": "Closure Date",
-					"length": 8,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Closure Date"
+					"label": "Migratory"
 				}
 			},
-			"layerId": "104",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
-				"sortingField": "esriCTCountField"
+				"sortingField": "esriCTTotalLengthField"
 			}
 		},
 		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/100",
-			"geometryType": "esriGeometryPoint",
-			"id": "EDMA_5442",
+			"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/DEP/MapServer/30",
+			"geometryType": "esriGeometryPolyline",
+			"id": "DEP_6454",
 			"label": "",
-			"layerName": "Solid Waste Permits",
-			"layerVersion": 10.71,
+			"layerName": "Existing Use",
+			"layerVersion": 10.91,
+			"layerId": "30",
+			"baseURL": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/DEP/MapServer/",
 			"selectedFields": {
-				"PMT_ID": {
-					"name": "PMT_ID",
+				"SEGMENT_NA": {
+					"name": "SEGMENT_NA",
 					"type": "esriFieldTypeString",
-					"alias": "Solid Waste Facility ID",
-					"length": 255,
+					"alias": "SEGMENT_NA",
+					"length": 254,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Segment Name"
 				},
-				"PMT_ID_1": {
-					"name": "PMT_ID_1",
+				"USE_DESCRI": {
+					"name": "USE_DESCRI",
 					"type": "esriFieldTypeString",
-					"alias": "Permit ID",
-					"length": 12,
+					"alias": "USE_DESCRI",
+					"length": 254,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Use Description"
 				},
-				"POS_DESC": {
-					"name": "POS_DESC",
+				"QUALIFIER": {
+					"name": "QUALIFIER",
 					"type": "esriFieldTypeString",
-					"alias": "Permit Operating Status",
-					"length": 50,
+					"alias": "QUALIFIER",
+					"length": 254,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
-				},
-				"SIT_NAME": {
-					"name": "SIT_NAME",
-					"type": "esriFieldTypeString",
-					"alias": "Facility Site Name",
-					"length": 50,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Facility Name"
+					"label": "Qualifier"
 				}
 			},
-			"layerId": "100",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
-				"sortingField": "esriCTCountField"
-			}
-		},
-		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/119",
-			"geometryType": "esriGeometryPoint",
-			"id": "EDMA_4559",
-			"label": "",
-			"layerName": "VPDES Outfalls",
-			"layerVersion": 10.71,
-			"selectedFields": {
-				"OUTFALL_ID": {
-					"name": "OUTFALL_ID",
-					"type": "esriFieldTypeString",
-					"alias": "OUTFALL_ID",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Outfall ID"
-				},
-				"VAP_PMT_NO": {
-					"name": "VAP_PMT_NO",
-					"type": "esriFieldTypeString",
-					"alias": "VAP_PMT_NO",
-					"length": 9,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"VAP_TYPE": {
-					"name": "VAP_TYPE",
-					"type": "esriFieldTypeString",
-					"alias": "VAP_TYPE",
-					"length": 8,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"FAC_NAME": {
-					"name": "FAC_NAME",
-					"type": "esriFieldTypeString",
-					"alias": "FAC_NAME",
-					"length": 50,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Facility Name"
-				}
-			},
-			"layerId": "119",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTCountField"
+				"sortingField": "esriCTTotalLengthField"
 			}
 		},
 		{
 			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/0",
 			"geometryType": "esriGeometryPolyline",
-			"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_9798",
+			"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_1588",
 			"label": "",
-			"layerName": "NaturalGas_InterIntrastate_Pipelines_US_EIA",
+			"layerName": "Natural Gas Interstate and Intrastate Pipelines",
 			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/",
 			"selectedFields": {
 				"TYPEPIPE": {
 					"name": "TYPEPIPE",
@@ -1433,7 +1712,7 @@
 					"defaultValue": null,
 					"description": null,
 					"isViewOverride": false,
-					"label": "TypePipe"
+					"label": "Type of Pipe"
 				},
 				"Operator": {
 					"name": "Operator",
@@ -1460,8 +1739,6 @@
 					"label": ""
 				}
 			},
-			"layerId": "0",
-			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
@@ -1469,12 +1746,67 @@
 			}
 		},
 		{
+			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_ProcessingPlants_US_EIA/FeatureServer/0",
+			"geometryType": "esriGeometryPoint",
+			"id": "NaturalGas_ProcessingPlants_US_EIA_9365",
+			"label": "",
+			"layerName": "Natural Gas Processing Plants",
+			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_ProcessingPlants_US_EIA/FeatureServer/",
+			"selectedFields": {
+				"Plant_Name": {
+					"name": "Plant_Name",
+					"type": "esriFieldTypeString",
+					"alias": "Plant_Name",
+					"length": 254,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Plant Name"
+				},
+				"Owner": {
+					"name": "Owner",
+					"type": "esriFieldTypeString",
+					"alias": "Owner",
+					"length": 254,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Owner"
+				},
+				"City": {
+					"name": "City",
+					"type": "esriFieldTypeString",
+					"alias": "City",
+					"length": 254,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "City"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
 			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/Market_Hubs_Natural_Gas/FeatureServer/0",
 			"geometryType": "esriGeometryPoint",
-			"id": "Market_Hubs_Natural_Gas_1390",
+			"id": "Market_Hubs_Natural_Gas_3419",
 			"label": "",
-			"layerName": "Market_Hubs_Natural_Gas",
+			"layerName": "Natural Gas Trading Hubs",
 			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/Market_Hubs_Natural_Gas/FeatureServer/",
 			"selectedFields": {
 				"HubName": {
 					"name": "HubName",
@@ -1489,8 +1821,6 @@
 					"label": "Hub Name"
 				}
 			},
-			"layerId": "0",
-			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/Market_Hubs_Natural_Gas/FeatureServer/",
 			"groupbyfieldCheckBoxStatus": true,
 			"sortInfo": {
 				"sortOrder": "Asc",
@@ -1498,12 +1828,55 @@
 			}
 		},
 		{
+			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/HGL_Pipelines_US_EIA/FeatureServer/0",
+			"geometryType": "esriGeometryPolyline",
+			"id": "HGL_Pipelines_US_EIA_4693",
+			"label": "",
+			"layerName": "Hydrogen Gas Liquid Pipelines",
+			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/HGL_Pipelines_US_EIA/FeatureServer/",
+			"selectedFields": {
+				"Opername": {
+					"name": "Opername",
+					"type": "esriFieldTypeString",
+					"alias": "Opername",
+					"length": 150,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Operating Name"
+				},
+				"Pipename": {
+					"name": "Pipename",
+					"type": "esriFieldTypeString",
+					"alias": "Pipename",
+					"length": 150,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Pipe Name"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
 			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/PetroleumProduct_Pipelines_US_EIA/FeatureServer/0",
 			"geometryType": "esriGeometryPolyline",
-			"id": "PetroleumProduct_Pipelines_US_EIA_2738",
+			"id": "PetroleumProduct_Pipelines_US_EIA_8884",
 			"label": "",
-			"layerName": "PetroleumProduct_Pipelines_US_EIA",
+			"layerName": "Petroleum Product Pipelines",
 			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/PetroleumProduct_Pipelines_US_EIA/FeatureServer/",
 			"selectedFields": {
 				"Opername": {
 					"name": "Opername",
@@ -1515,7 +1888,7 @@
 					"defaultValue": null,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
+					"label": "Operating Name"
 				},
 				"Pipename": {
 					"name": "Pipename",
@@ -1527,529 +1900,7 @@
 					"defaultValue": null,
 					"description": null,
 					"isViewOverride": false,
-					"label": ""
-				}
-			},
-			"layerId": "0",
-			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/PetroleumProduct_Pipelines_US_EIA/FeatureServer/",
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTTotalLengthField"
-			}
-		},
-		{
-			"url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/ArcGIS/rest/services/NPS_Watershed_Plan_ViewOnly/FeatureServer/2",
-			"geometryType": "esriGeometryPolygon",
-			"id": "NPS_Watershed_Plans_2841",
-			"label": "",
-			"layerName": "319 Watersheds",
-			"layerVersion": 10.81,
-			"layerId": "2",
-			"baseURL": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/ArcGIS/rest/services/NPS_Watershed_Plan_ViewOnly/FeatureServer/",
-			"selectedFields": {
-				"IP_NAME": {
-					"name": "IP_NAME",
-					"type": "esriFieldTypeString",
-					"alias": "NPS Implementation Plan",
-					"length": 200,
-					"editable": true,
-					"nullable": true,
-					"defaultValue": null,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"Indv_Wtrsd": {
-					"name": "Indv_Wtrsd",
-					"type": "esriFieldTypeString",
-					"alias": "NPS Subwatershed",
-					"length": 100,
-					"editable": true,
-					"nullable": true,
-					"defaultValue": null,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				}
-			},
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTTotalAreaField"
-			}
-		},
-		{
-			"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/0",
-			"geometryType": "esriGeometryPoint",
-			"id": "NPDES_NP21_7087",
-			"label": "",
-			"layerName": "NPDES Outfalls",
-			"layerVersion": 10.91,
-			"layerId": "0",
-			"baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/",
-			"selectedFields": {
-				"PERMANENT_IDENTIFIER": {
-					"name": "PERMANENT_IDENTIFIER",
-					"type": "esriFieldTypeString",
-					"alias": "Permanent Identifier",
-					"length": 40,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"EVENTDATE": {
-					"name": "EVENTDATE",
-					"type": "esriFieldTypeDate",
-					"alias": "EventDate",
-					"length": 8,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"REACHCODE": {
-					"name": "REACHCODE",
-					"type": "esriFieldTypeString",
-					"alias": "ReachCode",
-					"length": 14,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"REACHSMDATE": {
-					"name": "REACHSMDATE",
-					"type": "esriFieldTypeDate",
-					"alias": "ReachSMDate",
-					"length": 8,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"REACHRESOLUTION": {
-					"name": "REACHRESOLUTION",
-					"type": "esriFieldTypeInteger",
-					"alias": "ReachResolution",
-					"description": null,
-					"isViewOverride": false,
-					"domain": {
-						"name": "Resolution",
-						"type": "codedValue",
-						"codedValues": [
-							{
-								"name": "Local",
-								"code": 1
-							},
-							{
-								"name": "High",
-								"code": 2
-							},
-							{
-								"name": "Medium",
-								"code": 3
-							}
-						],
-						"_inherited": {
-							"p": 1
-						}
-					},
-					"label": ""
-				},
-				"FEATURE_PERMANENT_IDENTIFIER": {
-					"name": "FEATURE_PERMANENT_IDENTIFIER",
-					"type": "esriFieldTypeString",
-					"alias": "Feature_Permanent_Identifier",
-					"length": 40,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"FEATURECLASSREF": {
-					"name": "FEATURECLASSREF",
-					"type": "esriFieldTypeInteger",
-					"alias": "FeatureClassRef",
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"SOURCE_ORIGINATOR": {
-					"name": "SOURCE_ORIGINATOR",
-					"type": "esriFieldTypeString",
-					"alias": "Source Originator",
-					"length": 130,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"SOURCE_DATADESC": {
-					"name": "SOURCE_DATADESC",
-					"type": "esriFieldTypeString",
-					"alias": "Source DataDesc",
-					"length": 100,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"SOURCE_FEATUREID": {
-					"name": "SOURCE_FEATUREID",
-					"type": "esriFieldTypeString",
-					"alias": "Source FeatureID",
-					"length": 200,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"FEATUREDETAILURL": {
-					"name": "FEATUREDETAILURL",
-					"type": "esriFieldTypeString",
-					"alias": "FeatureDetailURL",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Feature Detail URL"
-				},
-				"MEASURE": {
-					"name": "MEASURE",
-					"type": "esriFieldTypeDouble",
-					"alias": "Measure",
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"EVENTOFFSET": {
-					"name": "EVENTOFFSET",
-					"type": "esriFieldTypeDouble",
-					"alias": "EventOffset",
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"EVENTTYPE": {
-					"name": "EVENTTYPE",
-					"type": "esriFieldTypeInteger",
-					"alias": "EventType Code",
-					"description": null,
-					"isViewOverride": false,
-					"domain": {
-						"name": "Point EventType",
-						"type": "codedValue",
-						"codedValues": [
-							{
-								"name": "303(d) Listed Impaired Waters",
-								"code": 10001
-							},
-							{
-								"name": "305(b) Assessed Waters",
-								"code": 10002
-							},
-							{
-								"name": "Beaches",
-								"code": 10003
-							},
-							{
-								"name": "CWSRF Benefits Reporting",
-								"code": 10004
-							},
-							{
-								"name": "Combined Sewer Overflows",
-								"code": 10005
-							},
-							{
-								"name": "Clean Watersheds Needs Survey",
-								"code": 10006
-							},
-							{
-								"name": "Drinking Water Intakes",
-								"code": 10007
-							},
-							{
-								"name": "Drinking Water Intakes USGS",
-								"code": 10008
-							},
-							{
-								"name": "Fish Consumption Advisories",
-								"code": 10009
-							},
-							{
-								"name": "Fish Tissue Data",
-								"code": 10010
-							},
-							{
-								"name": "Nonpoint Source Projects",
-								"code": 10011
-							},
-							{
-								"name": "Water Monitoring",
-								"code": 10012
-							},
-							{
-								"name": "No-Discharge Zones for Vessel Sewage",
-								"code": 10013
-							},
-							{
-								"name": "National Estuary Program",
-								"code": 10014
-							},
-							{
-								"name": "Facilities that Discharge to Water",
-								"code": 10015
-							},
-							{
-								"name": "Special Appropriations Projects",
-								"code": 10016
-							},
-							{
-								"name": "Source Water Areas",
-								"code": 10017
-							},
-							{
-								"name": "TMDLs on Impaired Waters",
-								"code": 10018
-							},
-							{
-								"name": "Drinking Water Wells",
-								"code": 10019
-							},
-							{
-								"name": "Water Quality Standards",
-								"code": 10020
-							},
-							{
-								"name": "2002 Impaired Waters Baseline",
-								"code": 10021
-							},
-							{
-								"name": "ATTAINS Integrated Reporting",
-								"code": 10022
-							},
-							{
-								"name": "Impaired Waters with TMDLs",
-								"code": 10023
-							},
-							{
-								"name": "305(b) Waters As Assessed",
-								"code": 10024
-							},
-							{
-								"name": "Drinking Water Surface Water",
-								"code": 10025
-							},
-							{
-								"name": "Drinking Water Ground Water",
-								"code": 10026
-							},
-							{
-								"name": "Drinking Water Source Protection Areas",
-								"code": 10027
-							},
-							{
-								"name": "Facility Registry Service Public",
-								"code": 10028
-							},
-							{
-								"name": "Facility Registry Service Restricted",
-								"code": 10029
-							},
-							{
-								"name": "Streamgage: Streamgage Status = Active; Record = Continuous",
-								"code": 57001
-							},
-							{
-								"name": "Streamgage: Streamgage Status = Active; Record = Partial",
-								"code": 57002
-							},
-							{
-								"name": "Streamgage: Streamgage Status = Inactive",
-								"code": 57003
-							},
-							{
-								"name": "Water Quality Station",
-								"code": 57004
-							},
-							{
-								"name": "Dam",
-								"code": 57100
-							},
-							{
-								"name": "Flow Alteration = Addition",
-								"code": 57201
-							},
-							{
-								"name": "Flow Alteration = Removal",
-								"code": 57202
-							},
-							{
-								"name": "Flow Alteration = Unknown",
-								"code": 57203
-							},
-							{
-								"name": "Hydrologic Unit Outlet",
-								"code": 57300
-							}
-						],
-						"_inherited": {
-							"p": 1
-						}
-					},
-					"label": ""
-				},
-				"GEOGSTATE": {
-					"name": "GEOGSTATE",
-					"type": "esriFieldTypeString",
-					"alias": "GeogState",
-					"length": 2,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"CYCLE_YEAR": {
-					"name": "CYCLE_YEAR",
-					"type": "esriFieldTypeString",
-					"alias": "Cycle_Year",
-					"length": 100,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"START_DATE": {
-					"name": "START_DATE",
-					"type": "esriFieldTypeDate",
-					"alias": "Start Date",
-					"length": 8,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"END_DATE": {
-					"name": "END_DATE",
-					"type": "esriFieldTypeDate",
-					"alias": "End Date",
-					"length": 8,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"WBD_HUC12": {
-					"name": "WBD_HUC12",
-					"type": "esriFieldTypeString",
-					"alias": "WBD HUC12",
-					"length": 12,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"WBD_HUC12_PERCENT": {
-					"name": "WBD_HUC12_PERCENT",
-					"type": "esriFieldTypeDouble",
-					"alias": "WBD HUC12 Percent",
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"INNETWORK": {
-					"name": "INNETWORK",
-					"type": "esriFieldTypeString",
-					"alias": "In Network",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"NAVIGABLE": {
-					"name": "NAVIGABLE",
-					"type": "esriFieldTypeString",
-					"alias": "Navigable",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"COASTAL": {
-					"name": "COASTAL",
-					"type": "esriFieldTypeString",
-					"alias": "Coastal",
-					"length": 1,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"VERTICES": {
-					"name": "VERTICES",
-					"type": "esriFieldTypeInteger",
-					"alias": "Vertices",
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				},
-				"ESRI_KEY": {
-					"name": "ESRI_KEY",
-					"type": "esriFieldTypeString",
-					"alias": "ESRI_Key",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": ""
-				}
-			},
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTCountField"
-			}
-		},		
-		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/181",
-			"geometryType": "esriGeometryPolyline",
-			"id": "EDMA_1980",
-			"label": "",
-			"layerName": "WQS Streams/Rivers",
-			"layerVersion": 10.71,
-			"layerId": "181",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
-			"selectedFields": {
-				"GNIS_NAME": {
-					"name": "GNIS_NAME",
-					"type": "esriFieldTypeString",
-					"alias": "GNIS_Name",
-					"length": 65,
-					"description": null,
-					"isViewOverride": false,
-					"label": "GNIS Name"
-				},
-				"SEC": {
-					"name": "SEC",
-					"type": "esriFieldTypeString",
-					"alias": "SECTION",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Section"
-				},
-				"CLASS": {
-					"name": "CLASS",
-					"type": "esriFieldTypeString",
-					"alias": "CLASS",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Class"
-				},
-				"BASIN_CODE": {
-					"name": "BASIN_CODE",
-					"type": "esriFieldTypeString",
-					"alias": "Basin Code",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Basin Code"
-				},
-				"STREAMTYPE": {
-					"name": "STREAMTYPE",
-					"type": "esriFieldTypeString",
-					"alias": "StreamType",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Stream Type"
+					"label": "Pipe Name"
 				}
 			},
 			"groupbyfieldCheckBoxStatus": true,
@@ -2057,95 +1908,33 @@
 				"sortOrder": "Asc",
 				"sortingField": "esriCTTotalLengthField"
 			}
-		},
-		{
-			"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/182",
-			"geometryType": "esriGeometryPolyline",
-			"id": "EDMA_6636",
-			"label": "",
-			"layerName": "Trout Streams/Rivers",
-			"layerVersion": 10.71,
-			"layerId": "182",
-			"baseURL": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/",
-			"selectedFields": {
-				"GNIS_NAME": {
-					"name": "GNIS_NAME",
-					"type": "esriFieldTypeString",
-					"alias": "GNIS_Name",
-					"length": 65,
-					"description": null,
-					"isViewOverride": false,
-					"label": "GNIS Name"
-				},
-				"SEC": {
-					"name": "SEC",
-					"type": "esriFieldTypeString",
-					"alias": "SECTION",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Section"
-				},
-				"CLASS": {
-					"name": "CLASS",
-					"type": "esriFieldTypeString",
-					"alias": "CLASS",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Class"
-				},
-				"BASIN_CODE": {
-					"name": "BASIN_CODE",
-					"type": "esriFieldTypeString",
-					"alias": "Basin Code",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Basin Code"
-				},
-				"STREAMTYPE": {
-					"name": "STREAMTYPE",
-					"type": "esriFieldTypeString",
-					"alias": "StreamType",
-					"length": 255,
-					"description": null,
-					"isViewOverride": false,
-					"label": "Stream Type"
-				}
-			},
-			"groupbyfieldCheckBoxStatus": true,
-			"sortInfo": {
-				"sortOrder": "Asc",
-				"sortingField": "esriCTTotalLengthField"
-			}
-		}
+		}		
 	],
 	"downloadSettings": {
 		"type": "syncEnable",
 		"layers": [
 			{
-				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
-				"layerName": "12-digit HU",
-				"id": "wbd_7728_6",
-				"allowDownload": true,
-				"downloadingFileOption": [
-					"csv"
-				]
-			},
-			{
 				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
 				"layerName": "8-digit HU",
-				"id": "wbd_7728_4",
+				"id": "wbd_3849_4",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/5",
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
+				"layerName": "12-digit HU",
+				"id": "wbd_3849_6",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
 				"layerName": "USGS NHD - Flow Direction",
-				"id": "NHDPlus_HR_4669",
+				"id": "NHDPlus_HR_2519",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
@@ -2154,133 +1943,178 @@
 			{
 				"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
 				"layerName": "303d Streams - Line",
-				"id": "303D_NP21_372_1",
+				"id": "303D_NP21_9019",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://www.fws.gov/wetlandsmapservice/rest/services/Wetlands/MapServer/0",
-				"layerName": "NWI - Wetlands",
-				"id": "Wetlands_590_0",
+				"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/Pennsylvania_ModeledProbabilityWetlands/MapServer/0",
+				"layerName": "Modeled Primary Watersheds",
+				"id": "Pennsylvania_ModeledProbabilityWetlands_6829",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://cmap2.vims.edu/arcgis/rest/services/VaResiliency/ShorelineInventoryLayers/MapServer/0",
-				"id": "ShorelineInventoryLayers_1151_0",
-				"layerName": "Virginia Tidal Marsh Inventory",
+				"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/DEP/MapServer/30",
+				"layerName": "Existing Use - Streams CH93",
+				"id": "DEP_8350",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VulnerabilityAssessments/MapServer/0",
-				"id": "VulnerabilityAssessments_1753_0",
-				"layerName": "Tidal Marsh Vulnerability Assessments",
+				"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/DEP/MapServer/29",
+				"layerName": "Designated Use - Streams CH93",
+				"id": "DEP_1699_29",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://cmap2.vims.edu/arcgis/rest/services/WetCAT/VA_NonTidal_NWI_Hab_WQ_4yrs/MapServer/2",
-				"id": "VA_NonTidal_NWI_Hab_WQ_4yrs_1707_2",
-				"layerName": "NonTidal NWI Habitat and Water Quality 4 yrs",
+				"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/PAFishBoat/MapServer/3",
+				"layerName": "Stocked Trout Waters",
+				"id": "PAFishBoat_9546",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/0",
+				"url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/PAFishBoat/MapServer/31",
+				"id": "PAFishBoat_1170",
+				"layerName": "Wilderness Trout Streams",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/TMDL_NP21/MapServer/1",
+				"id": "TMDL_NP21_8692_1",
+				"layerName": "TMDL - Line",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/0",
 				"layerName": "ATTAINS Assessment Lines",
-				"id": "Virginia_ATTAINS_2506",
+				"id": "WRR_PA_ATTAINS_4771",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/1",
+				"url": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/1",
 				"layerName": "ATTAINS Assessment Areas",
-				"id": "Virginia_ATTAINS_2459",
+				"id": "WRR_PA_ATTAINS_9461",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://gis.menv.com/server/rest/services/WRR/Virginia_ATTAINS/MapServer/2",
-				"layerName": "ATTAINS Assessment Unit Catchment Associations",
-				"id": "Virginia_ATTAINS_8409",
+				"url": "https://gis.menv.com/server/rest/services/WRR/WRR_PA_ATTAINS/MapServer/2",
+				"layerName": "ATTAINS Assessment Catchment Associations",
+				"id": "WRR_PA_ATTAINS_6912",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/185",
-				"layerName": "TMDL Watersheds",
-				"id": "EDMA_5037",
+				"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/TMDL_NP21/MapServer/1",
+				"layerName": "TMDL",
+				"id": "TMDL_NP21_8692",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/193",
-				"layerName": "VWP General Permits",
-				"id": "EDMA_1284",
+				"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/27",
+				"layerName": "WWCW Fisheries Lakes",
+				"id": "PAFishBoat_1394",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/192",
-				"layerName": "VWP Individual Permits",
-				"id": "EDMA_5936",
+				"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/28",
+				"layerName": "WWCW Fisheries Streams",
+				"id": "PAFishBoat_8636",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/98",
-				"layerName": "Renewable Energy Permits",
-				"id": "EDMA_7446",
+				"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/3",
+				"layerName": "Stocked Trout Waters",
+				"id": "PAFishBoat_9843",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/104",
-				"layerName": "Petroleum Release Sites",
-				"id": "EDMA_9790",
+				"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/26",
+				"layerName": "Trout Streamed Streams",
+				"id": "PAFishBoat_8147",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/100",
-				"layerName": "Solid Waste Permits",
-				"id": "EDMA_5442",
+				"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer/25",
+				"layerName": "Trout Natural Reproduction Streams",
+				"id": "PAFishBoat_6623",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
 				]
 			},
 			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/119",
-				"layerName": "VPDES Outfalls",
-				"id": "EDMA_4559",
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
+				"layerName": "wbd - 8-digit HU  (Subbasin)",
+				"id": "wbd_1906",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/6",
+				"layerName": "wbd - 12-digit HU (Subwatershed)",
+				"id": "wbd_7326",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/DEP/MapServer/29",
+				"layerName": "Designated Use",
+				"id": "DEP_2971",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/DEP/MapServer/30",
+				"layerName": "Existing Use",
+				"id": "DEP_6454",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
@@ -2288,8 +2122,17 @@
 			},
 			{
 				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/0",
-				"layerName": "NaturalGas_InterIntrastate_Pipelines_US_EIA",
-				"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_9798",
+				"layerName": "Natural Gas Interstate and Intrastate Pipelines",
+				"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_1588",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_ProcessingPlants_US_EIA/FeatureServer/0",
+				"layerName": "Natural Gas Processing Plants",
+				"id": "NaturalGas_ProcessingPlants_US_EIA_9365",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
@@ -2297,8 +2140,17 @@
 			},
 			{
 				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/Market_Hubs_Natural_Gas/FeatureServer/0",
-				"layerName": "Market_Hubs_Natural_Gas",
-				"id": "Market_Hubs_Natural_Gas_1390",
+				"layerName": "Natural Gas Trading Hubs",
+				"id": "Market_Hubs_Natural_Gas_3419",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/HGL_Pipelines_US_EIA/FeatureServer/0",
+				"layerName": "Hydrogen Gas Liquid Pipelines",
+				"id": "HGL_Pipelines_US_EIA_4693",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
@@ -2306,44 +2158,8 @@
 			},
 			{
 				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/PetroleumProduct_Pipelines_US_EIA/FeatureServer/0",
-				"layerName": "PetroleumProduct_Pipelines_US_EIA",
-				"id": "PetroleumProduct_Pipelines_US_EIA_2738",
-				"allowDownload": true,
-				"downloadingFileOption": [
-					"csv"
-				]
-			},
-			{
-				"url": "https://services.arcgis.com/cJ9YHowT8TU7DUyn/ArcGIS/rest/services/NPS_Watershed_Plan_ViewOnly/FeatureServer/2",
-				"layerName": "319 Watersheds",
-				"id": "NPS_Watershed_Plans_2841",
-				"allowDownload": true,
-				"downloadingFileOption": [
-					"csv"
-				]
-			},
-			{
-				"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/0",
-				"layerName": "NPDES Outfalls",
-				"id": "NPDES_NP21_7087",
-				"allowDownload": true,
-				"downloadingFileOption": [
-					"csv"
-				]
-			},
-			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/181",
-				"layerName": "WQS Streams/Rivers",
-				"id": "EDMA_1980",
-				"allowDownload": true,
-				"downloadingFileOption": [
-					"csv"
-				]
-			},
-			{
-				"url": "https://apps.deq.virginia.gov/arcgis/rest/services/public/EDMA/MapServer/182",
-				"layerName": "Trout Streams/Rivers",
-				"id": "EDMA_6636",
+				"layerName": "Petroleum Product Pipelines",
+				"id": "PetroleumProduct_Pipelines_US_EIA_8884",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
@@ -2355,4 +2171,4 @@
 			"csv"
 		]
 	}
-}						
+}
