@@ -67,9 +67,9 @@
 			"category": "Site Visit Locations"
 		},
 		{
-			"id": "akO",
-			"wrrID": "DE_Wetlands_1277",
-			"title": "Delaware Wetlands - 2017",
+			"id": "u72",
+			"wrrID": "DE_Wetlands_7283",
+			"title": "Delaware Wetlands - 1992",
 			"category": "Water Resources"
 		},
 		{
@@ -79,9 +79,27 @@
 			"category": "Water Resources"
 		},
 		{
-			"id": "u72",
-			"wrrID": "DE_Wetlands_7283",
-			"title": "Delaware Wetlands - 1992",
+			"id": "akO",
+			"wrrID": "DE_Wetlands_1277",
+			"title": "Delaware Wetlands - 2017",
+			"category": "Water Resources"
+		},
+		{
+			"id": "f5n",
+			"wrrID": "DE_Wetlands_3700",
+			"title": "2007 Head of Tide Wetlands",
+			"category": "Water Resources"
+		},
+		{
+			"id": "sUz",
+			"wrrID": "DE_Wetlands_8485",
+			"title": "2017 High Marsh",
+			"category": "Water Resources"
+		},
+		{
+			"id": "JnA",
+			"wrrID": "DE_Wetlands_8599",
+			"title": "2017 Low Marsh",
 			"category": "Water Resources"
 		},
 		{

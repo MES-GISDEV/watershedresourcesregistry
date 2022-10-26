@@ -556,12 +556,14 @@
 				"ACRES": {
 					"name": "ACRES",
 					"type": "esriFieldTypeString",
-					"alias": "ACRES"
+					"alias": "ACRES",
+					"label": "Acres"
 				},
 				"SYSTEMTYPE": {
 					"name": "SYSTEMTYPE",
 					"type": "esriFieldTypeString",
-					"alias": "SYSTEMTYPE"
+					"alias": "SYSTEMTYPE",
+					"label": "System Type"
 				}
 			},
 			"layerId": "0",
@@ -577,17 +579,20 @@
 				"ATTRIBUTE": {
 					"name": "ATTRIBUTE",
 					"type": "esriFieldTypeString",
-					"alias": "Attribute"
+					"alias": "Attribute",
+					"label": "Attribute"
 				},
 				"LLWW_CODE": {
 					"name": "LLWW_CODE",
 					"type": "esriFieldTypeString",
-					"alias": "LLWW_Code"
+					"alias": "LLWW_Code",
+					"label": "LLWW Code"
 				},
 				"ACRES": {
 					"name": "ACRES",
 					"type": "esriFieldTypeDouble",
-					"alias": "ACRES"
+					"alias": "ACRES",
+					"label": "Acres"
 				}
 			},
 			"layerId": "1",
@@ -596,7 +601,7 @@
 		{
 			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer/2",
 			"geometryType": "esriGeometryPolygon",
-			"id": "DE_Wetlands_7399_2",
+			"id": "DE_Wetlands_3700",
 			"label": "2007 Head of Tide Wetlands",
 			"layerName": "Delaware Wetlands",
 			"selectedFields": {
@@ -608,12 +613,14 @@
 				"LLWW_CODE": {
 					"name": "LLWW_CODE",
 					"type": "esriFieldTypeString",
-					"alias": "LLWW_Code"
+					"alias": "LLWW_Code",
+					"label": "LLWW Code"
 				},
 				"ACRES": {
 					"name": "ACRES",
 					"type": "esriFieldTypeDouble",
-					"alias": "ACRES"
+					"alias": "ACRES",
+					"label": "Acres"
 				}
 			},
 			"layerId": "2",
@@ -622,7 +629,7 @@
 		{
 			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer/4",
 			"geometryType": "esriGeometryPolygon",
-			"id": "DE_Wetlands_1277_4",
+			"id": "DE_Wetlands_8485",
 			"label": "2017 High Marsh",
 			"layerName": "Delaware Wetlands",
 			"selectedFields": {
@@ -634,17 +641,20 @@
 				"WETLAND_TY": {
 					"name": "WETLAND_TY",
 					"type": "esriFieldTypeString",
-					"alias": "WETLAND_TY"
+					"alias": "WETLAND_TY",
+					"label": "Wetland Type"
 				},
 				"ACRES": {
 					"name": "ACRES",
 					"type": "esriFieldTypeDouble",
-					"alias": "ACRES"
+					"alias": "ACRES",
+					"label": "Acres"
 				},
 				"LLWWCODE": {
 					"name": "LLWWCODE",
 					"type": "esriFieldTypeString",
-					"alias": "LLWWCode"
+					"alias": "LLWWCode",
+					"label": "LLWW Code"
 				}
 			},
 			"layerId": "4",
@@ -653,7 +663,7 @@
 		{
 			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer/5",
 			"geometryType": "esriGeometryPolygon",
-			"id": "DE_Wetlands_1277_5",
+			"id": "DE_Wetlands_8599",
 			"label": "2017 Low Marsh",
 			"layerName": "Delaware Wetlands",
 			"selectedFields": {
@@ -665,17 +675,20 @@
 				"WETLAND_TY": {
 					"name": "WETLAND_TY",
 					"type": "esriFieldTypeString",
-					"alias": "WETLAND_TY"
+					"alias": "WETLAND_TY",
+					"label": "Wetland Type"
 				},
 				"ACRES": {
 					"name": "ACRES",
 					"type": "esriFieldTypeDouble",
-					"alias": "ACRES"
+					"alias": "ACRES",
+					"label": "Acres"
 				},
 				"LLWWCODE": {
 					"name": "LLWWCODE",
 					"type": "esriFieldTypeString",
-					"alias": "LLWWCode"
+					"alias": "LLWWCode",
+					"label": "LLWW Code"
 				}
 			},
 			"layerId": "5",
@@ -696,17 +709,20 @@
 				"WETLAND_TY": {
 					"name": "WETLAND_TY",
 					"type": "esriFieldTypeString",
-					"alias": "WETLAND_TY"
+					"alias": "WETLAND_TY",
+					"label": "Wetland Type"
 				},
 				"ACRES": {
 					"name": "ACRES",
 					"type": "esriFieldTypeDouble",
-					"alias": "ACRES"
+					"alias": "ACRES",
+					"label": "Acres"
 				},
 				"LLWWCODE": {
 					"name": "LLWWCODE",
 					"type": "esriFieldTypeString",
-					"alias": "LLWWCode"
+					"alias": "LLWWCode",
+					"label": "LLWW Code"
 				}
 			},
 			"layerId": "6",
@@ -1435,7 +1451,7 @@
 				"sortOrder": "Asc",
 				"sortingField": "esriCTTotalLengthField"
 			}
-		}		
+		}
 	],
 	"downloadSettings": {
 		"type": "syncEnable",
@@ -1496,7 +1512,7 @@
 			},
 			{
 				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer/2",
-				"id": "DE_Wetlands_7399_2",
+				"id": "DE_Wetlands_3700",
 				"layerName": "2007 Head of Tide Wetlands",
 				"allowDownload": true,
 				"downloadingFileOption": [
@@ -1505,7 +1521,7 @@
 			},
 			{
 				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer/4",
-				"id": "DE_Wetlands_1277_4",
+				"id": "DE_Wetlands_8485",
 				"layerName": "2017 High Marsh",
 				"allowDownload": true,
 				"downloadingFileOption": [
@@ -1514,7 +1530,7 @@
 			},
 			{
 				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer/5",
-				"id": "DE_Wetlands_1277_5",
+				"id": "DE_Wetlands_8599",
 				"layerName": "2017 Low Marsh",
 				"allowDownload": true,
 				"downloadingFileOption": [
