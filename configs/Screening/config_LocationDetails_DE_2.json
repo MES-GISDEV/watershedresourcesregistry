@@ -711,8 +711,731 @@
 			},
 			"layerId": "6",
 			"baseURL": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer"
-		}
-		
+		},
+		{
+			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Watersheds/MapServer/3",
+			"geometryType": "esriGeometryPolygon",
+			"id": "DE_Watersheds_6571",
+			"label": "",
+			"layerName": "HUC 8",
+			"layerVersion": 10.91,
+			"layerId": "3",
+			"baseURL": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Watersheds/MapServer/",
+			"selectedFields": {
+				"AREAACRES": {
+					"name": "AREAACRES",
+					"type": "esriFieldTypeDouble",
+					"alias": "AreaAcres",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Area (Acres)"
+				},
+				"STATES": {
+					"name": "STATES",
+					"type": "esriFieldTypeString",
+					"alias": "States",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "States"
+				},
+				"HUC8": {
+					"name": "HUC8",
+					"type": "esriFieldTypeString",
+					"alias": "HUC8",
+					"length": 8,
+					"description": null,
+					"isViewOverride": false,
+					"label": "HUC 8"
+				},
+				"NAME": {
+					"name": "NAME",
+					"type": "esriFieldTypeString",
+					"alias": "Name",
+					"length": 120,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Name"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Watersheds/MapServer/5",
+			"geometryType": "esriGeometryPolygon",
+			"id": "DE_Watersheds_1957",
+			"label": "",
+			"layerName": "HUC 12",
+			"layerVersion": 10.91,
+			"layerId": "5",
+			"baseURL": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Watersheds/MapServer/",
+			"selectedFields": {
+				"AREAACRES": {
+					"name": "AREAACRES",
+					"type": "esriFieldTypeDouble",
+					"alias": "AreaAcres",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Area (Acres)"
+				},
+				"STATES": {
+					"name": "STATES",
+					"type": "esriFieldTypeString",
+					"alias": "States",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "States"
+				},
+				"HUC12": {
+					"name": "HUC12",
+					"type": "esriFieldTypeString",
+					"alias": "HUC12",
+					"length": 12,
+					"description": null,
+					"isViewOverride": false,
+					"label": "HUC 12"
+				},
+				"NAME": {
+					"name": "NAME",
+					"type": "esriFieldTypeString",
+					"alias": "Name",
+					"length": 120,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Name"
+				},
+				"HUTYPE": {
+					"name": "HUTYPE",
+					"type": "esriFieldTypeString",
+					"alias": "HUType",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"domain": {
+						"name": "HUType Domain",
+						"type": "codedValue",
+						"codedValues": [
+							{
+								"name": "Standard",
+								"code": "S"
+							},
+							{
+								"name": "Closed Basin",
+								"code": "C"
+							},
+							{
+								"name": "Frontal",
+								"code": "F"
+							},
+							{
+								"name": "Multiple Outlet",
+								"code": "M"
+							},
+							{
+								"name": "Water",
+								"code": "W"
+							},
+							{
+								"name": "Island",
+								"code": "I"
+							},
+							{
+								"name": "Unclassified",
+								"code": "U"
+							}
+						]
+					},
+					"label": "HU Type"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/0",
+			"geometryType": "esriGeometryPolyline",
+			"id": "WRR_DE_ATTAINS_2897",
+			"label": "",
+			"layerName": "ATTAINS Assessment Lines",
+			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/",
+			"selectedFields": {
+				"reportingcycle": {
+					"name": "reportingcycle",
+					"type": "esriFieldTypeInteger",
+					"alias": "ReportingCycle",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Cycle Year"
+				},
+				"assessmentunitname": {
+					"name": "assessmentunitname",
+					"type": "esriFieldTypeString",
+					"alias": "AssessmentUnitName",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Assessment Unit Name"
+				},
+				"waterbodyreportlink": {
+					"name": "waterbodyreportlink",
+					"type": "esriFieldTypeString",
+					"alias": "Waterbody Report Link",
+					"length": 4000,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Waterbody Report Link"
+				},
+				"ircategory": {
+					"name": "ircategory",
+					"type": "esriFieldTypeString",
+					"alias": "IR Category",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "IR Category"
+				},
+				"overallstatus": {
+					"name": "overallstatus",
+					"type": "esriFieldTypeString",
+					"alias": "Overall Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Overall Status"
+				},
+				"isassessed": {
+					"name": "isassessed",
+					"type": "esriFieldTypeString",
+					"alias": "Is Assessed",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Assessed"
+				},
+				"isimpaired": {
+					"name": "isimpaired",
+					"type": "esriFieldTypeString",
+					"alias": "Is Impaired",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Impaired"
+				},
+				"isthreatened": {
+					"name": "isthreatened",
+					"type": "esriFieldTypeString",
+					"alias": "Is Threatened",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Threatened"
+				},
+				"on303dlist": {
+					"name": "on303dlist",
+					"type": "esriFieldTypeString",
+					"alias": "On303dList",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "On 303d List"
+				},
+				"hastmdl": {
+					"name": "hastmdl",
+					"type": "esriFieldTypeString",
+					"alias": "Has TMDL",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Has TMDL"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		},
+		{
+			"url": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/2",
+			"geometryType": "esriGeometryPolygon",
+			"id": "WRR_DE_ATTAINS_5925",
+			"label": "",
+			"layerName": "ATTAINS Assessment Areas",
+			"layerVersion": 10.81,
+			"layerId": "2",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/",
+			"selectedFields": {
+				"reportingcycle": {
+					"name": "reportingcycle",
+					"type": "esriFieldTypeInteger",
+					"alias": "ReportingCycle",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Cycle Year"
+				},
+				"assessmentunitname": {
+					"name": "assessmentunitname",
+					"type": "esriFieldTypeString",
+					"alias": "AssessmentUnitName",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Assessment Unit Name"
+				},
+				"waterbodyreportlink": {
+					"name": "waterbodyreportlink",
+					"type": "esriFieldTypeString",
+					"alias": "Waterbody Report Link",
+					"length": 4000,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Waterbody Report Link"
+				},
+				"ircategory": {
+					"name": "ircategory",
+					"type": "esriFieldTypeString",
+					"alias": "IR Category",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "IR Category"
+				},
+				"overallstatus": {
+					"name": "overallstatus",
+					"type": "esriFieldTypeString",
+					"alias": "Overall Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Overall Status"
+				},
+				"isassessed": {
+					"name": "isassessed",
+					"type": "esriFieldTypeString",
+					"alias": "Is Assessed",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Assessed"
+				},
+				"isimpaired": {
+					"name": "isimpaired",
+					"type": "esriFieldTypeString",
+					"alias": "Is Impaired",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Impaired"
+				},
+				"isthreatened": {
+					"name": "isthreatened",
+					"type": "esriFieldTypeString",
+					"alias": "Is Threatened",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Threatened"
+				},
+				"on303dlist": {
+					"name": "on303dlist",
+					"type": "esriFieldTypeString",
+					"alias": "On303dList",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "On 303d List"
+				},
+				"hastmdl": {
+					"name": "hastmdl",
+					"type": "esriFieldTypeString",
+					"alias": "Has TMDL",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Has TMDL"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/1",
+			"geometryType": "esriGeometryPolygon",
+			"id": "WRR_DE_ATTAINS_815",
+			"label": "",
+			"layerName": "ATTAINS Assessment Unit Catchment Associations",
+			"layerVersion": 10.81,
+			"layerId": "1",
+			"baseURL": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/",
+			"selectedFields": {
+				"reportingcycle": {
+					"name": "reportingcycle",
+					"type": "esriFieldTypeInteger",
+					"alias": "ReportingCycle",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Cycle Year"
+				},
+				"assessmentunitname": {
+					"name": "assessmentunitname",
+					"type": "esriFieldTypeString",
+					"alias": "AssessmentUnitName",
+					"length": 255,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Assessment Unit Name"
+				},
+				"waterbodyreportlink": {
+					"name": "waterbodyreportlink",
+					"type": "esriFieldTypeString",
+					"alias": "Waterbody Report Link",
+					"length": 4000,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Waterbody Report Link"
+				},
+				"ircategory": {
+					"name": "ircategory",
+					"type": "esriFieldTypeString",
+					"alias": "IR Category",
+					"length": 5,
+					"description": null,
+					"isViewOverride": false,
+					"label": "IR Category"
+				},
+				"overallstatus": {
+					"name": "overallstatus",
+					"type": "esriFieldTypeString",
+					"alias": "Overall Status",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Overall Status"
+				},
+				"isassessed": {
+					"name": "isassessed",
+					"type": "esriFieldTypeString",
+					"alias": "Is Assessed",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Assessed"
+				},
+				"isimpaired": {
+					"name": "isimpaired",
+					"type": "esriFieldTypeString",
+					"alias": "Is Impaired",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Impaired"
+				},
+				"isthreatened": {
+					"name": "isthreatened",
+					"type": "esriFieldTypeString",
+					"alias": "Is Threatened",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Is Threatened"
+				},
+				"on303dlist": {
+					"name": "on303dlist",
+					"type": "esriFieldTypeString",
+					"alias": "On303dList",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "On 303d List"
+				},
+				"hastmdl": {
+					"name": "hastmdl",
+					"type": "esriFieldTypeString",
+					"alias": "Has TMDL",
+					"length": 1,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Has TMDL"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Environmental/DE_Ecological_Network/FeatureServer/0",
+			"geometryType": "esriGeometryPolygon",
+			"id": "DE_Ecological_Network_5738",
+			"label": "",
+			"layerName": "Delaware Ecological Network",
+			"layerVersion": 10.91,
+			"layerId": "0",
+			"baseURL": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Environmental/DE_Ecological_Network/FeatureServer/",
+			"selectedFields": {
+				"ELEMENT": {
+					"name": "ELEMENT",
+					"type": "esriFieldTypeString",
+					"alias": "ELEMENT",
+					"length": 254,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Element"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://services.mesgis.com/arcgis/rest/services/WRR/DNREC_Watershed_Grade/MapServer/0",
+			"geometryType": "esriGeometryPolygon",
+			"id": "DNREC_Watershed_Grade_7105",
+			"label": "",
+			"layerName": "DNREC_Watershed_Grade - Watersheds Merged",
+			"layerVersion": 10.31,
+			"layerId": "0",
+			"baseURL": "https://services.mesgis.com/arcgis/rest/services/WRR/DNREC_Watershed_Grade/MapServer/",
+			"selectedFields": {
+				"Watershed_Name": {
+					"name": "Watershed_Name",
+					"type": "esriFieldTypeString",
+					"alias": "Watershed Name",
+					"length": 50,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"Watershed_Grade": {
+					"name": "Watershed_Grade",
+					"type": "esriFieldTypeString",
+					"alias": "Watershed Grade",
+					"length": 25,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalAreaField"
+			}
+		},
+		{
+			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/15",
+			"geometryType": "esriGeometryPoint",
+			"id": "DE_Assets_2283",
+			"label": "",
+			"layerName": "Historic Markers",
+			"layerVersion": 10.91,
+			"layerId": "15",
+			"baseURL": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/",
+			"selectedFields": {
+				"MARKER_NAME": {
+					"name": "MARKER_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "MARKER NAME",
+					"length": 100,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Marker Name"
+				},
+				"MARKER_CATEGORY": {
+					"name": "MARKER_CATEGORY",
+					"type": "esriFieldTypeString",
+					"alias": "MARKER CATEGORY",
+					"length": 100,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Marker Category"
+				},
+				"STREET_ADDRESS": {
+					"name": "STREET_ADDRESS",
+					"type": "esriFieldTypeString",
+					"alias": "STREET ADDRESS",
+					"length": 200,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Street Address"
+				},
+				"CITY": {
+					"name": "CITY",
+					"type": "esriFieldTypeString",
+					"alias": "CITY",
+					"length": 50,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "City"
+				},
+				"CONDITION_REPORT": {
+					"name": "CONDITION_REPORT",
+					"type": "esriFieldTypeString",
+					"alias": "CONDITION REPORT",
+					"length": 2000,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Condition Report"
+				},
+				"CAPTION": {
+					"name": "CAPTION",
+					"type": "esriFieldTypeString",
+					"alias": "CAPTION",
+					"length": 2000,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Caption"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Society/DE_Geographic_Names/FeatureServer/4",
+			"geometryType": "esriGeometryPoint",
+			"id": "DE_Geographic_Names_3106",
+			"label": "",
+			"layerName": "Historic Cultural",
+			"layerVersion": 10.91,
+			"layerId": "4",
+			"baseURL": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Society/DE_Geographic_Names/FeatureServer/",
+			"selectedFields": {
+				"FEATURE_NAME": {
+					"name": "FEATURE_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "FEATURE_NAME",
+					"length": 100,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Feature Name"
+				},
+				"FEATURE_CLASS": {
+					"name": "FEATURE_CLASS",
+					"type": "esriFieldTypeString",
+					"alias": "FEATURE_CLASS",
+					"length": 30,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Feature Class"
+				},
+				"COUNTY_NAME": {
+					"name": "COUNTY_NAME",
+					"type": "esriFieldTypeString",
+					"alias": "COUNTY_NAME",
+					"length": 15,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "County"
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTCountField"
+			}
+		},
+		{
+			"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/0",
+			"geometryType": "esriGeometryPolyline",
+			"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_7371",
+			"label": "",
+			"layerName": "Natural Gas Interstate and Intrastate Pipelines",
+			"layerVersion": 10.81,
+			"layerId": "0",
+			"baseURL": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/",
+			"selectedFields": {
+				"TYPEPIPE": {
+					"name": "TYPEPIPE",
+					"type": "esriFieldTypeString",
+					"alias": "TYPEPIPE",
+					"length": 10,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": "Type Pipe"
+				},
+				"Operator": {
+					"name": "Operator",
+					"type": "esriFieldTypeString",
+					"alias": "Operator",
+					"length": 50,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"Status": {
+					"name": "Status",
+					"type": "esriFieldTypeString",
+					"alias": "Status",
+					"length": 50,
+					"editable": true,
+					"nullable": true,
+					"defaultValue": null,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				}
+			},
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
+		}		
 	],
 	"downloadSettings": {
 		"type": "syncEnable",
@@ -802,6 +1525,96 @@
 				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Wetlands/MapServer/6",
 				"id": "DE_Wetlands_1277_6",
 				"layerName": "2017 Wetlands",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Watersheds/MapServer/3",
+				"layerName": "HUC 8",
+				"id": "DE_Watersheds_6571",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Hydrology/DE_Watersheds/MapServer/5",
+				"layerName": "HUC 12",
+				"id": "DE_Watersheds_1957",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/0",
+				"layerName": "ATTAINS Assessment Lines",
+				"id": "WRR_DE_ATTAINS_2897",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/2",
+				"layerName": "ATTAINS Assessment Areas",
+				"id": "WRR_DE_ATTAINS_5925",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://gis.menv.com/server/rest/services/WRR/WRR_DE_ATTAINS/MapServer/1",
+				"layerName": "ATTAINS Assessment Unit Catchment Associations",
+				"id": "WRR_DE_ATTAINS_815",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Environmental/DE_Ecological_Network/FeatureServer/0",
+				"layerName": "Delaware Ecological Network",
+				"id": "DE_Ecological_Network_5738",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://services.mesgis.com/arcgis/rest/services/WRR/DNREC_Watershed_Grade/MapServer/0",
+				"layerName": "DNREC_Watershed_Grade - Watersheds Merged",
+				"id": "DNREC_Watershed_Grade_7105",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Transportation/DE_Assets/FeatureServer/15",
+				"layerName": "Historic Markers",
+				"id": "DE_Assets_2283",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Society/DE_Geographic_Names/FeatureServer/4",
+				"layerName": "Historic Cultural",
+				"id": "DE_Geographic_Names_3106",
+				"allowDownload": true,
+				"downloadingFileOption": [
+					"csv"
+				]
+			},
+			{
+				"url": "https://services7.arcgis.com/FGr1D95XCGALKXqM/ArcGIS/rest/services/NaturalGas_InterIntrastate_Pipelines_US_EIA/FeatureServer/0",
+				"layerName": "Natural Gas Interstate and Intrastate Pipelines",
+				"id": "NaturalGas_InterIntrastate_Pipelines_US_EIA_7371",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
