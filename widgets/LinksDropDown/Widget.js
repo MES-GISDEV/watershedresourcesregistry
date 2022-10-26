@@ -58,7 +58,7 @@ function(declare, html, query, on, lang, _WidgetsInTemplateMixin, BaseWidget, Ta
 				//domConstruct.place('<div><b>' + iTitle + '</b> <a href="' + iAddress + '" target="_blank">View Here</a></div><br><br>',dom.byId("drawerMappingNode"));
 				////Now for the real McCoy
 				//NOTE: I had to adjust \widgets\LinksDropDown\css\style.css for this, so that the colors, no underline would work
-				domConstruct.place('<a href="' + iAddress + '" target="_blank"> <div style="left: 0px; top: ' + topLocation + 'px; right: auto; bottom: auto; width: 100%; height: 40px; padding: 0px; z-index: auto;line-height: 40px" class="jimu-widget-onscreen-icon-link"> <center><span class="droplabel" >' + iTitle + '</span></center> </div></a>' ,dom.byId("drawerMappingNode"));
+				domConstruct.place('<a href="' + iAddress + '" target="_blank"> <div style="left: 0px; top: ' + topLocation + 'px; right: auto; bottom: auto; width: 100%; height: 40px; padding: 0px; z-index: auto;line-height: 40px" class="jimu-widget-onscreen-icon-link"> <center><span class="droplabel" >' + iTitle + '</span></center> </div></a>' ,dom.byId("drawerExtRepNode"));
 				//Adjust location of next button "y" coordinate
 				topLocation += 40;
 			});
