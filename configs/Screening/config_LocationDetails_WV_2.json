@@ -448,37 +448,6 @@
 			}
 		},	
 		{
-			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
-			"geometryType": "esriGeometryPolyline",
-			"id": "NHDPlus_HR_8040_4",
-			"label": "USGS NHD - Flow Direction",
-			"layerName": "USGS NHD Plus High Resolution",
-			"selectedFields": {
-				"FCODE": {
-					"name": "FCODE",
-					"type": "esriFieldTypeInteger",
-					"alias": "FCode"
-				},
-				"STREAMORDE": {
-					"name": "STREAMORDE",
-					"type": "esriFieldTypeSmallInteger",
-					"alias": "Stream Order"
-				},
-				"TOTDASQKM": {
-					"name": "TOTDASQKM",
-					"type": "esriFieldTypeDouble",
-					"alias": "Total Drainage Area Sq Km"
-				},
-				"ARBOLATESU": {
-					"name": "ARBOLATESU",
-					"type": "esriFieldTypeDouble",
-					"alias": "Upstream Cumulative Stream Km"
-				}
-			},
-			"layerId": "4",
-			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/"
-		},
-		{
 			"url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/303D_NP21/MapServer/1",
 			"geometryType": "esriGeometryPolyline",
 			"id": "303D_NP21_9884_1",
@@ -1420,32 +1389,109 @@
 			"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/5",
 			"geometryType": "esriGeometryPolyline",
 			"id": "NHDPlus_HR_8040",
-			"label": "USGS NHD - Flow Direction",
-			"layerName": "USGS NHD Plus High Resolution",
+			"label": "",
+			"layerName": "NHDPlus_HR - FlowDirection",
+			"layerVersion": 10.81,
+			"layerId": "5",
+			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/",
 			"selectedFields": {
-				"FCODE": {
-					"name": "FCODE",
+				"gnis_id": {
+					"name": "gnis_id",
+					"type": "esriFieldTypeString",
+					"alias": "GNIS_ID",
+					"length": 10,
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
+				},
+				"ftype": {
+					"name": "ftype",
 					"type": "esriFieldTypeInteger",
-					"alias": "FCode"
+					"alias": "FType",
+					"description": null,
+					"isViewOverride": false,
+					"label": ""
 				},
-				"STREAMORDE": {
-					"name": "STREAMORDE",
+				"streamleve": {
+					"name": "streamleve",
 					"type": "esriFieldTypeSmallInteger",
-					"alias": "Stream Order"
+					"alias": "StreamLevel",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Stream Level"
 				},
-				"TOTDASQKM": {
-					"name": "TOTDASQKM",
-					"type": "esriFieldTypeDouble",
-					"alias": "Total Drainage Area Sq Km"
+				"streamorde": {
+					"name": "streamorde",
+					"type": "esriFieldTypeSmallInteger",
+					"alias": "StreamOrder",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Stream Order"
 				},
-				"ARBOLATESU": {
-					"name": "ARBOLATESU",
+				"startflag": {
+					"name": "startflag",
+					"type": "esriFieldTypeSmallInteger",
+					"alias": "IsHeadwater",
+					"description": null,
+					"isViewOverride": false,
+					"domain": {
+						"name": "NoYes Domain",
+						"type": "codedValue",
+						"codedValues": [
+							{
+								"name": "Yes",
+								"code": 1
+							},
+							{
+								"name": "No",
+								"code": 0
+							}
+						],
+						"_inherited": {
+							"p": 1
+						}
+					},
+					"label": "Is Headwater"
+				},
+				"terminalfl": {
+					"name": "terminalfl",
+					"type": "esriFieldTypeSmallInteger",
+					"alias": "IsNetworkEnd",
+					"description": null,
+					"isViewOverride": false,
+					"domain": {
+						"name": "NoYes Domain",
+						"type": "codedValue",
+						"codedValues": [
+							{
+								"name": "Yes",
+								"code": 1
+							},
+							{
+								"name": "No",
+								"code": 0
+							}
+						],
+						"_inherited": {
+							"p": 1
+						}
+					},
+					"label": "Is Network End"
+				},
+				"totdasqkm": {
+					"name": "totdasqkm",
 					"type": "esriFieldTypeDouble",
-					"alias": "Upstream Cumulative Stream Km"
+					"alias": "TotalDrainageAreaSqKm",
+					"description": null,
+					"isViewOverride": false,
+					"label": "Total Drainage Area Sq Km"
 				}
 			},
-			"layerId": "4",
-			"baseURL": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/"
+			"groupbyfieldCheckBoxStatus": true,
+			"sortInfo": {
+				"sortOrder": "Asc",
+				"sortingField": "esriCTTotalLengthField"
+			}
 		}
 	],
 	"downloadSettings": {
@@ -1464,15 +1510,6 @@
 				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/wbd/MapServer/4",
 				"layerName": "8-digit HU",
 				"id": "wbd_9296_4",
-				"allowDownload": true,
-				"downloadingFileOption": [
-					"csv"
-				]
-			},
-			{
-				"url": "https://hydro.nationalmap.gov/arcgis/rest/services/NHDPlus_HR/MapServer/4",
-				"layerName": "USGS NHD - Flow Direction",
-				"id": "NHDPlus_HR_8040_4",
 				"allowDownload": true,
 				"downloadingFileOption": [
 					"csv"
