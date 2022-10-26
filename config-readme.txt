@@ -1,5 +1,5 @@
 //This file describes the format of the config.json.
-
+#test
 {
   //Required
   "theme": {
