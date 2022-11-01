@@ -1,4 +1,4 @@
 {
 	"configText":"Drawer",
-	"includeWidgets":["FindOpsMD", "ElevationProfile", "GeoprocessingDAD", "GeoprocessingUDS"]
+	"includeWidgets":["FindOpsMD", "ElevationProfile", "NearbyDischarges", "GeoprocessingDAD", "GeoprocessingUDS"]
 }
