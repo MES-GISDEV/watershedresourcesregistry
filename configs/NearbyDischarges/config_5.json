@@ -1,0 +1,395 @@
+{
+  "fontColor": "#000000",
+  "highlightColor": "#00ffff",
+  "showSelectionColor": true,
+  "searchLayers": [
+    {
+      "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "NPDES_NP21_912_0",
+      "layerId": "0",
+      "baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/",
+      "isMapServer": true,
+      "visibility": false,
+      "title": "Facilities that Discharge to Water",
+      "popupInfo": {
+        "title": "Facilities that Discharge to Water: {SOURCE_FEATUREID}",
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "ObjectID",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "Shape",
+            "label": "Shape",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "PERMANENT_IDENTIFIER",
+            "label": "Permanent Identifier",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "EVENTDATE",
+            "label": "EventDate",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "dateFormat": "shortDateShortTime"
+            }
+          },
+          {
+            "fieldName": "REACHCODE",
+            "label": "ReachCode",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "REACHSMDATE",
+            "label": "ReachSMDate",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "dateFormat": "shortDateShortTime"
+            }
+          },
+          {
+            "fieldName": "REACHRESOLUTION",
+            "label": "ReachResolution",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "FEATURE_PERMANENT_IDENTIFIER",
+            "label": "Feature_Permanent_Identifier",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "FEATURECLASSREF",
+            "label": "FeatureClassRef",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "SOURCE_ORIGINATOR",
+            "label": "Source Originator",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "SOURCE_DATADESC",
+            "label": "Source DataDesc",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "SOURCE_FEATUREID",
+            "label": "Source FeatureID",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "FEATUREDETAILURL",
+            "label": "FeatureDetailURL",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "MEASURE",
+            "label": "Measure",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "EVENTOFFSET",
+            "label": "EventOffset",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "EVENTTYPE",
+            "label": "EventType Code",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "GEOGSTATE",
+            "label": "GeogState",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "CYCLE_YEAR",
+            "label": "Cycle_Year",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "START_DATE",
+            "label": "Start Date",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "dateFormat": "shortDateShortTime"
+            }
+          },
+          {
+            "fieldName": "END_DATE",
+            "label": "End Date",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "dateFormat": "shortDateShortTime"
+            }
+          },
+          {
+            "fieldName": "WBD_HUC12",
+            "label": "WBD HUC12",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "WBD_HUC12_PERCENT",
+            "label": "WBD HUC12 Percent",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 2,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "INNETWORK",
+            "label": "In Network",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "NAVIGABLE",
+            "label": "Navigable",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "COASTAL",
+            "label": "Coastal",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "VERTICES",
+            "label": "Vertices",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "ESRI_KEY",
+            "label": "ESRI_Key",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox"
+          }
+        ],
+        "description": null,
+        "showAttachments": true,
+        "mediaInfos": []
+      }
+    }
+  ],
+  "bufferInfo": {
+    "isVisible": true
+  },
+  "defaultBufferDistance": 5,
+  "maxBufferDistance": 15,
+  "bufferDistanceUnit": {
+    "bufferUnit": "UNIT_STATUTE_MILE",
+    "routeUnit": "MILES",
+    "distanceUnit": "miles",
+    "label": "Miles",
+    "acronym": "mi",
+    "value": "miles"
+  },
+  "zoomToFeature": false,
+  "intersectSearchedLocation": false,
+  "enableProximitySearch": true,
+  "routeService": "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World",
+  "directionLengthUnit": {
+    "bufferUnit": "UNIT_STATUTE_MILE",
+    "routeUnit": "MILES",
+    "distanceUnit": "miles",
+    "label": "Miles",
+    "acronym": "mi",
+    "value": "miles"
+  },
+  "selectedSearchLayerOnly": false,
+  "isGeodesic": false,
+  "showLocationTool": false,
+  "symbols": {
+    "routeSymbol": {
+      "color": [
+        21,
+        99,
+        184,
+        255
+      ],
+      "width": 3.75,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "graphicLocationSymbol": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 12,
+      "type": "esriPMS",
+      "url": "http://gis.menv.com/portal/portalimages/Symbols/Basic1/Black_1_Tear_Pin2.png",
+      "imageData": "iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAYAAAAd+o5JAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADKGlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwMTQgNzkuMTU2Nzk3LCAyMDE0LzA4LzIwLTA5OjUzOjAyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozRDQ2Rjc1RjZDNDkxMUU0QTM3RThDNzNCRDk3QTcyQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozRDQ2Rjc2MDZDNDkxMUU0QTM3RThDNzNCRDk3QTcyQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNENDZGNzVENkM0OTExRTRBMzdFOEM3M0JEOTdBNzJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNENDZGNzVFNkM0OTExRTRBMzdFOEM3M0JEOTdBNzJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hw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",
+      "contentType": "image/png",
+      "width": 22.5,
+      "height": 22.5
+    },
+    "polylineSymbol": {
+      "color": [
+        21,
+        99,
+        184,
+        255
+      ],
+      "width": 3.75,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygonSymbol": {
+      "color": [
+        155,
+        187,
+        89,
+        64
+      ],
+      "outline": {
+        "color": [
+          115,
+          140,
+          61,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "bufferSymbol": {
+      "color": [
+        155,
+        187,
+        89,
+        64
+      ],
+      "outline": {
+        "color": [
+          115,
+          140,
+          61,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "maxResultCount": null,
+  "searchSourceSettings": {
+    "allPlaceholder": "",
+    "showInfoWindowOnSelect": true,
+    "sources": [
+      {
+        "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+        "name": "ArcGIS World Geocoding Service",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "Find address or place",
+        "countryCode": "",
+        "zoomScale": 50000,
+        "maxSuggestions": 6,
+        "maxResults": 6,
+        "searchInCurrentMapExtent": false,
+        "enableLocalSearch": true,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000,
+        "type": "locator"
+      }
+    ]
+  },
+  "attributeSymbology": [],
+  "filterSettings": {
+    "collapse": false,
+    "groupFiltersByLayer": false,
+    "expandFiltersOnLoad": false,
+    "filters": []
+  },
+  "showImageGallery": true,
+  "showFeaturesCount": true,
+  "editorDescription": "<font size=\"3\">Check on the \"Facilities that Discharge to Water\" layer to see the results</font><div><font size=\"4\"><b><br></b></font><div>Search for an address or locate on map</div></div>",
+  "noFeatureFoundMessage": "No results found",
+  "showCurrentLocationTool": false,
+  "enableDirection": false,
+  "bufferInputOption": "slider"
+}

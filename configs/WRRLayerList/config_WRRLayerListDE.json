@@ -61,6 +61,12 @@
 			"category": "Permits"
 		},
 		{
+			"id": "wSw",
+			"wrrID": "NPDES_NP21_912",
+			"title": "Facilities that Discharge to Water",
+			"category": "Permits"
+		},
+		{
 			"id": "pZq",
 			"wrrID": "survey123_f428e20cada347319bfc88cd00a82a98_fieldworker_9697",
 			"title": "Site Visit Location",
