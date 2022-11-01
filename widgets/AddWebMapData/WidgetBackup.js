@@ -107,14 +107,14 @@ define(['dojo/_base/declare',
 
                 if (l.layerType == 'ArcGISTiledMapServiceLayer') {
                     tempLayer = new ArcGISTiledMapServiceLayer(l.url, {
-                        id : l.id + "_fromFC", //FK Testing
+                        id : l.id,
                         opacity : l.opacity,
                         visible : l.visibility
                     });
                     tempLayer.title = l.title;
                 }else if (l.layerType == 'ArcGISImageServiceLayer') {
                     tempLayer = new ArcGISImageServiceLayer(l.url, {
-                        id : l.id + "_fromFC", //FK Testing
+                        id : l.id,
                         opacity : l.opacity,
                         visible : l.visibility
                     });
@@ -123,7 +123,7 @@ define(['dojo/_base/declare',
                 } else if (l.layerType == 'ArcGISFeatureLayer') {
                     tempLayer = new FeatureLayer(l.url, {
                         mode : FeatureLayer.MODE_ONDEMAND,
-                        id : l.id + "_fromFC", //FK Testing
+                        id : l.id,
                         opacity : l.opacity,
                         visible : l.visibility,
                         outFields : ["*"],
@@ -132,7 +132,7 @@ define(['dojo/_base/declare',
                     tempLayer = selfAddWebMapData._processLayer(tempLayer, l);
                 } else if (l.layerType == 'ArcGISMapServiceLayer') {
                     tempLayer = new ArcGISDynamicMapServiceLayer(l.url, {
-                        id : l.id + "_fromFC", //FK Testing
+                        id : l.id,
                         opacity : l.opacity,
                         visible : l.visibility,
                         "showAttribution" : false
