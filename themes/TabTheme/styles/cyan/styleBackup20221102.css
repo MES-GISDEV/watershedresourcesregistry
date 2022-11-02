@@ -1,27 +1,27 @@
 .jimu-main-background{
-  background-color: #15555d;
-  background: linear-gradient(#15555d, #2aaa8a);
+  background-color: #2aaa8a;
+  background: linear-gradient(#2aaa8a, #bbbbbb);
 }
 .jimu-on-screen-widget-panel>.jimu-panel-title{
 	color: white;
-  background-color: #15555d;
+  background-color: #2aaa8a;
 }
 .popup-links {
-background-color: #15555d;
+background-color: #2aaa8a;
 }
 .popup-links .link-section {
-  background-color: #15555d;
+  background-color: #2aaa8a;
 }
 .jimu-widget-sidebar-controller .max-pane,
 .jimu-widget-sidebar-controller .tab-resizer,
 .jimu-widget-sidebar-controller .min-pane,
 .jimu-widget-sidebar-controller .other-group-pane{
-  background-color: #15555d;
-  background: linear-gradient(#2aaa8a, #15555d)
+  background-color: #2aaa8a;
+  background: linear-gradient(#bbbbbb, #2aaa8a)
   border-style: none;
 }
 .esriPopup .titlePane {
-  background-color: #15555d;
+  background-color: #2aaa8a;
 }
 .jimu-widget-sidebar-controller .other-group-title{
   color: #ffffff;
@@ -30,7 +30,7 @@ background-color: #15555d;
   background-color: #39b999;
 }
 .tab-widget-frame .title-label {
-  color: #15555d;
+  color: #2aaa8a;
 }
 .jimu-widget-sidebar-controller .content-title,
 .jimu-widget-sidebar-controller .other-group-pane-title .text{
