@@ -439,7 +439,7 @@
                 "label": "Featured Collections",
                 "version": "1.3",
                 "uri": "widgets/AddWebMapData/Widget",
-                "config": "widgets/AddWebMapData/config.json"
+                "config": "configs/AddWebMapData/configDE.json"
 			},
 			{
                 "id": "ReportItems_1",
