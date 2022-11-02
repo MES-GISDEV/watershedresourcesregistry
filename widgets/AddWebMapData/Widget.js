@@ -328,7 +328,7 @@ define(['dojo/_base/declare',
 
             var regOAuth = tokenUtils.registerOAuthInfo(portalURL, appId);
 
-            tokenUtils.signInPortal(this.config.testUrl).then(function(credential) {
+            tokenUtils.signInPortal(this.config.singInUrl).then(function(credential) {
                 topic.publish('userSignIn', credential);
             }, function() {
                 var msg = new Message({
