@@ -480,7 +480,10 @@ function(lang, array, aspect, Deferred, cookie, json, topic, dojoScript, esriNS,
           window.location.href = signOutUrl;
         } else {
           //portal 10.2 or webTier portal.
-          window.location.href = setPortalUrl;
+		  //FK Testing Begin
+          //window.location.href = setPortalUrl;
+		  location.reload();
+		  //FK Testing End
         }
       }
 
