@@ -663,7 +663,7 @@
 	"wabVersion": "2.5",
 	"isWebTier": false,
 	"httpProxy": {
-    "useProxy": true,
+    "useProxy": false,
     "alwaysUseProxy": false,
     "url": "https://localhost/WRRProxy/proxy.ashx",
     "rules": [{
