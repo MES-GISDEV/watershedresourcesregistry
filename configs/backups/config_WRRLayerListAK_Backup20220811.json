@@ -1,0 +1,262 @@
+{
+  "layers": [
+  {
+    "id": "Ng1",
+    "wrrID": "Alaska_Culverts_9400",
+    "title": "Culvert Inventory",
+    "category": "Potential Restoration Opportunities"
+  },
+  {
+    "id": "Mqs",
+    "wrrID": "Alaska_ACS_7661",
+    "title": "Active Contamination Sites",
+    "category": "Potential Restoration Opportunities"
+  },
+  {
+    "id": "z8A",
+    "wrrID": "Alaska_AMS_5639",
+    "title": "Abandoned Mining Sites",
+    "category": "Potential Restoration Opportunities"
+  },
+  {
+    "id": "0H6",
+    "wrrID": "Alaska_WMS_3762",
+    "title": "Withdrawn Mining Sites",
+    "category": "Potential Restoration Opportunities"
+  },
+  {
+    "id": "kEa",
+    "wrrID": "Alaska_HMF_6802",
+    "title": "Historic Mining Footprint",
+    "category": "Potential Restoration Opportunities"
+  },
+  {
+    "id": "m6G",
+    "wrrID": "Documented_ADV_View_1494",
+    "title": "Abandoned and Derelict Vessels",
+    "category": "Potential Restoration Opportunities"
+  },
+  {
+    "id": "x2d",
+    "wrrID": "NHD_632",
+    "title": "NHD",
+    "category": "Hydrology and Hydrography"
+  },
+  {
+    "id": "oZk",
+    "wrrID": "wbd_7916",
+    "title": "12-digit HUC",
+    "category": "Hydrology and Hydrography"
+  },
+  {
+    "id": "hfi",
+    "wrrID": "wbd_3677",
+    "title": "10-digit HUC",
+    "category": "Hydrology and Hydrography"
+  },
+  {
+    "id": "5v3",
+    "wrrID": "wbd_433",
+    "title": "8-digit HUC",
+    "category": "Hydrology and Hydrography"
+  },
+  {
+    "id": "UIz",
+    "wrrID": "wbd_2333",
+    "title": "6-digit HUC",
+    "category": "Hydrology and Hydrography"
+  },
+  {
+    "id": "YzK",
+    "wrrID": "wbd_6416",
+    "title": "4-digit HUC",
+    "category": "Hydrology and Hydrography"
+  },
+  {
+    "id": "v4F",
+    "wrrID": "Wetlands_5015",
+    "title": "USFWS NWI",
+    "category": "Wetlands"
+  },
+  {
+    "id": "4Qt",
+    "wrrID": "Wetlands_9407",
+    "title": "Wetlands",
+    "category": "Hydrology and Hydrography"
+  },
+  {
+    "id": "Ce4",
+    "wrrID": "BLM_AK_Administered_Lands_SMA_142",
+    "title": "Administered Lands / Surface Management Agency (SMA)",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "A3P",
+    "wrrID": "BLM_AK_Area_of_Critical_Environmental_Concern_ACEC_507",
+    "title": "Areas of Critical Environmental Concern",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "d57",
+    "wrrID": "BLM_AK_Easements_17b_4633",
+    "title": "Easements, 17(b) - Point",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "PYw",
+    "wrrID": "BLM_AK_Easements_17b_8516",
+    "title": "Easements, 17(b) - Line",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "bK7",
+    "wrrID": "BLM_AK_Land_Status_Withdrawals_6046",
+    "title": "Land Withdrawals",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "g8V",
+    "wrrID": "BLM_AK_Land_Status_Conveyed_Lands_4673",
+    "title": "Conveyed Native Allotments",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "DrU",
+    "wrrID": "BLM_AK_Land_Status_Conveyed_Lands_8583",
+    "title": "Lands Conveyed to Native Corporation/Village",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "vQx",
+    "wrrID": "BLM_AK_Land_Status_Conveyed_Lands_2764",
+    "title": "Lands Conveyed to Private Entities",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "0hc",
+    "wrrID": "BLM_AK_Land_Status_Conveyed_Lands_3801",
+    "title": "Miscellaneous Title Transfers",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "arI",
+    "wrrID": "BLM_AK_Land_Status_Conveyed_Lands_1863",
+    "title": "Lands Conveyed to State of Alaska",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "lk2",
+    "wrrID": "BLM_AK_Land_Status_Selected_Lands_7975",
+    "title": "Lands Selected and Topfiled by State of Alaska",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "Ncl",
+    "wrrID": "BLM_AK_Land_Status_Selected_Lands_33",
+    "title": "Lands Selected by Native Corporation/Village",
+    "category": "Land and Mineral Status"
+  },
+  {
+    "id": "nOU",
+    "wrrID": "ORM_3034",
+    "title": "ORM - Updated 8/10/22",
+    "category": "Permits"
+  },
+  {
+    "id": "49E",
+    "wrrID": "RIBITS_4043",
+    "title": "RIBITS - Banks & Service Areas",
+    "category": "Permits"
+  },
+  {
+    "id": "b5d",
+    "wrrID": "RIBITS_8694",
+    "title": "RIBITS - ILFs",
+    "category": "Permits"
+  },
+  {
+    "id": "J5j",
+    "wrrID": "usfws_critical_habitat_final_6318",
+    "title": "FWS ESA Critical Habitat",
+    "category": "Fish, Vegetation, and Wildlife"
+  },
+  {
+    "id": "qR9",
+    "wrrID": "ESA_data_22",
+    "title": "NMFS ESA Critical Habitat",
+    "category": "Fish, Vegetation, and Wildlife"
+  },
+  {
+    "id": "VNo",
+    "wrrID": "EFH_2018_6806",
+    "title": "Alaska Essential Fish Habitat",
+    "category": "Fish, Vegetation, and Wildlife"
+  },
+  {
+    "id": "C5h",
+    "wrrID": "Solid_Waste_Sites_5413",
+    "title": "Alaska DEC Solid Waste Sites",
+    "category": "Wastewater, Stormwater, and Solid Waste Facilities"
+  },
+  {
+    "id": "pc7",
+    "wrrID": "AWS_Unserved_Communities_2607",
+    "title": "AWS Unserved Communities",
+    "category": "Wastewater, Stormwater, and Solid Waste Facilities"
+  },
+  {
+    "id": "aZz",
+    "wrrID": "Impaired_Waters_8922",
+    "title": "303(d) Listed/Impaired Waters",
+    "category": "Water Quality"
+  },
+  {
+    "id": "x34",
+    "wrrID": "WQ_Monitoring_Locations_2086",
+    "title": "DEC Water Quality",
+    "category": "Water Quality"
+  },
+  {
+    "id": "6yD",
+    "wrrID": "Priority_Impaired_Waters_2965",
+    "title": "Impaired Waters",
+    "category": "Water Quality"
+  },
+  {
+    "id": "L29",
+    "wrrID": "Drinking_Water_Protection_Areas_8185",
+    "title": "DEC Drinking Water Protection Areas",
+    "category": "Water Quality"
+  },
+  {
+    "id": "SpO",
+    "wrrID": "WRR_AK_ATTAINS_5197",
+    "title": "ATTAINS Assessment Lines",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "gky",
+    "wrrID": "WRR_AK_ATTAINS_4403",
+    "title": "ATTAINS Assessment Areas",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "yjH",
+    "wrrID": "WRR_AK_ATTAINS_2290",
+    "title": "ATTAINS Assessment Unit Catchment Associations",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "NyA",
+    "wrrID": "AKDOTPF_Route_Data_6683",
+    "title": "Harbor System",
+    "category": "Community Infratructure and Transportation"
+  },
+  {
+    "id": "ofd",
+    "wrrID": "USA_States_Generalized_5298",
+    "title": "State Boundary",
+    "category": "Boundaries"
+  }
+]
+}

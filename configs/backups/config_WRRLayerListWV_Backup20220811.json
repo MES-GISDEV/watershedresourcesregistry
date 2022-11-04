@@ -1,0 +1,383 @@
+{
+  "layers": [
+  {
+    "id": "Qvx",
+    "wrrID": "WestVirginia_HP_7353",
+    "title": "Stormwater Preservation",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "nkw",
+    "wrrID": "WestVirginia_HR_5736",
+    "title": "Stormwater Restoration",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "wwA",
+    "wrrID": "WestVirginia_THP_2256",
+    "title": "Terrestrial Habitat Preservation",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "Q2r",
+    "wrrID": "WestVirginia_THR_9934",
+    "title": "Terrestrial Habitat Restoration",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "m7j",
+    "wrrID": "WestVirginia_WR_2919",
+    "title": "Wetland Restoration",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "e5j",
+    "wrrID": "WestVirginia_WP_2918",
+    "title": "Wetland Preservation",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "rQN",
+    "wrrID": "WestVirginia_RP_4510",
+    "title": "Riparian Preservation",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "WHB",
+    "wrrID": "WestVirginia_RR_1589",
+    "title": "Riparian Restoration",
+    "category": "WRR Suitability Analyses"
+  },
+  {
+    "id": "73h",
+    "wrrID": "ORM_2709",
+    "title": "ORM - Updated 8/10/22",
+    "category": "Permits"
+  },
+  {
+    "id": "49E",
+    "wrrID": "RIBITS_8042",
+    "title": "RIBITS - Banks & Service Areas",
+    "category": "Permits"
+  },
+  {
+    "id": "u86",
+    "wrrID": "RIBITS_7296",
+    "title": "RIBITS - ILFs",
+    "category": "Permits"
+  },
+  {
+    "id": "EBq",
+    "wrrID": "Huntington_WV_Green_Infrastructure_Opportunities_8654",
+    "title": "Huntington",
+    "category": "Green Infrastructure Opportunities"
+  },
+  {
+    "id": "ieE",
+    "wrrID": "NPS_Watershed_Plans_5167",
+    "title": "319 Watersheds",
+    "category": "Impaired/Impairments"
+  },
+  {
+    "id": "YFT",
+    "wrrID": "NPDES_NP21_2565",
+    "title": "NPDES Outfalls",
+    "category": "Impaired/Impairments"
+  },
+  {
+    "id": "Sp2",
+    "wrrID": "NHDPlus_HR_4201",
+    "title": "NHD Plus Sink",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "v4S",
+    "wrrID": "NHDPlus_HR_3917",
+    "title": "NHD Point",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "kN6",
+    "wrrID": "NHDPlus_HR_524",
+    "title": "Network NHD Flowline",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "Q6I",
+    "wrrID": "NHDPlus_HR_4590",
+    "title": "Non-Network NHD Flowline",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "AAa",
+    "wrrID": "NHDPlus_HR_8040",
+    "title": "Flow Direction",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "5AM",
+    "wrrID": "NHDPlus_HR_4113",
+    "title": "NHD Plus Wall",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "E4E",
+    "wrrID": "NHDPlus_HR_7400",
+    "title": "NHD Plus Burn Line Event",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "k7Y",
+    "wrrID": "NHDPlus_HR_4051",
+    "title": "NHD Line",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "uWL",
+    "wrrID": "NHDPlus_HR_9907",
+    "title": "NHD Area",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "c4j",
+    "wrrID": "NHDPlus_HR_5252",
+    "title": "NHD Waterbody",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "TDL",
+    "wrrID": "NHDPlus_HR_9205",
+    "title": "NHD Plus Catchment",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "TLX",
+    "wrrID": "NHDPlus_HR_7041",
+    "title": "WBD HU12",
+    "category": "National Hydrography Dataset"
+  },
+  {
+    "id": "iX3",
+    "wrrID": "Wetlands_7433",
+    "title": "USFWS NWI",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "uum",
+    "wrrID": "wbd_9296",
+    "title": "USGS Watershed Boundaries",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "i5P",
+    "wrrID": "303D_NP21_9884",
+    "title": "303d Streams",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "d83",
+    "wrrID": "wv_hydrography_6643",
+    "title": "Streams (SAMB)",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "pCO",
+    "wrrID": "WVhydrology_wm_7934",
+    "title": "Hydrology",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "HtP",
+    "wrrID": "Wetlands_8672",
+    "title": "Wetlands (NWI)",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "w4R",
+    "wrrID": "Active_River_Area_8607",
+    "title": "Active River Area Layer",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "UJ5",
+    "wrrID": "NFHL_553",
+    "title": "Flood Hazard Zones (FEMA)",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "i2C",
+    "wrrID": "wetland_function_2019_wm_7808",
+    "title": "WV Wetland Rapid Assessment Method (2019)",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "ZaB",
+    "wrrID": "isPreservationActWatershed_7200",
+    "title": "Natural Streams Preservation Act Watersheds",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "NF9",
+    "wrrID": "watershed_assessment_branch_9530",
+    "title": "DEP Watershed Assessment Data",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "rTN",
+    "wrrID": "watershed_assessment_branch_820",
+    "title": "Watershed Assessment (Sample Results)",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "S8Y",
+    "wrrID": "watershed_assessment_branch_334",
+    "title": "Watershed Assessment (Sample Stations)",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "ko2",
+    "wrrID": "watershed_assessment_branch_1576",
+    "title": "2016 303d Impaired Streams (All)",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "sKz",
+    "wrrID": "watershed_assessment_branch_7129",
+    "title": "Tier 3 Streams",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "sem",
+    "wrrID": "watershed_assessment_branch_6678",
+    "title": "DEP Wetland Inventory",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "0xd",
+    "wrrID": "watershed_assessment_branch_610",
+    "title": "Trout Streams",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "nnA",
+    "wrrID": "Mussel_Streams_NHD_1608",
+    "title": "Mussel Streams",
+    "category": "Water and Watersheds"
+  },
+  {
+    "id": "Aa8",
+    "wrrID": "WRR_WV_ATTAINS_4006",
+    "title": "Assessment Lines",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "rlf",
+    "wrrID": "WRR_WV_ATTAINS_7332",
+    "title": "Assessment Unit Catchment Associations",
+    "category": "ATTAINS"
+  },
+  {
+    "id": "l82",
+    "wrrID": "NLCD_2016_Land_Cover_L48_4837",
+    "title": "NLCD 2016",
+    "category": "Land Use/Land Cover"
+  },
+  {
+    "id": "f95",
+    "wrrID": "WV_LULC_NAIP_2016_7792",
+    "title": "WV LULC NAIP 2016",
+    "category": "Land Use/Land Cover"
+  },
+  {
+    "id": "i7W",
+    "wrrID": "wv_LULC_2011_wm_7107",
+    "title": "WV LULC 2011",
+    "category": "Land Use/Land Cover"
+  },
+  {
+    "id": "Nef",
+    "wrrID": "wms_597",
+    "title": "NRCS Soil Data",
+    "category": "Land and Soils"
+  },
+  {
+    "id": "c1p",
+    "wrrID": "abandoned_mine_lands_4575",
+    "title": "Abandoned Mine Lands",
+    "category": "Mining"
+  },
+  {
+    "id": "JtQ",
+    "wrrID": "mining_reclamation_2117",
+    "title": "Mining Reclamation",
+    "category": "Mining"
+  },
+  {
+    "id": "2aY",
+    "wrrID": "special_reclamation_8757",
+    "title": "Special Reclamation",
+    "category": "Mining"
+  },
+  
+  {
+    "id": "P0c",
+    "wrrID": "usace_regulatory_boundary_4206",
+    "title": "USACE Regulatory Districts",
+    "category": "Boundaries"
+  },
+  {
+    "id": "tvd",
+    "wrrID": "WV_boundary_2117",
+    "title": "State Boundary",
+    "category": "Boundaries"
+  },
+  {
+    "id": "fNn",
+    "wrrID": "WV_Parcels_180",
+    "title": "Parcels",
+    "category": "Boundaries"
+  },
+  {
+    "id": "Ize",
+    "wrrID": "MS4_Areas_7920",
+    "title": "MS4 Areas",
+    "category": "Boundaries"
+  },
+  {
+    "id": "uB7",
+    "wrrID": "WV_WaterSewer_WVWDA_6557",
+    "title": "Sewer Served Areas",
+    "category": "Boundaries"
+  },
+  {
+    "id": "D4d",
+    "wrrID": "wv_protected_lands_4792",
+    "title": "Protected Lands",
+    "category": "Boundaries"
+  },
+  {
+    "id": "2Vq",
+    "wrrID": "ImportantBirdAreas_Point_76",
+    "title": "Important Bird Areas",
+    "category": "Boundaries"
+  },
+  {
+    "id": "1Wg",
+    "wrrID": "ImportantBirdAreas_Polygon_1992",
+    "title": "Important Bird Areas Polygon",
+    "category": "Boundaries"
+  },
+  {
+    "id": "8Gf",
+    "wrrID": "wv_imagery_NAIP_2014_1m_CIR_9732",
+    "title": "NAIP 2014",
+    "category": "Imagery"
+  },
+  {
+    "id": "d2S",
+    "wrrID": "wv_hillshade_1m_mosaic_4222",
+    "title": "WV Statewide Hillshade",
+    "category": "Imagery"
+  }
+]
+}
