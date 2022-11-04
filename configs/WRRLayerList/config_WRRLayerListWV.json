@@ -67,6 +67,12 @@
 			"category": "Permits"
 		},
 		{
+			"id": "tdC",
+			"wrrID": "NPDES_NP21_912",
+			"title": "Facilities that Discharge to Water",
+			"category": "Permits"
+		},
+		{
 			"id": "EBq",
 			"wrrID": "Huntington_WV_Green_Infrastructure_Opportunities_8654",
 			"title": "Huntington",

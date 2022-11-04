@@ -373,6 +373,17 @@
 				"config": "configs/ElevationProfile/config_Elevation_Profile.json",
 				"icon": "widgets/ElevationProfile/images/icon.png",
 				"IsController": false
+			},
+			{
+				"id": "Nearby_Discharges",
+				"name": "NearbyDischarges",
+				"label": "Nearby Discharges",
+				"version": "2.23",
+				"closeable": true,
+				"uri": "widgets/NearbyDischarges/Widget",
+				"config": "configs/NearbyDischarges/config_5.json",
+				"icon": "configs/NearbyDischarges/icon.png",
+				"IsController": false
 			}
 		],
 		"panel": {
