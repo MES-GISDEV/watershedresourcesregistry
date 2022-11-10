@@ -7,21 +7,9 @@
 			"category": "WRR Suitability Analyses"
 		},
 		{
-			"id": "qjs",
-			"wrrID": "MarylandWRR_RP_1m_7335",
-			"title": "Riparian Preservation 1 meter",
-			"category": "WRR Suitability Analyses"
-		},
-		{
 			"id": "kVO",
 			"wrrID": "MarylandWRR_RR_9994",
 			"title": "Riparian Restoration",
-			"category": "WRR Suitability Analyses"
-		},
-		{
-			"id": "BiS",
-			"wrrID": "MarylandWRR_RR_1m_847",
-			"title": "Riparian Restoration 1 meter",
 			"category": "WRR Suitability Analyses"
 		},
 		{
@@ -31,21 +19,9 @@
 			"category": "WRR Suitability Analyses"
 		},
 		{
-			"id": "RU0",
-			"wrrID": "MarylandWRR_HP_1m_799",
-			"title": "Stormwater Natural Infrastructure Preservation 1 meter",
-			"category": "WRR Suitability Analyses"
-		},
-		{
 			"id": "HT6",
 			"wrrID": "MarylandWRR_HR_9498",
 			"title": "Stormwater Compromised Infrastructure Restoration",
-			"category": "WRR Suitability Analyses"
-		},
-		{
-			"id": "g1X",
-			"wrrID": "MarylandWRR_HR_1m_1316",
-			"title": "Stormwater Compromised Infrastructure Restoration 1 meter",
 			"category": "WRR Suitability Analyses"
 		},
 		{
@@ -55,21 +31,9 @@
 			"category": "WRR Suitability Analyses"
 		},
 		{
-			"id": "Vvz",
-			"wrrID": "MarylandWRR_UP_1m_9970",
-			"title": "Upland Preservation 1 meter",
-			"category": "WRR Suitability Analyses"
-		},
-		{
 			"id": "BTV",
 			"wrrID": "MarylandWRR_UR_1819",
 			"title": "Upland Restoration",
-			"category": "WRR Suitability Analyses"
-		},
-		{
-			"id": "IDP",
-			"wrrID": "MarylandWRR_UR_1m_3923",
-			"title": "Upland Restoration 1 meter",
 			"category": "WRR Suitability Analyses"
 		},
 		{
@@ -79,21 +43,9 @@
 			"category": "WRR Suitability Analyses"
 		},
 		{
-			"id": "2Um",
-			"wrrID": "MarylandWRR_WP_1m_8940",
-			"title": "Wetland Preservation 1 meter",
-			"category": "WRR Suitability Analyses"
-		},
-		{
 			"id": "5G9",
 			"wrrID": "MarylandWRR_WR_1915",
 			"title": "Wetland Restoration",
-			"category": "WRR Suitability Analyses"
-		},
-		{
-			"id": "b72",
-			"wrrID": "MarylandWRR_WR_1m_542",
-			"title": "Wetland Restoration 1 meter",
 			"category": "WRR Suitability Analyses"
 		},
 		{
@@ -111,21 +63,39 @@
 		{
 			"id": "P1q",
 			"wrrID": "NontidalWetlandMitigation_6770",
-			"title": "Nontidal Wetland Mitigation Sites",
+			"title": "MDE Nontidal Wetland and Waterway Mitigation Sites",
 			"category": "Permits"
 		},
 		{
-			"id": "Wzb",
-			"wrrID": "NPDES_NP21_912",
-			"title": "Facilities that Discharge to Water",
+			"id": "Zbb",
+			"wrrID": "Mitigation_GIS_Layers_8887",
+			"title": "Mitigation Banks",
+			"category": "Permits"
+		},
+		{
+			"id": "Bcn",
+			"wrrID": "Mitigation_GIS_Layers_2760",
+			"title": "In-Lieu Fee Mitigation",
+			"category": "Permits"
+		},
+		{
+			"id": "62U",
+			"wrrID": "Mitigation_GIS_Layers_1901",
+			"title": "Grandfathered Mitigation",
+			"category": "Permits"
+		},
+		{
+			"id": "zYo",
+			"wrrID": "Mitigation_GIS_Layers_4866",
+			"title": "Permittee Responsible Mitigation and Banks",
 			"category": "Permits"
 		},
 		{
 			"id": "akT",
-			"wrrID": "ORM_MD202210_412",
-			"title": "ORM - Updated 10/20/2022",
+			"wrrID": "ORM_2001",
+			"title": "ORM - Updated 8/10/22",
 			"category": "USACE Permit Status"
-		  },
+		},
 		{
 			"id": "a89",
 			"wrrID": "RIBITS_3526",
@@ -224,31 +194,31 @@
 		},
 		{
 			"id": "zGj",
-			"wrrID": "58ff5bd0e4b006455f2d628b_8981",
+			"wrrID": "Natures_Network_6665",
 			"title": "Terrestrial Cores",
 			"category": "Nature's Network"
 		},
 		{
 			"id": "SJE",
-			"wrrID": "58ff5bd0e4b006455f2d628b_5638",
+			"wrrID": "Natures_Network_9014",
 			"title": "Grassland Bird Cores",
 			"category": "Nature's Network"
 		},
 		{
 			"id": "O8u",
-			"wrrID": "58ff5bd0e4b006455f2d628b_968",
+			"wrrID": "Natures_Network_9801",
 			"title": "Terrestrial Core Connectors",
 			"category": "Nature's Network"
 		},
 		{
 			"id": "Hjw",
-			"wrrID": "58ff5bd0e4b006455f2d628b_6997",
+			"wrrID": "Natures_Network_3062",
 			"title": "Road-bounded Natural Block",
 			"category": "Nature's Network"
 		},
 		{
 			"id": "WEk",
-			"wrrID": "5900fd76e4b0c2e071a84cab_9226",
+			"wrrID": "Natures_Network_Conservation_Design_8173",
 			"title": "Nature's Network Conservation Design, Core Areas and Connectors",
 			"category": "Nature's Network"
 		},
@@ -598,6 +568,12 @@
 			"id": "r28",
 			"wrrID": "MD_SubmergedAquaticVegetation_1717",
 			"title": "Submerged Aquatic Vegetation (SAV) - 2020",
+			"category": "Biota"
+		},
+		{
+			"id": "NuY",
+			"wrrID": "Bald_Eagle_Nest_5477",
+			"title": "Bald Eagle Nest",
 			"category": "Biota"
 		},
 		{
@@ -1162,31 +1138,31 @@
 			"id": "l5n",
 			"wrrID": "wbd_4722",
 			"title": "Federal HUC 8",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "WBn",
 			"wrrID": "wbd_5548",
 			"title": "Federal HUC 12",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "liy",
 			"wrrID": "NaturalGas_InterIntrastate_Pipelines_US_EIA_5938",
 			"title": "Natural Gas Interstate and intrastate Pipelines",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		},
         {
 			"id": "apl",
 			"wrrID": "Lng_ImportExportTerminals_US_EIA_7164",
 			"title": "Liquid Natural Gas Import and Export Terminals",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "UMT",
 			"wrrID": "PetroleumProduct_Pipelines_US_EIA_4200",
 			"title": "Petroleum Product Pipelines",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		}
 	]
 }
