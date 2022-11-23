@@ -133,6 +133,12 @@
     "category": "Permits"
   },
   {
+    "id": "0Y2",
+    "wrrID": "NPDES_NP21_912",
+    "title": "Facilities that Discharge to Water",
+    "category": "Permits"
+  },
+  {
     "id": "Huj",
     "wrrID": "SCCB_Priority_Model_5613",
     "title": "SC Conservation Bank Map",
@@ -268,12 +274,6 @@
     "id": "joq",
     "wrrID": "permits_2844",
     "title": "DHEC NPDES Outfalls",
-    "category": "Permits/Regulated"
-  },
-  {
-    "id": "0Y2",
-    "wrrID": "NPDES_NP21_912",
-    "title": "Facilities that Discharge to Water",
     "category": "Permits/Regulated"
   },
   {

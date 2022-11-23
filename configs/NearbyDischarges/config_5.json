@@ -6,7 +6,7 @@
     {
       "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/0",
       "geometryType": "esriGeometryPoint",
-      "id": "NPDES_NP21_912_0",
+      "id": "NPDES_NP21_912",
       "layerId": "0",
       "baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/",
       "isMapServer": true,

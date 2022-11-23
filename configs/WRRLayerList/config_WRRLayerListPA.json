@@ -445,9 +445,15 @@
 			"category": "Natural Heritage"
 		},
 		{
+			"id": "HAF",
+			"wrrID": "DEP_582",
+			"title": "Abandoned Mine - Points",
+			"category": "Mining Information"
+		},
+		{
 			"id": "8Ti",
 			"wrrID": "DEP_2709",
-			"title": "Abandoned Mines",
+			"title": "Abandoned Mines - Land Sites",
 			"category": "Mining Information"
 		},
 		{
@@ -550,43 +556,43 @@
 			"id": "Vsl",
 			"wrrID": "DEP_2971",
 			"title": "Designated Use",
-			"category": "Misc. (can be moved)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "bex",
 			"wrrID": "DEP_6454",
 			"title": "Existing Use",
-			"category": "Misc. (can be moved)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "eBM",
 			"wrrID": "NaturalGas_InterIntrastate_Pipelines_US_EIA_1588",
 			"title": "Natural Gas Interstate and Intrastate Pipelines",
-			"category": "Misc. (can be moved)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "mgj",
 			"wrrID": "NaturalGas_ProcessingPlants_US_EIA_9365",
 			"title": "Natural Gas Processing Plants",
-			"category": "Misc. (can be moved)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "AMo",
 			"wrrID": "Market_Hubs_Natural_Gas_3419",
 			"title": "Natural Gas Trading Hub",
-			"category": "Misc. (can be moved)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "ghL",
 			"wrrID": "HGL_Pipelines_US_EIA_4693",
 			"title": "Hydrogen Gas Liquid Pipelines",
-			"category": "Misc. (can be moved)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "ByO",
 			"wrrID": "PetroleumProduct_Pipelines_US_EIA_8884",
 			"title": "Petroleum Product Pipelines",
-			"category": "Misc. (can be moved)"
+			"category": "Miscellaneous"
 		}
 	]
 }		
