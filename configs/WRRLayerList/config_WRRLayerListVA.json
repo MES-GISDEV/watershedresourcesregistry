@@ -67,12 +67,6 @@
 			"category": "Permits"
 		},
 		{
-			"id": "D9Q",
-			"wrrID": "NPDES_NP21_912",
-			"title": "Facilities that Discharge to Water",
-			"category": "Permits"
-		},
-		{
 			"id": "hAt",
 			"wrrID": "EDMA_1284",
 			"title": "VWP General Permits (GP)",
@@ -245,6 +239,12 @@
 			"wrrID": "5900fd76e4b0c2e071a84cab_847",
 			"title": "Nature's Network Conservation Design, Core Areas and Connectors",
 			"category": "Nature's Network"
+		},
+		{
+			"id": "D9Q",
+			"wrrID": "NPDES_NP21_912",
+			"title": "Facilities that Discharge to Water",
+			"category": "Impaired/Impairments"
 		},
 		{
 			"id": "sDG",
@@ -634,19 +634,19 @@
 			"id": "liy",
 			"wrrID": "NaturalGas_InterIntrastate_Pipelines_US_EIA_9798",
 			"title": "Natural Gas Interstate and intrastate Pipelines",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		},
         {
 			"id": "apl",
 			"wrrID": "Market_Hubs_Natural_Gas_1390",
 			"title": "Natural Gas Trading Hubs",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "UMT",
 			"wrrID": "PetroleumProduct_Pipelines_US_EIA_2738",
 			"title": "Petroleum Product Pipelines",
-			"category": "Misc - can be moved easily"
+			"category": "Miscellaneous"
 		}
 	]
 }
