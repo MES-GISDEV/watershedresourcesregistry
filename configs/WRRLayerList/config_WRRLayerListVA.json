@@ -242,7 +242,7 @@
 		},
 		{
 			"id": "D9Q",
-			"wrrID": "NPDES_NP21_912",
+			"wrrID": "NPDES_NP21_3459",
 			"title": "Facilities that Discharge to Water",
 			"category": "Impaired/Impairments"
 		},
@@ -250,12 +250,6 @@
 			"id": "sDG",
 			"wrrID": "efpoints_5062",
 			"title": "Brownfields",
-			"category": "Impaired/Impairments"
-		},
-		{
-			"id": "frN",
-			"wrrID": "NPDES_NP21_7087",
-			"title": "NPDES Outfalls",
 			"category": "Impaired/Impairments"
 		},
 		{

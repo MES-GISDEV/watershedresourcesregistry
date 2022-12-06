@@ -67,27 +67,21 @@
 			"category": "Permits"
 		},
 		{
-			"id": "tdC",
-			"wrrID": "NPDES_NP21_912",
-			"title": "Facilities that Discharge to Water",
-			"category": "Permits"
-		},
-		{
 			"id": "EBq",
 			"wrrID": "Huntington_WV_Green_Infrastructure_Opportunities_8654",
 			"title": "Huntington",
 			"category": "Green Infrastructure Opportunities"
 		},
 		{
-			"id": "ieE",
-			"wrrID": "NPS_Watershed_Plans_5167",
-			"title": "319 Watersheds",
+			"id": "tdC",
+			"wrrID": "NPDES_NP21_3459",
+			"title": "Facilities that Discharge to Water",
 			"category": "Impaired/Impairments"
 		},
 		{
-			"id": "YFT",
-			"wrrID": "NPDES_NP21_2565",
-			"title": "NPDES Outfalls",
+			"id": "ieE",
+			"wrrID": "NPS_Watershed_Plans_5167",
+			"title": "319 Watersheds",
 			"category": "Impaired/Impairments"
 		},
 		{
@@ -424,31 +418,31 @@
 			"id": "rnw",
 			"wrrID": "Hydrology_4452",
 			"title": "Dams (NID)",
-			"category": "Misc. (can be moved later)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "pdP",
 			"wrrID": "Hydrology_5189",
 			"title": "Dams (Not Coal)",
-			"category": "Misc. (can be moved later)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "bNh",
 			"wrrID": "NaturalGas_InterIntrastate_Pipelines_US_EIA_7106",
 			"title": "Natural Gas Interstate and Intrastate Pipelines",
-			"category": "Misc. (can be moved later)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "IAs",
 			"wrrID": "NaturalGas_ProcessingPlants_US_EIA_4921",
 			"title": "Natural Gas Processing Plants",
-			"category": "Misc. (can be moved later)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "GIV",
 			"wrrID": "HGL_Pipelines_US_EIA_7054",
 			"title": "Hydrogen Gas Liquid Pipelines",
-			"category": "Misc. (can be moved later)"
+			"category": "Miscellaneous"
 		},
 		{
 			"id": "cAl",

@@ -61,12 +61,6 @@
 			"category": "Permits"
 		},
 		{
-			"id": "zSv",
-			"wrrID": "NPDES_NP21_912",
-			"title": "Facilities that Discharge to Water",
-			"category": "Permits"
-		},
-		{
 			"id": "kvm",
 			"wrrID": "DEP2_1186",
 			"title": "MS4 Municipalities",
@@ -157,10 +151,10 @@
 			"category": "Protected Lands"
 		},
 		{
-			"id": "h0B",
-			"wrrID": "NPDES_NP21_9012",
-			"title": "EPA NPDES Outfalls",
-			"category": "Regulated Activites"
+			"id": "zSv",
+			"wrrID": "NPDES_NP21_3459",
+			"title": "Facilities that Discharge to Water",
+			"category": "Regulated Facilities"
 		},
 		{
 			"id": "Sp2",
@@ -447,13 +441,19 @@
 		{
 			"id": "HAF",
 			"wrrID": "DEP_582",
-			"title": "Abandoned Mine - Points",
+			"title": "Abandoned Mine Points",
 			"category": "Mining Information"
 		},
 		{
 			"id": "8Ti",
 			"wrrID": "DEP_2709",
-			"title": "Abandoned Mines - Land Sites",
+			"title": "Abandoned Mine Sites with Public Health, Safety, and Welfare Problems ",
+			"category": "Mining Information"
+		},
+		{
+			"id": "WHp",
+			"wrrID": "DEP_7231",
+			"title": "Abandoned Mine Sites with Surface Features of Mine Abandonment",
 			"category": "Mining Information"
 		},
 		{

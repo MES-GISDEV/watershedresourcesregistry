@@ -92,7 +92,7 @@
 		},
 		{
 			"id": "wSw",
-			"wrrID": "NPDES_NP21_912",
+			"wrrID": "NPDES_NP21_3459",
 			"title": "Facilities that Discharge to Water",
 			"category": "Permits"
 		},
@@ -1139,6 +1139,18 @@
 			"wrrID": "PanchromaticDOQs_9282",
 			"title": "Maryland Panchromatic digital orthophotoquad (DOQ)",
 			"category": "Imagery"
+		},
+		{
+			"id": "mWT",
+			"wrrID": "MD_Historical_Aerial_Imagery_5194",
+			"title": "Historical Imagery 1970s",
+			"category": "Historical Imagery 1970s to 1980s"
+		},
+		{
+			"id": "tDV",
+			"wrrID": "MD_Historical_Aerial_Imagery_2164",
+			"title": "Historical Imagery 1980s",
+			"category": "Historical Imagery 1970s to 1980s"
 		},
 		{
 			"id": "l5n",

@@ -875,6 +875,9 @@ define([
                   var groupBox = html.getMarginBox(inputGroup);
                   var extents = html.getPadBorderExtents(this.searchDijit.inputNode);
                   html.setStyle(this.searchDijit.inputNode, 'width', groupBox.w - extents.w + 'px');
+                  html.setStyle(this.searchDijit.inputNode, 'width', '230px');
+                  html.setStyle(this.searchDijit.containerNode, 'width', '300px');
+                  this.searchDijit.inputNode.placeholder = "Find address or place (Long, Lat)";
                 }
               }
             }

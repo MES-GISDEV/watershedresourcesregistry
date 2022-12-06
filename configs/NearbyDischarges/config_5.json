@@ -1,19 +1,19 @@
 {
-  "fontColor": "#000000",
-  "highlightColor": "#00ffff",
+  "fontColor": "#200602",
+  "highlightColor": "#0b8b8b",
   "showSelectionColor": true,
   "searchLayers": [
     {
       "url": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/0",
       "geometryType": "esriGeometryPoint",
-      "id": "NPDES_NP21_912",
+      "id": "NPDES_NP21_3459",
       "layerId": "0",
       "baseURL": "https://watersgeo.epa.gov/arcgis/rest/services/OWRAD_NP21/NPDES_NP21/MapServer/",
-      "isMapServer": true,
+      "isMapServer": false,
+      "title": "NPDES Permitted Facilities that Discharge to Water",
       "visibility": false,
-      "title": "Facilities that Discharge to Water",
       "popupInfo": {
-        "title": "Facilities that Discharge to Water: {SOURCE_FEATUREID}",
+        "title": "Facilities that Discharge to Surface Water",
         "fieldInfos": [
           {
             "fieldName": "OBJECTID",
@@ -44,34 +44,6 @@
             "stringFieldOption": "textbox",
             "format": {
               "dateFormat": "shortDateShortTime"
-            }
-          },
-          {
-            "fieldName": "REACHCODE",
-            "label": "ReachCode",
-            "tooltip": "",
-            "visible": false,
-            "stringFieldOption": "textbox"
-          },
-          {
-            "fieldName": "REACHSMDATE",
-            "label": "ReachSMDate",
-            "tooltip": "",
-            "visible": false,
-            "stringFieldOption": "textbox",
-            "format": {
-              "dateFormat": "shortDateShortTime"
-            }
-          },
-          {
-            "fieldName": "REACHRESOLUTION",
-            "label": "ReachResolution",
-            "tooltip": "",
-            "visible": false,
-            "stringFieldOption": "textbox",
-            "format": {
-              "places": 0,
-              "digitSeparator": true
             }
           },
           {
@@ -108,17 +80,59 @@
           },
           {
             "fieldName": "SOURCE_FEATUREID",
-            "label": "Source FeatureID",
+            "label": "NPDES Permit Number",
+            "tooltip": "",
+            "visible": true,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "GEOGSTATE",
+            "label": "State",
+            "tooltip": "",
+            "visible": true,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "WBD_HUC12",
+            "label": "HUC12",
+            "tooltip": "",
+            "visible": true,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "FEATUREDETAILURL",
+            "label": "Detailed Facility Information",
+            "tooltip": "",
+            "visible": true,
+            "stringFieldOption": "textbox"
+          },
+          {
+            "fieldName": "REACHCODE",
+            "label": "Reach Code",
             "tooltip": "",
             "visible": false,
             "stringFieldOption": "textbox"
           },
           {
-            "fieldName": "FEATUREDETAILURL",
-            "label": "FeatureDetailURL",
+            "fieldName": "REACHRESOLUTION",
+            "label": "Reach Resolution",
             "tooltip": "",
             "visible": false,
-            "stringFieldOption": "textbox"
+            "stringFieldOption": "textbox",
+            "format": {
+              "places": 0,
+              "digitSeparator": true
+            }
+          },
+          {
+            "fieldName": "REACHSMDATE",
+            "label": "Reach SM Date",
+            "tooltip": "",
+            "visible": false,
+            "stringFieldOption": "textbox",
+            "format": {
+              "dateFormat": "shortDate"
+            }
           },
           {
             "fieldName": "MEASURE",
@@ -154,13 +168,6 @@
             }
           },
           {
-            "fieldName": "GEOGSTATE",
-            "label": "GeogState",
-            "tooltip": "",
-            "visible": false,
-            "stringFieldOption": "textbox"
-          },
-          {
             "fieldName": "CYCLE_YEAR",
             "label": "Cycle_Year",
             "tooltip": "",
@@ -186,13 +193,6 @@
             "format": {
               "dateFormat": "shortDateShortTime"
             }
-          },
-          {
-            "fieldName": "WBD_HUC12",
-            "label": "WBD HUC12",
-            "tooltip": "",
-            "visible": false,
-            "stringFieldOption": "textbox"
           },
           {
             "fieldName": "WBD_HUC12_PERCENT",
@@ -278,16 +278,16 @@
   },
   "selectedSearchLayerOnly": false,
   "isGeodesic": false,
-  "showLocationTool": false,
+  "showLocationTool": true,
   "symbols": {
     "routeSymbol": {
       "color": [
         21,
         99,
         184,
-        255
+        125
       ],
-      "width": 3.75,
+      "width": 3,
       "type": "esriSLS",
       "style": "esriSLSSolid"
     },
@@ -315,19 +315,19 @@
     },
     "polygonSymbol": {
       "color": [
-        155,
-        187,
-        89,
-        64
+        255,
+        189,
+        1,
+        0
       ],
       "outline": {
         "color": [
-          115,
-          140,
-          61,
+          255,
+          189,
+          1,
           255
         ],
-        "width": 1.5,
+        "width": 2.25,
         "type": "esriSLS",
         "style": "esriSLSSolid"
       },
@@ -336,16 +336,16 @@
     },
     "bufferSymbol": {
       "color": [
-        155,
-        187,
-        89,
-        64
+        142,
+        182,
+        81,
+        41
       ],
       "outline": {
         "color": [
-          115,
-          140,
-          61,
+          102,
+          128,
+          51,
           255
         ],
         "width": 1.5,
@@ -365,7 +365,7 @@
         "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
         "name": "ArcGIS World Geocoding Service",
         "singleLineFieldName": "SingleLine",
-        "placeholder": "Find address or place",
+        "placeholder": "Find address or place (Long, Lat)",
         "countryCode": "",
         "zoomScale": 50000,
         "maxSuggestions": 6,
@@ -387,9 +387,9 @@
   },
   "showImageGallery": true,
   "showFeaturesCount": true,
-  "editorDescription": "<font size=\"3\">Check on the \"Facilities that Discharge to Water\" layer to see the results</font><div><font size=\"4\"><b><br></b></font><div>Search for an address or locate on map</div></div>",
+  "editorDescription": "<div><span style=\"font-size: medium; color: rgb(32, 6, 2);\">Check on the \"Facilities that Discharge to Water\" layer to see the results</span><br></div><div><br></div>Search for an address or use the set location button to select a location on the map",
   "noFeatureFoundMessage": "No results found",
-  "showCurrentLocationTool": false,
-  "enableDirection": false,
-  "bufferInputOption": "slider"
+  "showCurrentLocationTool": true,
+  "enableDirection": true,
+  "bufferInputOption": "sliderAndTextbox"
 }
