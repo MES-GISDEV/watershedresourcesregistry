@@ -163,8 +163,8 @@ define([
 			};
 			//}
 			
-			/*FK -- we are going to use a class as the method to determine if this is going
-			to be visible or not. The class will be base on if the layer is currently visible */
+			/*FK -- we are going to use a class as the method to determine if the whole item is going
+			to be visible on the "Active Layer List" or not. The class will be base on if the layer is currently visible */
 			var sdClass = '';
 			//FK Post Test
 			try {
@@ -193,7 +193,7 @@ define([
 			domConstruct.place(layerTrNode, toTableNode, position);
 			
 			
-			/*FK-- based on the layers currently exist in the map we want to establish if the layer should be
+			/*FK-- based on the layers that currently exist in the map we want to establish if the layer should be
 			shown here based on if it is visible or not*/
 			var layer = this.map.getLayer(layerInfo.id)
 			if (layer){
@@ -236,7 +236,12 @@ define([
 					//Attempt to do style adjustment, base on the layer and DOM get to the row containing the 
 					//mainlayer file
 					var mainElm = document.getElementById("ID_" + layerName);	
-					mainElm.style = (evt.visible == true ? '' : 'display:none;'); 
+					/*FK 2022-12-14, this was one of two areas that determined if a content layer
+					was going to be visible or not based on visibility change. Now if a layer is on
+					the Active Layer list, I am making sure it stays there. I *do* want the mainElm.style
+					= "", that way any layer coming from the WRR list does turn on here*/
+					//mainElm.style = (evt.visible == true ? '' : 'display:none;'); 
+					mainElm.style = ""; 
 					var myCheck = mainElm.childNodes[0].childNodes[1]; // get the checkbox-
 					var myStyle = myCheck.childNodes[0].childNodes[0]; // get the style for the checkbox
 					if (evt.visible) {
@@ -248,18 +253,22 @@ define([
 						myStyle.classList.remove('checked');
 						myStyle.classList.remove('jimu-icon-checked');
 						
-						//FK Testing
+						/*FK 2022-12-14 This code was need when making content layers invisible, it hid sublayers and 
+						symbology. Since we are not making the layers invisible when turning checkboxes off we don't need
+						this*/
 						
+						/*
 						//Okay we can hide the symbology but...
 						test1 = mainElm.nextSibling; //maybe, we are on the right path...
 						test2 = test1.childNodes[0].childNodes[0]; //I originally had the child node and not grandchild node
 						test2.style.display = "none";
 						
-						//We need to collapse the main box and I'm fighting the aria stuff (currently commented out)
+						//We need to collapse the main box 
 						test3 = mainElm.childNodes[0].childNodes[0];
 						test3.classList.remove('unfold');
 						test3.setAttribute("aria-label", "Expand");
 						test3.setAttribute("aria-expanded", "false");
+						*/
 						
 						//FK End Testing
 					}
@@ -754,12 +763,15 @@ define([
 		},
 		
 		_onCkSelectNodeClick: function(layerInfo, ckSelect, evt) {
-			//FK Testing this is really out of whack but in theory, you click layer you're only turning this off
-			//you have to load a layer back on to here to have it show up.
-			//Let's set ckSelect.checked = false
+			/*FK 2022-12-14 - We were orginally tasked to "remove" layers from the Active Layer List when
+			a box was unchecked. I was doing this by turing the content layer invisible here. I hard coded
+			the checkbox to = false (unless from feature class layer) to remove layers. I am keeping this
+			here in case we need to go back to that.
+			/*
 			if (!layerInfo.id.includes("_fromFC")) {
 				ckSelect.checked = false;
 			}
+			*/
 			if(evt.ctrlKey || evt.metaKey) {
 				if(layerInfo.isRootLayer()) {
 					this.turnAllRootLayers(ckSelect.checked);
@@ -769,17 +781,22 @@ define([
 				} else {
 				this.layerListWidget._denyLayerInfosIsVisibleChangedResponseOneTime = true;
 				layerInfo.setTopLayerVisible(ckSelect.checked); 
-				//FK-- Make the layer invisible if the button gets unchecked
+				/*FK-- Make the layer invisible if the button gets unchecked. 2022-12-14, this is part of turning
+				content layers invisible when checkboxes are turned off. We don't need this now but am keeping this
+				in case this comes back */
+				/*
 				var myLayerNode = ckSelect.domNode.parentNode.parentNode.parentNode; //probably a better way to do this
 				//but it currently works
 				if (!ckSelect.checked && !layerInfo.id.includes("_fromFC")) //More testing on top of testing
 				{
-					myLayerNode.style = "display:none;";
+					//myLayerNode.style = "display:none;"; //FK Testing 2022-12-14
+					//myLayerNode.style = "";
 				}
 				else
 				{
 					myLayerNode.style = "";
 				}
+				*/
 			}
 			evt.stopPropagation();
 		},
