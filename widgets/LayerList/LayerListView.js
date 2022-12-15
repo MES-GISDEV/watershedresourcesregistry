@@ -245,7 +245,7 @@ define([
 					var myCheck = mainElm.childNodes[0].childNodes[1]; // get the checkbox-
 					var myStyle = myCheck.childNodes[0].childNodes[0]; // get the style for the checkbox
 					if (evt.visible) {
-						myStyle.classList.add('checked');
+						myStyle.classList.add('checked'); //GitHub Comment Test
 						myStyle.classList.add('jimu-icon-checked');
 					}
 					else
