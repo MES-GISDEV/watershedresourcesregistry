@@ -1862,14 +1862,14 @@
 			}
 		},
 		{
-			"url": "https://geodata.md.gov/imap/rest/services/Hydrology/MD_WaterQuality/MapServer/3",
+			"url": "https://mdewin64.mde.state.md.us/arcgis/rest/services/MDE_Water_Quality/MD_TierIIHighQualityWaters_2021/MapServer/2",
 			"geometryType": "esriGeometryPolygon",
 			"id": "MD_WaterQuality_9380",
 			"label": "",
 			"layerName": "Maryland Tier II Catchments",
 			"layerVersion": 10.71,
 			"layerId": "3",
-			"baseURL": "https://geodata.md.gov/imap/rest/services/Hydrology/MD_WaterQuality/MapServer/",
+			"baseURL": "https://mdewin64.mde.state.md.us/arcgis/rest/services/MDE_Water_Quality/MD_TierIIHighQualityWaters_2021/MapServer/",
 			"selectedFields": {
 				"CATCHMENT": {
 					"name": "CATCHMENT",
@@ -2214,7 +2214,7 @@
 				]
 			},
 			{
-				"url": "https://geodata.md.gov/imap/rest/services/Hydrology/MD_WaterQuality/MapServer/3",
+				"url": "https://mdewin64.mde.state.md.us/arcgis/rest/services/MDE_Water_Quality/MD_TierIIHighQualityWaters_2021/MapServer/2",
 				"layerName": "Maryland Tier II Catchments",
 				"id": "MD_WaterQuality_9380",
 				"allowDownload": true,
