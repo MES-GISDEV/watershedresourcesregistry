@@ -30,6 +30,7 @@ define([
 	'jimu/dijit/DropMenu',
 	'jimu/dijit/LoadingShelter',
 	'jimu/MapManager',
+	'jimu/BaseWidget',  //FK 2022-12-28 Added this
 	'jimu/utils',
 	'./PopupMenu',
 	'dijit/_TemplatedMixin',
@@ -38,10 +39,12 @@ define([
 	'dojo/dom-style',
 	'./NlsStrings'
 	], function(_WidgetBase, declare, lang, array, html, domConstruct, on, keys, focusUtil, query, WMSLayer,
-	CheckBox, DropMenu, LoadingShelter, MapManager, jimuUtils, PopupMenu, _TemplatedMixin, template,
+	CheckBox, DropMenu, LoadingShelter, MapManager, 
+	BaseWidget, //FK 2022-12-28 Added this
+	jimuUtils, PopupMenu, _TemplatedMixin, template,
 	domClass, domStyle, NlsStrings) {
 	
-	return declare([_WidgetBase, _TemplatedMixin], {
+	return declare([_WidgetBase, _TemplatedMixin, BaseWidget], { //FK 2022-12-28, added BaseWidget
 		templateString: template,
 		_currentSelectedLayerRowNode: null,
 		operationsDropMenu: null,
@@ -61,17 +64,51 @@ define([
 		_eventHandlers: null,
 		_layerIndexs: null,
 		
+		//FK Testing
+		/*startup: function(){
+			this.inherited(arguments);
+			//this.fetchDataByName('widgets_JoinedLayerLists_Widget_39');
+			this.fetchData();
+		},*/		
+		
 		postMixInProperties: function() {
 			this.inherited(arguments);
 			this.nls = NlsStrings.value;
 			this._layerDomNodeStorage = {};
 			this._eventHandlers = [];
 			this._initLayerIndexs();
+			this.fetchData(); //FK Testing
 		},
 		
 		postCreate: function() {
 			this.refresh();
 			this._initOperations();
+		},
+		
+		/*FK 2022-12-28, if there is data coming from WRRLayer List (\widgets\LayerList\LayerListView.js)
+			and it has a message of 'Hide layer - WRR call', pass the layer id in question
+		and try to turn it off*/
+		onReceiveData: function(name, widgetId, data, historyData) {
+			if (data.message == 'Hide layer - WRR call')
+			{
+				var layerName = data.layerID;
+				var mainElm = document.getElementById('ID_' + layerName);
+				var myCheck = mainElm.childNodes[0].childNodes[1];
+				var myStyle = myCheck.childNodes[0].childNodes[0];
+				
+				mainElm.style = 'display:none;';
+				var nxtSibling = mainElm.nextSibling;
+				var nxtSiblingStyleLocation = nxtSibling.childNodes[0].childNodes[0];
+				nxtSiblingStyleLocation.style.display = 'none';
+				
+				
+				//Collapse main box	
+				var partToCollapse = mainElm.childNodes[0].childNodes[0];
+				partToCollapse.classList.remove('unfold');
+				partToCollapse.setAttribute("aria-label", "Expand");
+				partToCollapse.setAttribute("aria-expanded", "false");
+				mainElm.style = 'display:none;';
+			}
 		},
 		
 		_initLayerIndexs: function() {
@@ -217,6 +254,7 @@ define([
 					}
 				})));*/
 				
+				
 				this.own(on(layer, 'change', lang.hitch(this, function (evt) {
 					var layerId = evt.target.id;
 					var vis = evt.target.checked || false;
@@ -237,13 +275,19 @@ define([
 					//mainlayer file
 					var mainElm = document.getElementById("ID_" + layerName);	
 					/*FK 2022-12-14, this was one of two areas that determined if a content layer
-					was going to be visible or not based on visibility change. Now if a layer is on
-					the Active Layer list, I am making sure it stays there. I *do* want the mainElm.style
+						was going to be visible or not based on visibility change. Now if a layer is on
+						the Active Layer list, I am making sure it stays there. I *do* want the mainElm.style
 					= "", that way any layer coming from the WRR list does turn on here*/
 					//mainElm.style = (evt.visible == true ? '' : 'display:none;'); 
 					mainElm.style = ""; 
 					var myCheck = mainElm.childNodes[0].childNodes[1]; // get the checkbox-
 					var myStyle = myCheck.childNodes[0].childNodes[0]; // get the style for the checkbox
+					/*FK 2022-12-27 Now they do want the layer "removed" if the user unchecks ONLY from WRR
+						I figured out I can use the index of the myStyle class list from above and if it
+					contradicts with evt.visible, we can call that to adjust layers.*/
+					var checkIndex = myStyle.classList.value.indexOf("jimu-icon-checked");
+					var turnOnFromWRR = checkIndex == -1 && evt.visible == true;
+					var turnOffFromWRR = checkIndex > -1 && evt.visible == false;
 					if (evt.visible) {
 						myStyle.classList.add('checked'); //GitHub Comment Test
 						myStyle.classList.add('jimu-icon-checked');
@@ -254,21 +298,29 @@ define([
 						myStyle.classList.remove('jimu-icon-checked');
 						
 						/*FK 2022-12-14 This code was need when making content layers invisible, it hid sublayers and 
-						symbology. Since we are not making the layers invisible when turning checkboxes off we don't need
-						this*/
+							symbology. Since we are not making the layers invisible when turning checkboxes off we don't need
+						this 2022-12-27 Nevermind, going to look at this again*/
 						
-						/*
-						//Okay we can hide the symbology but...
-						test1 = mainElm.nextSibling; //maybe, we are on the right path...
-						test2 = test1.childNodes[0].childNodes[0]; //I originally had the child node and not grandchild node
-						test2.style.display = "none";
-						
-						//We need to collapse the main box 
-						test3 = mainElm.childNodes[0].childNodes[0];
-						test3.classList.remove('unfold');
-						test3.setAttribute("aria-label", "Expand");
-						test3.setAttribute("aria-expanded", "false");
-						*/
+						if (turnOffFromWRR) 
+						{
+							/*
+								mainElm.style = 'display:none;';
+								
+								//Okay we can hide the symbology but...
+								test1 = mainElm.nextSibling; //maybe, we are on the right path...
+								test2 = test1.childNodes[0].childNodes[0]; //I originally had the child node and not grandchild node
+								test2.style.display = "none";
+								
+								//We need to collapse the main box 
+								test3 = mainElm.childNodes[0].childNodes[0];
+								test3.classList.remove('unfold');
+								test3.setAttribute("aria-label", "Expand");
+								test3.setAttribute("aria-expanded", "false");
+								
+								//2022-12-27, I think we are close to at least getting the layer disapper and appear regularly but I want to
+								//test with a layer with a sublayer
+							*/
+						}
 						
 						//FK End Testing
 					}
@@ -764,13 +816,13 @@ define([
 		
 		_onCkSelectNodeClick: function(layerInfo, ckSelect, evt) {
 			/*FK 2022-12-14 - We were orginally tasked to "remove" layers from the Active Layer List when
-			a box was unchecked. I was doing this by turing the content layer invisible here. I hard coded
-			the checkbox to = false (unless from feature class layer) to remove layers. I am keeping this
-			here in case we need to go back to that.
-			/*
-			if (!layerInfo.id.includes("_fromFC")) {
+				a box was unchecked. I was doing this by turing the content layer invisible here. I hard coded
+				the checkbox to = false (unless from feature class layer) to remove layers. I am keeping this
+				here in case we need to go back to that.
+				/*
+				if (!layerInfo.id.includes("_fromFC")) {
 				ckSelect.checked = false;
-			}
+				}
 			*/
 			if(evt.ctrlKey || evt.metaKey) {
 				if(layerInfo.isRootLayer()) {
@@ -782,20 +834,20 @@ define([
 				this.layerListWidget._denyLayerInfosIsVisibleChangedResponseOneTime = true;
 				layerInfo.setTopLayerVisible(ckSelect.checked); 
 				/*FK-- Make the layer invisible if the button gets unchecked. 2022-12-14, this is part of turning
-				content layers invisible when checkboxes are turned off. We don't need this now but am keeping this
+					content layers invisible when checkboxes are turned off. We don't need this now but am keeping this
 				in case this comes back */
 				/*
-				var myLayerNode = ckSelect.domNode.parentNode.parentNode.parentNode; //probably a better way to do this
-				//but it currently works
-				if (!ckSelect.checked && !layerInfo.id.includes("_fromFC")) //More testing on top of testing
-				{
+					var myLayerNode = ckSelect.domNode.parentNode.parentNode.parentNode; //probably a better way to do this
+					//but it currently works
+					if (!ckSelect.checked && !layerInfo.id.includes("_fromFC")) //More testing on top of testing
+					{
 					//myLayerNode.style = "display:none;"; //FK Testing 2022-12-14
 					//myLayerNode.style = "";
-				}
-				else
-				{
+					}
+					else
+					{
 					myLayerNode.style = "";
-				}
+					}
 				*/
 			}
 			evt.stopPropagation();
@@ -1475,86 +1527,85 @@ define([
 		},
 		
 		_onOperationsDropMenuOpen: function() {
-	var menuItems = query('.menu-item', this.operationsDropMenu.domNode);
-	menuItems = menuItems.filter(function(menuItem) {
-	if(html.hasClass(menuItem, 'menu-item-hidden')) {
-	return false;
-	} else {
-	return true;
-	}
-	});
-	var firstItem = menuItems[0], lastItem = menuItems[menuItems.length - 1];
-	menuItems.forEach(function(menuItem, index) {
-	var isFirstItem = false, isLastItem = false;
-	var previousItem = menuItems[index - 1], nextItem = menuItems[index + 1];
-	if(index === 0) {
-	focusUtil.focus(menuItem);
-	isFirstItem = true;
-	} else if(index === menuItems.length - 1) {
-	isLastItem = true;
-	}
-	
-	if(!menuItem.hasBeenOpened) {
-	this.own(on(menuItem, 'keydown',
-	lang.hitch(this, this._onLayerListOperationsMenuItemKey,
-	previousItem, nextItem, firstItem, lastItem, isFirstItem, isLastItem)));
-	menuItem.hasBeenOpened = true;
-	}
-	}, this);
-	},
-	
-	_onLayerListOperationsMenuItemKey: function(previousItem,
-	nextItem, firstItem, lastItem, isFirstItem, isLastItem, e) {
-	//jshint unused:false
-	/*
-	if(e.keyCode === keys.TAB && !e.shiftKey) {
-	e.stopPropagation();
-	if(isLastItem) {
-	e.preventDefault();
-	}
-	this._enableNavMode(e);
-	} else if(e.keyCode === keys.TAB && e.shiftKey) {
-	e.stopPropagation();
-	if(isFirstItem) {
-	e.preventDefault();
-	}
-	this._enableNavMode(e);
-	} else */
-	if(e.keyCode === keys.DOWN_ARROW) {
-	e.stopPropagation();
-	e.preventDefault();
-	if(nextItem) {
-	focusUtil.focus(nextItem);
-	}/*else {
-	focusUtil.focus(firstItem);
-	}*/
-	} else if(e.keyCode === keys.UP_ARROW) {
-	e.stopPropagation();
-	e.preventDefault();
-	if(previousItem) {
-	focusUtil.focus(previousItem);
-	}/*else {
-	focusUtil.focus(lastItem);
-	}*/
-	} else if(e.keyCode === keys.HOME) {
-	e.stopPropagation();
-	e.preventDefault();
-	if(firstItem) {
-	focusUtil.focus(firstItem);
-	}
-	} else if(e.keyCode === keys.END) {
-	e.stopPropagation();
-	e.preventDefault();
-	if(lastItem) {
-	focusUtil.focus(lastItem);
-	}
-	} else if(e.keyCode === keys.ESCAPE || e.keyCode === keys.TAB) {
-	e.stopPropagation();
-	e.preventDefault();
-	focusUtil.focus(this.layerListOperations);
-	this.operationsDropMenu.closeDropMenu();
-	}
-	}
-	});
-	});
+			var menuItems = query('.menu-item', this.operationsDropMenu.domNode);
+			menuItems = menuItems.filter(function(menuItem) {
+				if(html.hasClass(menuItem, 'menu-item-hidden')) {
+					return false;
+					} else {
+					return true;
+				}
+			});
+			var firstItem = menuItems[0], lastItem = menuItems[menuItems.length - 1];
+			menuItems.forEach(function(menuItem, index) {
+				var isFirstItem = false, isLastItem = false;
+				var previousItem = menuItems[index - 1], nextItem = menuItems[index + 1];
+				if(index === 0) {
+					focusUtil.focus(menuItem);
+					isFirstItem = true;
+					} else if(index === menuItems.length - 1) {
+					isLastItem = true;
+				}
+				
+				if(!menuItem.hasBeenOpened) {
+					this.own(on(menuItem, 'keydown',
+						lang.hitch(this, this._onLayerListOperationsMenuItemKey,
+						previousItem, nextItem, firstItem, lastItem, isFirstItem, isLastItem)));
+						menuItem.hasBeenOpened = true;
+				}
+			}, this);
+		},
 		
+		_onLayerListOperationsMenuItemKey: function(previousItem,
+			nextItem, firstItem, lastItem, isFirstItem, isLastItem, e) {
+			//jshint unused:false
+			/*
+				if(e.keyCode === keys.TAB && !e.shiftKey) {
+				e.stopPropagation();
+				if(isLastItem) {
+				e.preventDefault();
+				}
+				this._enableNavMode(e);
+				} else if(e.keyCode === keys.TAB && e.shiftKey) {
+				e.stopPropagation();
+				if(isFirstItem) {
+				e.preventDefault();
+				}
+				this._enableNavMode(e);
+			} else */
+			if(e.keyCode === keys.DOWN_ARROW) {
+				e.stopPropagation();
+				e.preventDefault();
+				if(nextItem) {
+					focusUtil.focus(nextItem);
+					}/*else {
+					focusUtil.focus(firstItem);
+				}*/
+				} else if(e.keyCode === keys.UP_ARROW) {
+				e.stopPropagation();
+				e.preventDefault();
+				if(previousItem) {
+					focusUtil.focus(previousItem);
+					}/*else {
+					focusUtil.focus(lastItem);
+				}*/
+				} else if(e.keyCode === keys.HOME) {
+				e.stopPropagation();
+				e.preventDefault();
+				if(firstItem) {
+					focusUtil.focus(firstItem);
+				}
+				} else if(e.keyCode === keys.END) {
+				e.stopPropagation();
+				e.preventDefault();
+				if(lastItem) {
+					focusUtil.focus(lastItem);
+				}
+				} else if(e.keyCode === keys.ESCAPE || e.keyCode === keys.TAB) {
+				e.stopPropagation();
+				e.preventDefault();
+				focusUtil.focus(this.layerListOperations);
+				this.operationsDropMenu.closeDropMenu();
+			}
+		}
+	});
+});

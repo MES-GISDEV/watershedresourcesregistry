@@ -7,6 +7,7 @@ define({
     itemZoomTo: "Zoom to",
     itemTransparency: "Transparency",
     itemSetVisibilityRange: "Set visibility range",
+	itemRemove: "Remove Layer",  //FK Testing 2022-12-16
     itemTransparent: "Transparent",
     itemOpaque: "Opaque",
     itemMoveUp: "Move up",
