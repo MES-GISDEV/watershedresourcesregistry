@@ -109,10 +109,10 @@
       "name": "ShowSelectedCatchments",
       "dataType": "GPBoolean",
       "description": "Option to return selected catchments as a feature layer.",
-      "defaultValue": false,
+      "defaultValue": true,
       "category": "",
       "label": "Show Selected Catchments",
-      "visible": true,
+      "visible": false,
       "required": true,
       "tooltip": "ShowSelectedCatchments"
     },

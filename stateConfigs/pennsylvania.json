@@ -132,7 +132,7 @@
 				"version": "2.23",
 				"closeable": true,
 				"uri": "widgets/LinksDropDown/Widget",
-				"config": "configs/LinksDropDown/stateConfigs/configDE.json",
+				"config": "configs/LinksDropDown/stateConfigs/configPA.json",
 				"icon": "configs/LinksDropDown/icon.png"
 			},
 			{
@@ -461,7 +461,7 @@
                 "config": "widgets/Analysis/config.json"
             },
 			{
-				"id": "AddData_27",
+				"id": "AddData_PA",
 				"name": "AddData",
 				"label": "Add Data",
 				"index": 4,

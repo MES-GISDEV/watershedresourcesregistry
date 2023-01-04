@@ -483,13 +483,13 @@
                 "config": "widgets/Analysis/config.json"
 			},
 			{
-				"id": "AddData_27",
+				"id": "AddData_MD",
 				"name": "AddData",
 				"label": "Add Data",
 				"index": 4,
 				"version": "2.23",
 				"uri": "widgets/AddData/Widget",
-				"config": "configs/AddData/config__27.json"
+				"config": "configs/AddData/config_AddDataMD.json"
 			}
 		],
 		"groups": []

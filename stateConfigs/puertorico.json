@@ -132,7 +132,7 @@
 				"version": "2.23",
 				"closeable": true,
 				"uri": "widgets/LinksDropDown/Widget",
-				"config": "configs/LinksDropDown/stateConfigs/configDE.json",
+				"config": "configs/LinksDropDown/stateConfigs/configPR.json",
 				"icon": "configs/LinksDropDown/icon.png"
 			},
 			{

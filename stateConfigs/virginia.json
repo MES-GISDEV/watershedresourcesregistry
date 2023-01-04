@@ -132,7 +132,7 @@
 				"version": "2.23",
 				"closeable": true,
 				"uri": "widgets/LinksDropDown/Widget",
-				"config": "configs/LinksDropDown/stateConfigs/configDE.json",
+				"config": "configs/LinksDropDown/stateConfigs/configVA.json",
 				"icon": "configs/LinksDropDown/icon.png"
 			},
 			{
@@ -461,13 +461,13 @@
                 "config": "widgets/Analysis/config.json"
 			},
 			{
-				"id": "AddData_27",
+				"id": "AddData_VA",
 				"name": "AddData",
 				"label": "Add Data",
 				"index": 4,
 				"version": "2.23",
 				"uri": "widgets/AddData/Widget",
-				"config": "configs/AddData/config__27.json"
+				"config": "configs/AddData/config_AddDataVA.json"
 			}
 		],
 		"groups": []
