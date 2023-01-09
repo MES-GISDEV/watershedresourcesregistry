@@ -410,13 +410,13 @@
 		},
 		{
 			"id": "dLG",
-			"wrrID": "Pennsylvania_Hydric_Soils_2830",
+			"wrrID": "hydricsoils_4374",
 			"title": "Hydric Soils",
 			"category": "Land and Landscapes"
 		},
 		{
 			"id": "CSw",
-			"wrrID": "FarmlandSoils2021_2469",
+			"wrrID": "agriculturalsoils_6946",
 			"title": "Agricultural Soils",
 			"category": "Land and Landscapes"
 		},

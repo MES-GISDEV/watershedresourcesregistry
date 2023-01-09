@@ -384,6 +384,27 @@
 				"config": "configs/NearbyDischarges/config_5.json",
 				"icon": "configs/NearbyDischarges/icon.png",
 				"IsController": false
+			},
+			{
+				"id": "DAD",
+				"name": "GeoprocessingDAD",
+				"label": "Drainage Area Delineation",
+				"version": "2.9",
+				"uri": "widgets/GeoprocessingDAD/Widget",
+				"config": "configs/GeoprocessingDAD/config_widgets_Geoprocessing_Widget_45.json",
+				"icon": "widget/GeoprocessingDAD/images/icon.png",
+				"IsController": true
+			},
+			{
+				"id": "UDS",
+				"name": "GeoprocessingUDS",
+				"label": "Upstream/Downstream Search",
+				"version": "2.9",
+				"closeable": true,
+				"uri": "widgets/GeoprocessingUDS/Widget",
+				"config": "configs/GeoprocessingUDS/config_widgets_Geoprocessing_Widget_46.json",
+				"icon": "widget/GeoprocessingUDS/images/icon.png",
+				"IsController": true
 			}
 		],
 		"panel": {

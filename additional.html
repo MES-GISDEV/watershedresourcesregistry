@@ -43,12 +43,22 @@
 
                   var jumplink = group.children[j].childNodes[0],
                       num1 = group.children[j].childNodes[0].children[0],
-                      num2 = group.children[j].childNodes[0].children[1];
+                      num2 = group.children[j].childNodes[0].children[1],
+					  num3 = null;
+					  if (group.children[j].childNodes[0].children.length == 3)
+					  {
+						num3 = group.children[j].childNodes[0].children[2];
+					  }
 
                   jumplink.addEventListener("click", function (event) {
                       var int1 = parseInt(num1.innerText);
                       var int2 = parseInt(num2.innerText);
-                      var playtime = (int1*60)+int2;
+					  var playtime = (int1*60)+int2;
+					  if (num3 != null)
+					  {
+						var int3 = parseInt(num3.innerText);
+						playtime = (int1*3600)+(int2*60)+int3;
+					  }
                       event.preventDefault();
                       myvideo.play();
                       myvideo.pause();
@@ -142,15 +152,15 @@
 					<li><a style="cursor:pointer; color:blue;"><b>27</b>:<b>51</b></a> “Ecological Lift Expectations and Site Selection: An Approach to Estimating Ecological Lift (and <br>
 						Mitigation Credits) in Maryland” by Nick Ozburn, USACE, Baltimore District </li>
 					<li><a style="cursor:pointer; color:blue;"><b>45</b>:<b>35</b></a> Break </li>
-					<li><a style="cursor:pointer; color:blue;"><b>61</b>:<b>00</b></a> “USGS Floodplain and Channel Evaluation Tool (FACET): Current Applications and Ongoing Development”<br>
+					<li><a style="cursor:pointer; color:blue;"><b>01</b>:<b>01</b>:<b>27</b></a> “USGS Floodplain and Channel Evaluation Tool (FACET): Current Applications and Ongoing Development”<br>
 						by Marina Metes, USGS MD-DE-DC Water Sciences Center </li>
-					<li><a style="cursor:pointer; color:blue;"><b>90</b>:<b>00</b></a> Discussion about Stream Stability, Facet, and Updating the WRR Spatial Analyses </li>
-					<li><a style="cursor:pointer; color:blue;"><b>109</b>:<b>00</b></a> Break </li>
-					<li><a style="cursor:pointer; color:blue;"><b>130</b>:<b>00</b></a> “Using the Recovery Potential Screening Tool to Support Planning and Prioritization” by Emily Cira and Andy Somor </li>
-					<li><a style="cursor:pointer; color:blue;"><b>155</b>:<b>00</b></a> “EnviroAtlas” by Molly Jenkins, ORISE Research Participant, ORD </li>
-					<li><a style="cursor:pointer; color:blue;"><b>182</b>:<b>00</b></a> Discussion about Spatial Analyses, connecting with states </li>
+					<li><a style="cursor:pointer; color:blue;"><b>01</b>:<b>30</b>:<b>00</b></a> Discussion about Stream Stability, Facet, and Updating the WRR Spatial Analyses </li>
+					<li><a style="cursor:pointer; color:blue;"><b>01</b>:<b>49</b>:<b>25</b></a> Break </li>
+					<li><a style="cursor:pointer; color:blue;"><b>02</b>:<b>11</b>:<b>30</b></a> “Using the Recovery Potential Screening Tool to Support Planning and Prioritization” by Emily Cira and Andy Somor </li>
+					<li><a style="cursor:pointer; color:blue;"><b>02</b>:<b>35</b>:<b>03</b></a> “EnviroAtlas” by Molly Jenkins, ORISE Research Participant, ORD </li>
+					<li><a style="cursor:pointer; color:blue;"><b>03</b>:<b>02</b>:<b>05</b></a> Discussion about Spatial Analyses, connecting with states </li>
 				</ul>
-			<br>
+				<br>
 					<h5>1/26/2022 - WRR Powerhour: Focus on EPA’s EnviroAtlas</h5>
 					<video width="640" height="360" controls>
 						<source src="videos/WRR Powerhour_20220126_Meeting.mp4" type="video/mp4">
@@ -307,9 +317,7 @@
                 </ul>
 				<br><br>			
             </div>
-        </div>
-
-       
+        </div>      
     </div>
     <!-- /.container -->
 	
