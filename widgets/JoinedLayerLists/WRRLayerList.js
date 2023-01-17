@@ -85,6 +85,32 @@ function (declare,
 			console.log('postCreate');
 		},
 		
+		//FK 2023-01-13 Testing
+		onReceiveData: function(name, widgetId, data, historyData) {
+			if (data.message == 'Turn off WRR Checkbox - Layer List Call')
+			{
+				var someThing = data.layerID
+				var layObj = this.layerStore.query({ wrrID: someThing });
+				if (layObj && layObj.length > 0) {
+					var chkBox = dojo.byId(layObj[0].id);
+					chkBox.checked = false;
+					
+					var layerObj = this.layerStore.query({ wrrID: someThing });
+					if (layerObj.length > 0) {
+						var layer = this.map.getLayer(layerObj[0].wrrID);
+						if (layer) {
+							layer.setVisibility(false);
+						}
+					}
+					
+					this.publishData({
+						message: 'Hide layer - WRR call',
+						layerID: someThing
+					});
+				}
+			}
+		},
+		
 		startup: function () {
 			///******
 			this.inherited(arguments);
@@ -414,14 +440,14 @@ function (declare,
 						}
 						console.log('layer vis change');
 					})));
-					}
-					}
-			},
-			
-			//////Start of functions with LayerListView///////
-			
-			_hideCurrentPopupMenu: function() {
-				if (this.currentPopupMenu && this.currentPopupMenu.state === 'opened') {
+				}
+			}
+		},
+		
+		//////Start of functions with LayerListView///////
+		
+		_hideCurrentPopupMenu: function() {
+			if (this.currentPopupMenu && this.currentPopupMenu.state === 'opened') {
 				this.currentPopupMenu.closeDropMenu();
 			}
 		},
@@ -683,4 +709,4 @@ function (declare,
 	});
 	
 	
-});												
+});																						

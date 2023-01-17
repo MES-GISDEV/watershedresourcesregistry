@@ -186,24 +186,24 @@ function(BaseWidget, declare, lang, array, html, dom, on,
 			
 			
 			/*FK -- I don't think I need this, so I'm thinking Widget.js can stay as-is
-			
-			var that = this;
-			setTimeout(function() {
+				
+				var that = this;
+				setTimeout(function() {
 				var layerInfo = layerInfoArray.shift();				
 				query("[class~='layer-tr-node-" + layerInfo.id + "']", this.domNode).forEach(function(layerTitleDivIdDomNode) {
-					try {
-						if (layerInfo.isVisible()) {
-							html.removeClass(layerTitleDivIdDomNode, 'not-visible');
-							} else {
-							html.addClass(layerTitleDivIdDomNode, 'not-visible');
-						}
-						} catch (err) {
-						console.warn(err.message);
-					}
+				try {
+				if (layerInfo.isVisible()) {
+				html.removeClass(layerTitleDivIdDomNode, 'not-visible');
+				} else {
+				html.addClass(layerTitleDivIdDomNode, 'not-visible');
+				}
+				} catch (err) {
+				console.warn(err.message);
+				}
 				}, that);
 				
 				if(layerInfoArray.length > 0) {
-					setTimeout(arguments.callee, 30); // jshint ignore:line
+				setTimeout(arguments.callee, 30); // jshint ignore:line
 				}
 			}, 30);*/
 		},
@@ -214,196 +214,340 @@ function(BaseWidget, declare, lang, array, html, dom, on,
 			//domConstruct.empty(this.layerListTable);
 			if (this.layerListView && this.layerListView.destroyRecursive) {
 				this.layerListView.destroyRecursive();
-				}
-				},
+			}
+		},
+		
+		_refresh: function() {
+			this._clearLayers();
+			this.showLayers();
+		},
+		
+		/****************
+			* Event
+		***************/
+		bindEvents: function() {
+			// summary:
+			//    bind events are listened by this module
+			this.own(on(this.operLayerInfos,
+				'layerInfosChanged',
+			lang.hitch(this, this._onLayerInfosChanged)));
 			
-			_refresh: function() {
-				this._clearLayers();
-				this.showLayers();
-			},
-			
-			/****************
-				* Event
-			***************/
-			bindEvents: function() {
-				// summary:
-				//    bind events are listened by this module
+			if(this.config.showBasemap) {
 				this.own(on(this.operLayerInfos,
-					'layerInfosChanged',
+					'basemapLayerInfosChanged',
 				lang.hitch(this, this._onLayerInfosChanged)));
-				
-				if(this.config.showBasemap) {
-					this.own(on(this.operLayerInfos,
-						'basemapLayerInfosChanged',
-					lang.hitch(this, this._onLayerInfosChanged)));
-				}
-				
-				this.own(on(this.operLayerInfos,
-					'tableInfosChanged',
-				lang.hitch(this, this._onTableInfosChanged)));
-				
-				this.own(this.operLayerInfos.on('layerInfosIsVisibleChanged',
-				lang.hitch(this, this._onLayerInfosIsVisibleChanged)));
-				
-				this.own(on(this.operLayerInfos,
-					'layerInfosReorder',
-				lang.hitch(this, this._onLayerInfosReorder)));
-				
-				this.own(on(this.map,
-					'zoom-end',
-				lang.hitch(this, this._onZoomEnd)));
-				
-				this.own(on(this.operLayerInfos,
-					'layerInfosRendererChanged',
-				lang.hitch(this, this._onLayerInfosRendererChanged)));
-				
-				this.own(on(this.operLayerInfos,
-					'layerInfosOpacityChanged',
-				lang.hitch(this, this._onLayerInfosOpacityChanged)));
-				
-				this.own(on(this.operLayerInfos,
-					'layerInfosScaleRangeChanged',
-				lang.hitch(this, this._onLayerInfosScaleRangeChanged)));
-			},
+			}
 			
-			_onLayerInfosChanged: function(/*layerInfo, changedType*/) {
-				//udpates layerFilter.isValid to false first
-				this.layerFilter.cancelFilter();
-				this.layerListView.refresh();
-				//this.showLayers();//FK Testing 
-			},
+			this.own(on(this.operLayerInfos,
+				'tableInfosChanged',
+			lang.hitch(this, this._onTableInfosChanged)));
 			
-			_onTableInfosChanged: function(/*tableInfoArray, changedType*/) {
-				//udpates layerFilter.isValid to false first
-				this.layerFilter.cancelFilter();
-				this.layerListView.refresh();
-			},
+			this.own(this.operLayerInfos.on('layerInfosIsVisibleChanged',
+			lang.hitch(this, this._onLayerInfosIsVisibleChanged)));
 			
-			_onLayerInfosIsVisibleChanged: function(changedLayerInfos) {
-				if(this._denyLayerInfosIsVisibleChangedResponseOneTime) {
-					this._denyLayerInfosIsVisibleChangedResponseOneTime = false;
-					} else {
-					array.forEach(changedLayerInfos, function(layerInfo) {
-						query("[class~='visible-checkbox-" + layerInfo.id + "']", this.domNode)
-						.forEach(function(visibleCheckBoxDomNode) {
-							var visibleCheckBox = registry.byNode(visibleCheckBoxDomNode);
-							if(layerInfo.isVisible()) {
-								visibleCheckBox.check();
-								} else {
-								visibleCheckBox.uncheck();
-							}
-						}, this);
-						
+			this.own(on(this.operLayerInfos,
+				'layerInfosReorder',
+			lang.hitch(this, this._onLayerInfosReorder)));
+			
+			this.own(on(this.map,
+				'zoom-end',
+			lang.hitch(this, this._onZoomEnd)));
+			
+			this.own(on(this.operLayerInfos,
+				'layerInfosRendererChanged',
+			lang.hitch(this, this._onLayerInfosRendererChanged)));
+			
+			this.own(on(this.operLayerInfos,
+				'layerInfosOpacityChanged',
+			lang.hitch(this, this._onLayerInfosOpacityChanged)));
+			
+			this.own(on(this.operLayerInfos,
+				'layerInfosScaleRangeChanged',
+			lang.hitch(this, this._onLayerInfosScaleRangeChanged)));
+		},
+		
+		_onLayerInfosChanged: function(/*layerInfo, changedType*/) {
+			//udpates layerFilter.isValid to false first
+			this.layerFilter.cancelFilter();
+			this.layerListView.refresh();
+			//this.showLayers();//FK Testing 
+		},
+		
+		_onTableInfosChanged: function(/*tableInfoArray, changedType*/) {
+			//udpates layerFilter.isValid to false first
+			this.layerFilter.cancelFilter();
+			this.layerListView.refresh();
+		},
+		
+		_onLayerInfosIsVisibleChanged: function(changedLayerInfos) {
+			if(this._denyLayerInfosIsVisibleChangedResponseOneTime) {
+				this._denyLayerInfosIsVisibleChangedResponseOneTime = false;
+				} else {
+				array.forEach(changedLayerInfos, function(layerInfo) {
+					query("[class~='visible-checkbox-" + layerInfo.id + "']", this.domNode)
+					.forEach(function(visibleCheckBoxDomNode) {
+						var visibleCheckBox = registry.byNode(visibleCheckBoxDomNode);
+						if(layerInfo.isVisible()) {
+							visibleCheckBox.check();
+							} else {
+							visibleCheckBox.uncheck();
+						}
 					}, this);
-				}
-			},
+					
+				}, this);
+			}
+		},
+		
+		_onZoomEnd: function() {
+			var layerInfoArray = [];
+			this.operLayerInfos.traversal(lang.hitch(this, function(layerInfo) {
+				layerInfoArray.push(layerInfo);
+			}));
 			
-			_onZoomEnd: function() {
+			var that = this;
+			setTimeout(function() {
+				var layerInfo = layerInfoArray.shift();
+				query("[class~='layer-title-div-" + layerInfo.id + "']", this.domNode)
+				.forEach(function(layerTitleDivIdDomNode) {
+					try {
+						if (layerInfo.isInScale()) {
+							html.removeClass(layerTitleDivIdDomNode, 'grayed-title');
+							} else {
+							html.addClass(layerTitleDivIdDomNode, 'grayed-title');
+						}
+						} catch (err) {
+						console.warn(err.message);
+					}
+				}, that);
+				
+				if(layerInfoArray.length > 0) {
+					setTimeout(arguments.callee, 30); // jshint ignore:line
+				}
+			}, 30);
+			
+			
+		},
+		
+		_onLayerInfosReorder: function() {
+			//if(this._denyLayerInfosReorderResponseOneTime) {
+			//  // denies one time
+			//  this._denyLayerInfosReorderResponseOneTime = false;
+			//} else {
+			//  this._refresh();
+			//}
+			this.layerFilter.cancelFilter();
+			this.layerListView.refresh();
+		},
+		
+		_onLayerInfosRendererChanged: function(changedLayerInfos) {
+			try {
+				array.forEach(changedLayerInfos, function(layerInfo) {
+					this.layerListView.redrawLegends(layerInfo);
+				}, this);
+				} catch (err) {
+				this._refresh();
+			}
+		},
+		
+		_onLayerInfosOpacityChanged: function(changedLayerInfos) {
+			array.forEach(changedLayerInfos, function(layerInfo) {
+				var opacity = layerInfo.layerObject.opacity === undefined ? 1 : layerInfo.layerObject.opacity;
+				var contentDomNode = query("[layercontenttrnodeid='" + layerInfo.id + "']", this.domNode)[0];
+				query(".legends-div.jimu-legends-div-flag img", contentDomNode).style("opacity", opacity);
+			}, this);
+			
+			if(this._denyLayerInfosOpacityResponseOneTime) {
+				// denies one time
+				this._denyLayerInfosOpacityResponseOneTime = false;
+				} else {
+				this.layerListView._hideCurrentPopupMenu();
+			}
+		},
+		
+		_onLayerInfosScaleRangeChanged: function(changedLayerInfos) {
+			array.forEach(changedLayerInfos, function(layerInfo) {
 				var layerInfoArray = [];
-				this.operLayerInfos.traversal(lang.hitch(this, function(layerInfo) {
-					layerInfoArray.push(layerInfo);
+				layerInfo.traversal(lang.hitch(this, function(subLayerInfo) {
+					layerInfoArray.push(subLayerInfo);
 				}));
 				
 				var that = this;
+				var currentIndex = 0;
+				var steps = 10;
 				setTimeout(function() {
-					var layerInfo = layerInfoArray.shift();
-					query("[class~='layer-title-div-" + layerInfo.id + "']", this.domNode)
-					.forEach(function(layerTitleDivIdDomNode) {
-						try {
-							if (layerInfo.isInScale()) {
-								html.removeClass(layerTitleDivIdDomNode, 'grayed-title');
-								} else {
-								html.addClass(layerTitleDivIdDomNode, 'grayed-title');
+					var batchLayerInfos = layerInfoArray.slice(currentIndex, currentIndex + steps);
+					currentIndex += steps;
+					array.forEach(batchLayerInfos, function(layerInfo) {
+						query("[class~='layer-title-div-" + layerInfo.id + "']", this.domNode)
+						.forEach(function(layerTitleDivIdDomNode) {
+							try {
+								if (layerInfo.isInScale()) {
+									html.removeClass(layerTitleDivIdDomNode, 'grayed-title');
+									} else {
+									html.addClass(layerTitleDivIdDomNode, 'grayed-title');
+								}
+								} catch (err) {
+								console.warn(err.message);
 							}
-							} catch (err) {
-							console.warn(err.message);
-						}
-					}, that);
+						}, that);
+					});
 					
-					if(layerInfoArray.length > 0) {
+					if(layerInfoArray.length > currentIndex) {
 						setTimeout(arguments.callee, 30); // jshint ignore:line
 					}
 				}, 30);
-				
-				
-			},
+			}, this);
+		},
+		
+		onAppConfigChanged: function(appConfig, reason, changedData){
+			/*jshint unused: false*/
+			this.appConfig = appConfig;
+		},
+		
+		//FK added function based on EnviroAtlas 2022-01-12
+		_onRemoveLayersClick: function() {
+			var that = this;
+			this.map.graphics.clear();
+			var currentLayer = null;
+			var graphicsLayerIDs = [];
 			
-			_onLayerInfosReorder: function() {
-				//if(this._denyLayerInfosReorderResponseOneTime) {
-				//  // denies one time
-				//  this._denyLayerInfosReorderResponseOneTime = false;
-				//} else {
-				//  this._refresh();
-				//}
-				this.layerFilter.cancelFilter();
-				this.layerListView.refresh();
-			},
+			//get and read the WRR Layer List of the respective state
+			var currentLocation = window.location;
+			var currentSearch = currentLocation.search;
+			var currentSearchLength = currentSearch.length;
+			//using the '?config=stateConfigs/[state].json' we can pull the stateConfigs file
+			var configFileLocation = './' + currentSearch.substr(8, currentSearchLength);
 			
-			_onLayerInfosRendererChanged: function(changedLayerInfos) {
-				try {
-					array.forEach(changedLayerInfos, function(layerInfo) {
-						this.layerListView.redrawLegends(layerInfo);
-					}, this);
-					} catch (err) {
-					this._refresh();
+			//open the state configs file, this will indicate where the WRR Layer list
+			//is for the respective state
+			var firstWrrRequest = new XMLHttpRequest();
+			firstWrrRequest.open('GET', configFileLocation, false)
+			firstWrrRequest.send(null)
+			var whatINeedToRead = JSON.parse(firstWrrRequest.responseText); 
+			var myPath = '';
+			var testForLength = whatINeedToRead.widgetPool.widgets.length;
+			for (let i = 0; i < testForLength; i++) {
+				if (whatINeedToRead.widgetPool.widgets[i].label = 'WRR Layer List')
+				{
+					myPath = './' + whatINeedToRead.widgetPool.widgets[i].config;
+					break;
 				}
-			},
-			
-			_onLayerInfosOpacityChanged: function(changedLayerInfos) {
-				array.forEach(changedLayerInfos, function(layerInfo) {
-					var opacity = layerInfo.layerObject.opacity === undefined ? 1 : layerInfo.layerObject.opacity;
-					var contentDomNode = query("[layercontenttrnodeid='" + layerInfo.id + "']", this.domNode)[0];
-					query(".legends-div.jimu-legends-div-flag img", contentDomNode).style("opacity", opacity);
-				}, this);
-				
-				if(this._denyLayerInfosOpacityResponseOneTime) {
-					// denies one time
-					this._denyLayerInfosOpacityResponseOneTime = false;
-					} else {
-					this.layerListView._hideCurrentPopupMenu();
-				}
-			},
-			
-			_onLayerInfosScaleRangeChanged: function(changedLayerInfos) {
-				array.forEach(changedLayerInfos, function(layerInfo) {
-					var layerInfoArray = [];
-					layerInfo.traversal(lang.hitch(this, function(subLayerInfo) {
-						layerInfoArray.push(subLayerInfo);
-					}));
-					
-					var that = this;
-					var currentIndex = 0;
-					var steps = 10;
-					setTimeout(function() {
-						var batchLayerInfos = layerInfoArray.slice(currentIndex, currentIndex + steps);
-						currentIndex += steps;
-						array.forEach(batchLayerInfos, function(layerInfo) {
-							query("[class~='layer-title-div-" + layerInfo.id + "']", this.domNode)
-							.forEach(function(layerTitleDivIdDomNode) {
-								try {
-									if (layerInfo.isInScale()) {
-										html.removeClass(layerTitleDivIdDomNode, 'grayed-title');
-										} else {
-										html.addClass(layerTitleDivIdDomNode, 'grayed-title');
-									}
-									} catch (err) {
-									console.warn(err.message);
-								}
-							}, that);
-						});
-						
-						if(layerInfoArray.length > currentIndex) {
-							setTimeout(arguments.callee, 30); // jshint ignore:line
-						}
-					}, 30);
-				}, this);
-			},
-			
-			onAppConfigChanged: function(appConfig, reason, changedData){
-				/*jshint unused: false*/
-				this.appConfig = appConfig;
 			}
 			
+			//open another XML file so we can read all the layers from myPath above
+			var wrrRequest = new XMLHttpRequest();
+			wrrRequest.open('GET', myPath, false)
+			wrrRequest.send(null)
+			var myJSONObject = JSON.parse(wrrRequest.responseText);
+			
+			/*Create a loop with the layers on the Active Layer List, if the layerId 
+				there matches a name in WRR Layer List the list, stop for now
+			for now else hide them*/
+			var removeTheseLayers = []; //array for layers to be removed
+			var hideTheseLayers = [];
+			for (j = 0, jl = this.map.graphicsLayerIds.length; j < jl; j++)
+			{	
+				var layerID = this.map.graphicsLayerIds[j];
+				var addToRemoveList = true;
+				var wrrLayersLength = myJSONObject.layers.length;
+				//go through all the layers/blocks in the WRR stateConfig config json file
+				//if the layer to be deleted is included in the config list don't outright
+				//delete it, we need to hide it because of the WRR Layer List and making sure
+				//the two layer lists don't get out of sync.
+				for (let i = 0; i < wrrLayersLength; i++) 
+				{
+					if (myJSONObject.layers[i].wrrID == layerID)
+					{
+						addToRemoveList = false;
+						break
+					}
+				}
+				
+				if (addToRemoveList)
+				{
+					//not in WRR List, go ahead and remove
+					removeTheseLayers.push(layerID);
+				}		
+				else //we are going to hide the layer since it's tied to the WRR list
+				{
+					//Testing, goal is to hide layer, then give it its own message
+					hideTheseLayers.push(layerID);
+				}
+			}		
+			for (j = 0; j < removeTheseLayers.length; j++)
+			{
+				layerToRemove = this.map.getLayer(removeTheseLayers[j]);
+				if (layerToRemove != null) 
+				{
+					this.map.removeLayer(layerToRemove);
+				}
+			}
+			for (j = 0; j < hideTheseLayers.length; j++)
+			{
+				layerToHide = this.map.getLayer(hideTheseLayers[j]);
+				if (layerToHide != null)
+				{
+					this.publishData({
+						/*Call message to WRR Layer List tool. Turn off checkbox 
+						-> hiding the layer on active layer list */
+						message: 'Turn off WRR Checkbox - Layer List Call',
+						layerID: layerToHide.id
+					});
+				}
+			}
+			/*I'd really like to make a loop from the above, I just don't know how
+			right away, let's at least get remove the layer sets for now*/
+			//Recycle old arrays for detecting layer sets to remove and hide
+			removeTheseLayers = []
+			hideTheseLayers = []
+			for (j = 0, jl = this.map.layerIds.length; j < jl; j++)
+			{
+				var layerID = this.map.layerIds[j];
+				var addToRemoveList = true;
+				var wrrLayersLength = myJSONObject.layers.length;
+				for (let i = 0; i < wrrLayersLength; i++) 
+				{
+					if (myJSONObject.layers[i].wrrID == layerID)
+					{
+						addToRemoveList = false;
+						break
+					}
+				}
+				
+				if (addToRemoveList)
+				{
+					removeTheseLayers.push(layerID);
+				}		
+				else
+				{
+					hideTheseLayers.push(layerID);
+				}
+			}
+			for (j = 0; j < removeTheseLayers.length; j++)
+			{
+				layerToRemove = this.map.getLayer(removeTheseLayers[j]);
+				if (layerToRemove != null) 
+				{
+					//prevent basemap layers from disappearing
+					if (layerToRemove._basemapGalleryLayerType === 'undefined')
+					{
+						this.map.removeLayer(layerToRemove);
+					}
+				}
+			}
+			for (j = 0; j < hideTheseLayers.length; j++)
+			{
+				layerToHide = this.map.getLayer(hideTheseLayers[j]);
+				if (layerToHide != null)
+				{
+					this.publishData({
+						message: 'Turn off WRR Checkbox - Layer List Call',
+						layerID: layerToHide.id
+					});
+				}
+			}
+		}
+		
 	});
 	
 	return clazz;

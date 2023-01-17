@@ -85,7 +85,7 @@ define([
 			this._initOperations();
 		},
 		
-		/*FK 2022-12-28, if there is data coming from WRRLayer List (\widgets\LayerList\LayerListView.js)
+		/*FK 2022-12-28, if there is data coming from WRRLayer List (\widgets\JoinedLayerLists\WRRLayerList.js)
 			and it has a message of 'Hide layer - WRR call', pass the layer id in question
 		and try to turn it off*/
 		onReceiveData: function(name, widgetId, data, historyData) {
@@ -100,7 +100,6 @@ define([
 				var nxtSibling = mainElm.nextSibling;
 				var nxtSiblingStyleLocation = nxtSibling.childNodes[0].childNodes[0];
 				nxtSiblingStyleLocation.style.display = 'none';
-				
 				
 				//Collapse main box	
 				var partToCollapse = mainElm.childNodes[0].childNodes[0];
@@ -1143,6 +1142,9 @@ define([
 					}, {
 					key: "collapseAlllayers",
 					label: this.nls.collapseAlllayers
+					}, {
+					key: "removeAllLayers",
+					label: this.nls.removeAllLayers
 				}],
 				box: this.layerListWidget.domNode.parentNode
 			}).placeAt(this.layerListOperations);
@@ -1195,6 +1197,12 @@ define([
 				return;
 				case 'collapseAlllayers':
 				this.foldOrUnfoldAllLayers(true);
+				/*FK Added remove all layers 2022-01-12
+					NOTICE: Main code for this is going to be on Widget.js
+					immediately inside LayerList (also respective HTML got
+				edited*/
+				case 'removeAllLayers':
+				document.getElementById("butRemoveAllLayers").click();        
 				return;
 				default:
 				return;
