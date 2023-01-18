@@ -125,7 +125,7 @@ function (declare, lang, array, html, baseFx, Deferred, all, on, topic, when,
 			not automatically close, the user can still close them manually*. I added
 		the keepWidgetsOpen.indexof "filter" as the main part of preventing closure*/
 		closeAllPanelsInGroup: function (groupId){
-			var keepWidgetsOpen = ["Print", "Draw and Measure", "Active Layer List"];
+			var keepWidgetsOpen = ["Print", "Draw and Measure", "Active Layer List", "Basemap Gallery"];
 			for(var i = 0; i < this.panels.length; i++){
 				if(this.panels[i].gid === groupId){
 					var myLabel = this.panels[i].label;
