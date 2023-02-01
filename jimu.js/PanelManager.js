@@ -446,7 +446,7 @@ function (declare, lang, array, html, baseFx, Deferred, all, on, topic, when,
 						borderBottomRightRadius: 0
 					}
 				};
-				}else if(panel.windowState === 'minimized'){
+			}else if(panel.windowState === 'minimized'){
 				var minimizedPanels = this.panels.filter(function(p){
 					return p.windowState === 'minimized' && p.state !== 'closed' && p.id !== panel.id;
 				});
@@ -455,7 +455,7 @@ function (declare, lang, array, html, baseFx, Deferred, all, on, topic, when,
 				if(minimizedPanels.some(function(p){
 					return p._mobileBottom === 0;
 				})){
-				bottom = panel.titleHeight;
+					bottom = panel.titleHeight;
 				}
 				
 				panel._mobileBottom = bottom;
@@ -476,7 +476,7 @@ function (declare, lang, array, html, baseFx, Deferred, all, on, topic, when,
 							borderBottomRightRadius: 0
 						}
 					};
-					}else{//landscape, stay at right, half width
+				}else{//landscape, stay at right, half width
 					return {
 						left: box.w - box.w / 2,
 						right: 0,
@@ -516,7 +516,7 @@ function (declare, lang, array, html, baseFx, Deferred, all, on, topic, when,
 							borderBottomRightRadius: 0
 						}
 					};
-					}else{//landscape, stay at right, half width
+				}else{//landscape, stay at right, half width
 					return {
 						left: box.w - box.w / 2,
 						right: 0,

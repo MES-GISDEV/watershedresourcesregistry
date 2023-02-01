@@ -106,7 +106,9 @@ define(['dojo/_base/declare',
           evt.stopPropagation();
         }
         var posInfo = this._getPositionInfo();
-        if (posInfo.isRunInMobile) {
+        //FK 2022-01-27 I am removing the condition for this filter, keeping old code intact
+        //if (posInfo.isRunInMobile) {
+        if (1 == 1){
           if (this.windowState === 'minimized') {
             html.removeClass(this.foldableNode, 'fold-up');
             html.addClass(this.foldableNode, 'fold-down');
@@ -120,7 +122,19 @@ define(['dojo/_base/declare',
           }
           //set max btn's label
           html.setAttr(this.maxNode, 'aria-label', this.headerNls.maxWindow);
-          this._setMobilePosition();
+          //FK 2023-01-27 see below with minimized window state
+          if (this.windowState === 'minimized')
+          {
+            //this._setMobilePosition(); //What original code called for
+
+            //New block that minimizes and maintains functionality
+            this._setDesktopMinPosition(posInfo.position) 
+          }
+          else
+          {
+            this._setDesktopPosition(posInfo.position);
+          }
+          
         }
       },
 
@@ -128,6 +142,11 @@ define(['dojo/_base/declare',
         //avoid to touchEvent pass through the closeBtn
         evt.preventDefault();
         evt.stopPropagation();
+
+        //FK 2023-01-27 If user closes box, I want to have fully restored box
+        //when opening again (at least for now because of functionality issues)
+        var posInfo = this._getPositionInfo();
+        this._setDesktopPosition(posInfo.position);
 
         this.panelManager.closePanel(this);
       },
@@ -155,7 +174,7 @@ define(['dojo/_base/declare',
         this._originalBox = {
           w: this.position.width || 400,
           h: this.position.height || 410,
-          l: this.position.left || 0,
+          l: this.position.left || 0,  //FK Thank you for having this!
           t: this.position.top || 0
         };
       },
@@ -240,8 +259,21 @@ define(['dojo/_base/declare',
       _switchToDesktopUI: function() {
         html.removeClass(this.titleNode, 'title-full');
         html.addClass(this.titleNode, 'title-normal');
-        html.setStyle(this.foldableNode, 'display', 'none');
+        //FK 2023-01-26 Commented out code referring to hiding foldable icon
+        //make sure icon is always there
+        //html.setStyle(this.foldableNode, 'display', 'none');
+        html.setStyle(this.foldableNode, 'display', 'block');
         html.setStyle(this.maxNode, 'display', 'none');
+
+        if (this.windowState === 'normal') {
+          html.removeClass(this.foldableNode, 'fold-up');
+          html.addClass(this.foldableNode, 'fold-down');
+          html.setAttr(this.foldableNode, 'aria-label', this.headerNls.foldWindow);
+        } else {
+          html.removeClass(this.foldableNode, 'fold-down');
+          html.addClass(this.foldableNode, 'fold-up');
+          html.setAttr(this.foldableNode, 'aria-label', this.headerNls.unfoldWindow);
+        }
       },
 
       resize: function(tmp) {
@@ -392,11 +424,42 @@ define(['dojo/_base/declare',
         }
 
         html.setStyle(this.domNode, {
+          /*FK 2023-02-01 This may not be perfect. I think we have something functional
+          at this point though. I have adjusted the top and height positions, this allows
+          the form to be minimized on the bottom right and come back where it belongs*/
+
+          //Original code, I commented out what was keeping the widgets from appearing
+          //"normal" when restoring from minimizing
           left: position.left + 'px',
           right: 'auto',
-          top: position.top + 'px',
+          //top: position.top + 'px',
           width: (position.width || this.position.width || this._originalBox.w) + 'px',
-          height: (position.height || this.position.height || this._originalBox.h) + 'px'
+          //height: (position.height || this.position.height || this._originalBox.h) + 'px'
+
+
+          //Adjusted code, adjustments based on above attributes
+          top: (this._originalBox.t + 50 || position.top) + 'px',
+          height: (this._originalBox.h || position.height) + 'px'
+          //FK End adjustments
+        });
+      },
+
+      //FK 2023-01-27, _setDesktopMinPosition is a whole new block I created
+      _setDesktopMinPosition: function(position) {
+        if(!window.appInfo.isRunInMobile && this.domNode &&
+          this.domNode.parentNode !== html.byId(jimuConfig.mapId)) {
+          html.place(this.domNode, jimuConfig.mapId);
+        }
+
+        html.setStyle(this.domNode, {
+          //Set "minimized box" close to lower right hand corner, but err on
+          //side of caution so that box is outside user's view
+          right: '5px',
+          left: 'auto',
+          bottom: '5px',
+          top: 'auto',
+          width: (this._originalBox.w) + 'px',
+          height: '35px'
         });
       },
 
