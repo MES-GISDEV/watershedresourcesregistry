@@ -25,6 +25,7 @@ define({
     collapseAlllayers: "Collapse all layers",
     turnAllLabelsOff: "Turn all labels off",
     turnAllLabelsOn: "Turn all labels on",
+	removeAllLayers: "Remove all layers", //FK added on 2023-01-12
     showLabels: "Show labels",
     hideLables: "Hide labels",
     keyword: "Keyword",
