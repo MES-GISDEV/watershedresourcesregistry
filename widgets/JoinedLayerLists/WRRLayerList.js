@@ -59,6 +59,7 @@ define(['dojo/_base/declare',
 	  html,
 	  DropDownButton, DropDownMenu, MenuItem, PopupMenu2) {
 		
+<<<<<<< HEAD
       //To create a widget, you need to derive from BaseWidget.
       return declare([_WidgetBase, _TemplatedMixin], {
           templateString: template,
@@ -162,6 +163,132 @@ define(['dojo/_base/declare',
               	if(collapseButton.innerHTML == "Collapse All Folders"){
               		collapseButton.innerHTML = "Expand All Folders";
 
+=======
+		////*********
+		_denyLayerInfosReorderResponseOneTime: null,
+		_denyLayerInfosIsVisibleChangedResponseOneTime: null,
+		
+		//  A module is responsible for show layers list
+		layerListView: null,
+		//  operational layer infos
+		operLayerInfos: null,
+		layerInfo: null,
+		
+		//methods to communication with app container:
+		postCreate: function () {
+			this.inherited(arguments);
+			console.log('postCreate');
+		},
+		
+		//FK 2023-01-13 Testing
+		onReceiveData: function(name, widgetId, data, historyData) {
+			if (data.message == 'Turn off WRR Checkbox - Layer List Call')
+			{
+				var someThing = data.layerID
+				var layObj = this.layerStore.query({ wrrID: someThing });
+				if (layObj && layObj.length > 0) {
+					var chkBox = dojo.byId(layObj[0].id);
+					chkBox.checked = false;
+					
+					var layerObj = this.layerStore.query({ wrrID: someThing });
+					if (layerObj.length > 0) {
+						var layer = this.map.getLayer(layerObj[0].wrrID);
+						if (layer) {
+							layer.setVisibility(false);
+						}
+					}
+					
+					this.publishData({
+						message: 'Hide layer - WRR call',
+						layerID: someThing
+					});
+				}
+			}
+		},
+		
+		startup: function () {
+			///******
+			this.inherited(arguments);
+			NlsStrings.value = this.nls;
+			this._denyLayerInfosReorderResponseOneTime = false;
+			this._denyLayerInfosIsVisibleChangedResponseOneTime = false;
+			
+			if (!this.loading) {
+				this.loading = new LoadingIndicator();
+			}
+			//set up the layer store for this config and then use it
+			this.wrrStore = new Memory({ data: this.config.layers });
+			this.appConfig.wrrStore = this.wrrStore;
+			
+			this.loading.placeAt(this.mainDiv);
+			this._showLoading();
+			
+			this.wm = WidgetManager.getInstance();
+			
+			esri.config.defaults.io.corsDetection = false;
+			
+			
+			///************
+			LayerInfos.getInstance(this.map, this.map.itemInfo)
+			.then(lang.hitch(this, function(operLayerInfos) {
+				this.operLayerInfos = operLayerInfos;
+				this.showLayers();
+				this.bindEvents();
+				dom.setSelectable(this.layersSection, false);
+			}));
+			
+			if (this.appConfig.wrrStore) {
+				this.layerStore = this.appConfig.wrrStore;
+				this._buildCategoryList(this.appConfig.wrrStore);
+			}
+			
+			console.log('startup');
+		},
+		
+		_buildCategoryList: function (items) {
+			//this.WRRLayerListDiv.innerHTML = "";
+			this.layerListBody.innerHTML = "";
+			
+			var categories = this._getCategories(items);
+			
+			for (var j = 0; j < categories.length; j++) {
+				var category = categories[j];
+				// var categoryBody = domConstruct.create('div', {
+				//     'class': 'category-container control-group collapsible'
+				// }, this.layerListBody);
+				
+				// var categoryTitle = domConstruct.create('h2', {
+				//     'class': 'category-title',
+				//     'innerHTML': category
+				// }, categoryBody);
+				
+				var categoryTitle = domConstruct.create('h2', {
+					'id': 'refReplace',
+					'class': 'category-title collapsible',
+					'innerHTML': category
+				}, this.layerListBody);
+				
+				var categoryBody = domConstruct.create('div', {
+					'class': 'category-container control-group'
+				}, this.layerListBody);
+				
+				var layerObj = items.query({ category: category });
+				if (layerObj.length > 0) {
+					this._buildLayerList(layerObj, categoryBody);
+				}
+			}
+			
+			//collapsible layer code
+			var coll = document.getElementsByClassName("collapsible");
+			var collapseButton = document.getElementById("collBtn");
+			var i;
+			
+			//code to collapse all layer groups at once
+			collapseButton.addEventListener("click", function() {
+              	if(collapseButton.innerHTML == "Collapse All Layers"){
+              		collapseButton.innerHTML = "Expand All Layers";
+					
+>>>>>>> 3f33c9869dce402d18e9d735ec65d39859d7c745
               		for (i = 0; i < coll.length; i++) {
 	              	    var content = coll[i].nextElementSibling;
 	              	    if (content.style.maxHeight){
@@ -346,6 +473,7 @@ define(['dojo/_base/declare',
 								  this.currentPopupMenu = popupMenu;
 								  popupMenu.openDropMenu();
 								}
+<<<<<<< HEAD
 							  }
 							  console.log(evt);
 							  
@@ -385,6 +513,91 @@ define(['dojo/_base/declare',
 		  
 		  _hideCurrentPopupMenu: function() {
 			  if (this.currentPopupMenu && this.currentPopupMenu.state === 'opened') {
+=======
+							}
+						}
+						
+						this.layerListView._changeSelectedLayerRow(layerTrNode);
+						if (popupMenu && popupMenu.state === 'opened') {
+							popupMenu.closeDropMenu();
+							} else {
+							this._hideCurrentPopupMenu();
+							if (popupMenu) {
+								this.currentPopupMenu = popupMenu;
+								popupMenu.openDropMenu();
+							}
+						}
+						console.log(evt);
+						
+						//hidden operation mene if that is opened.
+						if (this.operationsDropMenu && this.operationsDropMenu.state === 'opened') {
+							this.operationsDropMenu.closeDropMenu();
+						}
+						evt.stopPropagation();
+					})));
+					
+					this.own(on(layerChk, 'change', lang.hitch(this, function (evt) {
+						var layerId = evt.target.id;
+						var vis = evt.target.checked || false;
+						var checkStatus = evt.target.checked
+						var layerObj = this.layerStore.query({ id: layerId });
+						if (layerObj.length > 0) {
+							var layer = this.map.getLayer(layerObj[0].wrrID);
+							if (layer) {
+								layer.setVisibility(vis);
+							}
+							/*FK Pure testing 2022-12-16 need to replace*/
+							/*maybe we need to import esri/layers/FeatureLayer.... (nevermind, it's there already*/
+							/*Uncomment when re-testing*/
+							/*This was nice, but the WRR layer list doesn't have the website*/
+							
+							/*Is there a way we can get the config file based on the state*/
+							/*You might want to try https://stackoverflow.com/questions/34789321/js-read-json-file-and-use-as-an-object
+							and see what we can do*/
+							/*else
+								{
+								var testMap = this.map;
+								var Frank = testMap.layers;
+								var testLayer = new FeatureLayer(
+								"https://services.arcgis.com/QVENGdaPbd4LUkLV/arcgis/rest/services/USFWS_Critical_Habitat/FeatureServer/0"
+								);
+								this.map.addLayer(testLayer);
+							}*/
+						}
+						/*FK 2022-12-28, broadcast message if we uncheck a box over here, I want to pass
+							a message that says the layer is turned off and the layer ID, so LayerListView
+						can hide this layer*/
+						if (checkStatus == false)
+						{
+							this.publishData({
+								message: 'Hide layer - WRR call',
+								layerID: layer.id
+							});
+						}
+					})));
+					
+					this.own(on(layer, 'visibility-change', lang.hitch(this, function (evt) {
+						var layerName = evt.target.id;
+						var layObj = this.layerStore.query({ wrrID: layerName });
+						if (layObj && layObj.length > 0) {
+							var chkBox = dojo.byId(layObj[0].id);
+							/*FK 2022-12-28, EPA requested a change on how this works,
+								I'm keeping this line because one it's very basic, just turn
+								on and off the layer based on visibility-change and two, I 
+							can see someone changing their minds on this */
+							//chkBox.checked = evt.visible;
+						}
+						console.log('layer vis change');
+					})));
+				}
+			}
+		},
+		
+		//////Start of functions with LayerListView///////
+		
+		_hideCurrentPopupMenu: function() {
+			if (this.currentPopupMenu && this.currentPopupMenu.state === 'opened') {
+>>>>>>> 3f33c9869dce402d18e9d735ec65d39859d7c745
 				this.currentPopupMenu.closeDropMenu();
 			  }
 			},
@@ -492,6 +705,7 @@ define(['dojo/_base/declare',
 			  'layerInfosRendererChanged',
 			  lang.hitch(this, this._onLayerInfosRendererChanged)));
 	
+<<<<<<< HEAD
 			this.own(on(this.operLayerInfos,
 			  'layerInfosOpacityChanged',
 			  lang.hitch(this, this._onLayerInfosOpacityChanged)));
@@ -647,3 +861,6 @@ define(['dojo/_base/declare',
 	  
 	  
   });
+=======
+});																						
+>>>>>>> 3f33c9869dce402d18e9d735ec65d39859d7c745
