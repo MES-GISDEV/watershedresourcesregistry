@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Tampilkan lokasi pengukuran",
   "showAreaMeasurement": "Perlihatkan pengukuran area",
   "showDistanceMeasurement": "Perlihatkan pengukuran jarak",
+  "showDistanceMeasurementForLine": "Tampilkan pengukuran panjang",
+  "showDistanceMeasurementForPolygon": "Tampilkan pengukuran keliling",
+  "locationToggleOn": "Tekan tombol nyalakan/matikan untuk menampilkan pengukuran lokasi",
+  "locationToggleOff": "Tekan tombol nyalakan/matikan untuk menyembunyikan pengukuran lokasi",
+  "areaToggleOn": "Tekan tombol nyalakan/matikan untuk menampilkan pengukuran area",
+  "areaToggleOff": "Tekan tombol nyalakan/matikan untuk menyembunyikan pengukuran area",
+  "distanceForLineToggleOn": "Tekan tombol nyalakan/matikan untuk menampilkan pengukuran panjang",
+  "distanceForLineToggleOff": "Tekan tombol nyalakan/matikan untuk menyembunyikan pengukuran panjang",
+  "distanceForPolygonToggleOn": "Tekan tombol nyalakan/matikan untuk menampilkan pengukuran perimeter",
+  "distanceForPolygonToggleOff": "Tekan tombol nyalakan/matikan untuk menyembunyikan pengukuran perimeter",
   "areaUnits": "Unit area",
   "distanceUnits": "Unit jarak",
   "kilometers": "Kilometer",
@@ -49,5 +59,7 @@ define({
   "areas": "Area",
   "locationLabel": "Lokasi: ${value}",
   "areaLabel": "Luas: ${value} ${unit}",
-  "distanceLabel": "Jarak: ${value} ${unit}"
+  "distanceLabel": "Jarak: ${value} ${unit}",
+  "distanceLabelForLine": "Panjang: ${value} ${unit}",
+  "distanceLabelForPolygon": "Perimeter: ${value} ${unit}"
 });

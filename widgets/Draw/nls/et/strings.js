@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Kuva asukoha mõõtmine",
   "showAreaMeasurement": "Kuva pindala mõõtmine",
   "showDistanceMeasurement": "Kuva kauguse mõõtmine",
+  "showDistanceMeasurementForLine": "Kuva pikkuse mõõtmed",
+  "showDistanceMeasurementForPolygon": "Kuva ümbermõõdu mõõtmed",
+  "locationToggleOn": "Asukoha mõõtmise kuvamiseks vajutage vahetamise nuppu",
+  "locationToggleOff": "Asukoha mõõtmise peitmiseks vajutage vahetamise nuppu",
+  "areaToggleOn": "Pindala mõõtmise kuvamiseks vajutage vahetamise nuppu",
+  "areaToggleOff": "Pindala mõõtmise peitmiseks vajutage vahetamise nuppu",
+  "distanceForLineToggleOn": "Pikkuse mõõtmise kuvamiseks vajutage vahetamise nuppu",
+  "distanceForLineToggleOff": "Pikkuse mõõtmise peitmiseks vajutage vahetamise nuppu",
+  "distanceForPolygonToggleOn": "Ümbermõõdu mõõtmise kuvamiseks vajutage vahetamise nuppu",
+  "distanceForPolygonToggleOff": "Ümbermõõdu mõõtmise peitmiseks vajutage vahetamise nuppu",
   "areaUnits": "Pindalaühikud",
   "distanceUnits": "Vahemaa ühikud",
   "kilometers": "Kilomeetrit",
@@ -49,5 +59,7 @@ define({
   "areas": "Pindalad",
   "locationLabel": "Asukoht: ${value}",
   "areaLabel": "Pindala: ${value} ${unit}",
-  "distanceLabel": "Kaugus: ${value} ${unit}"
+  "distanceLabel": "Kaugus: ${value} ${unit}",
+  "distanceLabelForLine": "Pikkus: ${value} ${unit}",
+  "distanceLabelForPolygon": "Ümbermõõt: ${value} ${unit}"
 });

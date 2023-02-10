@@ -39,18 +39,21 @@ function(declare, html, query, on, lang, _WidgetsInTemplateMixin, BaseWidget, Ta
 			this._hasContent = this.config.about && this.config.about.aboutContent;
 		},
 		
-		startup: function() {
+		startup: function() {		
 			var self = this;
 			this.inherited(arguments);
 			
 			//try to get a links array from our config file
-			var linksArray = this.config.nationalLinks;
+			var statelinksArray = this.config.nationalLinks;
 			
 			//to set the buttons below each other we have to set up a variable that change for each button
 			var topLocation = 0;
-			
+
+			header1 = "State Tools";
+			domConstruct.place('<a ' + header1 + '> <div style="left: 0px; right: auto; bottom: auto; width: 100%; height: 40px; padding: 0px; z-index: auto;line-height: 40px" class="jimu-widget-onscreen-icon-header"> <center><span class="droplabel" >' + header1 + '</span></center> </div></a>' ,dom.byId("drawerMappingNode"));
+	
 			//loop through links to add to list
-			linksArray.forEach(function(iLink){
+			statelinksArray.forEach(function(iLink){
 				//the link contains the title and the link address in a array, let's split these 
 				var iTitle = iLink[0];
 				var iAddress = iLink[1];
@@ -58,7 +61,30 @@ function(declare, html, query, on, lang, _WidgetsInTemplateMixin, BaseWidget, Ta
 				//domConstruct.place('<div><b>' + iTitle + '</b> <a href="' + iAddress + '" target="_blank">View Here</a></div><br><br>',dom.byId("drawerMappingNode"));
 				////Now for the real McCoy
 				//NOTE: I had to adjust \widgets\LinksDropDown\css\style.css for this, so that the colors, no underline would work
-				domConstruct.place('<a href="' + iAddress + '" target="_blank"> <div style="left: 0px; top: ' + topLocation + 'px; right: auto; bottom: auto; width: 100%; height: 40px; padding: 0px; z-index: auto;line-height: 40px" class="jimu-widget-onscreen-icon-link"> <center><span class="droplabel" >' + iTitle + '</span></center> </div></a>' ,dom.byId("drawerExtRepNode"));
+				domConstruct.place('<a href="' + iAddress + '" target="_blank"> <div style="left: 0px; top: ' + topLocation + 'px; right: auto; bottom: auto; width: 100%; height: 40px; padding: 0px; z-index: auto;line-height: 40px" class="jimu-widget-onscreen-icon-link"> <center><span class="droplabel" >' + iTitle + '</span></center> </div></a>' ,dom.byId("drawerMappingNode"));
+				//Adjust location of next button "y" coordinate
+				topLocation += 40;
+			});
+
+			//try to get a links array from our config file
+			var federallinksArray = this.config.federalLinks;
+			
+			//to set the buttons below each other we have to set up a variable that change for each button
+			var topLocation = 0;
+
+			header2 = "Federal Tools";
+			domConstruct.place('<a' + header2 + '> <div style="left: 0px; right: auto; bottom: auto; width: 100%; height: 40px; padding: 0px; z-index: auto;line-height: 40px" class="jimu-widget-onscreen-icon-header"> <center><span class="droplabel" >' + header2 + '</span></center> </div></a>' ,dom.byId("drawerMappingNode"));
+	
+			//loop through links to add to list
+			federallinksArray.forEach(function(iLink){
+				//the link contains the title and the link address in a array, let's split these 
+				var iTitle = iLink[0];
+				var iAddress = iLink[1];
+				////Simple Link - let's try to do this first before doing something special with a button like tool
+				//domConstruct.place('<div><b>' + iTitle + '</b> <a href="' + iAddress + '" target="_blank">View Here</a></div><br><br>',dom.byId("drawerMappingNode"));
+				////Now for the real McCoy
+				//NOTE: I had to adjust \widgets\LinksDropDown\css\style.css for this, so that the colors, no underline would work
+				domConstruct.place('<a href="' + iAddress + '" target="_blank"> <div style="left: 0px; top: ' + topLocation + 'px; right: auto; bottom: auto; width: 100%; height: 40px; padding: 0px; z-index: auto;line-height: 40px" class="jimu-widget-onscreen-icon-link"> <center><span class="droplabel" >' + iTitle + '</span></center> </div></a>' ,dom.byId("drawerMappingNode"));
 				//Adjust location of next button "y" coordinate
 				topLocation += 40;
 			});

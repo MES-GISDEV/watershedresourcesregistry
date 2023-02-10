@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Afișați măsurătoarea de locație",
   "showAreaMeasurement": "Arată măsurarea suprafeței",
   "showDistanceMeasurement": "Arată măsurarea distanţei",
+  "showDistanceMeasurementForLine": "Afișați măsurătoarea de Lungime",
+  "showDistanceMeasurementForPolygon": "Afișați măsurătoarea de Perimetru",
+  "locationToggleOn": "Apăsați butonul de comutare pentru a afișa măsurarea locației",
+  "locationToggleOff": "Apăsați butonul de comutare pentru a ascunde măsurarea locației",
+  "areaToggleOn": "Apăsați butonul de comutare pentru a afișa măsurarea suprafeței",
+  "areaToggleOff": "Apăsați butonul de comutare pentru a ascunde măsurarea suprafeței",
+  "distanceForLineToggleOn": "Apăsați butonul de comutare pentru a afișa măsurarea lungimii",
+  "distanceForLineToggleOff": "Apăsați butonul de comutare pentru a ascunde măsurarea lungimii",
+  "distanceForPolygonToggleOn": "Apăsați butonul de comutare pentru a afișa măsurarea perimetrului",
+  "distanceForPolygonToggleOff": "Apăsați butonul de comutare pentru a ascunde măsurarea perimetrului",
   "areaUnits": "Unităţi suprafaţă",
   "distanceUnits": "Unităţi distanţă",
   "kilometers": "Kilometri",
@@ -49,5 +59,7 @@ define({
   "areas": "Suprafeţe",
   "locationLabel": "Locație: ${value}",
   "areaLabel": "Suprafață: ${value} ${unit}",
-  "distanceLabel": "Distanță: ${value} ${unit}"
+  "distanceLabel": "Distanță: ${value} ${unit}",
+  "distanceLabelForLine": "Lungime: ${value} ${unit}",
+  "distanceLabelForPolygon": "Perimetru: ${value} ${unit}"
 });

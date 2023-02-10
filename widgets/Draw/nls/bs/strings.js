@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Prikaži mjere lokacije",
   "showAreaMeasurement": "Prikaži mjerenje područja",
   "showDistanceMeasurement": "Prikaži mjerenje udaljenosti",
+  "showDistanceMeasurementForLine": "Prikaži mjerenje duljine",
+  "showDistanceMeasurementForPolygon": "Prikaži mjerenje perimetra",
+  "locationToggleOn": "Pritisnite prekidač za prikazivanje mjerenja lokacije",
+  "locationToggleOff": "Pritisnite prekidač za skrivanje mjerenja lokacije",
+  "areaToggleOn": "Pritisnite prekidač za prikazivanje mjerenja područja",
+  "areaToggleOff": "Pritisnite prekidač za skrivanje mjerenja područja",
+  "distanceForLineToggleOn": "Pritisnite prekidač za prikazivanje mjerenja duljine",
+  "distanceForLineToggleOff": "Pritisnite prekidač za skrivanje mjerenja duljine",
+  "distanceForPolygonToggleOn": "Pritisnite prekidač za prikazivanje mjerenja perimetra",
+  "distanceForPolygonToggleOff": "Pritisnite prekidač za skrivanje mjerenja perimetra",
   "areaUnits": "Površinske jedinice",
   "distanceUnits": "Jedinice udaljenosti",
   "kilometers": "Kilometri",
@@ -49,5 +59,7 @@ define({
   "areas": "Područja",
   "locationLabel": "Lokacija: ${value}",
   "areaLabel": "Površina: ${value} ${unit}",
-  "distanceLabel": "Udaljenost: ${value} ${unit}"
+  "distanceLabel": "Udaljenost: ${value} ${unit}",
+  "distanceLabelForLine": "Duljina: ${value} ${unit}",
+  "distanceLabelForPolygon": "Perimetar: ${value} ${unit}"
 });

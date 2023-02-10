@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Prikaži merenje lokacije",
   "showAreaMeasurement": "Prikaži merenje površine",
   "showDistanceMeasurement": "Prikaži merenje rastojanja",
+  "showDistanceMeasurementForLine": "Prikaži merenje dužine",
+  "showDistanceMeasurementForPolygon": "Prikaži merenje obima",
+  "locationToggleOn": "Pritisnite dugme za uključivanje/isključivanje da biste prikazali merenje lokacije",
+  "locationToggleOff": "Pritisnite dugme za uključivanje/isključivanje da biste sakrili merenje lokacije",
+  "areaToggleOn": "Pritisnite dugme za uključivanje/isključivanje da biste prikazali merenje površine",
+  "areaToggleOff": "Pritisnite dugme za uključivanje/isključivanje da biste sakrili merenje površine",
+  "distanceForLineToggleOn": "Pritisnite dugme za uključivanje/isključivanje da biste prikazali merenje dužine",
+  "distanceForLineToggleOff": "Pritisnite dugme za uključivanje/isključivanje da biste sakrili merenje dužine",
+  "distanceForPolygonToggleOn": "Pritisnite dugme za uključivanje/isključivanje da biste prikazali merenje obima",
+  "distanceForPolygonToggleOff": "Pritisnite dugme za uključivanje/isključivanje da biste sakrili merenje obima",
   "areaUnits": "Jedinice površine",
   "distanceUnits": "Jedinice rastojanja",
   "kilometers": "Kilometri",
@@ -49,5 +59,7 @@ define({
   "areas": "Površine",
   "locationLabel": "Lokacija: ${value}",
   "areaLabel": "Površina: ${value} ${unit}",
-  "distanceLabel": "Rastojanje: ${value} ${unit}"
+  "distanceLabel": "Rastojanje: ${value} ${unit}",
+  "distanceLabelForLine": "Dužina: ${value} ${unit}",
+  "distanceLabelForPolygon": "Obim: ${value} ${unit}"
 });

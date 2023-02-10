@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Visa platsmätning",
   "showAreaMeasurement": "Visa ytmätning",
   "showDistanceMeasurement": "Visa avståndsmätning",
+  "showDistanceMeasurementForLine": "Visa längdmätning",
+  "showDistanceMeasurementForPolygon": "Visa perimetermätning",
+  "locationToggleOn": "Använd växlingsknappen för att visa platsmätning",
+  "locationToggleOff": "Använd växlingsknappen för att dölja platsmätning",
+  "areaToggleOn": "Använd växlingsknappen för att visa ytmätning",
+  "areaToggleOff": "Använd växlingsknappen för att dölja ytmätning",
+  "distanceForLineToggleOn": "Använd växlingsknappen för att visa längdmätning",
+  "distanceForLineToggleOff": "Använd växlingsknappen för att dölja längdmätning",
+  "distanceForPolygonToggleOn": "Använd växlingsknappen för att visa perimetermätning",
+  "distanceForPolygonToggleOff": "Använd växlingsknappen för att dölja perimetermätning",
   "areaUnits": "Areaenheter",
   "distanceUnits": "Distansenheter",
   "kilometers": "Kilometer",
@@ -49,5 +59,7 @@ define({
   "areas": "Ytor",
   "locationLabel": "Plats: ${value}",
   "areaLabel": "Area: ${value} ${unit}",
-  "distanceLabel": "Avstånd: ${value} ${unit}"
+  "distanceLabel": "Avstånd: ${value} ${unit}",
+  "distanceLabelForLine": "Längd: ${value} ${unit}",
+  "distanceLabelForPolygon": "Perimeter: ${value} ${unit}"
 });

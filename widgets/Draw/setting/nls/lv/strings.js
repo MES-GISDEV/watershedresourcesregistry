@@ -23,7 +23,7 @@ define({
   "squareYards": "Kvadrātjardi",
   "location": "Novietojumi",
   "distance": "Attālumi",
-  "area": "Apgabali",
+  "area": "Laukumi",
   "kilometersAbbreviation": "km",
   "milesAbbreviation": "jūdzes",
   "metersAbbreviation": "m",

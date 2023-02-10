@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Toon locatiemeting",
   "showAreaMeasurement": "Toon oppervlaktemeting",
   "showDistanceMeasurement": "Toon afstandmeting",
+  "showDistanceMeasurementForLine": "Toon lengtemeting",
+  "showDistanceMeasurementForPolygon": "Toon omtrekmeting",
+  "locationToggleOn": "Druk op de wisselknop om locatiemeting te tonen",
+  "locationToggleOff": "Druk op de wisselknop om locatiemeting te verbergen",
+  "areaToggleOn": "Druk op de wisselknop om oppervlaktemeting te tonen",
+  "areaToggleOff": "Druk op de wisselknop om oppervlaktemeting te verbergen",
+  "distanceForLineToggleOn": "Druk op de wisselknop om lengtemeting te tonen",
+  "distanceForLineToggleOff": "Druk op de wisselknop om lengtemeting te verbergen",
+  "distanceForPolygonToggleOn": "Druk op de wisselknop om omtrekmeting te tonen",
+  "distanceForPolygonToggleOff": "Druk op de wisselknop om omtrekmeting te verbergen",
   "areaUnits": "Oppervlakte-eenheden",
   "distanceUnits": "Afstandseenheden",
   "kilometers": "Kilometer",
@@ -49,5 +59,7 @@ define({
   "areas": "Gebieden",
   "locationLabel": "Locatie: ${value}",
   "areaLabel": "Oppervlakte: ${value} ${unit}",
-  "distanceLabel": "Afstand: ${value} ${unit}"
+  "distanceLabel": "Afstand: ${value} ${unit}",
+  "distanceLabelForLine": "Lengte: ${value} ${unit}",
+  "distanceLabelForPolygon": "Omtrek: ${value} ${unit}"
 });

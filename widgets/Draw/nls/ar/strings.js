@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "إظهار قياس الموقع",
   "showAreaMeasurement": "إظهار قياس المنطقة",
   "showDistanceMeasurement": "إظهار قياس المسافة",
+  "showDistanceMeasurementForLine": "إظهار قياس الطول",
+  "showDistanceMeasurementForPolygon": "إظهار قياس محيط الشكل",
+  "locationToggleOn": "اضغط على زر التبديل لعرض قياس الموقع",
+  "locationToggleOff": "اضغط على زر التبديل لإخفاء قياس الموقع",
+  "areaToggleOn": "اضغط على زر التبديل لعرض قياس المساحة",
+  "areaToggleOff": "اضغط على زر التبديل لإخفاء قياس المساحة",
+  "distanceForLineToggleOn": "اضغط على زر التبديل لعرض قياس الطول",
+  "distanceForLineToggleOff": "اضغط على زر التبديل لإخفاء قياس الطول",
+  "distanceForPolygonToggleOn": "اضغط على زر التبديل لعرض قياس المحيط",
+  "distanceForPolygonToggleOff": "اضغط على زر التبديل لإخفاء قياس المحيط",
   "areaUnits": "وحدات المنطقة",
   "distanceUnits": "وحدات المسافة",
   "kilometers": "كيلومترات",
@@ -49,5 +59,7 @@ define({
   "areas": "مساحات",
   "locationLabel": "الموقع: ${value}",
   "areaLabel": "المساحة: ${value} ${unit}",
-  "distanceLabel": "المسافة: ${value} ${unit}"
+  "distanceLabel": "المسافة: ${value} ${unit}",
+  "distanceLabelForLine": "الطول: ${value} ${unit}",
+  "distanceLabelForPolygon": "محيط الشكل: ${value} ${unit}"
 });

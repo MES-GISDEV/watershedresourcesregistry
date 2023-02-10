@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Hiển thị phép đo khoảng cách",
   "showAreaMeasurement": "Hiển thị phép đo diện tích",
   "showDistanceMeasurement": "Hiển thị phép đo khoảng cách",
+  "showDistanceMeasurementForLine": "Hiển thị phép đo chiều dài",
+  "showDistanceMeasurementForPolygon": "Hiển thị phép đo chu vi",
+  "locationToggleOn": "Nhấn nút chuyển đổi để hiển thị phép đo vị trí",
+  "locationToggleOff": "Nhấn nút chuyển đổi để ẩn phép đo vị trí",
+  "areaToggleOn": "Nhấn nút chuyển đổi để hiển thị phép đo diện tích",
+  "areaToggleOff": "Nhấn nút chuyển đổi để ẩn phép đo diện tích",
+  "distanceForLineToggleOn": "Nhấn nút chuyển đổi để hiển thị phép đo chiều dài",
+  "distanceForLineToggleOff": "Nhấn nút chuyển đổi để ẩn phép đo chiều dài",
+  "distanceForPolygonToggleOn": "Nhấn nút chuyển đổi để hiển thị phép đo chu vi",
+  "distanceForPolygonToggleOff": "Nhấn nút chuyển đổi để ẩn phép đo chu vi",
   "areaUnits": "Đơn vị diện tích",
   "distanceUnits": "Đơn vị khoảng cách",
   "kilometers": "Kilômét",
@@ -49,5 +59,7 @@ define({
   "areas": "Khu vực",
   "locationLabel": "Vị trí: ${value}",
   "areaLabel": "Diện tích: ${value} ${unit}",
-  "distanceLabel": "Khoảng cách: ${value} ${unit}"
+  "distanceLabel": "Khoảng cách: ${value} ${unit}",
+  "distanceLabelForLine": "Chiều dài: ${value} ${unit}",
+  "distanceLabelForPolygon": "Chu vi: ${value} ${unit}"
 });

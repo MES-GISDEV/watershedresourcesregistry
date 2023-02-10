@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Vis positionsmåling",
   "showAreaMeasurement": "Vis områdemåling",
   "showDistanceMeasurement": "Vis afstandsmåling",
+  "showDistanceMeasurementForLine": "Vis længdemåling",
+  "showDistanceMeasurementForPolygon": "Vis omkredsmåling",
+  "locationToggleOn": "Tryk på til/fra-knappen for at vise positionsmåling",
+  "locationToggleOff": "Tryk på til/fra-knappen for at skjule positionsmåling",
+  "areaToggleOn": "Tryk på til/fra-knappen for at vise områdemåling",
+  "areaToggleOff": "Tryk på til/fra-knappen for at skjule områdemåling",
+  "distanceForLineToggleOn": "Tryk på til/fra-knappen for at vise længdemåling",
+  "distanceForLineToggleOff": "Tryk på til/fra-knappen for at skjule længdemåling",
+  "distanceForPolygonToggleOn": "Tryk på til/fra-knappen for at vise omkredsmåling",
+  "distanceForPolygonToggleOff": "Tryk på til/fra-knappen for at skjule omkredsmåling",
   "areaUnits": "Områdeenheder",
   "distanceUnits": "Afstandsenheder",
   "kilometers": "Kilometer",
@@ -49,5 +59,7 @@ define({
   "areas": "Områder",
   "locationLabel": "Position: ${value}",
   "areaLabel": "Område: ${value} ${unit}",
-  "distanceLabel": "Afstand: ${value} ${unit}"
+  "distanceLabel": "Afstand: ${value} ${unit}",
+  "distanceLabelForLine": "Længde: ${value} ${unit}",
+  "distanceLabelForPolygon": "Omkreds: ${value} ${unit}"
 });

@@ -85,6 +85,12 @@
     "category": "Protected Lands"
   },
   {
+    "id": "XRD",
+    "wrrID": "NLCD_2016_SC_4641",
+    "title": "2016 NLCD",
+    "category": "Land Use/Land Cover"
+  },
+  {
     "id": "Sm6",
     "wrrID": "USA_Counties_8817",
     "title": "County Boundaries",

@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Prikaži meritev lokacije",
   "showAreaMeasurement": "Pokaži meritev površine",
   "showDistanceMeasurement": "Pokaži meritev razdalje",
+  "showDistanceMeasurementForLine": "Prikaži meritev dolžine",
+  "showDistanceMeasurementForPolygon": "Prikaži meritev obsega",
+  "locationToggleOn": "Pritisnite gumb za preklop za prikaz meritve lokacije.",
+  "locationToggleOff": "Pritisnite gumb za preklop, da skrijete meritev lokacije.",
+  "areaToggleOn": "Pritisnite gumb za preklop za prikaz meritve območja.",
+  "areaToggleOff": "Pritisnite gumb za preklop, da skrijete meritev območja.",
+  "distanceForLineToggleOn": "Pritisnite gumb za preklop za prikaz meritve dolžine.",
+  "distanceForLineToggleOff": "Pritisnite gumb za preklop, da skrijete meritev dolžine.",
+  "distanceForPolygonToggleOn": "Pritisnite gumb za preklop za prikaz meritve obsega.",
+  "distanceForPolygonToggleOff": "Pritisnite gumb za preklop, da skrijete meritev obsega.",
   "areaUnits": "Enote območja",
   "distanceUnits": "Enote razdalje",
   "kilometers": "Kilometri",
@@ -49,5 +59,7 @@ define({
   "areas": "Območja",
   "locationLabel": "Lokacija: ${value}",
   "areaLabel": "Površina: ${value} ${unit}",
-  "distanceLabel": "Razdalja: ${value} ${unit}"
+  "distanceLabel": "Razdalja: ${value} ${unit}",
+  "distanceLabelForLine": "Dolžina: ${value} ${unit}",
+  "distanceLabelForPolygon": "Obseg: ${value} ${unit}"
 });

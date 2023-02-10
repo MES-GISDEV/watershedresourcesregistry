@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Mostrar medición de ubicación",
   "showAreaMeasurement": "Mostrar medición de área",
   "showDistanceMeasurement": "Mostrar medición de distancia",
+  "showDistanceMeasurementForLine": "Mostrar medición de longitud",
+  "showDistanceMeasurementForPolygon": "Mostrar medición de perímetro",
+  "locationToggleOn": "Pulse el botón de alternancia para mostrar la medición de ubicación",
+  "locationToggleOff": "Pulse el botón de alternancia para ocultar la medición de ubicación",
+  "areaToggleOn": "Pulse el botón de alternancia para mostrar la medición de área",
+  "areaToggleOff": "Pulse el botón de alternancia para ocultar la medición de área",
+  "distanceForLineToggleOn": "Pulse el botón de alternancia para mostrar la medición de longitud",
+  "distanceForLineToggleOff": "Pulse el botón de alternancia para ocultar la medición de longitud",
+  "distanceForPolygonToggleOn": "Pulse el botón de alternancia para mostrar la medición de perímetro",
+  "distanceForPolygonToggleOff": "Pulse el botón de alternancia para ocultar la medición de perímetro",
   "areaUnits": "Unidades de área",
   "distanceUnits": "Unidades de distancia",
   "kilometers": "Kilómetros",
@@ -49,5 +59,7 @@ define({
   "areas": "Áreas",
   "locationLabel": "Ubicación: ${value}",
   "areaLabel": "Área: ${value} ${unit}",
-  "distanceLabel": "Distancia: ${value} ${unit}"
+  "distanceLabel": "Distancia: ${value} ${unit}",
+  "distanceLabelForLine": "Longitud: ${value} ${unit}",
+  "distanceLabelForPolygon": "Perímetro: ${value} ${unit}"
 });

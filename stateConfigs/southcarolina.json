@@ -242,6 +242,22 @@
 				"icon": "configs/Print/print.png"
 			},
 			{
+				"position": {
+				  "left": 245,
+				  "top": 45,
+				  "relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "_31",
+				"name": "SiteVisits",
+				"label": "Site Descriptions",
+				"version": "2.2",
+				"closeable": true,
+				"IsController": false,
+				"uri": "widgets/SiteVisits123/Widget",
+				"config": "configs/SiteVisits123/config_SiteVisits123.json"
+			},
+			{
 				"uri": "widgets/OverviewMap/Widget",
 				"position": {
 					"right": 0,

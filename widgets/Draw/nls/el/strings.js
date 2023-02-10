@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Εμφάνιση μέτρησης τοποθεσίας",
   "showAreaMeasurement": "Εμφάνιση μέτρησης εμβαδού",
   "showDistanceMeasurement": "Εμφάνιση μέτρησης απόστασης",
+  "showDistanceMeasurementForLine": "Εμφάνιση μέτρησης μήκους",
+  "showDistanceMeasurementForPolygon": "Εμφάνιση μέτρησης περιμέτρου",
+  "locationToggleOn": "Πιέστε το κουμπί εναλλαγής για εμφάνιση της μέτρησης της τοποθεσίας.",
+  "locationToggleOff": "Πιέστε το κουμπί εναλλαγής για απόκρυψη της μέτρησης της τοποθεσίας.",
+  "areaToggleOn": "Πιέστε το κουμπί εναλλαγής για εμφάνιση της μέτρησης της περιοχής.",
+  "areaToggleOff": "Πιέστε το κουμπί εναλλαγής για απόκρυψη της μέτρησης της περιοχής.",
+  "distanceForLineToggleOn": "Πιέστε το κουμπί εναλλαγής για εμφάνιση της μέτρησης του μήκους.",
+  "distanceForLineToggleOff": "Πιέστε το κουμπί εναλλαγής για απόκρυψη της μέτρησης του μήκους.",
+  "distanceForPolygonToggleOn": "Πιέστε το κουμπί εναλλαγής για εμφάνιση της μέτρησης της περιμέτρου.",
+  "distanceForPolygonToggleOff": "Πιέστε το κουμπί εναλλαγής για απόκρυψη της μέτρησης της περιμέτρου.",
   "areaUnits": "Μονάδες εμβαδού",
   "distanceUnits": "Μονάδες απόστασης",
   "kilometers": "Χιλιόμετρα",
@@ -49,5 +59,7 @@ define({
   "areas": "Περιοχές",
   "locationLabel": "Τοποθεσία: ${value}",
   "areaLabel": "Περιοχή: ${value} ${unit}",
-  "distanceLabel": "Απόσταση: ${value} ${unit}"
+  "distanceLabel": "Απόσταση: ${value} ${unit}",
+  "distanceLabelForLine": "Μήκος: ${value} ${unit}",
+  "distanceLabelForPolygon": "Περίμετρος: ${value} ${unit}"
 });

@@ -15,14 +15,24 @@
 .jimu-widget-draw .location-units-tip,
 .jimu-widget-draw .area-units-tip,
 .jimu-widget-draw .distance-units-tip{
+  width: 120px;
   height: 30px;
   line-height: 30px;
-  padding-left: 60px;
+  text-align: right;
+  padding-right: 10px;
   font-size: 13px;
   font-family: 'Avenir Medium', Verdana, Geneva, sans-serif;
 }
 
-.jimu-rtl .jimu-widget-draw .area-units-tip{
+.jimu-rtl .jimu-widget-draw .location-units-tip,
+.jimu-rtl .jimu-widget-draw .area-units-tip,
+.jimu-rtl .jimu-widget-draw .distance-units-tip{
+  text-align: left;
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+/* .jimu-rtl .jimu-widget-draw .area-units-tip{
   padding-left: 0;
   padding-right: 17px;
 }
@@ -30,14 +40,14 @@
 .jimu-rtl .jimu-widget-draw .distance-units-tip{
   padding-left: 0;
   padding-right: 17px;
-}
+} */
 
 .jimu-widget-draw .dijitArrowButtonContainer{
   width: 40px;
 }
 
 .jimu-widget-draw .dijitSelect{
-  height: 40px;
+  height: 30px;
   width: 100%;
 }
 
@@ -84,11 +94,25 @@
   margin-left: 0;
 }
 
+.jimu-widget-draw .draw-item.jimu-symbol-chooser .symbol-set-table > tbody > tr > td{
+  /* word-break: break-all; */ /*it can't break line when one word is too long.*/
+  text-align: right;
+  padding-right: 10px;
+}
+
+.jimu-rtl .jimu-widget-draw .draw-item.jimu-symbol-chooser .symbol-set-table > tbody > tr > td{
+  text-align: left;
+  padding-right: 0;
+  padding-left: 10px;
+}
+
+.jimu-widget-draw .draw-item.jimu-symbol-chooser .symbol-set-table{
+  font-size: 12px;
+}
 .jimu-widget-draw .draw-item{
   margin-bottom: 5px;
   padding-bottom: 5px;
   border-bottom: 1px solid #eee;
-  font-size: 12px;
   overflow: hidden;
   display: none;
 }
@@ -153,6 +177,7 @@
 }
 
 .jimu-widget-draw .draw-item .header .item-title{
+  width: calc(100% - 35px);
   font-size: 14px;
   font-family: 'Avenir Medium', Verdana, Geneva, sans-serif;
 }

@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Mostra la mesura d'ubicació",
   "showAreaMeasurement": "Mostra la mesura d'àrea",
   "showDistanceMeasurement": "Mostra la mesura de distància",
+  "showDistanceMeasurementForLine": "Mostra la mesura de longitud",
+  "showDistanceMeasurementForPolygon": "Mostra la mesura de perímetre",
+  "locationToggleOn": "Premeu el botó d'activació o desactivació per mostrar la mesura d'ubicació",
+  "locationToggleOff": "Premeu el botó d'activació o desactivació per amagar la mesura d'ubicació",
+  "areaToggleOn": "Premeu el botó d'activació o desactivació per mostrar la mesura d'àrea",
+  "areaToggleOff": "Premeu el botó d'activació o desactivació per amagar la mesura d'àrea",
+  "distanceForLineToggleOn": "Premeu el botó d'activació o desactivació per mostrar la mesura de longitud",
+  "distanceForLineToggleOff": "Premeu el botó d'activació o desactivació per amagar la mesura de longitud",
+  "distanceForPolygonToggleOn": "Premeu el botó d'activació o desactivació per mostrar la mesura de perímetre",
+  "distanceForPolygonToggleOff": "Premeu el botó d'activació o desactivació per amagar la mesura de perímetre",
   "areaUnits": "Unitats d'àrea",
   "distanceUnits": "Unitats de distància",
   "kilometers": "Quilòmetres",
@@ -49,5 +59,7 @@ define({
   "areas": "Àrees",
   "locationLabel": "Ubicació: ${value}",
   "areaLabel": "Àrea: ${value} ${unit}",
-  "distanceLabel": "Distància: ${value} ${unit}"
+  "distanceLabel": "Distància: ${value} ${unit}",
+  "distanceLabelForLine": "Longitud: ${value} ${unit}",
+  "distanceLabelForPolygon": "Perímetre: ${value} ${unit}"
 });

@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "位置計測の表示",
   "showAreaMeasurement": "面積計測の表示",
   "showDistanceMeasurement": "距離計測の表示",
+  "showDistanceMeasurementForLine": "長さ計測の表示",
+  "showDistanceMeasurementForPolygon": "周長計測の表示",
+  "locationToggleOn": "切り替えボタンを押すと、位置計測が表示されます",
+  "locationToggleOff": "切り替えボタンを押すと、位置計測が非表示になります",
+  "areaToggleOn": "切り替えボタンを押すと、面積計測が表示されます",
+  "areaToggleOff": "切り替えボタンを押すと、面積計測が非表示になります",
+  "distanceForLineToggleOn": "切り替えボタンを押すと、長さ計測が表示されます",
+  "distanceForLineToggleOff": "切り替えボタンを押すと、長さ計測が非表示になります",
+  "distanceForPolygonToggleOn": "切り替えボタンを押すと、周長計測が表示されます",
+  "distanceForPolygonToggleOff": "切り替えボタンを押すと、周長計測が非表示になります",
   "areaUnits": "面積単位",
   "distanceUnits": "距離単位",
   "kilometers": "キロメートル",
@@ -49,5 +59,7 @@ define({
   "areas": "エリア",
   "locationLabel": "位置: ${value}",
   "areaLabel": "面積: ${value} ${unit}",
-  "distanceLabel": "距離: ${value} ${unit}"
+  "distanceLabel": "距離: ${value} ${unit}",
+  "distanceLabelForLine": "長さ: ${value} ${unit}",
+  "distanceLabelForPolygon": "周長: ${value} ${unit}"
 });

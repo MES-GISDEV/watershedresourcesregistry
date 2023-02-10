@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "แสดงการวัดที่ตั้ง",
   "showAreaMeasurement": "แสดงการวัดพื้นที่",
   "showDistanceMeasurement": "แสดงการวัดระยะทาง",
+  "showDistanceMeasurementForLine": "แสดงการวัดความยาว",
+  "showDistanceMeasurementForPolygon": "แสดงการวัดเส้นรอบวง",
+  "locationToggleOn": "กดปุ่มสลับเพื่อแสดงการวัดตำแหน่ง",
+  "locationToggleOff": "กดปุ่มสลับเพื่อซ่อนการวัดตำแหน่ง",
+  "areaToggleOn": "กดปุ่มสลับเพื่อแสดงการวัดพื้นที่",
+  "areaToggleOff": "กดปุ่มสลับเพื่อซ่อนการวัดพื้นที่",
+  "distanceForLineToggleOn": "กดปุ่มสลับเพื่อแสดงการวัดความยาว",
+  "distanceForLineToggleOff": "กดปุ่มสลับเพื่อซ่อนการวัดความยาว",
+  "distanceForPolygonToggleOn": "กดปุ่มสลับเพื่อแสดงการวัดอาณาเขต",
+  "distanceForPolygonToggleOff": "กดปุ่มสลับเพื่อนซ่อนการวัดอาณาเขต",
   "areaUnits": "หน่วยของพื้นที่",
   "distanceUnits": "หน่วยระยะทาง",
   "kilometers": "กิโลเมตร",
@@ -49,5 +59,7 @@ define({
   "areas": "พื้นที่",
   "locationLabel": "ที่ตั้ง: ${value}",
   "areaLabel": "พื้นที่: ${value} ${unit}",
-  "distanceLabel": "ระยะทาง: ${value} ${unit}"
+  "distanceLabel": "ระยะทาง: ${value} ${unit}",
+  "distanceLabelForLine": "ความยาว: ${value} ${unit}",
+  "distanceLabelForPolygon": "เส้นรอบวง: ${value} ${unit}"
 });

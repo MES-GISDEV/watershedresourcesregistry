@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2014 - 2018 Esri. All Rights Reserved.
+// Copyright © Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,10 +19,14 @@ define([
     'dijit/_WidgetsInTemplateMixin',
     'jimu/BaseWidget',
     'dojo/on',
+    'dojo/keys',
     'dojo/Deferred',
+    // 'dojo/number',
+    'dojo/i18n',
+    'dojo/i18n!esri/nls/jsapi',
     'dojo/_base/html',
     'dojo/_base/lang',
-    'dojo/_base/Color',
+    // 'dojo/_base/Color',
     'dojo/_base/array',
     'dojo/dom-style',
     'esri/config',
@@ -52,17 +56,19 @@ define([
     'jimu/dijit/LoadingIndicator',
     'jimu/dijit/DrawBox',
     'jimu/dijit/SymbolChooser',
-    'dijit/form/Select',
+    'jimu/dijit/ColorPicker',
+    'jimu/dijit/formSelect',
     'dijit/form/NumberSpinner'
   ],
-  function(declare, _WidgetsInTemplateMixin, BaseWidget, on, Deferred, html, lang, Color, array, domStyle,
+  function(declare, _WidgetsInTemplateMixin, BaseWidget, on, keys, Deferred, dojoI18n, esriNlsBundle,
+    html, lang, array, domStyle,
     esriConfig, Graphic, Polyline, Polygon, TextSymbol, Font, esriUnits, webMercatorUtils,
     EsriProjectParameters,
     EsriSpatialReference,
     EsriRequest,
     geodesicUtils, GeometryService, AreasAndLengthsParameters, LengthsParameters, UndoManager,
     OperationBase, GraphicsLayer, FeatureLayer, ViewStack, jimuUtils, ToggleButton, wkidUtils, LayerInfos,
-    LoadingIndicator) {
+      LoadingIndicator) {
     //custom operations
     var customOp = {};
     customOp.Add = declare(OperationBase, {
@@ -119,10 +125,17 @@ define([
       _polygonLayer: null,
       _labelLayer: null,
 
+      _existLocationUnits: true,//if location units exist in config
+      _existDistanceUnits: true,
+      _existAreaUnits: true,
+
       postMixInProperties: function(){
         this.inherited(arguments);
+        this.isRenderIdForAttrs = true;
         this.jimuNls = window.jimuNls;
         this.config.isOperationalLayer = !!this.config.isOperationalLayer;
+        //point locale decimal
+        this.numberDecimal = dojoI18n.getLocalization("dojo.cldr", "number", window.dojoConfig.locale).decimal;
 
         if(esriConfig.defaults.geometryService){
           this._gs = esriConfig.defaults.geometryService;
@@ -155,6 +168,37 @@ define([
         this._enableBtn(this.btnUndo, false);
         this._enableBtn(this.btnRedo, false);
         this._enableBtn(this.btnClear, false);
+
+        this.saveDrawToolTips();
+      },
+
+      //save original toolbar's tips
+      saveDrawToolTips: function(){
+        this._defaultStartStr = esriNlsBundle.toolbars.draw.start;
+        this._defaultAddPointStr = esriNlsBundle.toolbars.draw.addPoint;
+        this._defaultAddShapeStr = esriNlsBundle.toolbars.draw.addShape;
+        this._defaultFreehandStr = esriNlsBundle.toolbars.draw.freehand;
+
+        this.suffixStr = '';
+        if(this.map.snappingManager){
+          this.suffixStr = "<br/>" + "(" + this.jimuNls.snapping.pressStr + "<b>" +
+                            this.jimuNls.snapping.ctrlStr + "</b> " +
+                            this.jimuNls.snapping.snapStr + ")";
+        }
+      },
+
+      customDrawToolTips: function() {
+        esriNlsBundle.toolbars.draw.start = this._defaultStartStr + this.suffixStr;
+        esriNlsBundle.toolbars.draw.addPoint = this._defaultAddPointStr + this.suffixStr;
+        esriNlsBundle.toolbars.draw.addShape = this._defaultAddShapeStr + this.suffixStr;
+        esriNlsBundle.toolbars.draw.freehand = this._defaultFreehandStr + this.suffixStr;
+      },
+
+      resetDrawToolTips: function(){
+        esriNlsBundle.toolbars.draw.start = this._defaultStartStr;
+        esriNlsBundle.toolbars.draw.addPoint = this._defaultAddPointStr;
+        esriNlsBundle.toolbars.draw.addShape = this._defaultAddShapeStr;
+        esriNlsBundle.toolbars.draw.freehand = this._defaultFreehandStr;
       },
 
       _initGraphicsLayers: function(){
@@ -195,7 +239,12 @@ define([
         this.drawBox.deactivate();
       },
 
+      onOpen: function(){
+        this.customDrawToolTips();
+      },
+
       onClose: function () {
+        this.resetDrawToolTips();
         this._closeColorPicker();
         if(this.config.isOperationalLayer){
           this._removeEmptyLayers();
@@ -225,6 +274,9 @@ define([
       },
 
       _bindEvents: function() {
+        //init first focusable node
+        // jimuUtils.initFirstFocusNode(this.domNode, this.drawBox.pointIcon);
+
         //bind DrawBox
         this.own(on(this.drawBox, 'icon-selected', lang.hitch(this, this._onIconSelected)));
         this.own(on(this.drawBox, 'DrawEnd', lang.hitch(this, this._onDrawEnd)));
@@ -239,8 +291,8 @@ define([
         this.own(on(this.fillSymChooser, 'change', lang.hitch(this, function() {
           this._setDrawDefaultSymbols();
         })));
-        this.own(on(this.textSymChooser, 'change', lang.hitch(this, function(symbol) {
-          this.drawBox.setTextSymbol(symbol);
+        this.own(on(this.textSymChooser, 'change', lang.hitch(this, function() {
+          this._setDrawDefaultSymbols();
         })));
 
         //bind unit events
@@ -252,6 +304,7 @@ define([
 
       _onIconSelected:function(target, geotype, commontype){
         /*jshint unused: false*/
+        this._drawType = commontype;
         this._setDrawDefaultSymbols();
         if(this.config.isOperationalLayer){
           this._checkOperateLayers(commontype);
@@ -259,10 +312,15 @@ define([
         if(commontype === 'point'){
           this.viewStack.switchView(this.pointSection);
         }
+        else if(commontype === 'arrow'){
+          this.fillSymChooser.setFillSectionType(true);
+          this.viewStack.switchView(this.polygonSection);
+        }
         else if(commontype === 'polyline'){
           this.viewStack.switchView(this.lineSection);
         }
         else if(commontype === 'polygon'){
+          this.fillSymChooser.setFillSectionType(false);
           this.viewStack.switchView(this.polygonSection);
         }
         else if(commontype === 'text'){
@@ -300,7 +358,7 @@ define([
           layerDefinition.geometryType = "esriGeometryPolyline";
           layer = this._getFeatureLayer(layerDefinition);
           this._polylineLayer = layer;
-        }else if(type === 'polygon' && !this._polygonLayer){
+        }else if((type === 'polygon' || type === 'arrow') && !this._polygonLayer){
           layerDefinition.name = this.nls.areas;
           layerDefinition.geometryType = "esriGeometryPolygon";
           layer = this._getFeatureLayer(layerDefinition);
@@ -342,6 +400,9 @@ define([
       _onDrawEnd:function(graphic, geotype, commontype){
         /*jshint unused: false*/
         this.drawBox.clear();
+        if(!graphic.symbol){ //not draw and save graphic that has null symbol.
+          return;
+        }
 
         var geometry = graphic.geometry;
         if(geometry.type === 'extent'){
@@ -394,15 +455,13 @@ define([
       _initUnitSelect:function(){
         this._initDefaultUnits();
         this._initConfigUnits();
-        var m = this.configLocationUnits;
-        var n = this.defaultLocationUnits;
-        this.locationUnits = m.length > 0 ? m : n;
-        var a = this.configDistanceUnits;
-        var b = this.defaultDistanceUnits;
-        this.distanceUnits = a.length > 0 ? a : b;
-        var c = this.configAreaUnits;
-        var d = this.defaultAreaUnits;
-        this.areaUnits = c.length > 0 ? c : d;
+        //show or hide "Show ... measurement" modals
+        this.locationUnits = this.configLocationUnits;
+        this.distanceUnits = this.configDistanceUnits;
+        this.areaUnits = this.configAreaUnits;
+        this._existLocationUnits = this.locationUnits.length > 0 ? true : false;
+        this._existDistanceUnits = this.distanceUnits.length > 0 ? true : false;
+        this._existAreaUnits = this.areaUnits.length > 0 ? true : false;
         array.forEach(this.locationUnits, lang.hitch(this, function(unitInfo){
           var option = {
             value:unitInfo.unit,
@@ -585,13 +644,27 @@ define([
         var locationDisplay = html.getStyle(this.pointSection, 'display');
         var lineDisplay = html.getStyle(this.lineSection, 'display');
         var polygonDisplay = html.getStyle(this.polygonSection, 'display');
-        if (locationDisplay === 'block') {
+        if (locationDisplay === 'block' && this._existLocationUnits) {
           html.setStyle(this.locationMeasure, 'display', 'block');
-        } else if (lineDisplay === 'block') {
+        } else if (lineDisplay === 'block' && this._existDistanceUnits) {
+          this.distanceMeasureTitle.innerHTML = this.nls.showDistanceMeasurementForLine;
+          this._resetToggleTips('distanceForLine');
+
           html.setStyle(this.distanceMeasure, 'display', 'block');
         } else if (polygonDisplay === 'block') {
-          html.setStyle(this.distanceMeasure, 'display', 'block');
-          html.setStyle(this.areaMeasure, 'display', 'block');
+          if(this._drawType === 'arrow'){ //arrow
+            html.setStyle(this.distanceMeasure, 'display', 'none');
+            html.setStyle(this.areaMeasure, 'display', 'none');
+          }else{ //other polygons
+            if(this._existDistanceUnits){
+              this.distanceMeasureTitle.innerHTML = this.nls.showDistanceMeasurementForPolygon;
+              this._resetToggleTips('distanceForPolygon');
+              html.setStyle(this.distanceMeasure, 'display', 'block');
+            }
+            if(this._existAreaUnits){
+              html.setStyle(this.areaMeasure, 'display', 'block');
+            }
+          }
         }
       },
 
@@ -599,12 +672,31 @@ define([
         var types = ["location", "area", "distance"];
         array.forEach(types, lang.hitch(this, function(type){
           var node = this[type + "MeasureHeader"];
-          var toggleBtn = new ToggleButton({}, this[type + "ToggleDraw"]);
+          var toggleOptions = {
+            toggleTips: {
+              toggleOn: this.nls[type + 'ToggleOn'],
+              toggleOff: this.nls[type + 'ToggleOff']
+            }
+          };
+          var toggleBtn = new ToggleButton(toggleOptions, this[type + "ToggleDraw"]);
           toggleBtn.startup();
           node.toggleButton = toggleBtn;
           this.own(on(node, 'click', lang.hitch(this, this.toggleFilter, node)));
-          this.toggleFilter(node);
+          this.own(on(node, 'keydown', lang.hitch(this, function(node, evt){
+            if(evt.keyCode === keys.ENTER || evt.keyCode === keys.SPACE){
+              this.toggleFilter(node);
+            }
+          }, node)));
         }));
+      },
+
+      //reset toggle tips for distance measure (length/perimeter)
+      _resetToggleTips: function(type){
+        var toggleTips = {
+          toggleOn: this.nls[type + 'ToggleOn'],
+          toggleOff: this.nls[type + 'ToggleOff']
+        };
+        this.distanceMeasureHeader.toggleButton.resetToggleTips(toggleTips);
       },
 
       toggleFilter: function(node) {
@@ -642,6 +734,12 @@ define([
         this.drawBox.setPointSymbol(this._getPointSymbol());
         this.drawBox.setLineSymbol(this._getLineSymbol());
         this.drawBox.setPolygonSymbol(this._getPolygonSymbol());
+        this.drawBox.setTextSymbol(this._getTextSymbol());
+      },
+
+      _getLocalDecimalNumber: function(numStr){
+        //return dojoNumber.format(parseFloat(numStr));//decimal precision is not enough
+        return numStr.replace('.', this.numberDecimal);
       },
 
       getFormattedDDStr: function (fromValue, withFormatStr, addPrefix) {
@@ -656,6 +754,9 @@ define([
         parts[1] = parseInt(londegParts[0], 10).toString() + '.' + londegParts[1]; //'058.123' to '58.123'
         r.londeg = parts[1].replace(/[eEwW]/, '');
 
+        //decimal locale
+        r.latdeg = this._getLocalDecimalNumber(r.latdeg);
+        r.londeg = this._getLocalDecimalNumber(r.londeg);
         if (addPrefix) {
           if (parts[0].slice(-1) === 'N') {
             r.latdeg = '+' + r.latdeg;
@@ -696,6 +797,9 @@ define([
           r.lonsec = r.parts[5].replace(/[EWew]/, '');
         }
 
+        //decimal locale
+        r.latsec = this._getLocalDecimalNumber(r.latsec);
+        r.lonsec = this._getLocalDecimalNumber(r.lonsec);
         if (addPrefix) {
           if (r.parts[2].slice(-1) === 'N') {
             r.latdeg = '+' + r.latdeg;
@@ -834,6 +938,16 @@ define([
         return def;
       },
 
+      _getSymbolFont: function(textFontSizeDijit){
+        var a = Font.STYLE_ITALIC, b = Font.VARIANT_NORMAL, c = Font.WEIGHT_NORMAL;
+        var fontSize = this._getMeasureFontSize(textFontSizeDijit);
+        return new Font(fontSize, a, b, c, "Arial Unicode MS");
+      },
+
+      _getMeasureFontSize: function(textFontSizeDijit){
+        return parseInt(textFontSizeDijit.get('value'), 10) + 'px';
+      },
+
       _addLocationMeasure: function(geometry, graphic){
         if(!this.domNode){
           return;
@@ -844,9 +958,8 @@ define([
         this.getDDPoint(geometry).then(lang.hitch(this, function(mapPoint) {
           this.getCoordValues(mapPoint, abbr, 4).then(lang.hitch(this, function (r) {
               var location = this.getCoordByFormat(abbr, r[0], format);
-              var a = Font.STYLE_ITALIC, b = Font.VARIANT_NORMAL, c = Font.WEIGHT_BOLD;
-              var symbolFont = new Font("16px", a, b, c, "Courier");
-              var fontColor = new Color([0, 0, 0, 1]);
+              var symbolFont = this._getSymbolFont(this.locationTextFontSize);
+              var fontColor = this.locationTextColor.getColor();//.toRgba();
 
               // var label = this.nls.locationLabel;
               // var locationText = label.replace('${value}', location);
@@ -874,18 +987,15 @@ define([
             return;
           }
           var length = result.length;
-          var a = Font.STYLE_ITALIC;
-          var b = Font.VARIANT_NORMAL;
-          var c = Font.WEIGHT_BOLD;
-          var symbolFont = new Font("16px", a, b, c, "Courier");
-          var fontColor = new Color([0, 0, 0, 1]);
+          var symbolFont = this._getSymbolFont(this.distanceTextFontSize);
+          var fontColor = this.distanceTextColor.getColor();
           var ext = geometry.getExtent();
           var center = ext.getCenter();
 
           var unit = this.distanceUnitSelect.value;
           var abbr = this._getDistanceUnitInfo(unit).label;
           var localeLength = jimuUtils.localizeNumber(length.toFixed(1));
-          var label = this.nls.distanceLabel;
+          var label = this.nls.distanceLabelForLine;
           var lengthText = label.replace('${value}', localeLength).replace('${unit}', abbr);
 
           var textSymbol = new TextSymbol(lengthText, symbolFont, fontColor);
@@ -914,8 +1024,6 @@ define([
           if(!this.domNode){
             return;
           }
-          var symbolFont = new Font("16px", Font.STYLE_ITALIC, Font.VARIANT_NORMAL, Font.WEIGHT_BOLD, "Courier");
-          var fontColor = new Color([0, 0, 0, 1]);
           var ext = geometry.getExtent();
           var center = ext.getCenter();
 
@@ -924,16 +1032,20 @@ define([
             var offsetY1 = ifLength? 5 : -5;
             var unitAbbr1 = this._getAreaUnitInfo(this.areaUnitSelect.value).label;
             var areaLabel = this.nls.areaLabel;
+            var symbolFont1 = this._getSymbolFont(this.areaTextFontSize);
+            var fontColor1 = this.areaTextColor.getColor();
             var labelGraphic1 = this._getLabelGraphic(areaLabel, unitAbbr1, result.area, center,
-                symbolFont, fontColor, offsetY1);
+                symbolFont1, fontColor1, offsetY1);
             graphics.push(labelGraphic1);
           }
           if(ifLength){
             var offsetY2 = ifArea? -15 : -5;
             var unitAbbr2 = this._getDistanceUnitInfo(this.distanceUnitSelect.value).label;
-            var distanceLabel = this.nls.distanceLabel;
+            var distanceLabel = this.nls.distanceLabelForPolygon;
+            var symbolFont2 = this._getSymbolFont(this.distanceTextFontSize);
+            var fontColor2 = this.distanceTextColor.getColor();
             var labelGraphic2 = this._getLabelGraphic(distanceLabel, unitAbbr2, result.length, center,
-                symbolFont, fontColor, offsetY2);
+                symbolFont2, fontColor2, offsetY2);
             graphics.push(labelGraphic2);
           }
           this._pushAddOperation(graphics);
@@ -1243,8 +1355,10 @@ define([
       _enableBtn: function(btn, isEnable){
         if(isEnable){
           html.removeClass(btn, 'jimu-state-disabled');
+          html.attr(btn, "aria-label", btn.innerHTML);
         }else{
           html.addClass(btn, 'jimu-state-disabled');
+          html.attr(btn, "aria-label", btn.innerHTML + ' ' +  window.jimuNls.common.disabled);
         }
       },
 

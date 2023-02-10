@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Position anzeigen",
   "showAreaMeasurement": "Flächenmessung anzeigen",
   "showDistanceMeasurement": "Entfernungsmesswert anzeigen",
+  "showDistanceMeasurementForLine": "Längenmessung anzeigen",
+  "showDistanceMeasurementForPolygon": "Umfangsmessung anzeigen",
+  "locationToggleOn": "Zum Anzeigen der Position Umschaltfläche drücken",
+  "locationToggleOff": "Zum Ausblenden der Position Umschaltfläche drücken",
+  "areaToggleOn": "Zum Anzeigen der Flächenmessung Umschaltfläche drücken",
+  "areaToggleOff": "Zum Ausblenden der Flächenmessung Umschaltfläche drücken",
+  "distanceForLineToggleOn": "Zum Anzeigen der Längenmessung Umschaltfläche drücken",
+  "distanceForLineToggleOff": "Zum Ausblenden der Längenmessung Umschaltfläche drücken",
+  "distanceForPolygonToggleOn": "Zum Anzeigen der Umfangsmessung Umschaltfläche drücken",
+  "distanceForPolygonToggleOff": "Zum Ausblenden der Umfangsmessung Umschaltfläche drücken",
   "areaUnits": "Flächeneinheiten",
   "distanceUnits": "Abstandseinheiten",
   "kilometers": "Kilometer",
@@ -49,5 +59,7 @@ define({
   "areas": "Flächen",
   "locationLabel": "Position: ${value}",
   "areaLabel": "Fläche: ${value} ${unit}",
-  "distanceLabel": "Entfernung: ${value} ${unit}"
+  "distanceLabel": "Entfernung/Umfang: ${value} ${unit}",
+  "distanceLabelForLine": "Länge: ${value} ${unit}",
+  "distanceLabelForPolygon": "Umfang: ${value} ${unit}"
 });

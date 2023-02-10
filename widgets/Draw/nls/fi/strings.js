@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Näytä sijainnin mittaus",
   "showAreaMeasurement": "Näytä alueen mittaus",
   "showDistanceMeasurement": "Näytä etäisyyden mittaus",
+  "showDistanceMeasurementForLine": "Näytä pituuden mittaus",
+  "showDistanceMeasurementForPolygon": "Näytä ympärysmitan mittaus",
+  "locationToggleOn": "Näytä sijainnin mittaus napsauttamalla vaihtopainiketta",
+  "locationToggleOff": "Piilota sijainnin mittaus napsauttamalla vaihtopainiketta",
+  "areaToggleOn": "Näytä alueen mittaus napsauttamalla vaihtopainiketta",
+  "areaToggleOff": "Piilota alueen mittaus napsauttamalla vaihtopainiketta",
+  "distanceForLineToggleOn": "Näytä pituuden mittaus napsauttamalla vaihtopainiketta",
+  "distanceForLineToggleOff": "Piilota pituuden mittaus napsauttamalla vaihtopainiketta",
+  "distanceForPolygonToggleOn": "Näytä ympärysmitan mittaus napsauttamalla vaihtopainiketta",
+  "distanceForPolygonToggleOff": "Piilota ympärysmitan mittaus napsauttamalla vaihtopainiketta",
   "areaUnits": "Pinta-alayksiköt",
   "distanceUnits": "Etäisyyden yksiköt",
   "kilometers": "Kilometriä",
@@ -49,5 +59,7 @@ define({
   "areas": "Alueet",
   "locationLabel": "Sijainti: ${value}",
   "areaLabel": "Alue: ${value} ${unit}",
-  "distanceLabel": "Etäisyys: ${value} ${unit}"
+  "distanceLabel": "Etäisyys: ${value} ${unit}",
+  "distanceLabelForLine": "Pituus: ${value} ${unit}",
+  "distanceLabelForPolygon": "Ympärysmitta: ${value} ${unit}"
 });

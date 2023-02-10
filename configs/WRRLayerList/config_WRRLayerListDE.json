@@ -194,7 +194,7 @@
 		},
 		{
 			"id": "96B",
-			"wrrID": "DE_WellHeadProtectionAreas_4672",
+			"wrrID": "Permitting_and_Monitoring_8561",
 			"title": "Well Head Protection Areas",
 			"category": "Water Protection"
 		},
@@ -489,7 +489,7 @@
 		{
 			"id": "l5g",
 			"wrrID": "NLCD_2016_Land_Cover_L48_897",
-			"title": "NLCD 2016 Land Cover",
+			"title": "NLCD 2016",
 			"category": "Land Planning"
 		},
 		{
@@ -712,7 +712,7 @@
 			"id": "A3b",
 			"wrrID": "NaturalGas_InterIntrastate_Pipelines_US_EIA_7371",
 			"title": "Natural Gas Interstate and Intrastate Pipelines",
-			"category": "Misc. (can be moved later)"
+			"category": "Miscellaneous"
 		}
 	]
 }

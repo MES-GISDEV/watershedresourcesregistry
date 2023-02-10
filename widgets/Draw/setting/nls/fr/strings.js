@@ -13,7 +13,7 @@ define({
   "meters": "Mètres",
   "feet": "Pieds",
   "yards": "Yards",
-  "nauticalmiles": "Milles marins",
+  "nauticalmiles": "Milles nautiques",
   "squareKilometers": "Kilomètres carrés",
   "squareMiles": "Miles carrés",
   "acres": "Acres",

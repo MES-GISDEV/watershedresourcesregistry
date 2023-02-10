@@ -187,6 +187,12 @@
     "category": "Land Planning"
   },
   {
+    "id": "W3x",
+    "wrrID": "NLCD_2016_NJ_3132",
+    "title": "NLCD 2016",
+    "category": "Land Planning"
+  },
+  {
     "id": "KkS",
     "wrrID": "Transportation_7412",
     "title": "Roads",

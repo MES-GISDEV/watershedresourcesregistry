@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "הצג מדידת מיקום",
   "showAreaMeasurement": "הצג מדידת אזור",
   "showDistanceMeasurement": "הצג מדידת מרחק",
+  "showDistanceMeasurementForLine": "הצג מדידת אורך",
+  "showDistanceMeasurementForPolygon": "הצג מדידת היקף",
+  "locationToggleOn": "לחץ על לחצן ההחלפה כדי להציג את מדידת המיקום",
+  "locationToggleOff": "לחץ על לחצן ההחלפה כדי להסתיר את מדידת המיקום",
+  "areaToggleOn": "לחץ על לחצן ההחלפה כדי להציג את מדידת השטח",
+  "areaToggleOff": "לחץ על לחצן ההחלפה כדי להסתיר את מדידת השטח",
+  "distanceForLineToggleOn": "לחץ על לחצן ההחלפה כדי להציג את מדידת האורך",
+  "distanceForLineToggleOff": "לחץ על לחצן ההחלפה כדי להסתיר את מדידת האורך",
+  "distanceForPolygonToggleOn": "לחץ על לחצן ההחלפה כדי להציג את מדידת ההיקף",
+  "distanceForPolygonToggleOff": "לחץ על לחצן ההחלפה כדי להסתיר את מדידת ההיקף",
   "areaUnits": "יחידות שטח",
   "distanceUnits": "יחידות מרחק",
   "kilometers": "קילומטרים",
@@ -49,5 +59,7 @@ define({
   "areas": "שטחים",
   "locationLabel": "מיקום: ‎${value}‎",
   "areaLabel": "אזור: ‎${value}‎‏ ‎${unit}‎",
-  "distanceLabel": "מרחק: ‎${value}‎‏ ‎${unit}‎"
+  "distanceLabel": "מרחק: ‎${value}‎‏ ‎${unit}‎",
+  "distanceLabelForLine": "אורך: ‎${value}‎‏ ‎${unit}‎",
+  "distanceLabelForPolygon": "היקף: ‎${value}‎‏ ‎${unit}‎"
 });

@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Pokaż pomiar lokalizacji",
   "showAreaMeasurement": "Pokaż pomiar pola powierzchni",
   "showDistanceMeasurement": "Pokaż pomiar odległości",
+  "showDistanceMeasurementForLine": "Pokaż pomiar długości",
+  "showDistanceMeasurementForPolygon": "Pokaż pomiar obwodu",
+  "locationToggleOn": "Naciśnij przełącznik, aby wyświetlić pomiar lokalizacji",
+  "locationToggleOff": "Naciśnij przełącznik, aby ukryć pomiar lokalizacji",
+  "areaToggleOn": "Naciśnij przełącznik, aby wyświetlić pomiar pola powierzchni",
+  "areaToggleOff": "Naciśnij przełącznik, aby ukryć pomiar pola powierzchni",
+  "distanceForLineToggleOn": "Naciśnij przełącznik, aby wyświetlić pomiar długości",
+  "distanceForLineToggleOff": "Naciśnij przełącznik, aby ukryć pomiar długości",
+  "distanceForPolygonToggleOn": "Naciśnij przełącznik, aby wyświetlić pomiar obwodu",
+  "distanceForPolygonToggleOff": "Naciśnij przełącznik, aby ukryć pomiar obwodu",
   "areaUnits": "Jednostki powierzchni",
   "distanceUnits": "Jednostki odległości",
   "kilometers": "Kilometry",
@@ -49,5 +59,7 @@ define({
   "areas": "Powierzchnie",
   "locationLabel": "Lokalizacja: ${value}",
   "areaLabel": "Pole powierzchni: ${value} ${unit}",
-  "distanceLabel": "Odległość: ${value} ${unit}"
+  "distanceLabel": "Odległość: ${value} ${unit}",
+  "distanceLabelForLine": "Długość: ${value} ${unit}",
+  "distanceLabelForPolygon": "Obwód: ${value} ${unit}"
 });

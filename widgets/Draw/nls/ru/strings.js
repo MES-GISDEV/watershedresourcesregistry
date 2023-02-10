@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Показать измерения местоположения",
   "showAreaMeasurement": "Показать измерение площади",
   "showDistanceMeasurement": "Показать измерение расстояния",
+  "showDistanceMeasurementForLine": "Показать измерение длины",
+  "showDistanceMeasurementForPolygon": "Показать измерение периметра",
+  "locationToggleOn": "Нажмите кнопку  переключения, чтобы показать измерения местоположений",
+  "locationToggleOff": "Нажмите кнопку  переключения, чтобы скрыть измерения местоположений",
+  "areaToggleOn": "Нажмите кнопку  переключения, чтобы показать измерения площади",
+  "areaToggleOff": "Нажмите кнопку  переключения, чтобы скрыть измерения площади",
+  "distanceForLineToggleOn": "Нажмите кнопку  переключения, чтобы показать измерения длины",
+  "distanceForLineToggleOff": "Нажмите кнопку  переключения, чтобы скрыть измерения длины",
+  "distanceForPolygonToggleOn": "Нажмите кнопку  переключения, чтобы показать измерения периметра",
+  "distanceForPolygonToggleOff": "Нажмите кнопку  переключения, чтобы скрыть измерения периметра",
   "areaUnits": "Единицы площади",
   "distanceUnits": "Единицы расстояния",
   "kilometers": "Километры",
@@ -49,5 +59,7 @@ define({
   "areas": "Области",
   "locationLabel": "Местоположение: ${value}",
   "areaLabel": "Площадь: ${value} ${unit}",
-  "distanceLabel": "Расстояние: ${value} ${unit}"
+  "distanceLabel": "Расстояние: ${value} ${unit}",
+  "distanceLabelForLine": "Длина: ${value} ${unit}",
+  "distanceLabelForPolygon": "Периметр: ${value} ${unit}"
 });

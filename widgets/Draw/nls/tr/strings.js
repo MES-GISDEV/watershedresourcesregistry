@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Konum ölçümünü göster",
   "showAreaMeasurement": "Alan ölçümünü göster",
   "showDistanceMeasurement": "Mesafe ölçümünü göster",
+  "showDistanceMeasurementForLine": "Uzunluk ölçümünü göster",
+  "showDistanceMeasurementForPolygon": "Çevre ölçümünü göster",
+  "locationToggleOn": "Konum ölçümünü göstermek için geçiş düğmesine basın",
+  "locationToggleOff": "Konum ölçümünü gizlemek için geçiş düğmesine basın",
+  "areaToggleOn": "Alan ölçümünü göstermek için geçiş düğmesine basın",
+  "areaToggleOff": "Alan ölçümünü gizlemek için geçiş düğmesine basın",
+  "distanceForLineToggleOn": "Uzunluk ölçümünü göstermek için geçiş düğmesine basın",
+  "distanceForLineToggleOff": "Uzunluk ölçümünü gizlemek için geçiş düğmesine basın",
+  "distanceForPolygonToggleOn": "Çevre ölçümünü göstermek için geçiş düğmesine basın",
+  "distanceForPolygonToggleOff": "Çevre ölçümünü gizlemek için geçiş düğmesine basın",
   "areaUnits": "Alan birimi",
   "distanceUnits": "Mesafe birimleri",
   "kilometers": "Kilometre",
@@ -49,5 +59,7 @@ define({
   "areas": "Alanlar",
   "locationLabel": "Konum: ${value}",
   "areaLabel": "Alan: ${value} ${unit}",
-  "distanceLabel": "Mesafe: ${value} ${unit}"
+  "distanceLabel": "Mesafe: ${value} ${unit}",
+  "distanceLabelForLine": "Uzunluk: ${value} ${unit}",
+  "distanceLabelForPolygon": "Çevre: ${value} ${unit}"
 });

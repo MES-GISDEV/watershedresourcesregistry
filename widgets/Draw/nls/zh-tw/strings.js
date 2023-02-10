@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "顯示位置測量",
   "showAreaMeasurement": "顯示面積測量",
   "showDistanceMeasurement": "顯示距離測量",
+  "showDistanceMeasurementForLine": "顯示長度測量",
+  "showDistanceMeasurementForPolygon": "顯示周長測量",
+  "locationToggleOn": "按下切換按鈕以顯示位置測量",
+  "locationToggleOff": "按下切換按鈕以隱藏位置測量",
+  "areaToggleOn": "按下切換按鈕以顯示面積測量",
+  "areaToggleOff": "按下切換按鈕以隱藏面積測量",
+  "distanceForLineToggleOn": "按下切換按鈕以顯示長度測量",
+  "distanceForLineToggleOff": "按下切換按鈕以隱藏長度測量",
+  "distanceForPolygonToggleOn": "按下切換按鈕以顯示周長測量",
+  "distanceForPolygonToggleOff": "按下切換按鈕以隱藏周長測量",
   "areaUnits": "面積單位",
   "distanceUnits": "距離單位",
   "kilometers": "公里",
@@ -49,5 +59,7 @@ define({
   "areas": "面",
   "locationLabel": "位置: ${value}",
   "areaLabel": "面積: ${value} ${unit}",
-  "distanceLabel": "距離: ${value} ${unit}"
+  "distanceLabel": "距離: ${value} ${unit}",
+  "distanceLabelForLine": "長度: ${value} ${unit}",
+  "distanceLabelForPolygon": "周長: ${value} ${unit}"
 });

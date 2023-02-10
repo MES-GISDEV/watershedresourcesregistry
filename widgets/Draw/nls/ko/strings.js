@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "위치 측정치 보기",
   "showAreaMeasurement": "면적 측정치 보기",
   "showDistanceMeasurement": "거리 측정치 보기",
+  "showDistanceMeasurementForLine": "길이 측정치 표시",
+  "showDistanceMeasurementForPolygon": "둘레 측정치 표시",
+  "locationToggleOn": "토글 버튼을 눌러 위치 측정 표시",
+  "locationToggleOff": "토글 버튼을 눌러 위치 측정 숨기기",
+  "areaToggleOn": "토글 버튼을 눌러 면적 측정 표시",
+  "areaToggleOff": "토글 버튼을 눌러 면적 측정 숨기기",
+  "distanceForLineToggleOn": "토글 버튼을 눌러 길이 측정 표시",
+  "distanceForLineToggleOff": "토글 버튼을 눌러 길이 측정 숨기기",
+  "distanceForPolygonToggleOn": "토글 버튼을 눌러 둘레 측정 표시",
+  "distanceForPolygonToggleOff": "토글 버튼을 눌러 둘레 측정 숨기기",
   "areaUnits": "면적 단위",
   "distanceUnits": "거리 단위",
   "kilometers": "킬로미터",
@@ -49,5 +59,7 @@ define({
   "areas": "영역",
   "locationLabel": "위치: ${value}",
   "areaLabel": "면적: ${value}${unit}",
-  "distanceLabel": "거리: ${value}${unit}"
+  "distanceLabel": "거리: ${value}${unit}",
+  "distanceLabelForLine": "길이: ${value} ${unit}",
+  "distanceLabelForPolygon": "둘레: ${value} ${unit}"
 });

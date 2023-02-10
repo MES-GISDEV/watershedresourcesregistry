@@ -390,6 +390,6 @@
   "editorDescription": "<div><span style=\"font-size: medium; color: rgb(32, 6, 2);\">Check on the \"Facilities that Discharge to Water\" layer to see the results</span><br></div><div><br></div>Search for an address or use the set location button to select a location on the map",
   "noFeatureFoundMessage": "No results found",
   "showCurrentLocationTool": true,
-  "enableDirection": true,
+  "enableDirection": false,
   "bufferInputOption": "sliderAndTextbox"
 }

@@ -38,5 +38,5 @@ define({
   "squareFeetAbbreviation": "ft²",
   "squareYardsAbbreviation": "yd²",
   "defineUnits": "Definieren Sie die Maßeinheiten.",
-  "operationalLayer": "Die Zeichnung als operationalen Layer der Karte hinzufügen."
+  "operationalLayer": "Die Zeichnung als operationalen Layer der Karte hinzufügen"
 });

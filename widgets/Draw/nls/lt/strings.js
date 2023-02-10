@@ -26,6 +26,16 @@ define({
   "showLocationMeasurement": "Rodyti vietos matmenis",
   "showAreaMeasurement": "Rodyti ploto matmenis",
   "showDistanceMeasurement": "Rodyti atstumo matmenis",
+  "showDistanceMeasurementForLine": "Rodyti ilgio matmenis",
+  "showDistanceMeasurementForPolygon": "Rodyti perimetro matmenis",
+  "locationToggleOn": "Paspauskite perjungimo mygtuką, kad būtų rodomas padėties matmuo",
+  "locationToggleOff": "Paspauskite perjungimo mygtuką, kad nebūtų rodomas padėties matmuo",
+  "areaToggleOn": "Paspauskite perjungimo mygtuką, kad būtų rodomas ploto matmuo",
+  "areaToggleOff": "Paspauskite perjungimo mygtuką, kad nebūtų rodomas ploto matmuo",
+  "distanceForLineToggleOn": "Paspauskite perjungimo mygtuką, kad būtų rodomas ilgio matmuo",
+  "distanceForLineToggleOff": "Paspauskite perjungimo mygtuką, kad nebūtų rodomas ilgio matmuo",
+  "distanceForPolygonToggleOn": "Paspauskite perjungimo mygtuką, kad būtų rodomas perimetro matmuo",
+  "distanceForPolygonToggleOff": "Paspauskite perjungimo mygtuką, kad nebūtų rodomas perimetro matmuo",
   "areaUnits": "Ploto vienetai",
   "distanceUnits": "Atstumo vienetai",
   "kilometers": "Kilometrai",
@@ -49,5 +59,7 @@ define({
   "areas": "Plotai",
   "locationLabel": "Vieta: ${value}",
   "areaLabel": "Plotas: ${value} ${unit}",
-  "distanceLabel": "Atstumas: ${value} ${unit}"
+  "distanceLabel": "Atstumas: ${value} ${unit}",
+  "distanceLabelForLine": "Ilgis: ${value} ${unit}",
+  "distanceLabelForPolygon": "Perimetras: ${value} ${unit}"
 });
