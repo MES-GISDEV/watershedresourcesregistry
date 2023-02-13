@@ -1,20 +1,10 @@
 {
-<<<<<<< Updated upstream
 	"surveyLink": "https://survey123.arcgis.com/share/f428e20cada347319bfc88cd00a82a98",
 	"surveyLinkMobile": "arcgis-survey123://?itemID=f428e20cada347319bfc88cd00a82a98",
-=======
-	"surveyLink": "https://survey123.arcgis.com/share/7214f29e1d57455eb35bae2ac2251351?portalUrl=https://gis.menv.com/portal",
-	"surveyLinkMobile": "arcgis-survey123://?itemID=f428e20cada347319bfc88cd00a82a98",
-
->>>>>>> Stashed changes
 	"county": {
 		"url": "https://gis.menv.com/server/rest/services/WRR/WatershedsHUC12/MapServer/1",
 		"field": "NAME"
 	},
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 	"watershed": {
 		"url": "https://gis.menv.com/server/rest/services/WRR/WatershedsHUC12/MapServer/0",
 		"field": "HUC12"

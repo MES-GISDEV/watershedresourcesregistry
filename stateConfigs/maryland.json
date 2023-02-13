@@ -244,7 +244,11 @@
 				"uri": "widgets/Print/Widget",
 				"config": "configs/Print/config_widgets_Print_Widget_45.json",
 				"icon": "configs/Print/print.png"
+<<<<<<< Updated upstream
 			},	
+=======
+			},
+>>>>>>> Stashed changes
 			{
 				"position": {
 				  "left": 245,
@@ -257,6 +261,25 @@
 				"id": "_31",
 				"name": "SiteVisits",
 				"label": "Site Descriptions",
+<<<<<<< Updated upstream
+=======
+				"version": "2.22",
+				"closeable": true,
+				"IsController": false,
+				"uri": "widgets/SiteVisits123/Widget",
+				"config": "configs/SiteVisits123/config_SiteVisits123.json"
+			},	
+			{
+				"position": {
+				  "left": 245,
+				  "top": 45,
+				  "relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "_31",
+				"name": "SiteVisits",
+				"label": "Site Descriptions",
+>>>>>>> Stashed changes
 				"version": "2.2",
 				"closeable": true,
 				"IsController": false,

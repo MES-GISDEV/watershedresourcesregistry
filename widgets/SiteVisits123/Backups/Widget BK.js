@@ -52,11 +52,7 @@ define(['dojo/_base/declare', 'dojo/promise/all', 'jimu/BaseWidget', 'dojo/_base
             var today = Date.now();
 
 			
-<<<<<<< Updated upstream
             //get and apply the county for where the point was clicked
-=======
-            //get and apply the county for where the point was clicked (This code block only applies to the old Survey123 form. Not needed for the new Survey123 Form)
->>>>>>> Stashed changes
             var cquery = new Query();
             var cqueryTask = new QueryTask(this.config.county.url);
             cquery.outSpatialReference = {wkid:102100}; 
@@ -66,11 +62,7 @@ define(['dojo/_base/declare', 'dojo/promise/all', 'jimu/BaseWidget', 'dojo/_base
             cquery.outFields = [this.config.county.field];
 			var counties = cqueryTask.execute(cquery);
 
-<<<<<<< Updated upstream
             //get and apply the watershed to the point that was clicked
-=======
-            //get and apply the watershed to the point that was clicked (This code block only applies to the old Survey123 form. Not needed for the new Survey123 Form)
->>>>>>> Stashed changes
             var wquery = new Query();
             var wqueryTask = new QueryTask(this.config.watershed.url);
             wquery.outSpatialReference = { wkid: 102100 };
@@ -86,11 +78,7 @@ define(['dojo/_base/declare', 'dojo/promise/all', 'jimu/BaseWidget', 'dojo/_base
 				console.log(result);
 				
 
-<<<<<<< Updated upstream
 				// make sure both queries finished successfully
-=======
-				// make sure both queries finished successfully (This code block only applies to the old Survey123 form. Not needed for the new Survey123 Form)
->>>>>>> Stashed changes
 				if ( ! result[0].hasOwnProperty("features") ) {
 					console.log("Counties query failed.");
 				}else{
@@ -105,15 +93,9 @@ define(['dojo/_base/declare', 'dojo/promise/all', 'jimu/BaseWidget', 'dojo/_base
 				//if (window.appInfo.isRunInMobile) {
 				//   window.open(this.config.surveyLinkMobile + "&field:field_48=" + watershed + "&field:field_47=" + county + "&center="+ location.getLatitude() + "," + location.getLongitude());
 				//} else {
-<<<<<<< Updated upstream
 				//window.open(this.config.surveyLink);
 				 window.open(this.config.surveyLink + "?field:field_48=" + watershed + "&field:field_47=" + county + "&center=" + location.getLatitude() + "," + location.getLongitude());
 				//}				   
-=======
-				//window.open(this.config.surveyLink) + "?HUC12=" + watershed + "&countyname=" + county + "&center=" + location.getLatitude() + "," + location.getLongitude());
-				//}
-                window.open(this.config.surveyLink);			   
->>>>>>> Stashed changes
 			}));
 
         }

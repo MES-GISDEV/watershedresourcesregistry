@@ -131,7 +131,7 @@
 				"label": "External Resources",
 				"version": "2.23",
 				"closeable": true,
-				"uri": "widgets/LinksDropDown/Widget",
+				"uri": "widgets/LinksDropDown/WidgetNST",
 				"config": "configs/LinksDropDown/stateConfigs/configSC.json",
 				"icon": "configs/LinksDropDown/icon.png"
 			},
@@ -245,13 +245,15 @@
 				"position": {
 				  "left": 245,
 				  "top": 45,
+				  "width": 290,
+				  "height": 290,
 				  "relativeTo": "map"
 				},
 				"placeholderIndex": 1,
 				"id": "_31",
 				"name": "SiteVisits",
 				"label": "Site Descriptions",
-				"version": "2.2",
+				"version": "2.22",
 				"closeable": true,
 				"IsController": false,
 				"uri": "widgets/SiteVisits123/Widget",
