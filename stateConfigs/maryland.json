@@ -197,6 +197,8 @@
 				"position": {
 					"left": 95,
 					"top": 45,
+					"width": 360,
+					"height": 310,
 					"relativeTo": "map"
 				},
 				"placeholderIndex": 1,
@@ -229,7 +231,9 @@
 				"position": {
 					"left": 195,
 					"top": 45,
-					"relativeTo": "map"
+					"width": 310,
+          			"height": 310,
+          			"relativeTo": "map"
 				},
 				"placeholderIndex": 1,
 				"id": "widgets_Print_Widget_45",
@@ -240,7 +244,25 @@
 				"uri": "widgets/Print/Widget",
 				"config": "configs/Print/config_widgets_Print_Widget_45.json",
 				"icon": "configs/Print/print.png"
-			},			
+			},	
+			{
+				"position": {
+				  "left": 245,
+				  "top": 45,
+				  "width": 290,
+				  "height": 290,
+				  "relativeTo": "map"
+				},
+				"placeholderIndex": 1,
+				"id": "_31",
+				"name": "SiteVisits",
+				"label": "Site Descriptions",
+				"version": "2.2",
+				"closeable": true,
+				"IsController": false,
+				"uri": "widgets/SiteVisits123/Widget",
+				"config": "configs/SiteVisits123/config_SiteVisits123.json"
+			},		
 			{
 				"uri": "widgets/OverviewMap/Widget",
 				"position": {
@@ -354,6 +376,11 @@
 			},
 			{
 				"id": "FindOps_30",
+				"position": {
+					"width": 530,
+					"height": 500,
+					"relativeTo": "map"
+				},
 				"name": "FindOpsMD",
 				"label": "Find Opportunity Tool",
 				"version": "2.2",
@@ -387,6 +414,10 @@
 			},
 			{
 				"id": "DAD",
+				"position": {
+					"height": 550,
+					"relativeTo": "map"
+				},
 				"name": "GeoprocessingDAD",
 				"label": "Drainage Area Delineation",
 				"version": "2.9",
@@ -397,6 +428,10 @@
 			},
 			{
 				"id": "UDS",
+				"position": {
+					"height": 550,
+					"relativeTo": "map"
+				},
 				"name": "GeoprocessingUDS",
 				"label": "Upstream/Downstream Search",
 				"version": "2.9",

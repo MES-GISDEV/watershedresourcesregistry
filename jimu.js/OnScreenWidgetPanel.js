@@ -33,6 +33,7 @@ define(['dojo/_base/declare',
     /* global jimuConfig */
     var clazz = declare([BaseWidgetPanel, _TemplatedMixin], {
       baseClass: 'jimu-panel jimu-on-screen-widget-panel jimu-main-background',
+      _collapseHeight: 35, //FK 2023-02-08 added number for default collapse height
       _positionInfoBox: null,
       _originalBox: null,
       widgetIcon: null,
@@ -148,6 +149,11 @@ define(['dojo/_base/declare',
         var posInfo = this._getPositionInfo();
         this._setDesktopPosition(posInfo.position);
 
+        //FK 2023-02-07 Adding to prevent having to press min. button twice
+        html.removeClass(this.foldableNode, 'fold-up');
+        html.addClass(this.foldableNode, 'fold-down');
+        html.setAttr(this.foldableNode, 'aria-label', this.headerNls.foldWindow);
+        this.windowState = "normal";
         this.panelManager.closePanel(this);
       },
 
@@ -422,9 +428,9 @@ define(['dojo/_base/declare',
           this.domNode.parentNode !== html.byId(jimuConfig.mapId)) {
           html.place(this.domNode, jimuConfig.mapId);
         }
-
+        
         html.setStyle(this.domNode, {
-          /*FK 2023-02-01 This may not be perfect. I think we have something functional
+          /*FK 2023-02-08 This still may not be perfect. I think we have something functional
           at this point though. I have adjusted the top and height positions, this allows
           the form to be minimized on the bottom right and come back where it belongs*/
 
@@ -438,8 +444,13 @@ define(['dojo/_base/declare',
 
 
           //Adjusted code, adjustments based on above attributes
-          top: (this._originalBox.t + 50 || position.top) + 'px',
-          height: (this._originalBox.h || position.height) + 'px'
+          top: this.position.height == this._collapseHeight  
+            ? (this._originalBox.t + 50 || position.top) + 'px'
+            : position.top + 'px',
+          height: this.position.height == this._collapseHeight
+            ? (this._originalBox.h || position.height) + 'px'
+            : (position.height || this.position.height || this._originalBox.h) + 'px'
+            
           //FK End adjustments
         });
       },
@@ -459,7 +470,7 @@ define(['dojo/_base/declare',
           bottom: '5px',
           top: 'auto',
           width: (this._originalBox.w) + 'px',
-          height: '35px'
+          height: this._collapseHeight + 'px'
         });
       },
 

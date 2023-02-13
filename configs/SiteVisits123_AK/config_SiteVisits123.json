@@ -1,0 +1,14 @@
+{
+	"surveyLink": "https://survey123.arcgis.com/share/f428e20cada347319bfc88cd00a82a98",
+	"surveyLink2": "https://survey123.arcgis.com/share/24451ca2efd0456e84453a814ac1ebde",
+	"surveyLink3": "https://survey123.arcgis.com/share/c773acea5a3049a39a219188c71f16a3",
+	"surveyLinkMobile": "arcgis-survey123://?itemID=f428e20cada347319bfc88cd00a82a98",
+	"county": {
+		"url": "https://gis.menv.com/server/rest/services/WRR/WatershedsHUC12/MapServer/1",
+		"field": "NAME"
+	},
+	"watershed": {
+		"url": "https://gis.menv.com/server/rest/services/WRR/WatershedsHUC12/MapServer/0",
+		"field": "HUC12"
+	}
+}
