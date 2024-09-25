@@ -29,7 +29,7 @@ body {
 }
 
 .breadcrumb{
-    background-color: #8FCCBD;
+    background-color: #81B8AA;
 }
 .breadcrumb-item.active{
     color: #234A10;
@@ -44,7 +44,7 @@ body {
     opacity: .85;
 }
 .bg-wrr{
-    background-color: #2aaa8a;
+    background: linear-gradient(#15555d, #2aaa8a);
 }
 .wrrHeader{
     color: #fff;

@@ -1,8 +1,0 @@
-{
-    "portalUrl": "https://gis.menv.com/portal",
-	"singInUrl": "https://www.arcgis.com",
-    "publicContent": {
-      "Oldquery": "type:\"Web Map\" ",
-	  "query": "type:\"Web Map\" AND group:6d50dc8d1a7a458f84a28bbf70fd4f7e AND id:aa2fe2b9cdaa4fa0aadcab75ddd2edc5"
-    }
-}
